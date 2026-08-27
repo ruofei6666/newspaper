@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第239期 · 2026年8月27日</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --crimson: #C41E3A;
+    --slate: #4A5568;
+    --card: #FFFCF7;
+    --cream: #EBE4D8;
+    --mute: #9A9388;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Calibri, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  h1, h2, h3, .serif {
+    font-family: Cambria, Georgia, "Times New Roman", serif;
+    font-weight: 700;
+  }
+  a { color: var(--crimson); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 64px; }
+
+  /* 刊头：细线 + 朱红方印，不用通栏色带 */
+  .folio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 0 10px;
+    border-bottom: 1.5px solid var(--crimson);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--slate);
+  }
+  .mark {
+    width: 12px; height: 12px;
+    background: var(--crimson);
+    flex: 0 0 12px;
+  }
+
+  .cover {
+    background: var(--ink);
+    color: #F0ECE6;
+    padding: 48px 8vw 56px;
+    margin: 0 0 40px;
+  }
+  .cover .folio { color: #C8C0B4; border-bottom-color: var(--crimson); }
+  .cover h1 {
+    font-size: 48pt;
+    line-height: 1.05;
+    color: #fff;
+    margin: 28px 0 12px;
+  }
+  .cover .issue {
+    font-size: 20pt;
+    color: var(--crimson);
+    margin-bottom: 16px;
+  }
+  .cover .lead {
+    max-width: 42em;
+    font-size: 16pt;
+    color: #D6D0C6;
+    margin-bottom: 32px;
+  }
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    gap: 16px;
+  }
+  .stat {
+    background: #242424;
+    padding: 20px 22px 18px;
+    min-height: 140px;
+  }
+  .stat.accent { background: var(--crimson); }
+  .stat .k { font-size: 12px; letter-spacing: 0.12em; color: var(--crimson); margin-bottom: 6px; }
+  .stat.accent .k { color: #fff; }
+  .stat .n { font-size: 48pt; line-height: 0.95; color: #fff; }
+  .stat .d { font-size: 14px; color: #C8C0B4; margin-top: 8px; }
+  .stat.accent .d { color: #FFE0E4; }
+  .cover-note { margin-top: 22px; font-size: 13px; color: var(--mute); }
+
+  .section-head {
+    margin: 8px 0 22px;
+  }
+  .section-head h2 {
+    font-size: 54pt;
+    line-height: 0.95;
+  }
+  .section-head p {
+    font-size: 16pt;
+    color: var(--slate);
+    max-width: 38em;
+    margin-top: 10px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 36px;
+  }
+  article.card {
+    background: var(--card);
+    padding: 22px 22px 20px;
+    border-top: 5px solid var(--crimson);
+    min-height: 100%;
+  }
+  article.card.dark {
+    background: var(--ink);
+    color: #F0ECE6;
+  }
+  .num { font-size: 32pt; color: var(--crimson); line-height: 1; }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--slate);
+    font-weight: 700;
+    margin: 6px 0 8px;
+  }
+  article.card.dark .kicker { color: #E8A0A8; }
+  article.card h3 {
+    font-size: 36pt;
+    line-height: 1.08;
+    margin: 4px 0 10px;
+  }
+  .source { font-size: 12px; color: var(--crimson); margin-bottom: 10px; }
+  .summary { font-size: 14pt; text-align: left; margin-bottom: 14px; }
+  .why-label {
+    font-size: 12px;
+    color: var(--crimson);
+    font-weight: 700;
+    border-top: 1px solid var(--cream);
+    padding-top: 10px;
+    margin-bottom: 6px;
+  }
+  article.card.dark .why-label { border-top-color: #3A3A3A; }
+  .why { font-size: 14pt; color: var(--slate); }
+  article.card.dark .why { color: #C8C0B4; }
+
+  .opener {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 22px;
+    margin-bottom: 40px;
+  }
+  .read {
+    background: var(--card);
+    padding: 24px;
+  }
+  .read h3 { font-size: 16px; color: var(--crimson); margin-bottom: 10px; letter-spacing: 0.08em; }
+  .read p { font-size: 16pt; }
+  .index-list { list-style: none; }
+  .index-list li {
+    background: var(--card);
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 16pt;
+  }
+  .index-list span { color: var(--crimson); font-family: Cambria, Georgia, serif; font-size: 20pt; width: 1.6em; }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 8px 0 36px;
+  }
+  .metric { padding: 22px; min-height: 210px; }
+  .metric.ink { background: var(--ink); color: #F0ECE6; }
+  .metric.red { background: var(--crimson); color: #fff; }
+  .metric.paper { background: var(--card); }
+  .metric .lab { font-size: 12px; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .metric .big { font-size: 36pt; line-height: 0.95; margin-bottom: 12px; }
+  .metric p { font-size: 14pt; }
+
+  .quote {
+    background: var(--ink);
+    color: #fff;
+    padding: 28px 24px;
+  }
+  .quote .lab { color: var(--crimson); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 12px; }
+  .quote p { font-size: 18pt; font-family: Cambria, Georgia, serif; line-height: 1.35; }
+  .quote .who { margin-top: 18px; color: #C8C0B4; font-size: 13px; }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1.7fr 0.9fr;
+    gap: 22px;
+    margin-bottom: 36px;
+  }
+  .digits { background: var(--ink); color: #fff; padding: 24px 22px; }
+  .digits h4 { color: var(--crimson); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 16px; font-family: Calibri, Arial, sans-serif; font-weight: 700; }
+  .digits .row { margin-bottom: 22px; }
+  .digits .v { font-size: 28pt; font-family: Cambria, Georgia, serif; }
+  .digits .l { font-size: 13px; color: #C8C0B4; }
+
+  .close {
+    background: var(--ink);
+    color: #F0ECE6;
+    padding: 48px 8vw 56px;
+    margin-top: 24px;
+  }
+  .close .folio { color: #C8C0B4; }
+  .close h2 { font-size: 48pt; color: #fff; margin: 20px 0 8px; }
+  .close .sub { color: #C8C0B4; font-size: 16pt; margin-bottom: 28px; }
+  .tri { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .tri div { background: #242424; padding: 20px; min-height: 200px; }
+  .tri div.accent { background: var(--crimson); }
+  .tri .n { font-size: 22pt; color: var(--crimson); margin-bottom: 10px; }
+  .tri div.accent .n { color: #fff; }
+  .tri p { font-size: 15pt; }
+  .edit {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--mute);
+    max-width: 70em;
+  }
+
+  @media (max-width: 860px) {
+    .cover h1, .section-head h2, .close h2 { font-size: 36pt; }
+    article.card h3 { font-size: 28pt; }
+    .cover-grid, .cards, .opener, .metrics, .split, .tri { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; }
+    .cover, .close { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    article.card, .stat, .metric, .quote, .digits { break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+    a::after { content: " (" attr(href) ")"; font-size: 9pt; color: var(--slate); }
+  }
+</style>
+</head>
+<body>
+  <header class="cover">
+    <div class="wrap" style="padding-bottom:0;">
+      <div class="folio"><span class="mark"></span>THE MORNING BRIEF · 报馆晨报 · 第239期</div>
+      <h1>每日时政科技简报</h1>
+      <p class="issue serif">第239期 / 二零二六年八月二十七日 星期四</p>
+      <p class="lead">只收录上海时区昨日发生或昨日首发的核实稿件。营销稿、标题党与重复转载一律不录。</p>
+      <div class="cover-grid">
+        <div class="stat">
+          <div class="k">时政 POLITICS</div>
+          <div class="n serif">05</div>
+          <div class="d">灾情 · 关税 · 元首外交</div>
+        </div>
+        <div class="stat">
+          <div class="k">科技 TECHNOLOGY</div>
+          <div class="n serif">05</div>
+          <div class="d">并购 · 芯片 · 科学</div>
+        </div>
+        <div class="stat accent">
+          <div class="k">合计条目</div>
+          <div class="n serif">10</div>
+          <div class="d">交叉核验 · 中文为主</div>
+        </div>
+      </div>
+      <p class="cover-note">Asia/Shanghai 日历昨日 · 不含 8月26日旧闻与 8月28日凌晨之后稿件</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="folio"><span class="mark"></span>每日时政科技简报 · 第239期 · 2026年8月27日 星期四</div>
+
+    <section>
+      <div class="section-head">
+        <h2>时政</h2>
+        <p>喜马拉雅跨境灾情、对美关税反制与元首外交，构成昨日公共议程的三条主轴。</p>
+      </div>
+      <div class="opener">
+        <div class="read">
+          <h3>开篇识读</h3>
+          <p>8月26日上午，尼泊尔一侧冰川崩塌触发泥石流，波及西藏吉隆口岸。27日官方首次系统通报伤亡与失联规模，外交部同步公布尼方一侧近百名中国公民失联。同日，商务部就美拟加征7.5%关税表态，新华社刊发上合出访前瞻，王毅会见美使的通稿亦于当日首发。灾情、贸易与外交在同一新闻日交叉。</p>
+        </div>
+        <ol class="index-list">
+          <li><span class="serif">01</span>吉隆口岸伤亡通报</li>
+          <li><span class="serif">02</span>商务部反对加征关税</li>
+          <li><span class="serif">03</span>上合峰会出访前瞻</li>
+          <li><span class="serif">04</span>王毅会见美驻华大使</li>
+          <li><span class="serif">05</span>反对泛化国家安全</li>
+        </ol>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num serif">01</div>
+          <div class="kicker">公共事务 / 灾害救援</div>
+          <h3>吉隆泥石流：失联558人</h3>
+          <p class="source">新华社 · 2026-08-27 13:09 · <a href="https://www.news.cn/local/20260827/c80eca2cd35a443489c76d00193e11e3/c.html">原文</a></p>
+          <p class="summary">日喀则吉隆口岸救援指挥部27日通报：受尼泊尔一侧泥石流波及，截至当日8时搜救出2人，排查遇难3人、失联558人，其中外籍人员260人。外交部称尼方一侧失联中国公民近百人。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">这是昨日最重大的公共安全事件，牵动跨境救援、口岸通道与喜马拉雅灾害治理。</p>
+        </article>
+        <article class="card">
+          <div class="num serif">02</div>
+          <div class="kicker">宏观经济 / 中美经贸</div>
+          <h3>反对美拟加征7.5%关税</h3>
+          <p class="source">新华社 / 中国日报 · 2026-08-27 · <a href="https://www.chinadaily.com.cn/a/202608/27/WS6a8fe9b1e4b06d4aa055ac60.html">原文</a></p>
+          <p class="summary">发言人黄玲27日说，美方以所谓产能过剩对包括中国在内的16个经济体发起301调查、拟对自华进口加征7.5%关税，属将经贸问题政治化的单边保护主义。中方坚决反对并保留一切必要措施。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">若落地，特朗普第二任期对华关税或回升至约20%，并为9月中美元首会晤增加变数。</p>
+        </article>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num serif">03</div>
+          <div class="kicker">元首外交</div>
+          <h3>上合峰会与吉埃国事访问</h3>
+          <p class="source">新华社前瞻 · 2026-08-27 00:54 首发 · <a href="https://www.news.cn/politics/leaders/20260827/ff6182106df34f28a02329dbdcb87aed/c.html">原文</a></p>
+          <p class="summary">8月30日至9月3日，习近平将出席上合组织成立25周年比什凯克峰会，并对吉尔吉斯斯坦、埃及进行国事访问。前瞻强调中吉乌铁路、中埃苏伊士合作区与全球治理倡议。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">全球南方多边机制年中最重要的元首外交安排之一，关乎地区安全与互联互通议程。</p>
+        </article>
+        <article class="card dark">
+          <div class="num serif">04</div>
+          <div class="kicker">中美沟通</div>
+          <h3>为高层交往排除干扰</h3>
+          <p class="source">新华社 · 会见26日，通稿27日12:29首发 · <a href="http://politics.people.com.cn/n1/2026/0827/c1001-40787289.html">原文</a></p>
+          <p class="summary">王毅强调落实元首共识、聚焦积极议程、妥善管控分歧。庞德伟称愿筹备下阶段重要高层互动，并对吉隆灾情表示慰问。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">在9月24日访美传闻与关税摩擦并行之际，这是官方释放的稳定信号。</p>
+        </article>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num serif">05</div>
+          <div class="kicker">外交 / 科技安全叙事</div>
+          <h3>反对泛化国家安全</h3>
+          <p class="source">央视新闻 / 每日经济新闻 · 2026-08-27 例行记者会 · <a href="https://www.nbd.com.cn/articles/2026-08-27/4560639.html">原文</a></p>
+          <p class="summary">林剑就美方称有敌对势力攻击美国电力系统等报道答问：中方一贯反对泛化国家安全概念、打压别国企业，希望美方为各国企业经营提供公平、公正、非歧视环境。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">在中美科技与关键基础设施叙事升温时，官方明确划出反对“安全泛化”的政策红线。</p>
+        </article>
+        <aside class="quote">
+          <div class="lab">现场原话</div>
+          <p class="serif">“中方一贯反对泛化国家安全概念、打压别国企业的做法，希望美方为各国企业经营提供公平、公正、非歧视环境。”</p>
+          <div class="who">—— 外交部发言人林剑，8月27日</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="folio"><span class="mark"></span>每日时政科技简报 · 第239期 · 2026年8月27日 星期四</div>
+
+    <section>
+      <div class="section-head">
+        <h2>科技</h2>
+        <p>开源平台并购传闻、存储扩产、自研推理芯片架构，与编程智能体被纳入勒索链，同日进入版面。</p>
+      </div>
+      <div class="metrics">
+        <div class="metric ink">
+          <div class="lab" style="color:#C41E3A;">产业</div>
+          <div class="big serif">129<br>亿美元</div>
+          <p>英伟达据报收购 Hugging Face。双方尚未官方确认，需继续观察监管与交割。</p>
+        </div>
+        <div class="metric red">
+          <div class="lab">制造</div>
+          <div class="big serif">310<br>亿美元</div>
+          <p>铠侠与闪迪宣布至2032年在日扩产闪存，前提是获得政府支持。</p>
+        </div>
+        <div class="metric paper">
+          <div class="lab" style="color:#C41E3A;">安全 / 科学</div>
+          <div class="big serif">07<br>家企业</div>
+          <p>路透披露勒索团伙驱使 Cursor 智能体协助入侵；冰川崩塌机制同日被科学界厘清。</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num serif">06</div>
+          <div class="kicker">人工智能 / 产业并购</div>
+          <h3>据报收购Hugging Face</h3>
+          <p class="source">CNBC / The Information · 2026-08-27 · <a href="https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html">原文</a></p>
+          <p class="summary">CNBC称英伟达已同意以129亿美元收购开源模型平台Hugging Face；知情人士证实收购确在近期磋商之中。双方尚未官方确认。该平台2023年估值约45亿美元，年化收入据报约1.5亿美元。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">若成交，芯片巨头将把触角伸进开源模型分发层，重塑AI软件生态的中立性。</p>
+        </article>
+        <article class="card">
+          <div class="num serif">07</div>
+          <div class="kicker">芯片 / 存储产能</div>
+          <h3>在日扩产投资310亿美元</h3>
+          <p class="source">铠侠官方 / 路透社 · 2026-08-27 · <a href="https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html">原文</a></p>
+          <p class="summary">两家公司宣布拟至2032年在日本投资逾310亿美元扩建四日市、北上闪存产能，北上新厂投资约1.8万亿日元，前提是获得日本政府支持。高管当日会见首相高市早苗。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">AI算力瓶颈正从GPU蔓延到存储，东亚产能布局成为供应链安全议题。</p>
+        </article>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num serif">08</div>
+          <div class="kicker">芯片架构</div>
+          <h3>Jalapeño架构细节披露</h3>
+          <p class="source">Tom's Hardware · 2026-08-27 首发详解 · <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/hot-chips-2026-openais-jalapeno-ai-asic-unpacked-accelerator-developed-using-ai-achieves-efficiency-and-throughput-gains-against-power-hungry-blackwell">原文</a></p>
+          <p class="summary">与博通合作、700W、216GB HBM4、64切片NUMA架构。相对GB200/GB300，峰值每瓦吞吐约1.5–1.9倍、端到端延迟低1.7–3.6倍。二代已接近流片。会议在25日，本稿为27日架构详解。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">大模型公司自研推理芯片从跑分走向可规模化架构，推理能效成为算力竞争主战场。</p>
+        </article>
+        <article class="card dark">
+          <div class="num serif">09</div>
+          <div class="kicker">网络安全</div>
+          <h3>Cursor被用于勒索入侵</h3>
+          <p class="source">路透社 / Gambit Security · 2026-08-27 · <a href="https://www.channelnewsasia.com/business/exclusive-russian-speaking-cybercriminals-used-spacexs-cursor-ai-tool-hack-seven-companies-6345066">原文</a></p>
+          <p class="summary">俄语Aur0ra团伙今年4–5月利用SpaceX旗下Cursor，以“安全演练”话术驱使智能体完成凭证窃取与账户接管，至少波及比、德、英等七家公司。Gambit披露28段对话。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">通用编程智能体已被纳入真实勒索作战链，AI工具滥用从理论风险变成取证事实。</p>
+        </article>
+      </div>
+
+      <div class="split">
+        <article class="card">
+          <div class="num serif">10</div>
+          <div class="kicker">地球科学 / 灾害成因</div>
+          <h3>冰川崩塌而非构造地震</h3>
+          <p class="source">The Guardian / USGS · 2026-08-27 · <a href="https://www.theguardian.com/world/2026/aug/27/what-caused-the-catastrophic-flash-flood-in-nepal-and-tibet-and-how-does-a-glacier-collapse">原文</a></p>
+          <p class="summary">USGS认定周三边境附近5.2级地震信号实为冰川崩塌。卫星显示约0.2平方公里冰体自约5200米坠落1200米；半小时内特里苏里河水位上涨可达9米。喜马拉雅升温速率约为全球均值两倍。</p>
+          <div class="why-label">为何重要</div>
+          <p class="why">把跨境灾难从“地震说”纠正为气候敏感的冰岩崩塌，将影响预警体系与防灾政策。</p>
+        </article>
+        <aside class="digits">
+          <h4>关键数字</h4>
+          <div class="row"><div class="v">5.2</div><div class="l">地震仪记录震级</div></div>
+          <div class="row"><div class="v">0.2 km²</div><div class="l">崩落冰体面积</div></div>
+          <div class="row"><div class="v">9 m</div><div class="l">半小时水位涨幅</div></div>
+          <div class="row"><div class="v">×2</div><div class="l">区域升温相对全球</div></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="close">
+    <div class="wrap" style="padding-bottom:0;">
+      <div class="folio"><span class="mark"></span>每日时政科技简报 · 第239期 · 2026年8月27日 星期四</div>
+      <h2>收束</h2>
+      <p class="sub">十条互证之后，昨日新闻日可被读成三句话。</p>
+      <div class="tri">
+        <div>
+          <div class="n serif">一</div>
+          <p>冰川崩塌改写了中尼边境的一天：救援数字在27日首次系统公开，科学界同日否定构造地震说。</p>
+        </div>
+        <div>
+          <div class="n serif">二</div>
+          <p>中美议程同时出现关税加压与高层沟通：商务部划出反制底线，外交部要求为交往排除干扰。</p>
+        </div>
+        <div class="accent">
+          <div class="n serif">三</div>
+          <p>AI产业继续垂直整合，同时暴露工具被武器化：开源枢纽、存储扩产与编程智能体安全在同一日并置。</p>
+        </div>
+      </div>
+      <p class="edit">编辑说明：共10条（时政5 / 科技5）。缺口：部分英文稿以上海时区「昨日首发」收录；英伟达收购尚未官方确认。未纳入8月25–26日旧闻（如OpenAI跑分首发、英伟达财报、苹果发布会邀请）。</p>
+    </div>
+  </footer>
+</body>
+</html>
