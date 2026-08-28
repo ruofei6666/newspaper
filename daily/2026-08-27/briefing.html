@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第239期 · 2026年8月27日</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --cream: #EFE9DE;
+      --muted: #6B7380;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", SimSun, "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 32px 64px;
+    }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    .folio .brand {
+      font-family: Cambria, "Songti SC", SimSun, serif;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .folio .brand span { color: var(--crimson); margin-right: 10px; font-size: 11px; letter-spacing: 0.16em; }
+    .folio .meta { color: var(--slate); font-size: 12px; text-align: right; }
+    .rule {
+      width: 86px;
+      height: 3px;
+      background: var(--crimson);
+      margin: 8px 0 28px;
+    }
+    /* 封面 */
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 56px 48px 48px;
+      margin: 0 -32px 48px;
+      position: relative;
+    }
+    .cover .mark {
+      position: absolute;
+      left: 32px;
+      top: 72px;
+      width: 8px;
+      height: 268px;
+      background: var(--crimson);
+    }
+    .cover .kicker {
+      color: var(--crimson);
+      letter-spacing: 0.22em;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0 0 12px 28px;
+    }
+    .cover h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin: 0 0 18px 28px;
+      color: var(--paper);
+    }
+    .cover .issue {
+      font-size: 28px;
+      color: var(--crimson);
+      margin: 0 0 14px 28px;
+      font-weight: 400;
+    }
+    .cover .date {
+      margin: 0 0 36px 28px;
+      color: #C8C2B6;
+      font-size: 16px;
+    }
+    .counts {
+      display: grid;
+      grid-template-columns: repeat(3, 120px) 1fr;
+      gap: 16px;
+      margin-left: 28px;
+      align-items: stretch;
+    }
+    .count {
+      background: #242424;
+      padding: 14px 16px 12px;
+    }
+    .count b {
+      display: block;
+      font-family: Cambria, SimSun, serif;
+      font-size: 36px;
+      line-height: 1;
+      color: var(--paper);
+    }
+    .count span { color: var(--crimson); font-size: 14px; }
+    .cover .note { color: #A8AEB8; font-size: 14px; line-height: 1.5; padding-top: 8px; }
+    /* 开篇 */
+    .opener {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 28px;
+      align-items: start;
+      margin: 8px 0 28px;
+    }
+    .opener h2 { font-size: 40px; margin: 6px 0 0; line-height: 1.15; }
+    .eyebrow { color: var(--crimson); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; }
+    .numeral {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 18px 20px 16px;
+      min-height: 132px;
+    }
+    .numeral b {
+      display: block;
+      font-family: Cambria, SimSun, serif;
+      font-size: 64px;
+      line-height: 0.95;
+    }
+    .numeral span { color: var(--crimson); font-size: 13px; }
+    .lead {
+      background: var(--card);
+      padding: 22px 24px;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    /* 稿件 */
+    .feature {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 22px;
+      margin: 0 0 40px;
+    }
+    .stat {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 28px 22px;
+      min-height: 280px;
+    }
+    .stat b {
+      display: block;
+      font-family: Cambria, SimSun, serif;
+      font-size: 56px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .stat em { color: var(--crimson); font-style: normal; font-size: 15px; }
+    .stat .src { color: #C8C2B6; font-size: 12px; margin-top: 48px; }
+    article h3 { font-size: 28px; margin: 0 0 14px; line-height: 1.25; }
+    .summary, .why, .quote, .card {
+      background: var(--card);
+      padding: 16px 18px;
+    }
+    .why { background: var(--cream); margin-top: 14px; }
+    .label { color: var(--crimson); font-size: 12px; font-weight: 700; margin: 0 0 6px; }
+    .quote {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: Cambria, "Songti SC", SimSun, serif;
+      font-size: 16px;
+      margin: 0 0 16px;
+    }
+    .quote cite { display: block; color: var(--crimson); font-style: normal; font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; margin-top: 10px; }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+    .col {
+      background: var(--card);
+      padding: 18px 18px 20px;
+      border-top: 6px solid var(--crimson);
+      min-height: 280px;
+    }
+    .col.dark-edge { border-top-color: var(--ink); }
+    .col h3 { font-size: 20px; }
+    .chips {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .chip {
+      background: var(--card);
+      padding: 16px 16px 18px;
+      border-top: 6px solid var(--ink);
+      min-height: 320px;
+    }
+    .chip:first-child { border-top-color: var(--crimson); }
+    .chip h3 { font-size: 20px; margin: 8px 0 12px; }
+    .specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 8px 0 16px;
+    }
+    .spec { background: var(--card); padding: 14px 16px; }
+    .spec.ink { background: var(--ink); color: var(--paper); }
+    .spec b {
+      display: block;
+      font-family: Cambria, SimSun, serif;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px 40px 48px;
+      margin: 24px -32px 0;
+    }
+    .close h2 { font-size: 36px; color: var(--paper); margin: 12px 0 22px; }
+    .close li { margin: 0 0 14px; padding-top: 8px; border-top: 3px solid #3A3A3A; list-style: none; }
+    .close li:first-child { border-top-color: var(--crimson); }
+    .close ul { margin: 0; padding: 0; }
+    .close .foot { color: #9AA1AB; font-size: 13px; margin-top: 28px; }
+    .section-gap { margin-top: 8px; }
+    @media (max-width: 860px) {
+      .page { padding: 20px 16px 40px; }
+      .cover { margin: 0 -16px 32px; padding: 36px 20px 28px; }
+      .cover .mark { display: none; }
+      .cover h1, .cover .kicker, .cover .issue, .cover .date, .counts { margin-left: 0; }
+      .cover h1 { font-size: 36px; }
+      .counts, .opener, .feature, .pair, .chips, .specs { grid-template-columns: 1fr; }
+      .close { margin: 24px -16px 0; padding: 28px 20px 36px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .cover, .close { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page { max-width: none; padding: 12mm; }
+      a { color: inherit; text-decoration: none; }
+      .feature, .pair, .chips { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="mark" aria-hidden="true"></div>
+      <p class="kicker">THE MORNING GAZETTE</p>
+      <h1>每日时政科技简报</h1>
+      <p class="issue serif">第  2  3  9  期</p>
+      <p class="date">二零二六年八月二十七日  ·  星期四  ·  亚洲/上海「昨日」纪事</p>
+      <div class="counts">
+        <div class="count"><b>05</b><span>时政</span></div>
+        <div class="count"><b>04</b><span>科技</span></div>
+        <div class="count"><b>09</b><span>精选</span></div>
+        <p class="note">只收该日发生或该日首发。交叉核验新华社、商务部、外交部及 Hot Chips 现场报道。拒绝营销稿与重复转载。</p>
+      </div>
+    </header>
+
+    <div class="folio">
+      <div class="brand"><span>THE MORNING GAZETTE</span>每日时政科技简报</div>
+      <div class="meta">第239期  ·  2026年8月27日 星期四  ·  时政五则 / 科技四则</div>
+    </div>
+    <div class="rule"></div>
+
+    <section>
+      <p class="eyebrow">SECTION  ·  POLITICS</p>
+      <div class="opener">
+        <h2>时政开篇</h2>
+        <div class="numeral"><b>05</b><span>则时政精选</span></div>
+      </div>
+      <p class="lead">昨日的公共议程被两条线同时拉紧：一条是喜马拉雅边境的搜救，一条是华盛顿与北京之间尚未落锤的高层互动。关税、电网、自贸数字在同一天下午进入记者会，构成一份并不轻松的晨报头版。</p>
+    </section>
+
+    <article class="feature">
+      <div class="stat">
+        <b>558</b>
+        <em>人仍失联  ·  外籍 260</em>
+        <p class="src">新华社  ·  吉隆镇发布会  ·  8月27日 13:09</p>
+      </div>
+      <div>
+        <p class="eyebrow">时政  01  /  公共事务</p>
+        <h3>西藏吉隆泥石流搜救出 2 人，遇难 3 人</h3>
+        <p class="summary">27日上午，救援指挥部通报：8月26日尼泊尔一侧泥石流冲击吉隆口岸。截至27日8时，搜救出热索村村民2人，遇难3人、失联558人。日喀则已启动自然灾害救助一级应急响应。</p>
+        <div class="why">
+          <p class="label">为何重要</p>
+          <p>跨境地质灾害造成重大人员伤亡，搜救、外籍人员核验与次生灾害防范将持续牵动中尼双边与多国领事协调。</p>
+        </div>
+        <p><a href="https://www.news.cn/local/20260827/c80eca2cd35a443489c76d00193e11e3/c.html">原文链接 · 新华网</a></p>
+      </div>
+    </article>
+
+    <article>
+      <p class="eyebrow">时政  02  /  外交</p>
+      <h3>王毅会见美驻华大使，外交部称中美就元首互动保持沟通</h3>
+      <blockquote class="quote">
+        “中美关系仍面临各种风险挑战。双方应聚焦积极议程，妥善管控分歧，为两国高层交往排除干扰、克服障碍。”
+        <cite>—— 外交部长王毅，新华社8月27日电（会见发生于26日，该日首发）</cite>
+      </blockquote>
+      <div class="pair">
+        <div class="summary">
+          <p class="label">北京口径</p>
+          <p>林剑27日仅称：中美双方就年内元首互动安排保持着沟通。中方尚未正式公布访美行程。庞德伟转达对吉隆灾情的慰问。</p>
+        </div>
+        <div class="why" style="margin-top:0">
+          <p class="label">为何重要</p>
+          <p>元首会晤筹备与分歧管控同步推进。官方用语克制，显示日程仍在谈，而不是已经敲定的巡礼式宣布。</p>
+        </div>
+      </div>
+      <p><a href="https://www.news.cn/20260827/e5291f2649f649d09c9541596aa28f48/c.html">原文链接 · 新华网</a>
+         · <a href="https://www.nbd.com.cn/articles/2026-08-27/4560638.html">外交部回应 · 每日经济新闻</a></p>
+    </article>
+
+    <section>
+      <p class="eyebrow">时政  03–04  /  对照</p>
+      <h2 style="font-size:28px;margin:8px 0 18px">关税传闻与电网紧急令，同日进入中美议程</h2>
+      <div class="pair">
+        <article class="col">
+          <p class="label">03  ·  经贸</p>
+          <h3>商务部反对美拟加征 7.5% 关税</h3>
+          <p>黄玲27日称，美方以“产能过剩”为由对16个经济体发起301调查，将经贸问题政治化，是典型单边主义、保护主义。中方坚决反对，并保留采取一切必要措施的权利。</p>
+          <p class="label">为何重要  ·  新华社</p>
+          <p>传闻正值元首会晤筹备窗口，中方公开留权，贸易摩擦可能成为会前博弈变量。</p>
+          <p><a href="https://world.people.com.cn/n1/2026/0827/c1002-40787344.html">原文链接 · 人民网</a></p>
+        </article>
+        <article class="col dark-edge">
+          <p class="label">04  ·  安全 / 供应链</p>
+          <h3>美限制外国电网设备，中方反对泛化国安</h3>
+          <p>特朗普26日签署行政令，授权限制变压器、逆变器、储能系统等大容量电力设备。林剑27日回应：中方一贯反对泛化国家安全概念、打压别国企业。</p>
+          <p class="label">为何重要  ·  美国之音 / 外交部</p>
+          <p>命令可评估已装设备，或冲击全球逆变器与变压器供应链。</p>
+          <p><a href="https://www.voachinese.com/a/president-trump-declares-a-national-emergency-over-foreign-equipment-in-the-us-electricity-grid-20260827/8191029.html">原文链接 · 美国之音</a></p>
+        </article>
+      </div>
+    </section>
+
+    <article>
+      <p class="eyebrow">时政  05  /  开放</p>
+      <div class="opener" style="grid-template-columns: 1fr 200px">
+        <h3 style="font-size:28px;margin:0">中瑞自贸协定升级：双方零关税进口占比将超99%</h3>
+        <div class="numeral" style="background:var(--crimson);min-height:auto;padding:12px 16px">
+          <b style="font-size:40px">99%</b><span style="color:var(--paper)">零关税进口占比</span>
+        </div>
+      </div>
+      <p class="summary">商务部新任发言人黄玲27日介绍：升级后货物、服务、投资均作出更高水平双向开放，并完善原产地规则与贸易便利化。双方还将在数字贸易、人工智能、医药、机械与钟表等领域深化合作，目前正履行国内程序以便正式签署议定书。谈判完成于8月20日，99%这一关键数字于27日发布会首次对外说明。</p>
+      <div class="why">
+        <p class="label">为何重要  ·  中国新闻社</p>
+        <p>保护主义升温之际，中国与欧洲大陆国家把自贸安排再升一级，是制度型开放的对冲样本，也给供应链企业一张可预期的关税时间表。</p>
+      </div>
+      <p><a href="https://www.chinanews.com.cn/cj/2026/08-27/10685338.shtml">原文链接 · 中国新闻网</a></p>
+    </article>
+
+    <div class="folio section-gap" style="margin-top:48px">
+      <div class="brand"><span>THE MORNING GAZETTE</span>每日时政科技简报</div>
+      <div class="meta">第239期  ·  2026年8月27日 星期四  ·  时政五则 / 科技四则</div>
+    </div>
+    <div class="rule"></div>
+
+    <section>
+      <p class="eyebrow">SECTION  ·  TECHNOLOGY</p>
+      <div class="opener">
+        <h2>科技开篇</h2>
+        <div class="numeral"><b>04</b><span>则科技精选</span></div>
+      </div>
+      <p class="lead">8月27日的科技主场在斯坦福一带的 Hot Chips 会场。谷歌、AMD、微软同一天把自研加速器从路线图讲到机架。国内产业政策多见于26日国新办发布会，本期不混入；科学侧以中科院27日通报的 UGCG 结构为补。</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">科技  现场  /  Hot Chips 第三日</p>
+      <h2 style="font-size:26px;margin:8px 0 18px">三家超大规模厂商，同一天下午交出自己的硅片</h2>
+      <div class="chips">
+        <article class="chip">
+          <p class="label">01  ·  Google</p>
+          <h3>TPUv8 训练与推理分芯</h3>
+          <p>8i 配自研 Axion CPU、8 堆 HBM；8t 超节点规划 9600 颗芯片、2PB 共享 HBM、121 EFLOPS FP4，能效约为上代 Ironwood 两倍。</p>
+          <p class="label">为何重要</p>
+          <p>云厂商同时自研训练与推理芯片，正在把采购从通用 GPU 拆成场景专用硅片。</p>
+          <p><a href="https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/">原文 · ServeTheHome</a></p>
+        </article>
+        <article class="chip">
+          <p class="label">02  ·  AMD</p>
+          <h3>Helios 72 卡机架</h3>
+          <p>单架 72 颗 MI455X、31TB HBM4、宣称 2.9 EFLOPS，搭配 96 核 Venice 与 Vulcano 网卡。UALoE 走开放以太网。</p>
+          <p class="label">为何重要</p>
+          <p>这是对标英伟达机架系统的完整答卷，开放互连将影响云厂商选型。</p>
+          <p><a href="https://www.servethehome.com/amd-helios-mi400-system-architecture-at-hot-chips-2026/">原文 · ServeTheHome</a></p>
+        </article>
+        <article class="chip">
+          <p class="label">03  ·  Microsoft</p>
+          <h3>Maia 200 入 Azure</h3>
+          <p>台积电 3nm、1400 亿晶体管、6 堆 HBM3e、7TB/s、750W、约 1 万 TFLOPS FP4。软件定义数据流，全以太网规模扩展。</p>
+          <p class="label">为何重要</p>
+          <p>微软把自研加速器从“宣布存在”推进到可部署的系统叙事。</p>
+          <p><a href="https://www.servethehome.com/microsofts-maia-200-accelerator-at-hot-chips-2026/">原文 · ServeTheHome</a></p>
+        </article>
+      </div>
+    </section>
+
+    <article>
+      <p class="eyebrow">科技  04  /  生命科学</p>
+      <h3>中科院通报：人源 UGCG 酶八态结构揭示糖鞘脂“总闸门”</h3>
+      <div class="specs">
+        <div class="spec ink"><b>8</b><span>功能态结构</span></div>
+        <div class="spec"><b>2.9–3.4Å</b><span>冷冻电镜分辨率</span></div>
+        <div class="spec"><b>Nature</b><span>26日夜间上线</span></div>
+      </div>
+      <p class="summary">上海药物所徐华强团队解析人源 UGCG 如何同时抓取水溶性与膜内底物，并发现灵长类特有调控开关。抑制剂或堵住脂质通道，或干扰糖结合口袋。《自然》于26日23时上线，中科院英文科研通报见于27日。</p>
+      <div class="why">
+        <p class="label">为何重要</p>
+        <p>UGCG 是戈谢病等溶酶体贮积病的关键药靶。高清结构把药物设计从筛选试错，推进到可按结合口袋做机制导向优化。</p>
+      </div>
+      <p>
+        <a href="https://english.cas.cn/newsroom/research-news/202608/t20260824_1188705.html">中科院英文通报</a>
+        · <a href="https://www.nature.com/articles/s41586-026-10927-4">Nature 论文</a>
+      </p>
+    </article>
+
+    <footer class="close">
+      <div class="folio" style="color:#C8C2B6">
+        <div class="brand"><span>THE MORNING GAZETTE</span>每日时政科技简报</div>
+        <div class="meta">第239期  ·  2026年8月27日 星期四</div>
+      </div>
+      <div class="rule"></div>
+      <h2>一日收束</h2>
+      <ul>
+        <li>公共事务：吉隆口岸泥石流失联规模扩大至558人，中尼搜救与领事核验并行。</li>
+        <li>中美关系：元首互动仍在沟通，关税传闻与电网紧急令同日成为公开交锋点。</li>
+        <li>开放对照：中瑞自贸升级给出99%零关税数字，与保护主义叙事形成对照。</li>
+        <li>科技主场：Hot Chips 第三日，谷歌、AMD、微软同时深化自研加速器叙事。</li>
+        <li>科学侧记：UGCG 结构为糖脂药靶提供机制模板；国内产业政策稿多见于26日发布会，本期未混入。</li>
+      </ul>
+      <p class="foot">来源：新华社、人民网、中国新闻社、美国之音、ServeTheHome、中国科学院 / Nature。日期口径：Asia/Shanghai 昨日。本期 9 条（时政 5 + 科技 4）。</p>
+    </footer>
+  </div>
+</body>
+</html>
