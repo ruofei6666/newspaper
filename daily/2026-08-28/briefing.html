@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第240期 · 2026-08-28</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 6px;
+      background: var(--crimson);
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .big-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 12px; }
+    .big { background: var(--card); border: 1px solid var(--rule); padding: 18px 22px; border-radius: 6px; }
+    .big b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; }
+    .big span { color: var(--slate); margin-left: 8px; font-size: 14px; }
+    .big p { margin: 8px 0 0; font-size: 15px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .cover h1 { font-size: 36px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .big-grid, .toc { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第240期  ·  2026年8月28日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆零期  ·  二零二六年八月二十八日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>外交 · 救灾 · 宏观</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>词元 · 开源 · 算力</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>交叉核验后入选</em></div>
+      </div>
+      <p class="spine">今日主线：吉隆口岸跨境搜救升至政治局；中美在伊朗制裁威胁与贸易休战延长之间并行；贵阳数博会把「词元」写成产业语言。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>喜马拉雅的泥与华盛顿的制裁，同一天写进中国议程。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “要科学制定搜救方案，全力搜救国内外失联人员……要对尼泊尔受灾地区提供紧急援助，开展国际救援合作。”
+      </div>
+      <div class="facts">
+        <div class="fact"><b>26</b><i>日</i><p>尼泊尔一侧冰川崩塌，泥石流冲入吉隆口岸。</p></div>
+        <div class="fact"><b>28</b><i>日</i><p>政治局开会部署救援，李强已在灾区一线。</p></div>
+        <div class="fact"><b>200</b><i>万立方米</i><p>边境堰塞湖蓄水，溢流一度打断搜救。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">灾情现场</h2>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta">01　公共事务 · 北京</div>
+        <h3>政治局部署吉隆口岸抢险救援</h3>
+        <div class="src">来源：新华社　·　<a href="http://www.news.cn/politics/20260828/d95d0673440d4410bb082cf395d6b184/c.html">news.cn</a></div>
+        <p class="sum">习近平主持中共中央政治局会议，研究西藏日喀则吉隆县泥石流抢险。会议向遇难者默哀，要求科学搜救国内外失联人员、严防堰塞湖次生灾害，并对尼泊尔灾区提供紧急援助。李强已赴一线指导。</p>
+        <div class="why"><strong>为何重要</strong>灾害升至最高政治层级调度，跨境搜救与次生洪水将主导未来数日的公共治理议程。</div>
+      </article>
+      <article class="card">
+        <div class="meta">02　国际人道 · 加德满都 / 吉隆</div>
+        <h3>堰塞湖溢流，尼方确认469人遇难</h3>
+        <div class="src">来源：Al Jazeera / 联合早报　·　<a href="https://www.aljazeera.com/news/2026/8/28/death-toll-from-nepal-tibet-flood-passes-470-as-barrier-lake-threatens">aljazeera.com</a></div>
+        <p class="sum">尼泊尔总理府周五通报：山洪已造成469人遇难、977人失联，约644名失联者为外国人。边境堰塞湖蓄水约200万立方米并溢流，双方一度暂停搜救，后评估风险可控再恢复。</p>
+        <div class="why"><strong>为何重要</strong>这是喜马拉雅冰川崩塌的跨境人道危机，次生洪水仍可能改写伤亡数字与救援窗口。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">外交对照</h2>
+    <p class="section-sub">同一天里，中美既互相施压，也在为九月峰会铺路。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">施压 · 03</div>
+        <h3>特朗普暗示制裁对伊往来中资银行</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：中国新闻网 / 外交部记者会　·　<a href="https://www.chinanews.com.cn/gn/2026/08-28/10685902.shtml">chinanews.com.cn</a></div>
+        <p>林剑回应特朗普“可能制裁仍与伊朗保持业务往来的中国银行”：对话谈判是解决伊朗问题的唯一出路，中方反对非法单边制裁的立场一贯明确。</p>
+        <div class="why"><strong>为何重要</strong>二次制裁威胁与元首会晤准备并行，金融通道成为中美博弈的敏感前线。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">稳住 · 04</div>
+        <h3>釜山贸易休战几近肯定再延一年</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：南华早报独家　·　<a href="https://www.scmp.com/news/china/diplomacy/article/3365440/chinese-executives-may-join-xis-us-trip-trade-truce-extension-almost-certain">scmp.com</a></div>
+        <p>知情人士称去年釜山一年期安排几乎肯定延长。北京希望锁至特朗普任期结束，华盛顿倾向再延一年。双方同时讨论中企高管是否随习近平9月24日访美。</p>
+        <div class="why"><strong>为何重要</strong>休战能否延续，将决定稀土、关税与对华限制的短期可预期性，也框定峰会经济成果。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">宏观与民生</h2>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta">05　宏观经济 · 国家发改委</div>
+        <h3>全国投资工作推进会力推止跌回稳</h3>
+        <div class="src">来源：国家发展改革委　·　<a href="https://www.ndrc.gov.cn/xwdt/xwfb/202608/t20260828_1407266.html">ndrc.gov.cn</a></div>
+        <p class="sum">郑栅洁等主持会议，要求加快专项债发行、投放新型政策性金融工具，推进十五五重大工程与“六张网”建设，并推出民企可参与的重大项目，目标推动投资止跌回稳。</p>
+        <div class="why"><strong>为何重要</strong>投资仍是当前增长的主要短板。会议把财政工具与民间投资放在同一张施工图上。</div>
+      </article>
+      <article class="card">
+        <div class="meta">06　社会政策 · 住建 / 自然资源 / 金监</div>
+        <h3>三部门推行商品房现房销售</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/20260828/b2228e17249b48e3b21a1459430dac87/c.html">news.cn</a></div>
+        <p class="sum">新出让及未取工规证项目优先现房销售；继续预售的须单体封顶，购房款全额入监管账户。现房实行备案与定金制，并推行主办银行制与“交房即交证”。</p>
+        <div class="why"><strong>为何重要</strong>房地产基础制度转向存量时代：改写房企周转模式，也改写购房人资金安全。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>贵阳把「词元」从模型计量单位写成产业政策语言。</p>
+      <div class="stat4">
+        <div><b>87</b><i>项成果</i><p>数博会计划集中发布的制度、标准与产品</p></div>
+        <div><b>12.6</b><i>万个</i><p>全国高质量数据集最新累计规模</p></div>
+        <div><b>1815</b><i>PB</i><p>数据集对应的数据总体量</p></div>
+        <div><b>770B</b><i>总参</i><p>腾讯混元当日开源的 Hy4 preview</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察</div>
+        Hot Chips 已于 24–25 日结束，本日不混入其复述稿。科技版只收 28 日首发：数博会开幕、混元开源、机器人操作系统升级、通信业月报，以及曙光以存储换推理时延的方案。
+      </div>
+    </section>
+
+    <h2 class="section-title">词元与模型</h2>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta">07　产业政策 · 贵阳</div>
+        <h3>数博会开幕，词元成为产业主题</h3>
+        <div class="src">来源：新华网 / C114　·　<a href="https://www.news.cn/photo/20260828/e412e36714ba4ef1a81c07a4d7963c2d/c.html">news.cn</a></div>
+        <p class="sum">2026中国国际大数据产业博览会开幕，主题为“词元——数据要素价值释放新路径”。展会汇聚372家企业，计划发布87项成果；开幕式披露全国高质量数据集超12.6万个、数据量超1815PB。</p>
+        <div class="why"><strong>为何重要</strong>把词元从模型计量单位提升为数据要素交易与产业政策语言，数据市场化进入新阶段。</div>
+      </article>
+      <article class="card">
+        <div class="meta">08　人工智能 · 腾讯混元</div>
+        <h3>混元发布并开源 Hy4 preview</h3>
+        <div class="src">来源：腾讯 / 新华网　·　<a href="https://www.tencent.com/zh-cn/tencent-releases-and-open-sources-tencent-hy4-preview/">tencent.com</a></div>
+        <p class="sum">Hy4 preview 总参数770B、激活49B，上下文突破1M，已开源并上线元宝、CodeBuddy、WorkBuddy。腾讯内部盲测略优于 GLM 5.3 与 Kimi K3；定价为输入6元、输出18元/百万tokens。</p>
+        <div class="why"><strong>为何重要</strong>国产开源旗舰继续卷生产力与百万级上下文，直接改变编程与办公智能体的成本曲线。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">系统与算力</h2>
+    <p class="section-sub">一端是多机协同的操作系统，一端是把重复计算送进缓存的推理方案。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">具身智能 · 09</div>
+        <h3>M-Robots OS 3.0 转向群体智能</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：IT之家　·　<a href="https://www.ithome.com/0/995/737.htm">ithome.com</a></div>
+        <p>深开鸿发布基于开源鸿蒙的机器人操作系统 3.0 Beta，强调组网可信、微秒级硬实时与多机 Agent 协同，并演示无人零售、空地巡检。项目已捐赠开放原子基金会，同步发布全国产人形机器人星行侠 P02。</p>
+        <div class="why"><strong>为何重要</strong>操作系统比单机硬件更能决定机器人能否规模协同，开源底座将影响国产具身智能生态卡位。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">芯片与基础设施 · 10</div>
+        <h3>曙光 ParaCache：以存换算降时延</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：21世纪经济报道 / 爱集微　·　<a href="https://m.21jingji.com/article/20260828/herald/5a5697255b8ba633e6a1c569f749ffa2.html">21jingji.com</a></div>
+        <p>数博会发布的词元加速方案以四级缓存复用 KV 结果，兼容 vLLM 与 SGLang。曙光称 12 万词元输入下首词元时延最高降 98.5% 至约 400 毫秒，高并发吞吐最高提升 27 倍，已在曙光 8000 验证。</p>
+        <div class="why"><strong>为何重要</strong>推理瓶颈正从芯片峰值转向存储与缓存调度，「以存换算」成为国产算力降本的现实路径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">连接规模</h2>
+    <p class="section-sub">11　工信部发布 2026 年前 7 个月通信业运行情况</p>
+    <div class="big-grid">
+      <div class="big"><b>13.03</b><span>亿户</span><p>5G 移动电话用户，占移动用户 70.5%</p></div>
+      <div class="big"><b>515.4</b><span>万个</span><p>5G 基站，较上年末净增 31.6 万</p></div>
+      <div class="big"><b>−2.1%</b><span>收入</span><p>电信业务收入 1.02 万亿元，同比仍降</p></div>
+      <div class="big"><b>+17.6%</b><span>流量</span><p>移动互联网累计流量 2587 亿 GB</p></div>
+    </div>
+    <p class="section-sub">为何重要：连接规模继续扩张，但收入与流量背离，显示通信业向算力与智能服务转型的压力加大。来源：工业和信息化部（经公开转载核对，官网原文链接未能稳定打开）。</p>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第240期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">救灾要抢时间，外交要控预期，科技在把「词元」从实验室搬进交易与操作系统。三条线互不替代，却同在 8 月 28 日交汇。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>政治局部署吉隆口岸抢险</li>
+            <li>尼泊尔 469 遇难，堰塞湖溢流</li>
+            <li>中方回应美威胁制裁中资银行</li>
+            <li>釜山贸易休战几近肯定延长</li>
+            <li>稳投资推进会：专项债与六张网</li>
+            <li>商品房销售转向现房优先</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条</h4>
+          <ol>
+            <li>数博会开幕，词元成为主题</li>
+            <li>混元 Hy4 preview 开源</li>
+            <li>M-Robots OS 3.0 群体智能</li>
+            <li>曙光 ParaCache 降推理时延</li>
+            <li>5G 用户突破 13.03 亿户</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-08-28）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。缺口：工信部月报以转载稿核对，官网原文链接未能稳定打开。未混入 Hot Chips（8月24–25日）复述稿。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
