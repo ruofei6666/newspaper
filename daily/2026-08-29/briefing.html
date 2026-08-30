@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第241期 · 2026-08-29</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--crimson);
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .big-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 12px; }
+    .big { background: var(--card); border: 1px solid var(--rule); padding: 18px 22px; border-radius: 6px; }
+    .big b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; }
+    .big span { color: var(--slate); margin-left: 8px; font-size: 14px; }
+    .big p { margin: 8px 0 0; font-size: 15px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .big-grid, .toc { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第241期  ·  2026年8月29日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆壹期  ·  二零二六年八月二十九日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>04</b><span>时政</span><em>救灾 · 能源 · 宏观</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>模型 · 芯片 · 航天</em></div>
+        <div class="metric"><b>08</b><span>合计</span><em>交叉核验后入选</em></div>
+      </div>
+      <p class="spine">今日主线：吉隆口岸搜救进入黄金72小时收口；美委石油协议与霍尔木兹复航条件同日改写油市预期；模型供应首次被公开用作控制权变更后的竞争武器。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>喜马拉雅的72小时，与西半球的石油、海湾的航道，在同一张周六版面上交汇。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “只要有一丝希望，就绝不放弃。”——吉隆受灾核心区，消防搜救队在黄金72小时最后阶段仍反复呼喊。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>7</b><i>遇难</i><p>截至29日1时，吉隆口岸已确认7人遇难。</p></div>
+        <div class="fact"><b>554</b><i>失联</i><p>失联规模仍高，跨境搜救窗口正在收口。</p></div>
+        <div class="fact"><b>72</b><i>小时</i><p>29日是黄金救援窗口的最后关键阶段。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">现场与协议</h2>
+    <p class="section-sub">一端是口岸废墟里的搜救，一端是白宫社交账号上的「史上最大」石油交易。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　公共事务 · 吉隆</div>
+        <h3>吉隆搜救进入黄金72小时收口</h3>
+        <div class="src">来源：新民晚报 / 央视　·　<a href="https://www.163.com/dy/article/L5GLLMRP0512DU6N.html">163.com</a></div>
+        <p class="sum">截至29日1时，吉隆口岸泥石流已造成7人遇难、554人失联。当日进入黄金72小时最后阶段，消防与边防推进至国门附近拉网搜救，凌晨无人机向核心区投送物资。</p>
+        <div class="why"><strong>为何重要</strong>72小时窗口收口，失联规模仍高，次生灾害与跨境搜救将决定最终伤亡。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　能源外交 · 华盛顿 / 加拉加斯</div>
+        <h3>美委宣布「史上最大」石油协议</h3>
+        <div class="src">来源：中国新闻网 / 联合早报　·　<a href="https://www.chinanews.com.cn/gj/2026/08-29/10686272.shtml">chinanews.com.cn</a></div>
+        <p class="sum">特朗普当地时间28日晚宣布与委内瑞拉达成「史上最大石油协议」，称获逾650亿桶储量多数控制权；代总统罗德里格斯证实覆盖17个油田、投资超1000亿美元。白宫尚未发正式文本。</p>
+        <div class="why"><strong>为何重要</strong>霍尔木兹受阻、中期选举临近，西半球石油成为美方压油价与重塑地区秩序的筹码。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">海峡与利率</h2>
+    <p class="section-sub">油轮过不去，加息预期却先动了。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">航道 · 03</div>
+        <h3>伊朗：霍尔木兹谅解不自动生效</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：安纳多卢通讯社 / 塔斯尼姆　·　<a href="https://www.aa.com.tr/en/americas/iran-says-hormuz-transit-understanding-with-oman-contingent-on-us-fulfilling-commitments/4041221">aa.com.tr</a></div>
+        <p>伊朗副外长加里巴巴迪29日称，伊阿已就霍尔木兹通行达成谅解，但不会自动实施，须待美方履行伊斯兰堡备忘录。他强调海峡仍关闭，未经协调船只不得通行。</p>
+        <div class="why"><strong>为何重要</strong>复航与否直接牵动全球油价与通胀：技术安排已有，政治开关仍握在美伊手里。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">宏观 · 04</div>
+        <h3>沃什霍尔首秀释放加息信号</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：澎湃新闻 / 环球市场播报　·　<a href="https://www.thepaper.cn/newsDetail_forward_33971056">thepaper.cn</a></div>
+        <p>美联储主席沃什在杰克逊霍尔首秀称，PCE同比3.7%、六个月年化4.1%，夏季降温不足以证明趋势好转。期货隐含9月加息概率由约35%升至近六成。</p>
+        <div class="why"><strong>为何重要</strong>新主席把抗通胀重新钉死在2%，全球利率、美元与风险资产定价随之改写。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>模型不再中立分发，芯片名单被拖进法庭，巡天望远镜已上垫。</p>
+      <div class="stat4">
+        <div><b>11.12</b><i>切断日</i><p>OpenAI 拟停止向 Cursor 供应模型</p></div>
+        <div><b>5%</b><i>流量</i><p>Cursor 称 GPT 约占其用户流量</p></div>
+        <div><b>1260H</b><i>清单</i><p>长鑫起诉五角大楼要求除名</p></div>
+        <div><b>43</b><i>亿美元</i><p>罗曼望远镜任务全周期造价</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察</div>
+        未混入 28 日数博会、混元 Hy4、a16z 基金及英伟达收购 Hugging Face 的复述稿；亦未收入华为三折叠预热营销。远程算力管制的独家见于 28 日 21 时沪，29 日产业媒体完成法律交叉核验后收入。
+      </div>
+    </section>
+
+    <h2 class="section-title">模型与名单</h2>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　人工智能 · 旧金山</div>
+        <h3>OpenAI 将切断 Cursor 模型</h3>
+        <div class="src">来源：路透社 / IT之家　·　<a href="https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/">reuters.com</a></div>
+        <p class="sum">OpenAI 通知 SpaceX，拟于 11 月 12 日终止向 Cursor 供应模型，理由是无法确信马斯克体系会遵守条款。马斯克 29 日称「毫不在意」；Cursor 称 GPT 约占流量 5%；Anthropic 宣布加码算力。</p>
+        <div class="why"><strong>为何重要</strong>模型供应首次被公开用作控制权变更后的竞争武器，编程工具中立分发时代结束。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　芯片 · 华盛顿</div>
+        <h3>长鑫起诉五角大楼求除名</h3>
+        <div class="src">来源：IT之家 / 路透社　·　<a href="https://www.ithome.com/0/995/964.htm">ithome.com</a></div>
+        <p class="sum">长鑫存储在哥伦比亚特区联邦法院起诉美国国防部及赫格塞思，要求撤销 1260H「中国军事公司」认定。公司称芯片供民用、列名缺乏证据；五角大楼曾在 2 月拟除名当日撤回。</p>
+        <div class="why"><strong>为何重要</strong>中国最大 DRAM 厂把涉军清单拖进法庭，考验美国出口管制名单的证据与正当程序。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">算力边界</h2>
+    <p class="section-sub">一端是云端租卡的新禁令草案，一端是巡天望远镜已上发射台。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">出口管制 · 07</div>
+        <h3>美拟管远程租卡，律师质疑执法权</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Tom's Hardware / TechTimes　·　<a href="https://www.techtimes.com/articles/325957/20260829/commerce-drafts-ai-chip-rule-loophole-it-created-rescinding-biden-know-your-customer.htm">techtimes.com</a></div>
+        <p>29 日产业媒体交叉核验：商务部正起草规则，拟限制中国企业经泰国、新加坡等地数据中心远程租用高端 GPU，草案或于 9 月征求业界意见。出口法务律师指现有权限只管实物跨境，远程算力执法权存疑。</p>
+        <div class="why"><strong>为何重要</strong>算力管制从「芯片出境」扩到「云端遥控」，将改写东南亚机房与中国模型训练的合规边界。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科学突破 · 08</div>
+        <h3>罗曼望远镜明日 Falcon Heavy 升空</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Spaceflight Now　·　<a href="https://spaceflightnow.com/2026/08/29/roman-space-telescope-nasas-next-great-observatory-poised-for-sunday-launch/">spaceflightnow.com</a></div>
+        <p>Falcon Heavy 已运抵肯尼迪 39A，计划 30 日 7:26 EDT 发射造价 43 亿美元的罗曼空间望远镜。300 兆像素广域相机巡天速度约哈勃千倍，将探测暗能量并搜寻逾 10 万颗系外行星。</p>
+        <div class="why"><strong>为何重要</strong>下一代巡天台将把宇宙学张力与宜居行星搜寻同时推入大数据时代。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">明日升空 · 数字</h2>
+    <p class="section-sub">08　补充数字　南希·格雷斯·罗曼空间望远镜</p>
+    <div class="big-grid">
+      <div class="big"><b>7:26</b><span>EDT</span><p>Falcon Heavy 计划 30 日自 39A 发射罗曼望远镜</p></div>
+      <div class="big"><b>300</b><span>兆像素</span><p>广域红外相机单幅约覆盖 45 个街区</p></div>
+      <div class="big"><b>1000×</b><span>巡天</span><p>扫描速度约为哈勃空间望远镜的千倍</p></div>
+      <div class="big"><b>10万+</b><span>行星</span><p>预期发现逾 10 万颗系外行星</p></div>
+    </div>
+    <p class="section-sub">Falcon Heavy 已于周五夜间运抵发射台。造价 43 亿美元的南希·格雷斯·罗曼空间望远镜将前往日地 L2，用哈勃同级镜面做广域巡天，同时以主动日冕仪探测暗能量并拍摄系外行星。为何重要：下一代巡天台将把宇宙学张力与宜居行星搜寻同时推入大数据时代。</p>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第241期 · 收束</span>
+        <span class="iss">08 / 08</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">救人要抢小时，石油要写合同，模型要选阵营。周六的新闻不热闹，但三条线都在改规则：救援窗口、能源通道、算力分发。</p>
+      <div class="toc">
+        <div>
+          <h4>时政四条</h4>
+          <ol>
+            <li>吉隆搜救进入黄金72小时收口</li>
+            <li>美委宣布「史上最大」石油协议</li>
+            <li>伊朗：霍尔木兹谅解不自动生效</li>
+            <li>沃什霍尔首秀释放加息信号</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>OpenAI 将切断 Cursor 模型</li>
+            <li>长鑫起诉五角大楼求除名</li>
+            <li>美拟管远程租卡，律师质疑执法权</li>
+            <li>罗曼望远镜明日 Falcon Heavy 升空</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-08-29）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。美委协议与沃什演讲按当地时间换算后落入沪时 29 日。远程算力管制独家见于 28 日 21:05 沪时，29 日 Tom's Hardware 与 TechTimes 完成交叉核验后收入。未混入 28 日数博会、混元 Hy4、a16z 基金或英伟达—Hugging Face 复述稿。Firecrawl 未完成鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
