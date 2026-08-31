@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第242期 · 2026-08-30</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--crimson);
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card h3 { font-size: 28pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 28pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .big-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 12px; }
+    .big { background: var(--card); border: 1px solid var(--rule); padding: 18px 22px; border-radius: 6px; }
+    .big b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; }
+    .big span { color: var(--slate); margin-left: 8px; font-size: 14px; }
+    .big p { margin: 8px 0 0; font-size: 15px; }
+
+    .gap-card {
+      background: var(--card);
+      border: 1px dashed var(--crimson);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gap-card h3 { font-size: 28pt; margin: 8px 0 10px; color: var(--crimson); }
+    .gap-card ul { margin: 0; padding-left: 20px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .big-grid, .toc { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第242期  ·  2026年8月30日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆贰期  ·  二零二六年八月三十日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>外交 · 救灾 · 能源</em></div>
+        <div class="metric"><b>02</b><span>科技</span><em>航天 · 算电力</em></div>
+        <div class="metric"><b>07</b><span>合计</span><em>科技首发不足</em></div>
+      </div>
+      <p class="spine">今日主线：元首外交落到比什凯克跑道；吉隆与尼泊尔同日交出新伤亡与成因；美委石油协议改口「主权」；罗曼望远镜按点升空。人工智能与芯片周日几乎没有可核验的首发。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>喜马拉雅两侧同时点名，天山脚下同时迎客。一条冰川改写了两条国境线的伤亡账本，一架专机打开了上合二十五周年的议程。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “全体起立，向在吉隆「8·26」泥石流灾害中遇难的人员默哀。”——西藏自治区主席嘎玛泽登在吉隆镇发布会开场。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>16</b><i>遇难 · 中方</i><p>截至29日18时，吉隆口岸确认16人遇难、546人失联。</p></div>
+        <div class="fact"><b>788</b><i>遇难 · 尼方</i><p>尼泊尔警方30日称已寻获788具遗体，约2502人仍失联。</p></div>
+        <div class="fact"><b>261</b><i>外籍失联</i><p>中方排查失联外籍人员261人，分属23个国家。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">口岸与峰会</h2>
+    <p class="section-sub">一端是废墟里的身份识别，一端是玛纳斯机场的红毯与猎鹰。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　公共事务 · 吉隆</div>
+        <h3>吉隆发布会：16人遇难，成因查明</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/20260830/240c5417e97049ebb532643b6838347b/c.html">news.cn</a></div>
+        <p class="sum">30日西藏自治区在吉隆镇举行发布会：截至29日18时，灾害致16人遇难、546人失联。中科院称26日10时52分尼泊尔蓝塘里壤峰约5200米处冰川断裂，泥石流冲击22公里，夷平口岸0.7平方公里、27处建筑。已排查失联外籍261人、23国。</p>
+        <div class="why"><strong>为何重要</strong>官方首次完整公布伤亡、外籍失联规模与冰川成因，搜救从黄金72小时转入身份识别与次生灾害防控。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 比什凯克</div>
+        <h3>习近平抵达比什凯克出席上合峰会</h3>
+        <div class="src">来源：新华社 / 央视　·　<a href="https://news.cctv.com/2026/08/30/ARTINbOQ0LhlWAtkY8gWr5sV260830.shtml">cctv.com</a></div>
+        <p class="sum">当地时间30日下午，习近平乘专机抵达比什凯克，应扎帕罗夫邀请出席上合峰会并对吉尔吉斯斯坦国事访问。书面讲话称中吉合作迎「黄金期」，将商中吉乌铁路等并擘画命运共同体。行程至9月3日，随后将访埃及。</p>
+        <div class="why"><strong>为何重要</strong>上合成立25周年峰会开幕在即，元首外交从中亚互联互通延伸到中东能源通道。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">下游与油权</h2>
+    <p class="section-sub">同一条冰川冲向加德满都的河谷；同一份石油协议，华盛顿说控股，加拉加斯说主权。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 03</div>
+        <h3>尼泊尔洪灾遇难升至788</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：The Hindu / HimalPress　·　<a href="https://www.thehindu.com/news/international/nepal-struggles-to-preserve-recovered-bodies-as-flood-toll-crosses-700/article71408214.ece">thehindu.com</a></div>
+        <p>尼泊尔警方30日称已寻获788具遗体，约2502人仍失联。外长呼吁提供冷冻柜与DNA试剂；水电工地逾900人失联，约100人据信仍困隧道。印中韩专家协助搜救。达丁县滑坡导致连接加德满都的普里特维公路中断。</p>
+        <div class="why"><strong>为何重要</strong>同源冰川泥石流在尼侧伤亡远超中方口岸，遗体保存与交通中断使跨境救援进入更艰难阶段。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">能源外交 · 04</div>
+        <h3>委方称石油协议未丧主权</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：半岛电视台 / 卫报　·　<a href="https://www.aljazeera.com/news/2026/8/30/venezuela-says-it-retains-sovereignty-following-us-oil-deal">aljazeera.com</a></div>
+        <p>罗德里格斯30日发表电视讲话，称与美方25年协议下委方保留资源所有权与主权；17个战略油田、目标日产150万桶，每桶约19美元入账。特朗普周五称美方获650亿桶多数控制权，白宫尚未发正式文本。</p>
+        <div class="why"><strong>为何重要</strong>同一协议出现「美方控股」与「委方主权」两种叙事，西半球石油秩序的法律基础尚未落纸。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">海湾动员</h2>
+    <p class="section-sub">新领袖以圣纪贺词发声，复航谈判被拉回阵营语言。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　外交 · 德黑兰</div>
+        <h3>哈梅内伊吁海湾认清「真正敌人」</h3>
+        <div class="src">来源：半岛电视台　·　<a href="https://www.aljazeera.com/news/2026/8/30/irans-khamenei-calls-for-gulf-unity-as-hormuz-tensions-persist">aljazeera.com</a></div>
+        <p class="sum">伊朗最高领袖穆杰塔巴·哈梅内伊30日发表圣纪贺词，敦促海湾与西亚伊斯兰国家认清「真正敌人」并加以对抗。他自2月28日美以打击致其父遇害后未再公开露面。贺词发布时霍尔木兹仍关闭。</p>
+        <div class="why"><strong>为何重要</strong>新领袖把复航从技术安排拉回阵营动员，海湾斡旋空间更窄。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>海峡数字 · 补充</div>
+        <h3>约400艘船仍困在海湾</h3>
+        <div class="src">来源：国际海事组织 / 路透　·　半岛电视台30日转述</div>
+        <p class="sum">国际海事组织周五称，自美以对伊开战后，最多约400艘船、6000名海员无法安全离开海湾。路透援引Kpler：周四仅7艘商品船过峡，低于十日均值15艘。加里巴巴迪周六「不自动复航」表态已见于昨刊，本日不重收。</p>
+        <div class="why"><strong>为何重要</strong>物理过境量仍接近停摆，贺词并不能替代美伊履约这个开关。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>巡天台按点离开地面；算力的下一只瓶颈，被指到了铸件车间。</p>
+      <div class="stat4">
+        <div><b>7:26</b><i>EDT</i><p>猎鹰重型送罗曼望远镜升空</p></div>
+        <div><b>1.4</b><i>TB / 日</i><p>NASA称其为天体物理最高回传</p></div>
+        <div><b>18</b><i>个月</i><p>马斯克称自铸叶片可提前投运</p></div>
+        <div><b>02</b><i>首发</i><p>周日可核验科技仅两条</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">信息不足 · 编辑观察</div>
+        周日科技首发偏薄。已核验并排除：地月激光通信（中科院26日宣布，27–30日复述）；TechInsights麒麟9030 Pro制程报告（27日官网，29–30日转载）；Apple M6 / M5 Ultra（25日新闻室）；Recuris论文（25日提交arXiv）；OpenAI Astra「首测」（未官方发布，属灰度传闻）。亦未混入29日OpenAI断供Cursor、长鑫起诉、远程租卡草案。
+      </div>
+    </section>
+
+    <h2 class="section-title">升空与铸件</h2>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　科学突破 · 肯尼迪</div>
+        <h3>罗曼望远镜搭乘猎鹰重型升空</h3>
+        <div class="src">来源：NASA / 新华社　·　<a href="https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches/">nasa.gov</a></div>
+        <p class="sum">美东时间30日7:26（北京时间19:26），造价43亿美元的南希·格雷斯·罗曼空间望远镜由猎鹰重型从肯尼迪39A发射。约31分钟后与上级分离，侧助推器回收，太阳能板已展开。将飞往日地L2，日回传1.4TB，首图预计2027年初。</p>
+        <div class="why"><strong>为何重要</strong>下一代巡天台按期按预算升空，暗能量与系外行星普查进入广域大数据阶段。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　产业 · 巴斯卓普</div>
+        <h3>马斯克确认自建燃机叶片铸造厂</h3>
+        <div class="src">来源：IT之家 / TechCrunch　·　<a href="https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/">techcrunch.com</a></div>
+        <p class="sum">马斯克确认SpaceX正于得州巴斯卓普筹建燃气轮机动叶与静叶铸造厂，称可把燃机投运最多提前18个月。The Information指全球仅数家厂能量产热端叶片，订单排至2030年。SpaceX与特斯拉还各规划年产100GW光伏。</p>
+        <div class="why"><strong>为何重要</strong>AI算力瓶颈从芯片排产转到电力与铸件，铸造能力可能成为新的基础设施壁垒。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">升空之后 · 数字</h2>
+    <p class="section-sub">06　补充数字　南希·格雷斯·罗曼空间望远镜</p>
+    <div class="big-grid">
+      <div class="big"><b>7:26</b><span>EDT</span><p>猎鹰重型自肯尼迪39A升空，北京时间19:26</p></div>
+      <div class="big"><b>300</b><span>兆像素</span><p>宽视场红外相机，巡天速度约哈勃千倍</p></div>
+      <div class="big"><b>1.4</b><span>TB / 日</span><p>NASA称其为迄今天体物理任务最高回传</p></div>
+      <div class="big"><b>2027</b><span>年初</span><p>约三个月飞抵L2后，预计发布首批科学图像</p></div>
+    </div>
+    <article class="gap-card" style="margin-top:22px;">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科技缺口</div>
+      <h3>模型、芯片、互联网：信息不足</h3>
+      <p>交叉检索中英科技媒体与官方新闻室后，未找到8月30日（沪时）可确认的大模型发布、芯片量产节点或互联网平台重大规则变更。与其用复述稿凑满四至六条，本刊选择留白，并在收束页列出排除清单。</p>
+    </article>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第242期 · 收束</span>
+        <span class="iss">07 / 07</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">救人要报数字，出访要落跑道，石油要争解释权，望远镜要先离开地面。周日的新闻不热闹，但四条线都在改现场：伤亡账本、欧亚议程、油权叙事、巡天时间表。科技栏则诚实留白。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>吉隆发布会：16人遇难，成因查明</li>
+            <li>习近平抵达比什凯克出席上合峰会</li>
+            <li>尼泊尔洪灾遇难升至788</li>
+            <li>委方称石油协议未丧主权</li>
+            <li>哈梅内伊吁海湾认清「真正敌人」</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技二条 · 缺口</h4>
+          <ol>
+            <li>罗曼望远镜搭乘猎鹰重型升空</li>
+            <li>马斯克确认自建燃机叶片铸造厂</li>
+            <li>模型 / 芯片 / 互联网：信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-08-30，星期日）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。美委协议的「主权」讲话按当地周六换算后落入沪时30日；罗曼发射为美东30日清晨、北京时间30日晚。未混入29日霍尔木兹「不自动复航」、沃什霍尔加息、OpenAI断供Cursor。未收入26–29日已首发的地月激光、TechInsights麒麟报告、Apple M6、Recuris论文。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
