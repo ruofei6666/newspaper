@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第244期 · 2026-09-01</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--crimson);
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card h3 { font-size: 22pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 22pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .split { display: grid; grid-template-columns: 1.7fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 16px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 28px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .side-card { background: var(--card); border: 1px solid var(--rule); padding: 20px 22px; border-radius: 6px; }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .side-card p { margin: 8px 0 0; font-size: 14px; color: var(--slate); }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 20pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第244期  ·  2026年9月1日  ·  星期二</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆肆期  ·  二零二六年九月一日  ·  星期二</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>峰会 · 口岸 · 河谷</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>交接 · 开源 · 巡天</em></div>
+        <div class="metric"><b>09</b><span>合计</span><em>周二首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：比什凯克把二十五周年写成宣言和二十八份文件；吉隆把路抢到国门一公里内，尼侧伤亡账本跨过千人。科技栏：特纳斯接过苹果，讯飞把百万上下文放到端侧，罗曼遮阳罩弹起、日冕仪苏醒。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>比什凯克把峰会开成交椅日；喜马拉雅两侧把同一条冰川写成两本还在改写的伤亡账。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “站在关乎人类前途命运的十字路口，上海合作组织应该勇担历史责任，主动引领历史航向。”——习近平在比什凯克，据新华社。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>28</b><i>份成果文件</i><p>元首理事会批准宪章议定书、安全与禁毒中心条例等，巴基斯坦接任主席国。</p></div>
+        <div class="fact"><b>1010</b><i>遇难 · 尼方</i><p>减灾部门1日上午报987，警方稍后称已发现1010具遗体。</p></div>
+        <div class="fact"><b>1 km</b><i>距口岸</i><p>G216线1日10时50分抢通至吉隆口岸一公里以内。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">宣言与扩桌</h2>
+    <p class="section-sub">上午交椅换手，下午把议题推到联合国在场的那张更大的桌子上。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 比什凯克</div>
+        <h3>上合元首理事会通过比什凯克宣言，巴方接任主席国</h3>
+        <div class="src">来源：新华社 / 央视　·　<a href="https://news.cctv.com/2026/09/01/ARTIuLNBLHB7PPOhQOeAT5AA260901.shtml">news.cctv.com</a></div>
+        <p class="sum">当地时间1日上午，习近平出席上合组织成员国元首理事会第二十六次会议，发表《推动上海合作组织实现更高质量发展》。成员国签署二十五周年比什凯克宣言，批准宪章议定书等，通过28份成果文件，巴基斯坦接任2026–2027年度轮值主席国。</p>
+        <div class="why"><strong>为何重要</strong>成立25周年节点，组织把发展战略、安全中心与主席国交接一次落纸。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 比什凯克</div>
+        <h3>习近平在「上合组织+」倡议平等有序的世界多极化</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/leaders/20260901/a19fa9a116d24434a6ce30356fb00b82/c.html">news.cn</a></div>
+        <p class="sum">当地时间1日下午，习近平出席「上合组织+」会议，发表《共同倡导平等有序的世界多极化 实现更加公正合理的全球治理》。扎帕罗夫主持，成员国及蒙古、埃及、土耳其、越南等受邀国领导人和联合国秘书长古特雷斯等出席。</p>
+        <div class="why"><strong>为何重要</strong>把上合扩成全球治理对话台，把多极化主张讲给观察员、对话伙伴和联合国听。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">口岸与河谷</h2>
+    <p class="section-sub">同一条冰川：北岸把路抢到一公里，南岸在隧道口与泥浆对峙。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">公共事务 · 03</div>
+        <h3>吉隆救援第七日，G216抢通至口岸一公里内</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260901_3186186.shtml">ce.cn</a></div>
+        <p>新华社1日电，10时50分许G216线已抢通至距吉隆口岸一公里以内；口岸附近新开一座4/5G基站。军地连夜照明抢修，西藏军区已出动5架次直升机投送物资。上午9时55分，各救援点为遇难者默哀。伤亡仍为16遇难、546失联。</p>
+        <div class="why"><strong>为何重要</strong>道路距国门只剩最后一公里，搜救从「进得去」转入「抵口岸」。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 04</div>
+        <h3>尼泊尔遇难人数破千，水电隧道仍未见生还</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：德国之声 / 红星新闻　·　<a href="https://www.dw.com/zh/%E4%B8%AD%E5%B0%BC%E8%BE%B9%E5%A2%83%E6%B3%A5%E7%9F%B3%E6%B5%81%E7%81%BE%E5%AE%B3%E9%81%87%E9%9A%BE%E4%BA%BA%E6%95%B0%E8%B6%85%E8%BF%87%E5%8D%83%E4%BA%BA/a-78585641">dw.com</a></div>
+        <p>尼泊尔减灾部门1日通报，截至9时确认987人遇难、3916人失踪；警方稍后称已发现1010具遗体。12处水电项目约900名工人下落不明，约500人据信困在隧道。军方称三条灌泥隧道仅寻获4具遗体，一处地下厂房距作业面仍有183米。</p>
+        <div class="why"><strong>为何重要</strong>同源冰川灾害南岸账本跨过千人门槛，隧道窗口还在与泥浆和氧气赛跑。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">记者会与口径</h2>
+    <p class="section-sub">比什凯克会晤次日，北京给出免签与南太两条官方句子。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　外交 · 北京</div>
+        <h3>外交部回应中俄免签永久化，驳斥干涉所罗门传言</h3>
+        <div class="src">来源：中新社 / 央视新闻　·　<a href="https://www.chinanews.com.cn/gn/2026/09-01/10687900.shtml">chinanews.com.cn</a></div>
+        <p class="sum">郭嘉昆1日主持例行记者会。就普京「愿将免签转为永久安排」称，中俄相互免签体现高水平战略互信，便利人员往来。就新西兰外长暗示中方介入所罗门总理不信任案，称中方不干涉内政，有关说法毫无根据。</p>
+        <div class="why"><strong>为何重要</strong>比什凯克会晤次日给出官方口径，同时划清南太岛国内政边界。</div>
+      </article>
+      <div>
+        <div class="dark-note">
+          <div class="lab">时区边界 · 未收入</div>
+          美军中央司令部称美东时间1日正午开始打击伊朗革命卫队目标。该时点合北京时间9月2日0时，已出本刊采编窗，不提前收入。
+        </div>
+        <div class="side-card">
+          <b>100</b>
+          <i>个科技合作项目</i>
+          <p>习在元首理事会提出，未来三年同上合国家联合实施，并建国际人工智能应用合作中心。</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>库比蒂诺换主事人；合肥把百万上下文放到端侧；飞往L2的巡天台先挡光、再点亮日冕仪。</p>
+      <div class="stat4">
+        <div><b>9/1</b><i>接任</i><p>特纳斯正式出任苹果CEO</p></div>
+        <div><b>100万</b><i>Token</i><p>星火X2.5端侧原生上下文</p></div>
+        <div><b>6:05</b><i>EDT</i><p>罗曼遮阳罩展开完成</p></div>
+        <div><b>8:22</b><i>EDT</i><p>日冕仪上电完成</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单</div>
+        未混入：英伟达35亿美元入股联发科（8月31日美东首发，已见昨刊，1日为股价与分析复述）；工信部应用服务商专项（31日公开发布）；寒序uHBM架构（31日公布）；燧原科创板定价142.18元（31日晚公告）；苹果诉OpenAI补充证据（31日向法院提交）；罗曼天线展开（31日14:03 EDT完成，1日博客补记）。美伊新一轮交火见时政页时区说明。
+      </div>
+    </section>
+
+    <h2 class="section-title">交接与开源</h2>
+    <p class="section-sub">一端换主事人，一端把长上下文从云端卸到手机和座舱。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　互联网 · 库比蒂诺</div>
+        <h3>约翰·特纳斯正式出任苹果CEO</h3>
+        <div class="src">来源：MacRumors / 美联社　·　<a href="https://www.macrumors.com/2026/09/01/john-ternus-is-now-apple-ceo/">macrumors.com</a></div>
+        <p class="sum">苹果领导层页面1日显示，原硬件工程高级副总裁约翰·特纳斯已接任CEO，库克转任董事会执行主席。交接于4月宣布、9月1日生效。特纳斯将主持9月9日秋季发布会，外界预计推出iPhone 18 Pro及首款折叠机。</p>
+        <div class="why"><strong>为何重要</strong>15年库克时代正式交棒，硬件出身的新帅要在一周内主持关键产品发布。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　人工智能 · 合肥</div>
+        <h3>讯飞开源星火X2.5端侧模型，原生百万Token上下文</h3>
+        <div class="src">来源：新京报 / IT之家　·　<a href="https://www.bjnews.com.cn/detail/1788270778129337.html">bjnews.com.cn</a></div>
+        <p class="sum">词元星火1日开源星火X2.5-4B与1.7B，称是端侧首个原生支持100万Token上下文的通用模型。全国产算力全流程训练，约20万亿Token预训练，适配英伟达、华为、海光等。权重已上Hugging Face。9月7日将发布293B基座。</p>
+        <div class="why"><strong>为何重要</strong>百万上下文下放到可断网的端侧，国产算力训练路线第一次有可下载的对照物。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">挡光与苏醒</h2>
+    <p class="section-sub">先把帽檐弹起来，再点亮那台专门用来「看不见恒星」的相机。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　科学突破 · 深空</div>
+        <h3>罗曼望远镜遮阳罩展开</h3>
+        <div class="src">来源：NASA科学博客　·　<a href="https://science.nasa.gov/blogs/roman/2026/09/01/nasa-roman-space-telescopes-antenna-visor-deployed/">science.nasa.gov</a></div>
+        <p class="sum">NASA 1日称，可展开孔径罩于美东时间1日6:05完成展开，历时约8分钟，由三根电子触发支臂弹起，用于挡住杂散光。高增益天线已于31日14:03展开，本日不重收。宽视场仪器预计数周后上电，首批公开图像最早2027年初。</p>
+        <div class="why"><strong>为何重要</strong>光学开口被护住，巡天台从「飞起来」进入「挡得住杂光」的在轨组装阶段。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　科学突破 · 深空</div>
+        <h3>罗曼日冕仪上电，准备直接为系外行星拍照</h3>
+        <div class="src">来源：NASA科学博客　·　<a href="https://science.nasa.gov/blogs/roman/2026/09/01/nasa-romans-planet-imager-has-powered-on/">science.nasa.gov</a></div>
+        <p class="sum">NASA称，日冕仪于美东时间1日7:27开始上电，8:22完成。该仪器用光学元件、掩模与可变形镜挡住恒星眩光，以拍摄更冷、更老、轨道更近的巨行星。随后将进行数月标定，任务首一年半内累计观测约三个月。</p>
+        <div class="why"><strong>为何重要</strong>升空第三天最先进的星光抑制仪器苏醒，直接成像系外行星从设计走进在轨调试。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第244期 · 收束</span>
+        <span class="iss">09 / 09</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">峰会要交椅，口岸要抢通最后一公里，河谷要把千人账本写成隧道口的作业面。周二不是周一的复述：比什凯克交出宣言和二十八份文件，尼泊尔伤亡跨过一千，苹果换主事人，端侧第一次宣称百万上下文，巡天台先挡光再点亮日冕仪。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>上合元首理事会通过比什凯克宣言，巴方接任主席国</li>
+            <li>习近平在「上合组织+」倡议平等有序的世界多极化</li>
+            <li>吉隆救援第七日，G216抢通至口岸一公里内</li>
+            <li>尼泊尔遇难人数破千，水电隧道仍未见生还</li>
+            <li>外交部回应中俄免签永久化，驳斥干涉所罗门传言</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>约翰·特纳斯正式出任苹果CEO</li>
+            <li>讯飞开源星火X2.5端侧模型，原生百万Token上下文</li>
+            <li>罗曼望远镜遮阳罩展开</li>
+            <li>罗曼日冕仪上电，准备直接为系外行星拍照</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-01，星期二）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入8月31日中吉条约、习普会、英伟达入股联发科、工信部专项、库克最后一天、罗曼中途修正与天线展开。美军中央司令部正午打击合北京时间9月2日0时，不提前收入。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
