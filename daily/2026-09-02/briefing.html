@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第245期 · 2026-09-02</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第245期  ·  2026年9月2日  ·  星期三</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆伍期  ·  二零二六年九月二日  ·  星期三</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>开罗 · 海峡 · 口岸</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>管线 · 核糖体 · 超表面</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周三首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：开罗把中东安全新架构写成四点倡议；霍尔木兹再响交火，吉隆把路抢进核心区，尼侧伤亡账本继续上修。科技栏：高通把矩阵核塞进GPU切片，《自然》让核糖体读自己、让基因跨染色体拼蛋白，中埃把人工智能写进建交七十年的文本。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>比什凯克交椅次日，专机落到尼罗河；同一条冰川的南北两岸，一边通了路，一边还在数遗体。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “坚持中东地区人民自己当家作主，反对外部势力干涉……巴勒斯坦问题仍是中东问题的核心，任何时候都不应该被忽视和边缘化。”——习近平在开罗，据新华社。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>4</b><i>点倡议</i><p>地区自主、综合治理、以发展筑安全、国际协同，写进中东安全新架构。</p></div>
+        <div class="fact"><b>21</b><i>遇难 · 吉隆</i><p>截至2日12时，中方侧遇难升至21人，541人失联，G216核心通道10时抢通。</p></div>
+        <div class="fact"><b>1118</b><i>遇难 · 尼方</i><p>警方2日通报遇难1118人、失联4858人；同日另有通报称发现遗体1127具。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">太阳宫与霍尔木兹</h2>
+    <p class="section-sub">一边把安全架构讲给开罗，一边把雷达和油轮写回交火清单。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 开罗</div>
+        <h3>习近平同塞西会谈，提出中东安全新架构</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202609/content_7080018.htm">gov.cn</a></div>
+        <p class="sum">当地时间2日上午，习近平在开罗太阳宫同塞西会谈，提出中东安全新架构四点倡议，强调地区自主与航道安全，巴勒斯坦问题仍是核心。会后见证签署一带一路、人工智能等文件，发表深化全面战略伙伴关系联合声明；访问期间另签数字经济、科技等20余份合作文件。</p>
+        <div class="why"><strong>为何重要</strong>美伊再交火之际，北京把安全架构和航道安全讲给开罗听，并把人工智能写进建交70年的联合声明。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　国际 · 海湾</div>
+        <h3>美军再袭伊朗，伊方反击，婚礼遇袭致死</h3>
+        <div class="src">来源：NPR / 美联社　·　<a href="https://www.npr.org/2026/09/02/g-s1-141500/us-iran-war">npr.org</a></div>
+        <p class="sum">美军中央司令部称已完成对伊朗防空、雷达与海上资产的新一轮打击；伊方向约旦、巴林、科威特等地发射导弹与无人机。霍尔木兹省官员称库赫斯塔克一处婚礼遇袭，致死至少四人，另有通报为五人（含一名儿童）。特朗普称无意逼伊朗谈判。布伦特原油周二收涨约4.5%至94.52美元。</p>
+        <div class="why"><strong>为何重要</strong>沪时2日0时起可核验的新一轮交火，把霍尔木兹封锁、油价与中期选举绑在同一条导火索上。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">口岸与河谷</h2>
+    <p class="section-sub">同一条冰川：北岸把机械开进堆积体，南岸把遇难人数再改一版。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">公共事务 · 03</div>
+        <h3>吉隆第八日：G216核心通道抢通</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="http://www.xinhuanet.com/20260902/c875cecfb18143d3bf5ba30957b7eb20/c.html">xinhuanet.com</a></div>
+        <p>西藏自治区2日发布会通报，截至10时通往核心区陆路通道抢通，12时统计遇难21人、失联541人、遗物847件。累计投入救援2300余人，12座基站恢复。搜救由表层转入厚达4至16米的堆积体深挖；堰塞湖已于8月30日自然泄流。</p>
+        <div class="why"><strong>为何重要</strong>路通之后，口岸从「进得去」变成「挖得下」，伤亡账本同步改写。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 04</div>
+        <h3>尼泊尔遇难升至1118人，4858人失联</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 尼泊尔警方　·　<a href="https://www.chinadailyhk.com/hk/article/638906">chinadailyhk.com</a></div>
+        <p>尼泊尔警方2日称，8月26日泥石流遇难人数升至1118人，4858人失踪；同日另有通报称发现遗体1127具，已完成1113具尸检。军方与中印等专家继续在特里苏里等水电隧道供氧搜救。</p>
+        <div class="why"><strong>为何重要</strong>同源冰川灾害南岸账本继续上修，隧道窗口仍未关闭。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">记者会与纪念日</h2>
+    <p class="section-sub">加德满都收下第二批物资；投降书签署日，宪章条款被重新拿到台前。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　外交 · 北京</div>
+        <h3>近百中国公民在尼失联，第三批援助筹备中</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202609/t20260902_12015002.shtml">mfa.gov.cn</a></div>
+        <p class="sum">郭嘉昆2日说，对尼第二批物资1日下午抵加德满都，5名DNA专家随机抵达；正筹备第三批贝雷桥、防疫与应急通讯物资，并将再派DNA专家。吉隆侧排查出261名外籍失联人员、涉及23国；近百中国公民在尼受灾地区失联。</p>
+        <div class="why"><strong>为何重要</strong>把跨境伤亡从救援现场写成领事账本，援助从物资转入鉴定与桥梁。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>06　外交 · 北京</div>
+          <h3>日本投降81周年，重申敌国条款仍有效</h3>
+          <div class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202609/t20260902_12015002.shtml">mfa.gov.cn</a></div>
+          <p class="sum">郭嘉昆2日指出，1945年9月2日日本签署投降书，确认侵略战争定性不容篡改。《联合国宪章》第53、77、107条「敌国条款」仍然有效。他批评日方美化侵略、推进再军事化，称「新型军国主义」灰犀牛正在奔袭。</p>
+          <div class="why"><strong>为何重要</strong>在投降书签署日把宪章条款重新拿到台前，划出历史定性与再武装的边界。</div>
+        </article>
+        <div class="side-card">
+          <b>G20</b>
+          <i>财长会无公报</i>
+          <p>同日记者会，中方对G20财长和央行行长会议未能发表公报深表遗憾，称应基于协商一致、平等参与。</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>圣迭戈把矩阵核焊进图形切片；实验室让核糖体读自己、让基因跨染色体拼蛋白；开罗把人工智能写进联合声明。</p>
+      <div class="stat4">
+        <div><b>40%</b><i>功耗</i><p>Neural Fusion 开启时高通宣称改善约四成</p></div>
+        <div><b>Ribo-M</b><i>顺式翻译</i><p>核糖体翻译编码在自身RNA上的蛋白</p></div>
+        <div><b>3万+</b><i>嵌合转录本</i><p>直接RNA测序给出的暗基因组清单</p></div>
+        <div><b>20+</b><i>份文件</i><p>中埃数字经济、科技、教育等合作文本</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：上合比什凯克宣言与「上合+」（9月1日）；特纳斯就任苹果CEO、讯飞星火X2.5、罗曼遮阳罩与日冕仪上电（均1日首发）；OpenAI《Path to Astra》（1日）；努比亚NaviX Ultra入网许可（1日）；合见工软3DIC工具（1日IDAS发布）；Jalapeño（8月25日）、混元Hy4（8月31日）。罗曼望远镜2日无新的NASA博客节点。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">切片与联合声明</h2>
+    <p class="section-sub">一端把AI焊进GPU管线，一端把算力写进建交七十年的文本。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　芯片 · 圣迭戈</div>
+        <h3>高通公布 Adreno Neural Fusion GPU</h3>
+        <div class="src">来源：9to5Google / Android Authority　·　<a href="https://9to5google.com/2026/09/02/qualcomm-details-adreno-neural-fusion-gpu-for-next-snapdragon-chip/">9to5google.com</a></div>
+        <p class="sum">高通2日披露下一代旗舰骁龙的Adreno GPU：三切片1.45GHz，每切片内置Matrix Cores，可在图形管线内跑AI模型；18MB片上高性能内存就近缓存。称Neural Fusion开启时功耗改善约40%，Unity与虚幻引擎已接入。完整NPU细节留待9月22–24日峰会。</p>
+        <div class="why"><strong>为何重要</strong>把超分和插帧从驱动层推进到GPU切片，端侧渲染第一次按「专用矩阵核」来讲。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　产业 · 开罗</div>
+        <h3>中埃签署人工智能与数字经济合作文件</h3>
+        <div class="src">来源：新华社 / 联合声明　·　<a href="https://geneva.china-mission.gov.cn/zgyw/202609/t20260902_12015037.htm">china-mission.gov.cn</a></div>
+        <p class="sum">习塞会谈后见证签署一带一路、人工智能、经贸等文件；访问期间另签数字经济、科技等20余份合作文件。联合声明支持埃方数字化转型，拓展云、数据中心、半导体与网络安全合作，埃方赞赏中方发起的世界人工智能合作组织。</p>
+        <div class="why"><strong>为何重要</strong>把算力、半导体和世界人工智能合作组织写进建交70年的官方文本。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">读自己与跨染色体</h2>
+    <p class="section-sub">一本《自然》让核糖体翻译自身RNA，另一本让哺乳动物基因拼出新蛋白。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　科学突破 · 芝加哥</div>
+        <h3>核糖体可翻译编码在自身RNA上的蛋白</h3>
+        <div class="src">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-10962-1">nature.com</a></div>
+        <p class="sum">阿尔哈德等2日在《自然》报告，把蛋白编码序列接到16S rRNA上，得到嵌合mrRNA，可组装成能顺式翻译自身编码蛋白的Ribo-M；再与拴系亚基结合得Ribo-TM。突变或抗生素破坏小亚基功能则翻译停止。为正交蛋白生产与RNA世界假说提供实验平台。</p>
+        <div class="why"><strong>为何重要</strong>第一次在体内外证明核糖体可以「读自己」，把编码、解码和合成收进同一条RNA。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　科学突破 · 波士顿</div>
+        <h3>哺乳动物基因可跨染色体拼出嵌合蛋白</h3>
+        <div class="src">来源：Nature / 哈佛医学院　·　<a href="https://www.nature.com/articles/s41586-026-10982-x">nature.com</a></div>
+        <p class="sum">哈佛医学院团队2日在《自然》报告，不同基因甚至不同染色体的指令可组合成嵌合mRNA，并编码此前未知的功能蛋白。直接RNA测序列出逾3万条至少出现过一次的嵌合转录本，近400条受炎症信号调控，部分在人鼠免疫细胞中保守。</p>
+        <div class="why"><strong>为何重要</strong>打破「一基因一蛋白」教科书图景，免疫暗基因组第一次有可检索的清单。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">频率台阶</h2>
+    <p class="section-sub">非线性光学把效率往上推了四个数量级，实验室给出可量产的暗示。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　科学突破 · 格拉茨</div>
+        <h3>超表面使非线性光转换效率提高约7.2万倍</h3>
+        <div class="src">来源：Nature Nanotechnology / 格拉茨工大　·　<a href="https://doi.org/10.1038/s41565-026-02268-0">doi.org</a></div>
+        <p class="sum">格拉茨工大团队2日在《自然-纳米技术》报告，半导体量子阱与超表面组合，在电信波长把非线性光转换效率提高约7.2万倍。论文称有望缩小光电器件体积、降低数据中心机柜间光互联能耗。</p>
+        <div class="why"><strong>为何重要</strong>非线性光学从实验室效率跨过数量级，光计算和量子光源第一次有可量产的效率台阶。</div>
+      </article>
+      <div class="dark-note" style="margin:0;">
+        <div class="lab">信息不足 · 产业首发</div>
+        周三芯片与互联网整机首发偏少：高通只交出GPU切片，未公布完整SoC与NPU；国内整机与大模型多为一、二日复述。科学栏以《自然》两篇与一篇纳米技术论文补足，不以降配营销稿凑数。
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第245期 · 收束</span>
+        <span class="iss">11 / 11</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">开罗要架构，海峡要雷达，口岸要挖开四到十六米的淤泥。周三不是周二的复述：中东安全新架构落在太阳宫，美军打击合沪时零时后入账，吉隆路通、尼侧过一千一百，敌国条款在投降书签署日被重申。实验室则让核糖体读自己、让基因跨染色体拼蛋白，高通把矩阵核焊进切片。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>习近平同塞西会谈，提出中东安全新架构</li>
+            <li>美军再袭伊朗，伊方反击，婚礼遇袭致死</li>
+            <li>吉隆第八日：G216核心通道抢通</li>
+            <li>尼泊尔遇难升至1118人，4858人失联</li>
+            <li>近百中国公民在尼失联，第三批援助筹备中</li>
+            <li>日本投降81周年，外交部重申敌国条款</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条</h4>
+          <ol>
+            <li>高通公布 Adreno Neural Fusion GPU</li>
+            <li>中埃签署人工智能与数字经济合作文件</li>
+            <li>核糖体可翻译编码在自身RNA上的蛋白</li>
+            <li>哺乳动物基因可跨染色体拼出嵌合蛋白</li>
+            <li>超表面使非线性光转换效率提高约7.2万倍</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-02，星期三）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入9月1日上合宣言、特纳斯就任、星火X2.5、罗曼遮阳罩与日冕仪、Astra安全评估，以及8月Hot Chips / Hy4复述。美军中央司令部正午打击合北京时间2日0时，本期刊入。G20财长会本身在8月31日至9月1日举行，仅收2日外交部口径。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
