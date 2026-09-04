@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第246期 · 2026-09-03</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第246期  ·  2026年9月3日  ·  星期四</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆陆期  ·  二零二六年九月三日  ·  星期四</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>返京 · 河谷 · 纪念日</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>枢纽 · IFA · 端侧</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周四首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：专机落回北京，王毅把五天四夜写成官方账本；尼侧遇难过一千二百，第三批物资与鉴定专家同机启运；吉隆路通次日，一百九十五人突击队翻进联检大楼。科技栏：英伟达出价一百二十九亿买下开源枢纽，柏林IFA把超级芯片出货窗和小米自研折叠同日摆上展台。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>出访收口落在星期四上午；同一条冰川的南北两岸，一边把突击队推进废墟，一边把遇难人数再改一版。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “5天4夜里，习近平主席密集出席20余场活动，双多边结合、跨区域联动……访问亮点纷呈，取得圆满成功。”——王毅谈此访，据新华社9月3日电。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>20+</b><i>场活动</i><p>王毅称五天四夜双多边结合；上合新设口岸经济与基础教育合作中心。</p></div>
+        <div class="fact"><b>1252</b><i>遇难 · 尼方</i><p>3日官方口径较2日的1118人再上修；失联仍在四千至近五千之间。</p></div>
+        <div class="fact"><b>195</b><i>人突击队</i><p>吉隆第九日，消防分三批轮换进入核心区，分层清障联检大楼。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">返京与记者会</h2>
+    <p class="section-sub">专机落地，出访账本收口；同一场例行记者会，墨西哥外长被写进下周日程。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>习近平返京，王毅总结5天4夜出访</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202609/content_7080078.htm">gov.cn</a></div>
+        <p class="sum">9月3日上午，习近平结束上合峰会及吉尔吉斯斯坦、埃及国事访问回到北京。王毅向随行记者介绍：5天4夜出席20余场活动；上合宣布成立口岸经济、基础教育合作中心，未来3年联合实施100个科技项目；中埃扩大本币互换。</p>
+        <div class="why"><strong>为何重要</strong>把8月30日以来的双多边行程收成官方账本，新设平台把天津峰会蓝图落到口岸与基础教育。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 北京</div>
+        <h3>墨西哥外长贝拉斯科将于6–7日访华</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260903_12015775.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">郭嘉昆宣布，应王毅邀请，墨西哥外长贝拉斯科将于9月6日至7日访华，此访是其4月就任以来首次来华。中方称墨为拉美大国和全面战略伙伴，期待就双边与国际地区问题交换意见、增进互信。</p>
+        <div class="why"><strong>为何重要</strong>在美委石油与拉美债务被点名的同一天，北京把墨西哥外长请上日程。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">口岸与河谷</h2>
+    <p class="section-sub">北岸把突击队推进堆积体，南岸把遇难人数再改一版；援助从「筹备」变成启运。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">公共事务 · 03</div>
+        <h3>吉隆第九日：195人突击队纵深搜寻</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="http://www.xz.xinhua.org/20260903/305cd55c6d2148f4acbd3a7559d583ec/c.html">xz.xinhua.org</a></div>
+        <p>新华社吉隆9月3日电，G216核心段打通后，国家综合性消防救援队伍组成195人突击队，分3批轮换进入核心区，对停车场、联检大楼等「翻一层、搜一层、清一层」。当日未见官方更新伤亡数字，仍为21遇难、541失联。</p>
+        <div class="why"><strong>为何重要</strong>路通次日，搜救从「进得去」变成分层清障，账本却尚未改写。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 04</div>
+        <h3>尼泊尔遇难升至1252人，近五千失联</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：法新社 / 星洲日报　·　<a href="https://www.sinchew.com.my/news/20260903/international/7814784">sinchew.com.my</a></div>
+        <p>尼泊尔灾害管理部门3日称，边境洪水已造成至少1252人死亡。警方上午10时口径为发现遗体1252具、失联4875人；另有通报失踪约4216人。约583名外籍人士仍下落不明。总理沙阿称工作重点将由搜救转向复原重建。</p>
+        <div class="why"><strong>为何重要</strong>同源冰川灾害南岸账本再上修，官方口径从搜救窗口转入复原。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">启运与纪念日</h2>
+    <p class="section-sub">第三批物资与鉴定专家同机起飞；胜利纪念日当天，防卫预算被点名。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　外交 · 北京</div>
+        <h3>对尼第三批援助启运，DNA专家同机</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260903_12015775.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">郭嘉昆说，3日上午对尼第三批紧急援助已启运，含帐篷、毛毯、太平柜、防护服和卫星通讯设备，第二批DNA鉴定专家同机赴尼；西藏已援助2座贝雷桥。中方紧急开发「妈祖」气象云端定制版交付尼方试用。</p>
+        <div class="why"><strong>为何重要</strong>援助从「筹备中」变成启运，鉴定与桥梁把跨境搜救推进到认人和通路。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>06　外交 · 北京</div>
+          <h3>抗战胜利81周年，外交部批日防卫预算</h3>
+          <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260903_12015775.shtml">fmprc.gov.cn</a></div>
+          <p class="sum">9月3日是抗战胜利纪念日。郭嘉昆回应日本2026年版防卫白皮书谋求「对敌方基地攻击能力」、2027年度防卫预算概算8.89万亿日元再创新高，重申《开罗宣言》《波茨坦公告》《日本投降书》确立的战败国义务。</p>
+          <div class="why"><strong>为何重要</strong>胜利纪念日当天把法律文件重新拿到台前，对准日本再武装预算。</div>
+        </article>
+        <div class="side-card">
+          <b>8.89</b>
+          <i>万亿日元</i>
+          <p>日本防卫省提交的2027年度预算概算再创纪录；外交部同日警告勿以「国家正常化」包装「新型军国主义」。</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>芯片巨头买下开源枢纽；柏林媒体日把超级芯片出货窗和自研折叠同日摆上展台。</p>
+      <div class="stat4">
+        <div><b>129.3</b><i>亿美元</i><p>英伟达收购 Hugging Face 的对价（含留任股权）</p></div>
+        <div><b>10月</b><i>出货窗</i><p>RTX Spark Windows 整机在 IFA 确认货架时间</p></div>
+        <div><b>PAIR</b><i>本地路由</i><p>闲置家用电脑被写成可调度的推理节点</p></div>
+        <div><b>O3</b><i>玄戒</i><p>小米 18 Fold 海外首秀搭载自研 3 纳米芯片</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：习塞会谈四点倡议、中埃人工智能文件、大埃及博物馆参观（均2日发生）；美军中央司令部2日交火复述；吉隆G216抢通与尼侧1118人（2日账本）；高通 Adreno Neural Fusion、《自然》核糖体与嵌合mRNA、超表面非线性光学（2日首发）；地月激光（8月底）；GPT-6 Astra 正式发布（4日凌晨，未提前收入）。科学栏当日首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">枢纽易主</h2>
+    <p class="section-sub">开源模型的默认分发权，第一次被写进芯片公司的并购合同。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　产业 · 圣克拉拉</div>
+        <h3>英伟达129.3亿美元收购Hugging Face</h3>
+        <div class="src">来源：NVIDIA博客 / SEC 8-K / CNBC　·　<a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">blogs.nvidia.com</a></div>
+        <p class="sum">黄仁勋3日宣布，英伟达同意以129.303亿美元收购开源AI平台Hugging Face，其中约119亿支付股东、至多10亿股权留任，预计2027上半年交割。承诺平台保持开放、不强制英伟达算力、继续支持其他芯片商。</p>
+        <div class="why"><strong>为何重要</strong>芯片巨头买下全球最大开源模型枢纽，中立分发权第一次进入反垄断审查窗口。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　芯片 · 柏林</div>
+        <h3>RTX Spark整机定档10月出货</h3>
+        <div class="src">来源：NVIDIA博客　·　<a href="https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/">blogs.nvidia.com</a></div>
+        <p class="sum">IFA 2026上，英伟达确认搭载RTX Spark超级芯片的Windows整机10月出货。芯片含20核Grace CPU、最高1 petaflop Blackwell GPU、至多128GB统一内存。联想发布Yoga Pro 9n与Yoga 9n二合一，宏碁展出紧凑桌面概念机。</p>
+        <div class="why"><strong>为何重要</strong>从5月发布到10月货架，端侧超级芯片第一次有可核对的出货窗。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">家用路由与折叠首秀</h2>
+    <p class="section-sub">一端把第二台电脑写成推理节点，一端把自研SoC拿到IFA主通道。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　软件 · 圣克拉拉</div>
+        <h3>英伟达开源PAIR，闲置PC组本地算力网</h3>
+        <div class="src">来源：NVIDIA博客　·　<a href="https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/">blogs.nvidia.com</a></div>
+        <p class="sum">英伟达发布免费开源工具Personal AI Router（PAIR），可发现局域网上的兼容电脑，把推理请求分发给有余量的机器，适配Ollama与LM Studio。支持GeForce RTX 20系及以上、DGX Spark及Apple M4以上芯片。</p>
+        <div class="why"><strong>为何重要</strong>把「家里第二台电脑」写成可调度的本地推理节点，端侧智能体第一次有家用路由层。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　产业 · 柏林</div>
+        <h3>小米首登IFA，18 Fold搭载玄戒O3真机展出</h3>
+        <div class="src">来源：Android Authority　·　<a href="https://www.androidauthority.com/xiaomi-18-fold-ifa-2026-showcase-3704608/">androidauthority.com</a></div>
+        <p class="sum">柏林IFA媒体日，小米以3300平方米展位首次参展，展出380余款产品。18 Fold真机亮相，为首款搭载自研3纳米玄戒O3旗舰芯片的折叠屏，并配长鑫LPDDR6（至高12800Mbps），中国区9月7日发布。</p>
+        <div class="why"><strong>为何重要</strong>自研SoC、国产内存与折叠形态在海外首秀同台，端侧供应链第一次被拿到IFA主通道。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">信息不足 · 科学首发</div>
+      周四未见可交叉核验的《自然》《科学》级论文首发；罗曼望远镜3日NASA稿件仅为8月30日发射回顾，未构成新节点。产业栏以并购、出货窗与展会真机补足，不以降配营销稿或2日科学复述凑数。
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第246期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期四不是星期三的复述：专机落回北京，出访被收成五天四夜的官方账本；尼侧过一千二百，第三批物资与鉴定专家同机起飞；吉隆路通次日，突击队翻进联检大楼。芯片公司花一百二十九亿买下开源枢纽，柏林把超级芯片出货窗和自研折叠同日摆上展台。科学栏留白，比用旧稿填满更诚实。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>习近平返京，王毅总结5天4夜出访</li>
+            <li>墨西哥外长贝拉斯科将于6–7日访华</li>
+            <li>吉隆第九日：195人突击队纵深搜寻</li>
+            <li>尼泊尔遇难升至1252人，近五千失联</li>
+            <li>对尼第三批援助启运，DNA专家同机</li>
+            <li>抗战胜利81周年，外交部批日防卫预算</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>英伟达129.3亿美元收购Hugging Face</li>
+            <li>RTX Spark整机定档10月出货</li>
+            <li>英伟达开源PAIR，闲置PC组本地算力网</li>
+            <li>小米首登IFA，18 Fold搭载玄戒O3真机展出</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-03，星期四）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入2日习塞会谈、中埃人工智能文件、美军交火、吉隆G216抢通、尼侧1118人、高通Neural Fusion与《自然》两篇。英伟达收购协议签署日为2日，8-K签署与官方博客、CNBC首发均在3日，本期刊入。GPT-6 Astra正式发布在4日凌晨，未提前收入。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
