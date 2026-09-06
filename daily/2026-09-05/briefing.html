@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第248期 · 2026-09-05</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第248期  ·  2026年9月5日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆捌期  ·  二零二六年九月五日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>停火 · 油轮 · 隧道</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>费马 · Astra配额</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周六首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：克里姆林宫把一份未公开的停火方案摆上桌，霍尔木兹把报复写成三艘油轮；同一条冰川的南岸抬出中国工人，北岸第一次报出全国捐赠账。科技栏：上期未赶上的费马形式化在沪时凌晨进入公共视野，Astra从白名单走进付费席位。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期六把两场战争同时写进日程：莫斯科谈三天不打首都，波斯湾按「两艘换三艘」拆油轮。河谷这边，一条隧道抬出活人，另一条江南山沟从头开账。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「亲爱的同事们，我热烈欢迎你们来到莫斯科。局势当然并不简单。」——普京在克里姆林宫迎接维特科夫与库什纳，俄媒播出的开场白。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>3</b><i>日不打首都</i><p>佩斯科夫称自午夜起三日不打基辅；泽连斯基承诺同期不打莫斯科。</p></div>
+        <div class="fact"><b>3</b><i>艘油轮</i><p>Downy、Stark 1被永久失能，空载Kylo在阿曼湾被摧毁。</p></div>
+        <div class="fact"><b>11</b><i>日困隧道</i><p>陆海涛从上特里苏里1号225米处获救，是该洞第一名中国籍生还者。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">两场战争的星期六</h2>
+    <p class="section-sub">一份未公开方案被带进克里姆林宫；同一天，中央司令部把报复写成三艘油轮。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 莫斯科 / 基辅</div>
+        <h3>普京会见美特使，双方承诺三日不打首都</h3>
+        <div class="src">来源：半岛电视台 / 卫报　·　<a href="https://www.aljazeera.com/news/2026/9/5/russias-putin-meets-us-envoys-to-discuss-trump-proposal-to-end-ukraine-war">aljazeera.com</a></div>
+        <p class="sum">周六普京在克里姆林宫会见特朗普特使维特科夫与库什纳，闭门逾三小时。佩斯科夫称俄军自午夜起三日不打基辅；泽连斯基承诺同期不打莫斯科。特使周日首访基辅。战线上周六仍有袭击。</p>
+        <div class="why"><strong>为何重要</strong>四年半战争后，华盛顿把一份未公开方案重新摆上桌，但克里姆林宫仍坚持四州与不入约。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　军事 · 波斯湾 / 阿曼湾</div>
+        <h3>美军打击三艘伊朗油轮，报复对军舰的导弹攻击</h3>
+        <div class="src">来源：CNN / 半岛电视台　·　<a href="https://www.cnn.com/2026/09/05/middleeast/iran-us-tanker-kharg-intl">cnn.com</a></div>
+        <p class="sum">中央司令部称，航母与驱逐舰周六躲开革命卫队多枚弹道导弹后，在哈尔克岛外与阿曼湾打击三艘原油船：Downy、Stark 1被永久失能，空载Kylo被摧毁。库珀称「你打两艘，我们拆三艘」。</p>
+        <div class="why"><strong>为何重要</strong>霍尔木兹航运战从军舰对射升级到油轮对等报复，能源通道风险再抬升。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">南岸隧道与北岸捐赠</h2>
+    <p class="section-sub">一条洞抬出中国工人，另一条洞宣告搜完；吉隆伤亡数字未改，慈善日第一次写出全国账本。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 03</div>
+        <h3>陆海涛受困十一日后从尼泊尔隧道获救</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：中新社 / 联合早报　·　<a href="https://www.zaobao.com.sg/news/china/story20260905-9631406">zaobao.com.sg</a></div>
+        <p>当地时间5日，尼军与韩国专家从上特里苏里1号水电站隧道入口约225米处救出河南安阳籍工人陆海涛，受困11天。直升机转运加德满都尼军总医院，生命体征平稳。大使张茂明到ICU探望。</p>
+        <div class="why"><strong>为何重要</strong>上特里苏里1号此前被认为数百人受困，这是该洞第一名被证实的中国籍生还者。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 04</div>
+        <h3>尼泊尔遇难升至1344人，3A隧道再无生还</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：香港01 / 尼警方　·　<a href="https://www.hk01.com/%E5%8D%B3%E6%99%82%E5%9C%8B%E9%9A%9B/60387094/%E5%B0%BC%E6%B3%8A%E7%88%BE%E6%B3%A5%E7%9F%B3%E6%B5%811342%E6%AD%BB-%E6%B0%B4%E9%9B%BB%E5%BB%A03a%E9%9A%A7%E9%81%93%E6%95%91%E5%87%BA2%E4%BA%BA%E5%BE%8C-%E6%90%9C%E6%95%91%E9%9A%8A-%E5%86%8D%E7%84%A1%E7%99%BC%E7%8F%BE">hk01.com</a></div>
+        <p>尼警方称截至5日5时已发现1344具遗体、4898人失联。上翠苏里3A隧道4日救出2人后，武装警察称已搜遍各段，除两名生还者与一具遗体再无发现，多处被泥石与水压压垮。</p>
+        <div class="why"><strong>为何重要</strong>南岸从「隧道里还有活人」转到「这条洞搜完了」，搜救窗口正在收窄。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">江南新账与慈善日</h2>
+    <p class="section-sub">吉隆搜救未歇，沙德尔又在遂川撕开一条山沟；北岸伤亡未改写，捐赠第一次被写成全国数字。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　公共事务 · 江西遂川</div>
+        <h3>台风沙德尔致遂川泥石流，1死11失联</h3>
+        <div class="src">来源：新华社 / 央广网　·　<a href="https://jx.cnr.cn/tp/20260905/t20260905_527805597.shtml">cnr.cn</a></div>
+        <p class="sum">5日凌晨4时许，遂川县高坪镇明坑村石下组发生泥石流，12栋房屋受损、8栋全毁，塌方超3万立方米。已救出3人（1人遇难），11人失联。国家防减救灾委启动四级响应，晚间640余人到场。</p>
+        <div class="why"><strong>为何重要</strong>吉隆搜救未歇，江南又开一条泥石流前线，极端降水正在叠成多点灾情。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　社会 · 北京</div>
+        <h3>民政部：吉隆灾害慈善捐赠已超6.6亿元</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/20260905/05237ffceaf7412185bcd290877f7b2b/c.html">news.cn</a></div>
+        <p class="sum">5日是第十一个中华慈善日。新华社从民政部获悉，吉隆泥石流发生以来慈善捐赠超6.6亿元，其中147万人次经互联网平台捐出5016万元。民政部同日部署慈善日宣传。</p>
+        <div class="why"><strong>为何重要</strong>北岸伤亡账本未再改写，社会捐助第一次被写成可核对的全国数字。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>上期截稿后才进入沪时视野的形式化证明，和付费席位终于摸到的Astra，把星期六的科技栏写成核验与配额两件事。</p>
+      <div class="stat4">
+        <div><b>1300万</b><i>行 Lean</i><p>Claude形式化费马大定理的公开仓库体量</p></div>
+        <div><b>11</b><i>日</i><p>Prove2Me多智能体跑完全程的官方用时</p></div>
+        <div><b>200</b><i>条 / 周</i><p>200美元Pro档GPT-6 Pro的周配额</p></div>
+        <div><b>1/2</b><i>相对Sol</i><p>标准Astra在五小时窗口约为Sol一半</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：习近平访美企业家团与国宴（4日路透/特朗普，5日仅为转载）；央行5000亿买断式逆回购等量续作（4日公告）；吉隆31遇难/531失联（4日18时）；尼泊尔3A隧道第九日救出2人（4日）；GPT-6 Astra沪时4日凌晨首发与Critical门槛；华为韬定律/麒麟密度（4日ChinaXiv）；三星Arm 2纳米、微软Zenith（4日）；古尔曼苹果产品长文（4日9时美东=沪时21时）；WeatherNext 3、英伟达收购HF、RTX Spark/PAIR、小米IFA（3日）。芯片与整机产业周六未见可交叉核验的首发，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">机器核验</h2>
+    <p class="section-sub">公司写出1300万行Lean；最有动机找茬的人自己编译了一遍。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　科学 · 旧金山</div>
+        <h3>Claude十一日形式化费马大定理</h3>
+        <div class="src">来源：Anthropic　·　<a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">anthropic.com</a></div>
+        <p class="sum">Anthropic称内部模型在Prove2Me上用11天写出1300万行Lean，证明2.95万条中间定理。这是对怀尔斯1995年证明的机器可检查翻译，不是新数学。UTC晚间首发，折沪时为5日凌晨。</p>
+        <div class="why"><strong>为何重要</strong>自动形式化第一次把「千页文献端到端核验」写成可复现的公开仓库。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　科学 · 伦敦</div>
+        <h3>巴泽德独立编译：证明成立，但不是新数学</h3>
+        <div class="src">来源：Xena Project　·　<a href="https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/">xenaproject.wordpress.com</a></div>
+        <p class="sum">帝国理工巴泽德下载公开仓库并自行编译，确认sorry-free、与Mathlib的FLT陈述一致。他写道这完成了Wiedijk百题最后一题，但EPSRC项目仍要向Mathlib提交、并做可供人阅读的动态文档。评论区讨论延续至5日。</p>
+        <div class="why"><strong>为何重要</strong>最有动机找茬的竞争者完成了对抗性核验，把公司声明变成可核对的学术事实。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">付费席位</h2>
+    <p class="section-sub">发布两日后，Astra从白名单走进Work与API；真正的分配规则是配额表。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　人工智能 · 旧金山</div>
+        <h3>GPT-6 Astra向Pro、企业与API开放</h3>
+        <div class="src">来源：OpenAI / THE DECODER　·　<a href="https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/">the-decoder.com</a></div>
+        <p class="sum">奥尔特曼称Astra已对Pro、Enterprise与Business Premium用户在Work与Codex开放，API同步上线，Plus仍分批。美中部4日午后声明，折沪时为5日凌晨。</p>
+        <div class="why"><strong>为何重要</strong>旗舰模型从白名单走进付费席位，发布与可用之间的空窗被写进产品节奏。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>10　产品 · 旧金山</div>
+          <h3>Astra额度约为Sol一半</h3>
+          <div class="src">来源：THE DECODER　·　<a href="https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/">the-decoder.com</a></div>
+          <p class="sum">200美元Pro每周200条GPT-6 Pro；100美元档每周50条并与Sol Pro共用。标准Astra在五小时窗口约为Sol一半。免费与Go档仍无前沿模型。</p>
+          <div class="why"><strong>为何重要</strong>电脑操作被写成AGI节点之后，真正的分配规则是配额，不是无限席位。</div>
+        </article>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 芯片与整机</div>
+          周六未见可交叉核验的芯片流片、整机上市或《自然》《科学》级论文首发。不以韬定律、三星Arm、Zenith或IFA复述凑数。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第248期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期六不是星期五的复述：莫斯科谈三天不打首都，波斯湾按「两艘换三艘」拆油轮；南岸隧道抬出陆海涛，3A洞宣告搜完，江南遂川另开一本泥石流账。科技栏把上期截稿后的费马形式化写成可编译的公开仓库，又把Astra从白名单写成配额表。芯片与整机首发不足，不拿周四周五的论文和展台补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>普京会见美特使，双方承诺三日不打首都</li>
+            <li>美军打击三艘伊朗油轮</li>
+            <li>陆海涛受困十一日后从尼泊尔隧道获救</li>
+            <li>尼泊尔遇难升至1344人，3A隧道再无生还</li>
+            <li>台风沙德尔致遂川泥石流，1死11失联</li>
+            <li>民政部：吉隆灾害慈善捐赠已超6.6亿元</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>Claude十一日形式化费马大定理</li>
+            <li>巴泽德独立编译：证明成立，但不是新数学</li>
+            <li>GPT-6 Astra向Pro、企业与API开放</li>
+            <li>Astra额度约为Sol一半</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-05，星期六）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入4日访美企业家团、央行续作、吉隆31/531、3A第九日救人、Astra凌晨首发、韬定律、三星Arm、Zenith、古尔曼苹果长文，以及3日返京总结、墨西哥外长预告、英伟达收购HF、RTX Spark/PAIR、小米IFA与WeatherNext 3。费马形式化官方页署期4日，UTC 21:26 进入公共索引，折沪时为5日凌晨，上期未收入，本期刊入。芯片与整机产业首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
