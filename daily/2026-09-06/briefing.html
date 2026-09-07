@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第249期 · 2026-09-06</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第249期  ·  2026年9月6日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰肆玖期  ·  二零二六年九月六日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>基辅 · 霍尔木兹 · 增资</em></div>
+        <div class="metric"><b>03</b><span>科技</span><em>减速 · 实习生</em></div>
+        <div class="metric"><b>09</b><span>合计</span><em>周日首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：特使第一次把未公开方案带进基辅，霍尔木兹把「对等」改成「更快更痛」；欧佩克+冻住十月配额，财政部把3600亿写进八家央企公告。北岸改写43/519，江南遂川从1死改到3死。科技栏：同一家实验室周日同时发布刹车长文与3.1倍智能体工时。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期日把两场战争的下一页同时摊开：基辅第一次见到这对特使，霍尔木兹把报复从油轮写到无人艇。油价这边，七国决定十月不再加码。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「美国人必须明白，对等回应的时代已经结束。」——伊朗议长兼首席谈判代表加利巴夫周日对议会的讲话。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>1</b><i>次首访基辅</i><p>维特科夫与库什纳自全面入侵以来首次到访，乘火车自波兰入境。</p></div>
+        <div class="fact"><b>6</b><i>个月连增后停</i><p>欧佩克+七国周日线上会议，10月配额与9月持平。</p></div>
+        <div class="fact"><b>3600</b><i>亿元增资</i><p>工行、农行等八家金融央企同日公告补充核心一级资本。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">两场战争的星期日</h2>
+    <p class="section-sub">一份未公开方案第一次被带进基辅；同一天，德黑兰宣布「对等」作废。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 基辅</div>
+        <h3>美特使首访基辅，与泽连斯基举行实质性会谈</h3>
+        <div class="src">来源：半岛电视台 / 美联社　·　<a href="https://www.aljazeera.com/news/2026/9/6/us-envoys-hold-substantive-talks-with-zelenskyy-in-first-visit-to-kyiv">aljazeera.com</a></div>
+        <p class="sum">周日维特科夫与库什纳乘火车抵基辅，与泽连斯基会谈，英德法国家安全顾问列席第二轮。维特科夫称「实质性、受鼓舞」；库什纳称方案要超越停火。领土问题泽连斯基仍要求元首级谈判。首都三日互不打击仍有效，战线未停。</p>
+        <div class="why"><strong>为何重要</strong>特使八访莫斯科后第一次走进基辅，方案仍未公开，访问本身被写成进展。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　军事 · 霍尔木兹</div>
+        <h3>伊朗称对等报复结束，革命卫队再袭油轮与无人艇</h3>
+        <div class="src">来源：彭博 / 法新社　·　<a href="https://www.bloomberg.com/news/articles/2026-09-06/iran-says-it-targeted-oil-tankers-in-response-to-us-strikes">bloomberg.com</a></div>
+        <p class="sum">议长加利巴夫周日称「对等回应时代已结束」，将以更快更痛回击。革命卫队称袭击霍尔木兹未授权航线三艘油轮、三艘美关联船只，并打击试图进入海峡的美军无人艇。中央司令部称军舰躲开导弹；无人艇袭击未见独立核实。</p>
+        <div class="why"><strong>为何重要</strong>周六拆三艘油轮之后，周日把报复从「两艘换三艘」改写成不设上限。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">油桶停笔与资本补账</h2>
+    <p class="section-sub">七国把十月配额按在九月的格子里；八家央企把3600亿写进同一天的公告。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">能源 · 03</div>
+        <h3>欧佩克+七国决定十月配额与九月持平</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：欧佩克 / 塔斯社　·　<a href="https://www.thenationalnews.com/business/energy/2026/09/06/opec-keeps-oil-output-policy-unchanged-for-october-amid-iran-war-uncertainty/">thenationalnews.com</a></div>
+        <p>沙特、俄罗斯、伊拉克、科威特、哈萨克斯坦、阿尔及利亚、阿曼周日线上会议，决定10月配额维持9月水平，连续六个月增产后首次暂停。声明称完成2023年165万桶自愿减产的兑现。下次会10月4日。</p>
+        <div class="why"><strong>为何重要</strong>霍尔木兹实质封闭时，纸面配额已难对应实际产量，冻产是对战争溢价的认账。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">宏观 · 04</div>
+        <h3>八家金融央企拟增资3600亿元补核心一级资本</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 人民网　·　<a href="https://www.news.cn/fortune/20260906/1633e4121bf14b52859aff2dffa36888/c.html">news.cn</a></div>
+        <p>工行、农行等8家中央金融企业6日分别公告增资计划，合计拟增资3600亿元。工行、农行拟向财政部与中国烟草定增分别不超过1000亿、1600亿；财政部另向进出口银行、中信保及四家国有险企注资。</p>
+        <div class="why"><strong>为何重要</strong>特别国债注资从去年四家大行延到工行、农行与险企，资本补充被写成系统安排。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">北岸改写与江南加码</h2>
+    <p class="section-sub">吉隆第一次把伤亡改成43/519，并向境外记者打开现场；遂川从1死改到3死。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　救灾 · 西藏吉隆</div>
+        <h3>吉隆通报43遇难519失联，中外媒体见面会首开现场</h3>
+        <div class="src">来源：新华社 / 央视　·　<a href="https://www.news.cn/20260906/12341483ea9e456b9b7d8935873ac295/c.html">news.cn</a></div>
+        <p class="sum">指挥部6日通报，截至5日18时遇难43人、失联519人，较4日的31/531改写。国新办会同外交部组织美英俄印等境外记者赴现场，下午见面会。任维称已投入2500余人、救出2人。苏鹏程称源头在尼境蓝塘里壤峰，全程仅6–7分钟。</p>
+        <div class="why"><strong>为何重要</strong>伤亡账本十一日后首次改写，跨境预警窗口被官方写成「只有几分钟」。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　公共事务 · 江西遂川</div>
+        <h3>遂川泥石流升至3死9失联，救援通道抢通</h3>
+        <div class="src">来源：新华社 / 中新网　·　<a href="https://www.chinanews.com.cn/sh/2026/09-06/10691334.shtml">chinanews.com.cn</a></div>
+        <p class="sum">新华社南昌6日电，救援人员中午再找到一名失联者，已无生命体征。高坪镇明坑村泥石流已致3人遇难、9人失联。汤湖至明坑村道路6日凌晨1时30分全线抢通。5日首报为1死11失联。</p>
+        <div class="why"><strong>为何重要</strong>沙德尔在江南的账本加码，搜救从徒步进入转成通道打开后的深翻。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>同一家实验室在星期日同时写出两份文件：一份说没有人准备好继续全速扩张，一份说智能体已经干完3.1倍的研究工时。</p>
+      <div class="stat4">
+        <div><b>3.1</b><i>倍工时</i><p>8月中旬每个研究工作日对应的智能体工作日</p></div>
+        <div><b>2028</b><i>年3月</i><p>官方写下的「自动研究员」节点</p></div>
+        <div><b>600</b><i>美元 / 日</i><p>中位研究者每日推理花费</p></div>
+        <div><b>0</b><i>芯片首发</i><p>周日未见可核验的流片或整机上市</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：普京会见维特科夫/库什纳与三日不打首都、美军打击三艘伊朗油轮、陆海涛获救、尼泊尔1344/4898、遂川1死11失联首报、民政部吉隆捐赠6.6亿、Claude费马形式化、Astra向Pro/企业/API开放（均5日）；访美企业家团、央行续作、吉隆31/531、Astra凌晨首发、韬定律、三星Arm、Zenith（4日）；英伟达收购HF、RTX Spark、小米IFA（3日）；路透7月Iris备忘录、港大忆阻器论文（2月23日发表，6日仅为院系转述）；华为/小米9月7日发布会预告。芯片、整机与《自然》《科学》级论文周日首发不足，已标明缺口。墨西哥外长访华未见6日会谈或开馆首发，未以3日预告充数。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">同一天的刹车与油门</h2>
+    <p class="section-sub">首席科学家要求自愿减速；研究组织宣布实习生已经上岗。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　人工智能 · 旧金山</div>
+        <h3>帕乔茨基长文：尚无实验室配得上全速扩张</h3>
+        <div class="src">来源：OpenAI　·　<a href="https://openai.com/index/an-alien-mind/">openai.com</a></div>
+        <p class="sum">首席科学家帕乔茨基周日发表《An Alien Mind》，称尚无实验室把对齐与监控做到足以继续全速扩张。他期望自愿减速成为常态，直至形成共享安全门槛，并呼吁政府把国际协调列为优先。文末署期9月6日。</p>
+        <div class="why"><strong>为何重要</strong>旗舰模型发布三日后， internally 负责能力的人把「减速」写成公开立场。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　产业 · 旧金山</div>
+        <h3>OpenAI称已达到「自动研究实习生」</h3>
+        <div class="src">来源：OpenAI / Engadget　·　<a href="https://openai.com/index/research-acceleration-view-inside-openai/">openai.com</a></div>
+        <p class="sum">同日内部数据：截至8月中旬，研究组织每1个人类工作日对应3.1个智能体工作日，并称已达到「自动研究实习生」——能在人指导下完成需数日的明确研究任务。下一步节点是2028年3月的自动研究员。</p>
+        <div class="why"><strong>为何重要</strong>实验室把自己的研究劳动力写成可度量的倍数，递归加速从口号变成工时表。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">工时的价格</h2>
+    <p class="section-sub">3.1倍的背面是每天数百到数千美元的推理账单；芯片栏今天交白卷。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　产品 · 旧金山</div>
+        <h3>中位研究者每日推理花费超600美元</h3>
+        <div class="src">来源：OpenAI / The Next Web　·　<a href="https://thenextweb.com/news/openai-slowdown-pachocki-alien-mind-research-intern-compute">thenextweb.com</a></div>
+        <p class="sum">同篇披露，研究组织中位研究者每日推理花费超600美元，前10%超7000美元。公司一边把工时比写成3.1，一边由首席科学家另文警告无人准备好机器智力继续暴涨的后果。</p>
+        <div class="why"><strong>为何重要</strong>加速与刹车写在同一天：账单证明用得起，长文承认管不住。</div>
+      </article>
+      <div>
+        <div class="side-card">
+          <b>0</b>
+          <i>芯片 / 整机 / 科学</i>
+          <p>周日未见可交叉核验的流片、整机上市或《自然》《科学》级论文首发。</p>
+        </div>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 芯片与整机</div>
+          不以7月路透Iris备忘录、2月港大忆阻器论文、4日韬定律或9月7日华为小米预告凑数。科学与产业整机首发不足，已标明缺口。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第249期 · 收束</span>
+        <span class="iss">09 / 09</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期日不是星期六的复述：特使第一次走进基辅，德黑兰宣布对等作废，七国把十月油桶按住，八家央企写下3600亿。吉隆改写43/519并打开现场，遂川从1死加到3死。科技栏只有同一实验室的两份周日文件——刹车与3.1倍工时——芯片和科学交了白卷，不拿旧论文和明日发布会补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>美特使首访基辅，与泽连斯基举行实质性会谈</li>
+            <li>伊朗称对等报复结束，革命卫队再袭油轮与无人艇</li>
+            <li>欧佩克+七国决定十月配额与九月持平</li>
+            <li>八家金融央企拟增资3600亿元补核心一级资本</li>
+            <li>吉隆通报43遇难519失联，中外媒体见面会首开现场</li>
+            <li>遂川泥石流升至3死9失联，救援通道抢通</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技三条</h4>
+          <ol>
+            <li>帕乔茨基长文：尚无实验室配得上全速扩张</li>
+            <li>OpenAI称已达到「自动研究实习生」</li>
+            <li>中位研究者每日推理花费超600美元</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-06，星期日）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入5日克里姆林宫会谈、美军拆三艘油轮、陆海涛获救、尼泊尔1344、遂川首报、民政部6.6亿、费马形式化与Astra配额；亦未混入4日访美团、央行续作、吉隆31/531、Astra首发与韬定律，以及3日返京总结、墨外长预告、英伟达收购HF。墨西哥外长6–7日行程未见6日会谈或开馆首发。芯片、整机与科学论文首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
