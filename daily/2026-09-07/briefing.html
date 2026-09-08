@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第250期 · 2026-09-07</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .nepal {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 22px;
+      margin: 18px 0 40px;
+    }
+    .num-stack { display: grid; gap: 16px; }
+    .num-stack div { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .num-stack b { font-size: 36px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .num-stack i { font-style: normal; font-weight: 700; font-size: 13px; color: var(--slate); }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .nepal { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第250期  ·  2026年9月7日  ·  星期一</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍零期  ·  二零二六年九月七日  ·  星期一</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>中墨 · 化武 · 油价</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>麒麟 · 鸿蒙 · 玄戒</em></div>
+        <div class="metric"><b>09</b><span>合计</span><em>周一发布会日</em></div>
+      </div>
+      <p class="spine">今日主线：墨西哥外长走进北京会客厅，外交部把日遗化武与委内瑞拉权益写成同场口径；南岸把死亡账改写成1355，北岸油价把霍尔木兹写成97美元。科技栏不再预告：麒麟9050 Pro与玄戒O3同一天变成可下单的整机。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期一先把一张南美名片摆上桌，再把两场历史账——日遗化武与委内瑞拉石油——写进同一场记者会。河谷南岸改写全国死亡数字，海峡北岸把周末炮火折成开盘价。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「中墨关系不针对第三方，也不应受第三方影响。」——王毅7日在北京会见墨西哥外长贝拉斯科。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>1</b><i>场中墨会谈</i><p>6–7日访华行程首场可核验会谈落地，一中原则与APEC中国年同日入账。</p></div>
+        <div class="fact"><b>1355</b><i>人遇难</i><p>尼减灾机构7日公布新账，失联4996人，总统鲍德尔视察灾区并呼吁气候正义。</p></div>
+        <div class="fact"><b>97</b><i>美元 / 桶</i><p>布伦特周一升至约97美元，霍尔木兹近十日日均仅10艘商船。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">会客厅与履约场</h2>
+    <p class="section-sub">一张南美名片被写成全球南方口径；一趟禁化武组织行程在记者会上收口。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>王毅会见墨西哥外长，强调关系不针对第三方</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/bmz_679954/1206_680604/xgxw_680610/202609/t20260907_12017648.shtml">mfa.gov.cn</a></div>
+        <p class="sum">7日王毅在北京会见墨外长贝拉斯科，转达习近平对辛鲍姆问候。中方称从全球南方团结看待中墨关系，支持墨反对外来干涉。墨方恪守一中原则与联大2758号决议，支持中方主办APEC，并就吉隆灾害再次慰问。</p>
+        <div class="why"><strong>为何重要</strong>墨外长6–7日访华的首场可核验会谈落地，把一中原则、APEC中国年与「不针对第三方」写成同日口径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 北京</div>
+        <h3>毛宁通报禁化武组织考察日遗化武设施</h3>
+        <div class="src">来源：外交部　·　<a href="https://rs.china-embassy.gov.cn/fyrth/202609/t20260907_12017452.htm">china-embassy.gov.cn</a></div>
+        <p class="sum">毛宁称8月31日至9月5日，禁化武组织总干事、执理会主席及12国代表访华，赴珲春、敦化、哈尔巴岭察看日遗化武作业。中方称访问适逢抗战胜利纪念日，各方支持督促日方全面彻底销毁遗弃化武。</p>
+        <div class="why"><strong>为何重要</strong>这是访华行程结束后中方首次公开通报，把日遗化武重新写成履约与历史责任问题。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">石油条款与开盘价</h2>
+    <p class="section-sub">委内瑞拉被写成不可让渡的合法权益；霍尔木兹把周末互袭折进周一油价。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">外交 · 03</div>
+        <h3>中方强调在委合法权益必须得到保护</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部 / 卫星社　·　<a href="https://sputniknews.cn/20260907/1073119389.html">sputniknews.cn</a></div>
+        <p>就美委新协议是否冲击中方石油利益，毛宁称中委合作受国际法与两国法律保护，与第三方无关，也不应受第三方干扰。同场仅称中美就人工智能「保持沟通」，未证实路透所称9月中旬安全对话。</p>
+        <div class="why"><strong>为何重要</strong>美委石油新安排之后，北京第一次用记者会把委内瑞拉权益写成不可让渡条款。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">宏观 · 04</div>
+        <h3>布伦特原油周一升至约97美元</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透 / 商业时报　·　<a href="https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-extends-gains-us-and-iran-target-ships-tit-tat-attacks">businesstimes.com.sg</a></div>
+        <p>路透称周一布伦特涨约0.8%至97.07美元/桶（0512 GMT），WTI约92.28美元。Kpler数据显示霍尔木兹近十日日均仅10艘商船，为5月以来最低。周末美伊互袭油轮，伊方周日称将划限制区。</p>
+        <div class="why"><strong>为何重要</strong>欧佩克+周日纸面持平挡不住海峡实物约束，油价把航运战写成周一开盘后的宏观冲击。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">南岸改账</h2>
+    <p class="section-sub">总统走进安置点，减灾机构第一次把全国死亡数字写成1355。</p>
+    <div class="nepal">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　公共事务 · 加德满都 / 拉苏瓦</div>
+        <h3>尼泊尔总统视察灾区，死亡升至1355人</h3>
+        <div class="src">来源：加德满都邮报 / 印报托　·　<a href="https://kathmandupost.com/national/2026/09/07/nepal-flood-death-toll-rises-to-1-355-nearly-5-000-unaccounted-for">kathmandupost.com</a></div>
+        <p class="sum">总统鲍德尔7日视察努瓦科特比杜尔安置点与拉苏瓦，并发表全国讲话，呼吁气候正义、停止相互指责。国家减灾机构称八县遇难升至1355人、失联4996人（含外籍589人），已救出13396人，财产损失约3875亿卢比。</p>
+        <div class="why"><strong>为何重要</strong>南岸第一次把全国死亡账改写成1355，并把冰川洪灾写成向国际社会索要气候正义的国家叙事。</div>
+      </article>
+      <div class="num-stack">
+        <div><b>4996</b><i>人仍失联</i><p>努瓦科特2340、拉苏瓦1967，含约100名军警与公职人员。</p></div>
+        <div><b>2.56</b><i>十亿美元</i><p>减灾机构初步估计住房与基础设施损失3875亿卢比。</p></div>
+        <div><b>13</b><i>日</i><p>8月26日冰川崩塌满13日，传统印度教哀悼期同日收口。</p></div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>下午广州、晚上北京：华为把韬定律写成可购买的麒麟，小米把沟通会上的玄戒O3写成价目表。操作系统与汽车同夜入账。</p>
+      <div class="stat4">
+        <div><b>+55%</b><i>晶体管密度</i><p>麒麟9050 Pro官方称由约1.55亿升至2.38亿/mm²</p></div>
+        <div><b>30B</b><i>端侧 MoE</i><p>达芬奇NPU称可跑总参30B、激活2B全模态模型</p></div>
+        <div><b>200</b><i>TOPS</i><p>玄戒O3张量算力，安兔兔官方口径超500万</p></div>
+        <div><b>20.99</b><i>万元起</i><p>澎程N70 Pro上市价，Max综合续航1461km</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：八家金融央企拟增资3600亿、吉隆43/519中外媒体见面会、维特科夫/库什纳首访基辅、欧佩克+十月配额、雷扎伊限制区讲话、遂川3死9失联升级、帕乔茨基《An Alien Mind》（均为6日）；韬定律ChinaXiv论文与麒麟密度+55%（4日）；小米IFA预告与18 Fold定档（3日）；墨西哥外长行程预告（3日）；Politico吉林化纤PAN前体（4日）；费马形式化、Astra配额、英伟达收购Hugging Face、RTX Spark/PAIR。刘如谦Nature蛋白进化论文署期7月22日，科大量子定位《自然·物理》9月3日在线，地月激光更早，均不收入。科学与海外芯片、互联网平台周一未见可交叉核验的首发，已标明缺口。Firecrawl 已安装但未鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">下午广州</h2>
+    <p class="section-sub">一面把论文里的逻辑折叠推进量产；一面把操作系统改写成智能体。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　芯片 · 广州</div>
+        <h3>麒麟9050 Pro落地韬定律，Mate XT 2首发</h3>
+        <div class="src">来源：环球时报 / IT之家　·　<a href="https://www.globaltimes.cn/page/202609/1370015.shtml">globaltimes.cn</a></div>
+        <p class="sum">华为7日14:30发布Mate XT 2，首发麒麟9050 Pro。官方称逻辑折叠使晶体管密度由约1.55亿升至2.38亿/mm²（+55%），整机性能较上代升42%；达芬奇NPU支持端侧30B-A2B MoE。售价19999元起，9月12日开售。</p>
+        <div class="why"><strong>为何重要</strong>时隔六年旗舰场再推新麒麟，把4日论文里的韬定律写成可购买的量产SoC。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　系统 · 广州</div>
+        <h3>HarmonyOS 7正式发布并开启公测</h3>
+        <div class="src">来源：IT之家 / C114　·　<a href="https://www.ithome.com/0/999/277.htm">ithome.com</a></div>
+        <p class="sum">何刚发布鸿蒙7：空间美学、系统智能体小艺、星盾六大防诈；方舟引擎称性能+15%、续航+36分钟，1TB机最多省出109GB。鸿蒙6/7设备据称破8500万。首批Mate 80/70、Pura 90等即日起尝鲜，Mate 60系列10月起。</p>
+        <div class="why"><strong>为何重要</strong>操作系统从流畅叙事改写成智能体与防诈底座，并第一次把跨苹果手表、耳机互联写进正式版。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">晚上北京</h2>
+    <p class="section-sub">玄戒O3从沟通会走进折叠机价目表；同一场发布会把澎程写成可提车的数字。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　芯片 · 北京</div>
+        <h3>小米18 Fold首发玄戒O3，10999元起</h3>
+        <div class="src">来源：IT之家　·　<a href="https://www.ithome.com/0/999/441.htm">ithome.com</a></div>
+        <p class="sum">秋季发布会首先推出18 Fold，首发玄戒O3（官方称首款超500万安兔兔SoC），NPU 200 TOPS，并联合长鑫量产国产LPDDR6。售价10999元起，9月10日开售；16GB+1TB陶瓷特别版15999元、限量1500台。</p>
+        <div class="why"><strong>为何重要</strong>8月沟通会上的O3参数第一次变成可下单整机，国产旗舰SoC与LPDDR6同步进入万元折叠市场。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>09　产业 · 北京</div>
+          <h3>小米澎程N70上市，20.99万元起</h3>
+          <div class="src">来源：新浪科技 / IT之家　·　<a href="https://www.ithome.com/0/999/448.htm">ithome.com</a></div>
+          <p class="sum">雷军发布中大型五座增程SUV澎程N70。Pro综合续航1351km、售20.99万元；Max双电机四驱综合1461km、售23.99万元。全系NVIDIA Thor 700 TOPS与小米HAD。</p>
+          <div class="why"><strong>为何重要</strong>小米把手机芯片发布会扩成汽车量产夜，澎程从预告清单走进价目表。</div>
+        </article>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 科学与海外芯片</div>
+          周一未见可交叉核验的《自然》《科学》级论文、海外芯片流片或互联网平台规则首发。不以7月蛋白进化、9月3日量子定位或6日自动研究实习生复述凑数。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第250期 · 收束</span>
+        <span class="iss">09 / 09</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期一不是星期天的复述：墨西哥外长走进北京，日遗化武与委内瑞拉权益被写进同一场记者会；南岸把死亡账改写成1355，油价把霍尔木兹折成97美元。科技栏把两场预告写成两场上市——麒麟9050 Pro与玄戒O3同一天变成可下单的整机，鸿蒙7与澎程N70跟着入账。科学与海外芯片首发不足，不拿上周论文补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>王毅会见墨西哥外长，强调关系不针对第三方</li>
+            <li>毛宁通报禁化武组织考察日遗化武设施</li>
+            <li>中方强调在委合法权益必须得到保护</li>
+            <li>布伦特原油周一升至约97美元</li>
+            <li>尼泊尔总统视察灾区，死亡升至1355人</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>麒麟9050 Pro落地韬定律，Mate XT 2首发</li>
+            <li>HarmonyOS 7正式发布并开启公测</li>
+            <li>小米18 Fold首发玄戒O3，10999元起</li>
+            <li>小米澎程N70上市，20.99万元起</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-07，星期一）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入6日央企增资3600亿、吉隆43/519见面会、美特使首访基辅、欧佩克+配额、雷扎伊限制区讲话、遂川3死9失联、帕乔茨基长文；未混入4日韬定律论文、Politico吉林化纤、费马形式化与Astra配额；未混入3日墨外长预告、小米IFA、英伟达收购HF。科学与海外芯片、互联网平台首发不足，已标明缺口。Firecrawl 已安装但未鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
