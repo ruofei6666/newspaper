@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第251期 · 2026-09-08</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第251期  ·  2026年9月8日  ·  星期二</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍壹期  ·  二零二六年九月八日  ·  星期二</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>海湾 · 更新 · 援助</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>基因组 · 流体 · 光刻</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周二首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：王毅把海湾安全新架构写进中卡会谈，国务院把城市更新写成财政金融协同；运-20把第四批援助送到加德满都，胡塞把沙特南部能源设施点着。同一天，特朗普与普京通了一小时，基辅的三日停火到期。科技栏：DeepMind交出基因组突变地图，OpenAI宣称流体方程可以爆破，光刻厂把High NA时间表钉在2030。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期二把两张地图叠在一起：一张是海湾能源通道，一张是城市更新的财政账本。河谷南岸的遇难数字再被改写，北岸的援助从帐篷换成气垫船。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「枪炮施压不是出路，对话谈判才是正途。」——王毅在北京对卡塔尔首相兼外交大臣穆罕默德谈中东海湾局势。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>97.92</b><i>美元 / 桶</i><p>布伦特收于近六周高位；胡塞袭击沙特南部四城能源设施。</p></div>
+        <div class="fact"><b>1357</b><i>人遇难</i><p>尼减灾署截至8日13时数字；失联约5326人。第四批中方援助当日运抵。</p></div>
+        <div class="fact"><b>1</b><i>小时通话</i><p>克宫称特朗普与普京「建设性且坦率」；白宫未立即证实。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">海湾会谈与城市账本</h2>
+    <p class="section-sub">一场把能源供应写进战略伙伴关系的会见；一场把老旧街区写成扩大内需抓手的专题学习。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>王毅同卡塔尔首相会谈，卡方承诺优先保障对华能源供应</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/wjb_673085/zzjg_673183/xws_674681/xgxw_674683/202609/t20260908_12018458.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">9月8日，王毅在北京会见访华的卡塔尔首相兼外交大臣穆罕默德。双方互致元首问候。王毅称中方始终把对卡关系放在中东外交重要位置，强调对话谈判才是海湾出路。穆罕默德表示卡方恪守一个中国原则，将克服困难优先保障中方能源供应，并支持中方中东安全倡议。</p>
+        <div class="why"><strong>为何重要</strong>霍尔木兹航运受阻之际，能源供应承诺与地区安全新架构被写进同一场会谈。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　宏观 · 北京</div>
+        <h3>李强主持国务院专题学习：城市更新要加大投入并完善基金</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/leaders/20260908/49033f162797403a925e33650eb3ad7f/c.html">news.cn</a></div>
+        <p class="sum">9月8日，国务院以「高质量推进城市更新、促进城市内涵式发展」为主题进行第二十一次专题学习。李强指出城市更新已成为改善居住、扩大内需和动能转换的抓手，要求统筹住房到城区改造、加快老旧街区厂区转型，并加大政府投入、完善城市更新基金等投融资工具。</p>
+        <div class="why"><strong>为何重要</strong>房地产转向内涵式发展后，城市更新被写成财政金融协同的系统工程，而不只是修缮口号。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">南岸数字与海峡火光</h2>
+    <p class="section-sub">援助从帐篷换成气垫船与太平柜；胡塞把战火从霍尔木兹扩到红海一侧的沙特出口通道。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　救灾 · 加德满都</div>
+        <h3>对尼第四批紧急援助运抵，尼方遇难升至1357人</h3>
+        <div class="src">来源：外交部 / CGTN　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260908_12018501.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">毛宁说第四批紧急援助物资8日上午启运，含救援运输、照明与遗体处置装备。当天下午运-20运抵加德满都，张茂明大使与尼科技部长马哈比尔·普恩出席移交。尼减灾署称截至8日13时遇难1357人、约5326人失联。中方民间亦搭建安置点并移交首批善款。</p>
+        <div class="why"><strong>为何重要</strong>跨境冰川灾后第十四日，援助清单说明搜救已进入处置遗体与防次生灾害阶段。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　能源 · 海湾 / 也门</div>
+        <h3>胡塞袭击沙特南部能源设施，布伦特收于97.92美元</h3>
+        <div class="src">来源：路透社　·　<a href="https://www.reuters.com/business/energy/oil-rises-risks-prolonged-mideast-conflict-heighten-supply-worries-2026-09-08/">reuters.com</a></div>
+        <p class="sum">也门胡塞武装8日袭击沙特南部四城能源设施，造成逾70人受伤并引发油设施起火。布伦特收涨0.9%至97.92美元/桶，WTI涨1.7%至93.03美元。高盛、汇丰上调2026–2027油价预期。霍尔木兹周一仅7艘商品船通过。中国8月原油进口同比仍降23.4%。</p>
+        <div class="why"><strong>为何重要</strong>战火扩到红海一侧的沙特出口通道，油价逼近百美元会把通胀与加息预期绑在一起。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">一小时通话与到期停火</h2>
+    <p class="section-sub">克宫把元首通话写成「建设性」；基辅在同一天重新听见爆炸。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">外交 · 05</div>
+        <h3>特朗普与普京通话一小时，克宫称美方促尽快结束乌战</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透社 / 克宫　·　<a href="https://www.reuters.com/world/putin-told-trump-he-wants-swift-end-ukraine-war-us-russia-ties-restored-kremlin-2026-09-08/">reuters.com</a></div>
+        <p>克宫助理乌沙科夫称，特朗普与普京8日通话整整一小时，属「建设性且坦率」。特朗普强调尽早结束冲突以全面恢复美俄关系；普京介绍战场判断并谈美方可做之事。双方正面评价特使周末访莫斯科与基辅。白宫未立即证实。</p>
+        <div class="why"><strong>为何重要</strong>特使穿梭后的元首通话把「三方会谈」从试探写成日程，但领土条件仍未松动。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">军事 · 06</div>
+        <h3>三日停火结束俄军再袭基辅，泽连斯基称特使有「不错想法」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透社 / 欧洲新闻台　·　<a href="https://www.reuters.com/world/europe/zelenskiy-says-us-envoys-presented-decent-ideas-peace-talks-2026-09-08/">reuters.com</a></div>
+        <p>泽连斯基8日称维特科夫与库什纳提出若干「非常不错、很有价值」的想法，并计划9月下旬会见特朗普讨论冬季防空。英方同日宣布约1亿英镑防空拨款，德防长承诺提供爱国者导弹。停火到期后俄军再袭基辅，当地称复杂打击造成至少3人死亡。</p>
+        <div class="why"><strong>为何重要</strong>外交日程与防空库存在同一天并列：会谈还在谈「想法」，首都已重新进入弹道导弹窗口。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期二的科技栏不写发布会复述，只写三件可核验的首发：一张基因组地图、一条流体奇点证明、一份光刻时间表。</p>
+      <div class="stat4">
+        <div><b>90亿</b><i>种单碱基</i><p>AlphaGenome Atlas预计算的人类基因组突变规模</p></div>
+        <div><b>1 PB</b><i>数据集</i><p>DeepMind称图谱体积约一拍字节</p></div>
+        <div><b>88</b><i>小时</i><p>OpenAI多智能体抵达纳维–斯托克斯证明的用时</p></div>
+        <div><b>2030</b><i>年量产</i><p>台积电称启用ASML High NA的时间点</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：李强7日会见卡首相、王毅7日会见墨西哥外长贝拉斯科、麒麟9050 Pro / Mate XT 2、HarmonyOS 7公测、小米18 Fold / 玄戒O3、澎程N70（均为7日发布会或首发）。未混入6日特使首访基辅、欧佩克+十月配额、八家金融央企拟增资3600亿、吉隆43/519见面会。未混入GPT-6 Astra首发（3–4日）、费马形式化、韬定律论文、英伟达收购Hugging Face。互联网平台与国产芯片8日未见可交叉核验的产业首发，华为/小米稿件均为7日复述，已标明缺口。Firecrawl 已安装但未鉴权。
+      </div>
+    </section>
+
+    <h2 class="section-title">地图与奇点</h2>
+    <p class="section-sub">一张把90亿种突变写成可检索分数的图谱；一份宣称流体可以在有限时间爆破的证明。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　科学 · 伦敦</div>
+        <h3>DeepMind发布AlphaGenome Atlas，预计算90亿种单碱基突变</h3>
+        <div class="src">来源：Google DeepMind　·　<a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/">blog.google</a></div>
+        <p class="sum">DeepMind 8日推出AlphaGenome Atlas，用既有模型预计算人类基因组全部约90亿种单碱基替换的调控影响，数据约1 PB，并给出综合编码与非编码的AVI分数。Broad研究所用其优先排序DNM1变异；UK Biobank分析称非编码关联增加22%。门户免编程开放，商业使用需授权。</p>
+        <div class="why"><strong>为何重要</strong>把「查突变影响」从每次现算改成可检索地图，罕见病优先排序第一次有统一标尺。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　科学 · 旧金山</div>
+        <h3>OpenAI称内部模型解决纳维–斯托克斯问题，并给出Lean形式化</h3>
+        <div class="src">来源：OpenAI　·　<a href="https://openai.com/index/navier-stokes-solution/">openai.com</a></div>
+        <p class="sum">OpenAI 8日称，能力显著高于GPT-6 Astra的内部模型证明三维不可压纳维–斯托克斯方程可在有限时间内形成奇点，对应克莱研究所陈述C与D。约万级智能体运行约88小时，Astra再用17小时完成Lean核验。公司声明不申领百万美元奖金，并承认Alpöge与Buckmaster在强迫欧拉方程上的优先权。</p>
+        <div class="why"><strong>为何重要</strong>若核验成立，流体是否永远光滑的九十年问题将被改写成「可以爆破」。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">光刻时间表</h2>
+    <p class="section-sub">三大厂把High NA写进同一天；光罩尺寸本身成为下一代先进制程的公约。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　芯片 · 台北 / 维尔德霍芬</div>
+        <h3>台积电称2030年起用High NA量产，三星瞄2028、英特尔已投产</h3>
+        <div class="src">来源：日经亚洲　·　<a href="https://asia.nikkei.com/business/tech/semiconductors/tsmc-intel-and-samsung-all-bet-on-asml-s-latest-chip-tool-in-ai-race">asia.nikkei.com</a></div>
+        <p class="sum">台积电8日表示将自2030年起在先进制程量产中使用ASML High NA极紫外光刻机；三星目标不晚于2028年导入，英特尔称已在量产中使用。台积电预计AI所需的复杂晶体管架构将推高High NA图层数。</p>
+        <div class="why"><strong>为何重要</strong>先进制程路线从「谁先买机器」变成「谁先把High NA喂饱AI图层」。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>10　芯片 · 维尔德霍芬</div>
+          <h3>ASML与台积电发起12英寸光罩倡议</h3>
+          <div class="src">来源：ASML　·　<a href="https://www.asml.com/en/news/press-releases/2026/tsmc-and-asml-announce-industry-transition-to-large-format-photomasks-for-high-na-euv">asml.com</a></div>
+          <p class="sum">双方8日宣布推动极紫外光罩从6英寸转向12英寸，以提高High NA产率并去掉拼接限制。目标2031年建成中试线，2033年支撑先进节点量产。三星、英特尔等表示有意加入。</p>
+          <div class="why"><strong>为何重要</strong>High NA若继续用6英寸光罩，产率会被拼接吃掉。</div>
+        </article>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 互联网与国产芯片</div>
+          8日未见可交叉核验的互联网平台产品首发或国产芯片流片/整机上市。不以7日华为三折叠、小米18 Fold或混元/通义旧稿凑数。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第251期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期二不是星期一的复述：中卡会谈把能源供应和海湾安全新架构写在同一张桌上，国务院把城市更新写成可融资的系统工程；运-20把第四批援助送到加德满都，胡塞把沙特南部能源设施点着。同一小时尺度上，特朗普与普京通话，基辅的三日停火到期。科技栏交出一张90亿突变的地图、一份流体可以爆破的证明，以及High NA的2030时间表。互联网平台与国产芯片首发不足，不拿周日发布会补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>王毅同卡塔尔首相会谈，卡方承诺优先保障能源供应</li>
+            <li>李强主持国务院专题学习：城市更新与基金</li>
+            <li>对尼第四批紧急援助运抵，尼方遇难升至1357人</li>
+            <li>胡塞袭击沙特南部能源设施，布伦特收于97.92美元</li>
+            <li>特朗普与普京通话一小时，克宫称美方促尽快结束乌战</li>
+            <li>三日停火结束俄军再袭基辅，泽连斯基称特使有「不错想法」</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>DeepMind发布AlphaGenome Atlas</li>
+            <li>OpenAI称解决纳维–斯托克斯千禧年问题</li>
+            <li>台积电称2030年起用High NA量产</li>
+            <li>ASML与台积电发起12英寸光罩倡议</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-08，星期二）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入7日李强见卡首相、王毅见墨外长、麒麟9050 Pro/Mate XT 2、HarmonyOS 7、小米18 Fold/玄戒O3、澎程N70；未混入6日特使首访基辅、欧佩克+配额、央企增资3600亿、吉隆43/519见面会；未混入Astra首发、费马形式化、韬定律论文、英伟达收购Hugging Face。互联网平台与国产芯片8日首发不足，已标明缺口。Firecrawl 已安装但未鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
