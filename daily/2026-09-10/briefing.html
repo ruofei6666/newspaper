@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第253期 · 2026-09-10</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 28pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第253期  ·  2026年9月10日  ·  星期四</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍叁期  ·  二零二六年九月十日  ·  星期四</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>金砖 · 油价 · 镐山</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>折叠屏 · 2纳米 · 月球模型</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周四首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：外交部傍晚宣布习近平12–13日赴新德里出席金砖会晤，上午记者会仍称「暂无信息」。国新办把《金融强国建设“十五五”规划》写进下午三点。特朗普的安德鲁斯停火时间表与镐山警告合沪时入账。胡塞夺取摩卡，布伦特收在107.63美元。加德满都把遇难数字改到1377。科技栏：苹果首款折叠屏与2纳米A20 Pro在沪时凌晨首发，NASA与IBM同日开源月球基础模型。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期四把一张行程表和一张油价表叠在一起：新德里的金砖周末，阿曼湾与红海的双海峡。北京用金融五年规划作答，达拉斯把镐山写进竞选演说。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「应印度共和国总理莫迪邀请，国家主席习近平将于9月12日至13日赴印度新德里出席金砖国家领导人第十八次会晤。」——外交部发言人10日18时宣布。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>12–13</b><i>日 · 新德里</i><p>习近平赴印出席金砖第十八次会晤；记者会上仍称暂无信息。</p></div>
+        <div class="fact"><b>107.63</b><i>美元 / 桶</i><p>布伦特收涨6.34%；胡塞夺取摩卡，WTI收102.48。</p></div>
+        <div class="fact"><b>1377</b><i>人遇难</i><p>尼方10日数字；失联约5130人，已救出13656人。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">行程表与沟通窗口</h2>
+    <p class="section-sub">一份傍晚才落墨的金砖行程；一场仍不证实日期的元首互动。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京 / 新德里</div>
+        <h3>习近平将赴印度出席金砖第十八次会晤</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.fmprc.gov.cn/zyxw/202609/t20260910_12019913.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">外交部发言人10日18时宣布：应莫迪邀请，习近平将于9月12日至13日赴新德里出席金砖国家领导人第十八次会晤。当日记者会上郭嘉昆仍称暂无信息。</p>
+        <div class="why"><strong>为何重要</strong>中印在边境灾后与经贸摩擦并行之际，元首出现在新德里本身就是信号。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 北京</div>
+        <h3>郭嘉昆：中美就年内元首互动保持沟通</h3>
+        <div class="src">来源：外交部　·　<a href="https://us.china-embassy.gov.cn/lcbt/wjbfyrbt/202609/t20260910_12019908.htm">us.china-embassy.gov.cn</a></div>
+        <p class="sum">郭嘉昆称元首外交具有不可替代的战略引领作用，双方就年内元首互动安排保持沟通。就美方在巴拿马试点人工智能供应链溯源，他反对封闭排他的「小圈子」。</p>
+        <div class="why"><strong>为何重要</strong>峰会窗口仍在谈，但拉美溯源试点把人工智能供应链写成围堵工具。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">五年账本与镐山警告</h2>
+    <p class="section-sub">北京把利率与准备金写进「十五五」；达拉斯把地下隧道写进竞选演说。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　宏观 · 北京</div>
+        <h3>《金融强国建设“十五五”规划》出台</h3>
+        <div class="src">来源：国新办 / 外汇局　·　<a href="https://www.safe.gov.cn/safe/2026/0910/27866.html">safe.gov.cn</a></div>
+        <p class="sum">国新办下午发布会宣布规划出台。目标是到2030年形成调控协同、风险防控精准的总体框架，到2035年基本建成中国特色现代金融体系。央行配套印发规划及9份行动方案。</p>
+        <div class="why"><strong>为何重要</strong>数量型中介目标将淡化，利率、准备金与离岸人民币被写成未来五年主轴。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　军事 · 安德鲁斯 / 达拉斯</div>
+        <h3>特朗普警告镐山活动，称战事将于中期选举后结束</h3>
+        <div class="src">来源：新华社 / 路透社　·　<a href="https://www.cnbc.com/2026/09/10/iran-us-war-hormuz-pickaxe-mountain.html">cnbc.com</a></div>
+        <p class="sum">特朗普9日晚（合沪时10日）在安德鲁斯称战事将于11月中期选举后立即结束；随后在达拉斯警告镐山「有一些动向」，称若再耍花招将予以重击。CSIS称该地道路活动为历史高位。</p>
+        <div class="why"><strong>为何重要</strong>停火被绑上选举日历，地下核设施再被点名，战事出口仍不是谈判桌。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">双海峡与南岸数字</h2>
+    <p class="section-sub">红海港口易手把第二道咽喉写进油价；河谷南岸第十六日仍在改写名单。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">能源 · 05</div>
+        <h3>胡塞占领摩卡，布伦特收于107.63美元</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透社 / 半岛电视台　·　<a href="https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/">reuters.com</a></div>
+        <p>胡塞武装10日夺取也门红海港口摩卡，并向曼德海峡方向推进。布伦特收涨6.34%至107.63美元，WTI收102.48美元，创5月中旬以来最高。霍尔木兹与红海双海峡同时承压。</p>
+        <div class="why"><strong>为何重要</strong>油轮战火从霍尔木兹扩到红海出口，市场不再按「单一海峡」定价。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 06</div>
+        <h3>尼方遇难升至1377人，失联约5130人</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：PTI / 外交部　·　<a href="https://www.thehindu.com/news/international/nepal-floods-death-toll-climbs-to-1377-search-operations-continue-for-more-than-5000-missing/article71451283.ece">thehindu.com</a></div>
+        <p>尼减灾署10日通报遇难升至1377人，失联约5130人，已救出13656人。尼方拟向富裕国家寻求50亿美元重建援助。郭嘉昆称中方愿根据尼方需要提供力所能及的帮助。</p>
+        <div class="why"><strong>为何重要</strong>救援窗口转入重建要价，数字第十六日仍在改写，跨境冰川灾害尚未收口。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期四的科技栏先记沪时凌晨的苹果发布会，再记一条可核验的科学开源：首款折叠屏、一颗2纳米手机芯片、一块健康传感腕表，以及一张把月球写成基础模型的地图。</p>
+      <div class="stat4">
+        <div><b>15999</b><i>元起</i><p>iPhone Duo 国行256GB起售价</p></div>
+        <div><b>2nm</b><i>A20 Pro</i><p>苹果首款2纳米iPhone芯片</p></div>
+        <div><b>7.6</b><i>英寸内屏</i><p>面积较18 Pro Max大约50%</p></div>
+        <div><b>200万</b><i>图像块</i><p>NASA–IBM月球模型训练样本</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：9日原子能机构提交安理会、五艘油轮、布伦特101.21、毛宁「抽梯子」、8月CPI/PPI、尼方1369、OpenAI–三星、WHOLISTIC / ProteinTalks / GPN-Star。未混入商务部蒸馏答问（9日21:28首发）、Jalapeño复述、韬定律论文与麒麟9050 Pro。OpenAI「ChatGPT for Financial Services」路透时戳17:29 UTC，合沪时已入11日，未收入。国产芯片、互联网平台与科学期刊10日首发不足，已标明缺口。Firecrawl 已安装但未鉴权。
+      </div>
+    </section>
+
+    <h2 class="section-title">折叠屏与2纳米</h2>
+    <p class="section-sub">特纳斯把第一部可对折的iPhone放上乔布斯剧院；同一颗芯片也写进直板旗舰。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　产品 · 库比蒂诺</div>
+        <h3>苹果发布首款折叠屏 iPhone Duo</h3>
+        <div class="src">来源：Apple 新闻室　·　<a href="https://www.apple.com.cn/newsroom/2026/09/apple-unveils-iphone-duo/">apple.com.cn</a></div>
+        <p class="sum">苹果沪时10日凌晨发布首款折叠屏iPhone Duo。外屏5.4英寸、内屏7.6英寸，搭载A20 Pro与侧边触控ID，全球纯eSIM。国行256GB起售15999元，10月16日预购、23日发售。</p>
+        <div class="why"><strong>为何重要</strong>折叠屏从安卓高端竞赛改写成苹果入场券，定价本身就是市场分层。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　芯片 · 库比蒂诺</div>
+        <h3>A20 Pro成为苹果首款2纳米iPhone芯片</h3>
+        <div class="src">来源：Apple 新闻室　·　<a href="https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/">apple.com</a></div>
+        <p class="sum">iPhone 18 Pro/Pro Max搭载A20 Pro：6核CPU、7核GPU较上代快约40%，双16核神经网络引擎。均热板持续性能宣称提升约40%。美售1199/1299美元，9月12日预购、18日开卖。</p>
+        <div class="why"><strong>为何重要</strong>2纳米从M系列走进手机，持续性能比峰值跑分更能改写端侧AI上限。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">腕上传感与月面地图</h2>
+    <p class="section-sub">一块把准备度写成0到10的腕表；一套把十七年轨道影像写成开源模型的月球图。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　科学 · 戈达德 / 约克敦</div>
+        <h3>NASA与IBM开源月球基础模型</h3>
+        <div class="src">来源：NASA Science / IBM Research　·　<a href="https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/">science.nasa.gov</a></div>
+        <p class="sum">NASA与IBM开源月球基础模型，以月球勘测轨道器约200万图像块训练，用于撞击坑测绘、极地冰稳定性与火山地貌分析。权重已上线Hugging Face，属Prithvi系列延伸。美东8时首发，合沪时20时。</p>
+        <div class="why"><strong>为何重要</strong>月球数据第一次被写成可迁移的多模态底座，而不是按任务各训各的。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>10　硬件 · 库比蒂诺</div>
+          <h3>Ultra 4以健康传感系统重写心率采样</h3>
+          <div class="src">来源：Apple 新闻室　·　<a href="https://www.apple.com/newsroom/2026/09/apple-unveils-apple-watch-ultra-4/">apple.com</a></div>
+          <p class="sum">Apple Watch Ultra 4引入健康传感系统与S11芯片，宣称可穿戴设备中最准心率，全天每5秒测量，并给出0–10准备度评分。户外续航约45小时，9月18日起售。</p>
+          <div class="why"><strong>为何重要</strong>采样频率把运动手表推进到连续生理监测，而不只是运动记录仪。</div>
+        </article>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 国产芯片与互联网平台</div>
+          10日未见可交叉核验的国产芯片流片/整机上市，也未见互联网平台产品首发或《自然》《科学》新论文。不以Jalapeño复述、韬定律旧稿或OpenAI金融版（沪时已入11日）凑数。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第253期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期四不是星期三的复述：新德里的金砖行程傍晚才落墨，中美元首互动仍只写成「保持沟通」。金融「十五五」把利率和准备金写成五年主轴。特朗普把停火绑上中期选举，又把镐山点进演说。胡塞夺取摩卡，布伦特收在107.63美元。加德满都把遇难数字改到1377。科技栏交出首款折叠屏、一颗2纳米手机芯片，以及一张开源的月球地图。国产芯片与互联网平台首发不足，不拿9日论文和11日凌晨稿补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>习近平将赴印度出席金砖第十八次会晤</li>
+            <li>郭嘉昆：中美就年内元首互动保持沟通</li>
+            <li>《金融强国建设“十五五”规划》出台</li>
+            <li>特朗普警告镐山活动，称战事将于中期选举后结束</li>
+            <li>胡塞占领摩卡，布伦特收于107.63美元</li>
+            <li>尼方遇难升至1377人，失联约5130人</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>苹果发布首款折叠屏 iPhone Duo</li>
+            <li>A20 Pro成为苹果首款2纳米iPhone芯片</li>
+            <li>NASA与IBM开源月球基础模型</li>
+            <li>Ultra 4以健康传感系统重写心率采样</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-10，星期四）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入9日原子能机构提交安理会、五艘油轮、布伦特101.21、毛宁「抽梯子」、8月CPI/PPI、尼方1369、OpenAI–三星与《自然》三篇；未混入商务部蒸馏答问（9日21:28）、Jalapeño复述、韬定律与麒麟旧稿。苹果发布会于太平洋时间9日上午举行，合沪时10日凌晨，按首发日收入。特朗普安德鲁斯表态约18:54 UTC，合沪时10日凌晨，按首发日收入。OpenAI金融版路透时戳已入11日，未收入。国产芯片、互联网平台与科学期刊10日首发不足，已标明缺口。Firecrawl 已安装但未鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
