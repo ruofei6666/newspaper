@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第254期 · 2026-09-11</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 28pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第254期  ·  2026年9月11日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍肆期  ·  二零二六年九月十一日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>金砖 · 油报 · 9/11</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>金融版 · 科创板 · 光子</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周五首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：毛宁把习莫双边会晤写成「正在安排」，普京与佩泽希齐扬同日抵达新德里。国常会把算力网和安全生产放上同一张议程。IEA把海湾供应恢复推迟到2027年。特朗普在五角大楼把对伊战争写进9/11二十五周年。加德满都把遇难数字改到1385。科技栏：OpenAI金融版按沪时入账，燧原科技登陆科创板，《自然》两篇把结构光和铁电热管理写成论文。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期五把一张会晤表和一张供需表叠在一起：新德里的金砖前夜，巴黎的石油月报，华盛顿的纪念日演说。北京用算力网作答，加德满都继续改写名单。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「中印双方正在安排习近平主席同印度总理莫迪举行双边会晤。这将是两国领导人继喀山、天津会晤之后，连续第三年会晤。」——外交部发言人毛宁11日记者会。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>第三年</b><i>习莫双边</i><p>喀山、天津之后，中印正在安排金砖期间会晤。</p></div>
+        <div class="fact"><b>2.5</b><i>百万桶 / 日</i><p>IEA将2026年需求降幅再下调94万桶/日。</p></div>
+        <div class="fact"><b>1385</b><i>人遇难</i><p>尼方周五早间数字；傍晚通报1386具遗体。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">会晤表与抵达夜</h2>
+    <p class="section-sub">北京把双边写成「正在安排」；新德里把两位总统请进巴拉特·曼达帕姆。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>毛宁：中印正在安排习莫双边会晤</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://us.china-embassy.gov.cn/chn/lcbt/wjbfyrbt/202609/t20260911_12020879.htm">us.china-embassy.gov.cn</a></div>
+        <p class="sum">毛宁11日称，中印正在安排习近平同莫迪举行双边会晤，这将是喀山、天津之后连续第三年会晤。她并称习近平将在金砖会晤发表重要讲话，提出中方倡议，为「大金砖合作」定向领航。</p>
+        <div class="why"><strong>为何重要</strong>行程10日已宣布，11日才把双边会晤从「暂无信息」写成正在安排。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 新德里</div>
+        <h3>普京抵印与莫迪会谈，伊总统同日到访</h3>
+        <div class="src">来源：印度外交部 / 法新社　·　<a href="https://theprint.in/diplomacy/modi-putin-discuss-ukraine-war-safety-of-indian-seafarers-during-bilateral-meeting-in-delhi/3040421/">theprint.in</a></div>
+        <p class="sum">普京11日抵新德里，与莫迪会谈约45分钟，讨论经贸、防务、能源及黑海印度海员安全；莫迪接受访俄年度峰会邀请。伊朗总统佩泽希齐扬同日抵达并会谈，莫迪强调航行自由与海员安全。</p>
+        <div class="why"><strong>为何重要</strong>金砖前夜，莫斯科与德黑兰先坐进新德里的会客室，航道安全被写成双边议题。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">算力网与供需表</h2>
+    <p class="section-sub">北京把算电协同写进常务会议；巴黎把海湾复产推迟到明年。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　宏观 · 北京</div>
+        <h3>国常会部署安全生产并研究算力网</h3>
+        <div class="src">来源：新华社 / 人民网　·　<a href="http://politics.people.com.cn/n1/2026/0911/c1024-40797223.html">politics.people.com.cn</a></div>
+        <p class="sum">李强11日主持国常会，针对近期安全事故部署压实「三管三必须」，并研究算力网建设：完善基础设施、推进算电协同与绿电直连。会议还研究老旧水库改造，审议通过基金会管理条例修订草案。</p>
+        <div class="why"><strong>为何重要</strong>算力第一次被写进同一场国常会的安全与水利议程，绿电直连成调度条件。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　能源 · 巴黎</div>
+        <h3>IEA：海湾供应恢复推迟至2027年</h3>
+        <div class="src">来源：国际能源署　·　<a href="https://www.iea.org/reports/oil-market-report-september-2026">iea.org</a></div>
+        <p class="sum">IEA周五月报将2026年全球需求降幅下调至250万桶/日，较上月再砍94万桶。供应预计降至1.007亿桶/日，海湾全面恢复推迟到2027年。8月霍尔木兹流量仅760万桶/日，海湾柴油净出口约为战前四分之一。</p>
+        <div class="why"><strong>为何重要</strong>市场不再按「年底复航」定价，2026–27被写成近乎失落的两年。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">纪念日与南岸数字</h2>
+    <p class="section-sub">五角大楼把对伊战争写进二十五周年；河谷南岸第十七日仍在改写名单。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">军事 · 05</div>
+        <h3>特朗普在9/11仪式上将对伊战争写入「反恐」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：卫报 / 纽约邮报　·　<a href="https://www.theguardian.com/us-news/2026/sep/11/trump-hegseth-911-memorial">theguardian.com</a></div>
+        <p>特朗普在五角大楼二十五周年仪式上说「我们永远不会忘记，这就是今天还在打仗的原因」，称要确保伊朗「永远不会拥有核武器」。国防部长赫格塞斯称伊方防空「已经没了」，并把油轮击沉写进悼词。</p>
+        <div class="why"><strong>为何重要</strong>纪念日被改写成战争动员，停火日历仍绑在中期选举，而不是谈判桌。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">救灾 · 06</div>
+        <h3>尼方遇难升至1385人，傍晚通报1386具遗体</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：尼减灾署 / Nepal News　·　<a href="https://english.nepalnews.com/s/nation/bhote-koshi-flood-death-toll-reaches-1385-as-rescue-operations-intensify/">english.nepalnews.com</a></div>
+        <p>尼减灾署周五早通报博科西洪灾遇难升至1385人、失联5130人、已救出13676人；傍晚发言人马哈特称截至17时已发现1386具遗体。较10日的1377人再改写，搜寻进入第十七日。</p>
+        <div class="why"><strong>为何重要</strong>跨境冰川灾害的名单仍未收口，救援窗口继续让位于清点与重建要价。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期五的科技栏先记沪时凌晨入账的华尔街产品，再记一块登陆科创板的国产云端芯片，以及两篇把结构光和铁电热管理写成论文的《自然》稿。</p>
+      <div class="stat4">
+        <div><b>1:29</b><i>沪时首发</i><p>OpenAI金融版路透时戳入11日</p></div>
+        <div><b>179%</b><i>首日收涨</i><p>燧原科技发行价142.18元</p></div>
+        <div><b>片上</b><i>时空波包</i><p>《自然·光子学》激光阵列</p></div>
+        <div><b>AlN</b><i>铁电热导</i><p>掺杂降矫顽场也降热导</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：10日金砖行程宣布、郭嘉昆元首互动、金融「十五五」、安德鲁斯停火时间表、胡塞夺摩卡、布伦特107.63收盘、尼方1377、iPhone Duo / A20 Pro / Ultra 4、NASA–IBM月球模型。未混入DeepSeek V4.1-Flash（官方changelog署期9月10日）、混元Hy4（8月底）、AuK（9–10日）及高通骁龙预告复述。互联网平台与海外芯片量产11日首发不足，已标明缺口。Firecrawl 已安装但未鉴权。
+      </div>
+    </section>
+
+    <h2 class="section-title">华尔街产品与科创板开盘</h2>
+    <p class="section-sub">一份按沪时凌晨入账的投行工作台；一只尚未盈利的云端芯片股。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　人工智能 · 旧金山</div>
+        <h3>OpenAI推出面向投行的ChatGPT金融版</h3>
+        <div class="src">来源：OpenAI / 路透社　·　<a href="https://openai.com/index/introducing-chatgpt-financial-services/">openai.com</a></div>
+        <p class="sum">路透时戳9月10日17:29 UTC（合沪时11日1:29）发布。产品由GPT-6 Astra驱动，内置LSEG、PitchBook、Daloopa等数据，摩根士丹利与Evercore为设计伙伴，面向投行建模与路演稿。</p>
+        <div class="why"><strong>为何重要</strong>初级分析师最耗时的检索与制表，被写成可引用、可审计的企业工作流。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　芯片 · 上海</div>
+        <h3>燧原科技登陆科创板，首日收涨179%</h3>
+        <div class="src">来源：新华财经 / 东方财富　·　<a href="https://finance.eastmoney.com/a/202609113872036688.html">eastmoney.com</a></div>
+        <p class="sum">燧原科技（688801）11日挂牌，发行价142.18元，开盘410元，收盘397元，涨179.22%。公司尚未盈利，拟募资约61亿元用于第五、六代云端AI芯片。腾讯为第一大客户并参与战略配售。</p>
+        <div class="why"><strong>为何重要</strong>国产云端芯片的定价权从私募估值转到公开市场，客户集中度也一并亮相。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">片上结构光与铁电热管理</h2>
+    <p class="section-sub">一套不再依赖自由空间光路的激光阵列；一层把矫顽场和热导写成同一对矛盾的氮化铝。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　科学 · 洛杉矶 / 奥兰多</div>
+        <h3>片上时空波包激光阵列见于《自然·光子学》</h3>
+        <div class="src">来源：Nature Photonics　·　<a href="https://www.nature.com/articles/s41566-026-02003-0">nature.com</a></div>
+        <p class="sum">南加州大学与中佛罗里达大学团队11日发表片上时空波包激光阵列：用双端分布式反馈激光直接合成相干或非相干时空结构光，不再依赖光栅与空间光调制器组成的自由空间光路，面向显微、通信与超快光学。</p>
+        <div class="why"><strong>为何重要</strong>结构光第一次从光学平台走进芯片，光源本身就能整形，而不是后置调制。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>10　科学 · 弗吉尼亚 / 宾州</div>
+          <h3>氮化铝铁电薄膜：降矫顽场也降热导</h3>
+          <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-77264-y">nature.com</a></div>
+          <p class="sum">弗吉尼亚大学与宾州州立大学团队报告CMOS兼容AlN铁电薄膜：硼、钪掺杂可降低矫顽场，但同时抑制晶格热导。红外椭偏测得的光学声子寿命与热导呈单调关系，给集成存储划出热设计边界。</p>
+          <div class="why"><strong>为何重要</strong>下一代氮化物存储不能只看翻转电压，散热成为与极化同样硬的约束。</div>
+        </article>
+        <div class="dark-note" style="margin:16px 0 0;">
+          <div class="lab">信息不足 · 互联网平台与海外芯片</div>
+          11日未见可交叉核验的互联网平台产品首发或海外芯片量产/流片公告。不以DeepSeek V4.1-Flash（10日官方稿）、混元Hy4旧稿或高通预告复述凑数。
+        </div>
+      </div>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第254期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期五不是星期四的复述：金砖行程已落墨，双边会晤才被写成「正在安排」。普京与佩泽希齐扬先于习近平坐进新德里。国常会把算力网和安全生产放上同一张议程。IEA把海湾复产推迟到2027年，柴油比原油更紧。特朗普在五角大楼把对伊战争写进9/11。加德满都把遇难数字改到1385。科技栏交出一份华尔街工作台、一只科创板云端芯片，以及两篇把光和热写成约束的论文。互联网平台与海外芯片首发不足，不拿10日模型稿补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>毛宁：中印正在安排习莫双边会晤</li>
+            <li>普京抵印与莫迪会谈，伊总统同日到访</li>
+            <li>国常会部署安全生产并研究算力网</li>
+            <li>IEA：海湾供应恢复推迟至2027年</li>
+            <li>特朗普在9/11仪式上将对伊战争写入「反恐」</li>
+            <li>尼方遇难升至1385人，傍晚通报1386具遗体</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>OpenAI推出面向投行的ChatGPT金融版</li>
+            <li>燧原科技登陆科创板，首日收涨179%</li>
+            <li>片上时空波包激光阵列见于《自然·光子学》</li>
+            <li>氮化铝铁电薄膜：降矫顽场也降热导</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-11，星期五）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。未混入10日金砖行程宣布、郭嘉昆元首互动、金融「十五五」、安德鲁斯停火时间表、胡塞夺摩卡、布伦特107.63、尼方1377、苹果折叠屏与2纳米、NASA–IBM月球模型。OpenAI金融版路透时戳17:29 UTC，合沪时11日凌晨，按首发日收入。DeepSeek V4.1-Flash官方署期为10日，未收入。特朗普五角大楼仪式为美东上午，合沪时11日晚，按首发日收入。互联网平台与海外芯片量产11日首发不足，已标明缺口。Firecrawl 已安装但未鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
