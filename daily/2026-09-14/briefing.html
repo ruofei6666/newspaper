@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第257期 · 2026-09-14</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 28pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第257期  ·  2026年9月14日  ·  星期一</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍柒期  ·  二零二六年九月十四日  ·  星期一</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>再确认 · 回款 · 油价</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>盈利 · MONAKA · 框架</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周一首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：郭嘉昆把新德里写成中印关系的「再确认」；国新办五部门把中小企业回款难写成现金支付硬杠杠。沙特东西管道关停后，布伦特迎来第一个交易日。科技栏：金融时报盈利稿合沪时凌晨入账，富士通把2纳米MONAKA写成11月可下单，济南网安周交出《框架》3.0，《自然·电子》把过滤做进晶体管前端。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期一先把会晤桌收成句法，再把账期和油价叠在同一张版面上：新德里被写成「再确认」，现金支付被写成硬杠杠，替代线关停后的第一根K线把109美元写进早盘。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「如果说喀山和天津会晤是引领中印关系『再出发』『再提升』，那么新德里会晤就是两国领导人对中印关系发展的『再确认』。」——外交部发言人郭嘉昆，9月14日例行记者会。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>再确认</b><i>中印做伙伴</i><p>习莫连续三年会晤后的官方句法。</p></div>
+        <div class="fact"><b>60日</b><i>付现承诺</i><p>龙头先行，央企现金支付成硬杠杠。</p></div>
+        <div class="fact"><b>108.85</b><i>布伦特盘中</i><p>东西管道关停后第一个交易日。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">句法与账期</h2>
+    <p class="section-sub">上午把会晤写成「再确认」；下午把拖欠写成可问责的执行口径。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>外交部：新德里会晤是中印关系的「再确认」</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260914_12021744.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">郭嘉昆14日称，习莫连续三年会晤后，新德里是对中印关系的「再确认」，最重要共识是做伙伴。莫迪称对华关系不受第三方影响。双方同意相互支持金砖主席国，妥处分歧、维护边境安宁。</p>
+        <div class="why"><strong>为何重要</strong>12–13日是会场实录，14日才由发言人把「再出发—再提升—再确认」写成可引用的官方句法。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　经济 · 国新办</div>
+        <h3>五部门吹风：央企现金支付成「硬杠杠」</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.cs.com.cn/xwzx/01/2026/09/14/detail_2026091410039156.html">cs.com.cn</a></div>
+        <p class="sum">国新办14日解读中小企业回款难治理通知。工信部称以付款四项关键要素填补结算空白；国资委要求央企少开票、多付现，严禁新开6个月以上票证；央行称账款凭证余额已较规范前降20%，至2.4万亿元。</p>
+        <div class="why"><strong>为何重要</strong>通知此前已印发，14日才把现金支付、60日账期和披露规则写成可问责的执行口径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">第一根K线与高原程序</h2>
+    <p class="section-sub">替代线关停后的开盘；吉隆把身份确认写成可执行安排。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">能源 · 03</div>
+        <h3>沙特东西管道关停后，布伦特盘中报108.85美元</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：环球市场播报 / 路透社　·　<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-14/doc-inirveaq9297610.shtml">sina.com.cn</a></div>
+        <p>伊拉克无人机周四损毁沙特东西管道后，利雅得关停这条日输700万桶、可绕开霍尔木兹的替代线。周一至美东早盘，布伦特涨约4.2%报108.85美元，WTI报104.23美元。阿曼原定14日航道会已延期。</p>
+        <div class="why"><strong>为何重要</strong>13日还在数延布库存能撑几天，14日是管道关停后第一个交易日，油价把替代线失效写成价格。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">灾害 · 04</div>
+        <h3>外交部：吉隆外籍失联家属DNA采集办法已通报使馆</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部 / 中国日报网　·　<a href="https://cn.chinadaily.com.cn/a/202609/14/WS6aa7aa19e4b09a165c789ea0.html">chinadaily.com.cn</a></div>
+        <p>路透问吉隆外籍失联搜救及是否联系苹果等设备商。郭嘉昆称，中方已向有关国家驻华使馆通报家属DNA信息采集办法；确认外籍遇难者身份后将通报善后。西藏自治区开通失联外籍人员家属热线。</p>
+        <div class="why"><strong>为何重要</strong>此前只报遇难与失联总数，14日才把身份确认程序和家属热线写成可执行安排。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">河谷数字与立法越线</h2>
+    <p class="section-sub">加德满都再加四人；巴拿马议员把一个中国原则写成需要切割的「小组」。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　灾害 · 加德满都</div>
+        <h3>尼泊尔泥石流遇难升至1392人</h3>
+        <div class="src">来源：央视新闻 / 中新网　·　<a href="https://www.chinanews.com.cn/gj/2026/09-14/10696112.shtml">chinanews.com.cn</a></div>
+        <p class="sum">尼泊尔警方称，截至当地14日上午11时，泥石流遇难人数升至1392人。8月26日冰川崩塌引发跨境灾害以来进入第三周。上一日官方数字为1388人。</p>
+        <div class="why"><strong>为何重要</strong>一天再加4人，说明河谷仍在出遗体，第三周搜救没有停。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　外交 · 巴拿马</div>
+        <h3>外交部回应巴拿马议员成立涉台「立法交流小组」</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260914_12021744.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">巴拿马部分议员成立所谓「巴拿马—台湾立法跨党派交流小组」，美国议员线上参会。巴总统穆利诺称不支持议员同台接触。郭嘉昆称该小组严重违背一个中国原则，敦促美方停止发出错误信号。</p>
+        <div class="why"><strong>为何重要</strong>巴政府已切割，14日中方把板子同时拍向议员越线和美国线上站台。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期一的科技栏先记一篇沪时凌晨入账的盈利稿，再记一枚可下单的2纳米CPU、一份从1.0升到3.0的治理框架，和一篇把过滤做进晶体管的《自然·电子》。国产互联网平台当日首发不足，不以复述稿补页。</p>
+      <div class="stat4">
+        <div><b>2季</b><i>调整后盈利</i><p>Anthropic告知股东</p></div>
+        <div><b>2nm</b><i>三维叠层</i><p>MONAKA 11月开售</p></div>
+        <div><b>3.0</b><i>治理框架</i><p>济南网安周首发</p></div>
+        <div><b>95.9%</b><i>MNIST精度</i><p>逻辑先过滤再放电</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：13日金砖第二阶段五项倡议、王毅三个战略性目标、霍尔木兹商船遇袭与阿曼航道会延期、特朗普「留下并拿走石油」、基辅—华沙客车、尼方1388、移动云异构推理、《财富》奥特曼访谈、heise iOS 27选择加入条款。未混入12日第一阶段讲话/宣言/习莫会/阿莫迪长文/英伟达锚定盘，以及11日国常会、10日iPhone Duo。iOS 27正式推送时戳14日17:08 UTC，合沪时15日1:08；特朗普称乌俄互不打能源设施时戳14日16:03 UTC，合沪时15日0:03；新华社金砖纪实时戳15日1:21——均未提前收入。AMD中国首发稿写「近日」，未采用。国产互联网平台14日首发不足，已标明缺口。Firecrawl 未安装鉴权。
+      </div>
+    </section>
+
+    <h2 class="section-title">盈利口径与可下单的硅</h2>
+    <p class="section-sub">一篇股东通报在沪时清晨入账；一枚2纳米CPU在东京被写成11月价目表。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　人工智能 · 旧金山</div>
+        <h3>Anthropic告知股东：调整后营业利润将连续两季为正</h3>
+        <div class="src">来源：金融时报 / 路透社　·　<a href="https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/">reuters.com</a></div>
+        <p class="sum">FT援引知情人士称，Anthropic已告知小股东，本季调整后营业利润将连续两季为正。二季度营收同比增14倍至115亿美元，7月底年化营收650亿美元。路透13日22:54 UTC首发，合沪时14日6:54。</p>
+        <div class="why"><strong>为何重要</strong>阿莫迪刚呼吁放缓前沿，公司同时用「连续盈利」安抚IPO前的烧钱质疑。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>08　芯片 · 东京</div>
+          <h3>富士通宣布11月开售2纳米三维叠层CPU「MONAKA」</h3>
+          <div class="src">来源：富士通 / 共同社　·　<a href="https://prtimes.jp/main/html/rd/p/000000608.000093942.html">prtimes.jp</a></div>
+          <p class="sum">富士通14日宣布，11月起向云与数据中心厂商全球销售FUJITSU-MONAKA，并推出国产服务器。芯片为2nm+5nm三维叠层，主频最高3.8GHz，AI推理吞吐称为他社CPU两倍。服务器石川生产，2027年4月起对日欧出货。</p>
+          <div class="why"><strong>为何重要</strong>这是「富岳」技术第一次被写成可下单的主权AI服务器，而不再是路线图幻灯片。</div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="section-title">框架升号与前端过滤</h2>
+    <p class="section-sub">济南把1.0、2.0写成3.0；实验室把无关像素挡在放电之前。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　治理 · 济南</div>
+        <h3>网安周发布《人工智能安全治理框架》3.0</h3>
+        <div class="src">来源：中央网信办 / 新华社　·　<a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm">cac.gov.cn</a></div>
+        <p class="sum">全国网安标委14日在济南网安周开幕式发布《框架3.0》，延续「风险分类、技术应对、综合治理」，更新风险分类。同期发布人工智能赋能网安测试结果和消费类网联摄像头安全标识备案产品。</p>
+        <div class="why"><strong>为何重要</strong>1.0、2.0还是去年前年的文本，3.0是智能时代网安周当天交出的可引用升级，而不是预告稿。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　科学 · 期刊</div>
+        <h3>《自然·电子》：二硫化钼晶体管把逻辑做进脉冲网络前端</h3>
+        <div class="src">来源：Nature Electronics　·　<a href="https://www.nature.com/articles/s41928-026-01706-0">nature.com</a></div>
+        <p class="sum">14日开放获取论文报告，铁电HZO栅控的二硫化钼双栅晶体管可同器件实现逻辑、突触与神经元。前端逻辑先筛掉任务无关输入再放电；三层脉冲网络在MNIST上50轮后精度达95.9%。</p>
+        <div class="why"><strong>为何重要</strong>它把「省电」从算法稀疏写成硬件先过滤，给类脑芯片一条不拼先进制程的路。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第257期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期一不是星期天的复述：郭嘉昆把新德里收成「再确认」，五部门把回款难收成现金硬杠杠。东西管道关停后的第一根K线把108.85美元写进早盘；吉隆第一次把外籍身份确认写成程序。科技栏交出一篇连续盈利的股东通报、一枚11月可下单的2纳米CPU、一份从2.0升到3.0的治理框架，和一篇把过滤做进晶体管的期刊。国产互联网平台首发不足，不拿转载稿补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>外交部：新德里会晤是中印关系的「再确认」</li>
+            <li>五部门吹风：央企现金支付成「硬杠杠」</li>
+            <li>沙特东西管道关停后，布伦特盘中报108.85美元</li>
+            <li>外交部：吉隆外籍失联家属DNA采集办法已通报使馆</li>
+            <li>尼泊尔泥石流遇难升至1392人</li>
+            <li>外交部回应巴拿马议员成立涉台「立法交流小组」</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>Anthropic告知股东：调整后营业利润将连续两季为正</li>
+            <li>富士通宣布11月开售2纳米三维叠层CPU「MONAKA」</li>
+            <li>网安周发布《人工智能安全治理框架》3.0</li>
+            <li>《自然·电子》：二硫化钼晶体管把逻辑做进脉冲网络前端</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-14，星期一）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。金融时报/路透Anthropic稿时戳13日22:54 UTC，合沪时14日6:54，按首发日收入。富士通PR Times时戳14日13:00 JST。Nature Electronics 14日见刊。未混入13日金砖二阶/王毅收束/霍尔木兹商船/特朗普拿石油/华沙客车/移动云异构/财富访谈/heise条款，以及12日宣言与习莫会。iOS 27正式推送、特朗普乌俄能源互不打击、新华社金砖纪实时戳已入15日，未收入。国产互联网平台14日首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
