@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第259期 · 2026-09-16</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 22pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 22pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .wide { margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 20pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第259期  ·  2026年9月16日  ·  星期三</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰伍玖期  ·  二零二六年九月十六日  ·  星期三</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>北京会谈 · 盟情咨文 · 红海</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>Rubin · 智能体 · 硅光</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周三首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：王毅同日会见伊朗外长阿拉格齐与巴西总统顾问阿莫林，把开峡、伊斯兰堡备忘录和世界人工智能合作组织写进官方口径；郭嘉昆宣布丁薛祥出席东博会，并评欧盟网安法案与台菲办事处。冯德莱恩在斯特拉斯堡提出欧洲安全理事会，并向加拿大伸出「准成员」邀请；美方确认马斯喀特见胡塞后不军事援沙。尼泊尔遇难升至1409人。科技栏：Vera Rubin首登MLPerf，华为给出2035智能体路线图，谷歌与英伟达拉起柔性用电联盟，《自然》用单晶纳米膜打破硅光异质集成瓶颈。美联储加息落在沪时17日凌晨，不提前收入；吉隆无新官方伤亡；国产互联网平台与手机芯片首发不足，已标明缺口。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期三的北京把两场预告写成会谈：上午对德黑兰谈开峡与备忘录，晚上对巴西利亚谈全球南方与人工智能治理。同一天，斯特拉斯堡搭一张新的安全桌，马斯喀特则把也门从美军作战名单上划掉。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「美伊战事继续延宕不符合当事方和国际社会共同利益。我们鼓励伊朗和美国保持理性和克制，尽快回归伊斯兰堡谅解备忘录。」——王毅16日同阿拉格齐会谈
+      </div>
+      <div class="facts">
+        <div class="fact"><b>16:08</b><i>王毅—阿拉格齐</i><p>外交部发稿：回归备忘录、开峡、勿外溢红海。</p></div>
+        <div class="fact"><b>21:37</b><i>王毅—阿莫林</i><p>赞巴西加入世界人工智能合作组织。</p></div>
+        <div class="fact"><b>1409</b><i>尼方遇难</i><p>当地20时警方数字；吉隆仍无新口径。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">钓鱼台的两场会见</h2>
+    <p class="section-sub">一条把海湾停火写到谈判桌上；一条把全球南方和人工智能治理并进同一间会客室。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京 / 德黑兰</div>
+        <h3>王毅同伊朗外长会谈，吁回归伊斯兰堡备忘录并开峡</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202609/t20260916_12023687.shtml">mfa.gov.cn</a></div>
+        <p class="sum">16日王毅在京与阿拉格齐会谈。中方称美伊战事延宕不符各方利益，鼓励双方保持克制、回归伊斯兰堡谅解备忘录并重构谈判机制；敦促早日开放霍尔木兹，不希望紧张外溢也门和红海。伊方称不希望冲突持续，已同阿曼达成开峡方案。</p>
+        <div class="why"><strong>为何重要</strong>15日还是「赴华」预告，16日北京会谈把海湾停火、开峡和中东安全新架构写成官方口径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 北京 / 巴西利亚</div>
+        <h3>王毅会见阿莫林，赞巴西加入世界人工智能合作组织</h3>
+        <div class="src">来源：外交部 / 新华社 / 中新社　·　<a href="https://www.fmprc.gov.cn/web/wjdt_674879/gjldrhd_674881/202609/t20260916_12023873.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">16日晚王毅以中央外办主任身份会见巴西总统首席特别顾问阿莫林。王毅转达习近平问候，称中巴已从全面战略伙伴跨越到命运共同体；赞赏巴西决定加入世界人工智能合作组织。双方就乌克兰危机、拉美和中东交换意见。</p>
+        <div class="why"><strong>为何重要</strong>金砖主席国交接前夕，南美顾问进京把全球南方协作和人工智能治理写进同一场会见。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">南宁预告与三条答问</h2>
+    <p class="section-sub">一场记者会同时处理东盟经贸、欧洲数字保护主义和台海外围。</p>
+    <div class="wide">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　外交 · 北京 / 南宁</div>
+        <h3>郭嘉昆宣布丁薛祥出席东博会，评欧盟网安法案与台菲办事处</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/202609/t20260916_12023724.shtml">fmprc.gov.cn</a></div>
+        <p class="sum">发言人宣布丁薛祥17日将在南宁出席第23届中国—东盟博览会开幕式并致辞。郭嘉昆称欧盟《网络安全法案》修订案「损人不利己」，评估五年或致3600多亿欧元损失；并驳民进党筹划在菲宿务设办事处，敦促菲方恪守一个中国原则。</p>
+        <div class="why"><strong>为何重要</strong>东博会开幕前夜划出东盟经贸、欧洲数字保护主义与台海三条对外口径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">斯特拉斯堡的新桌，马斯喀特的拒绝</h2>
+    <p class="section-sub">一边要自建安全理事会并拉住加拿大；一边确认不把也门叠进对伊战争。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">欧洲 · 04</div>
+        <h3>冯德莱恩提出欧洲安全理事会，并向加拿大伸出「准成员」邀请</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透　·　<a href="https://www.reuters.com/world/americas/eus-von-der-leyen-backs-european-security-council-playbook-against-sabotage-2026-09-16/">reuters.com</a></div>
+        <p>欧委会主席冯德莱恩16日在斯特拉斯堡发表盟情咨文，支持设立汇集欧盟、英国、挪威、乌克兰与加拿大领导人的欧洲安全理事会，并提出应对破坏、纵火和无人机侵扰的「反混合剧本」。她同时称愿为加拿大打开欧盟首个「准成员」大门。</p>
+        <div class="why"><strong>为何重要</strong>在对特朗普治下北约可靠性存疑时，布鲁塞尔试图自建安全桌并拉住北美盟友。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">海湾 · 05</div>
+        <h3>美官员马斯喀特会见胡塞后决定不军事援沙</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：卫报 / 路透　·　<a href="https://www.theguardian.com/world/2026/sep/16/us-officials-decide-against-backing-saudi-arabia-yemen-meeting-houthi-leaders">theguardian.com</a></div>
+        <p>卫报16日确认，美方上周末在马斯喀特会见胡塞领导人，随后决定不直接军事介入帮沙特击退胡塞沿红海推进。路透称胡塞已夺取俯瞰曼德海峡的阵地与岛礁，沙特面临近年最重挫败，美欧均未加入7月沙特海上防卫联盟。</p>
+        <div class="why"><strong>为何重要</strong>红海与霍尔木兹双通道承压时，华盛顿选择不把也门战场叠进对伊战争。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">第三周的死亡曲线</h2>
+    <p class="section-sub">尼侧数字继续上修；吉隆一侧的官方伤亡口径仍停在十日之前。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　灾害 · 加德满都</div>
+        <h3>尼泊尔警方：泥石流遇难人数升至1409人</h3>
+        <div class="src">来源：央视新闻 / 中新网　·　<a href="https://www.chinanews.com.cn/gj/2026/09-16/10697940.shtml">chinanews.com.cn</a></div>
+        <p class="sum">据尼泊尔警方最新数据，截至当地时间16日20时，8月26日冰川崩塌引发的泥石流遇难人数升至1409人。这是14日官方数字1392人之后的新统计。吉隆一侧16日未见新的遇难或失联通报。</p>
+        <div class="why"><strong>为何重要</strong>跨境灾害进入第三周，尼侧死亡曲线仍在抬升，而中方伤亡口径已连续十日未更新。</div>
+      </article>
+      <div class="dark-note" style="margin:0;">
+        <div class="lab">信息不足 · 吉隆与宏观</div>
+        吉隆「8·26」泥石流16日未见新的遇难、失联或搜救官方通报，不以9月5日的43/519复述凑数。统计局8月数据发布会在15日举行，16日为转载，不收入。美联储加息声明于16日14:00 EDT发布，合沪时17日2:00，按日历日规则不提前收入。
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期三的科技栏先记一套刚拿到对照数字的下一代机柜，再记一份把智能体写成十年主航道的路线图、一场为电网让路的算力联盟，和一块把多种单晶薄膜贴进硅光的芯片。国产互联网平台与手机芯片当日首发不足，不以15日天玑9600 Pro复述补页。</p>
+      <div class="stat4">
+        <div><b>3.7×</b><i>吞吐倍率</i><p>Vera Rubin vs GB300 · Qwen3-VL</p></div>
+        <div><b>90%</b><i>智能体流量</i><p>华为预测2035年 token 占比</p></div>
+        <div><b>1 GW</b><i>柔性负荷</i><p>谷歌可削减电网用电</p></div>
+        <div><b>1290</b><i>pm/V</i><p>钛酸钡电光系数 r42</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：15日郭嘉昆通报阿莫林访华预告、特朗普称伊急于达成协议、乌俄能源互不打击、金砖纪实、先进制造业综述、嫦娥月壤、iOS 27/Siri AI、华为3D数据中心、OpenAI–Anthropic–谷歌安全磋商、朱雀二号遥七、硅光量子频率处理器。未混入14日回款难/布伦特盘中高点、13日金砖二阶与移动云异构推理、10日iPhone Duo、9月7日麒麟9050 Pro与小米18 Fold、9月3日英伟达收购Hugging Face。联发科天玑9600 Pro于15日04:40 ET官方首发，16日为转载。IonQ/ORNL生成式量子电路论文arXiv编号属7月，仅作会议复述，不收入。国产互联网平台与海外手机芯片16日首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">机柜对照与十年路线图</h2>
+    <p class="section-sub">一套机架第一次交出公开倍率；一份报告把智能体写成中国算力的主航道。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　算力 · 圣克拉拉</div>
+        <h3>英伟达Vera Rubin NVL72首登MLPerf，吞吐最高达GB300的3.7倍</h3>
+        <div class="src">来源：NVIDIA Blog　·　<a href="https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/">blogs.nvidia.com</a></div>
+        <p class="sum">MLPerf Inference v6.1于16日公布。Vera Rubin NVL72首登预览：Qwen3-VL吞吐最高达GB300的3.7倍，DeepSeek-R1最高2.5倍；四机柜288卡扩展效率99%。</p>
+        <div class="why"><strong>为何重要</strong>下一代机柜级推理第一次有公开对照数字，机架吞吐直接改写算力采购账本。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　产业 · 深圳 / 北京</div>
+        <h3>华为发布《智能世界2035》：智能体或贡献逾九成AI流量</h3>
+        <div class="src">来源：路透　·　<a href="https://www.reuters.com/legal/litigation/chinas-huawei-forecasts-billions-agents-will-dominate-ai-traffic-by-2035-2026-09-16/">reuters.com</a></div>
+        <p class="sum">华为16日报告预测，到2035年自主智能体将贡献全球逾90%的AI token流量，并重申全球或有约9000亿个智能体。报告不主张放缓前沿研发，而把智能体安全与隐私列入支撑这一前景的十项关键技术。</p>
+        <div class="why"><strong>为何重要</strong>美侧讨论放缓时，中国最大算力供应商把加速部署写成十年路线图。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">给电网让路，给硅光贴膜</h2>
+    <p class="section-sub">一边用柔性负荷换更快并网；一边用单晶纳米膜绕开衬底晶格匹配。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">能源 · 09</div>
+        <h3>谷歌、英伟达与Emerald AI成立人工智能能源管理联盟</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：NVIDIA Blog / Axios / Fortune　·　<a href="https://blogs.nvidia.com/blog/ai-energy-management-alliance/">blogs.nvidia.com</a></div>
+        <p>三家16日宣布成立AEMA，主张数据中心按电网负荷柔性用电，以换取更快并网。联盟含Anthropic、National Grid等约20家成员；谷歌称已有约1吉瓦可削减负荷，弗吉尼亚近100兆瓦柔性AI工厂年内投运。</p>
+        <div class="why"><strong>为何重要</strong>算力扩张的瓶颈从芯片转向电网，柔性负荷第一次被写成行业共同规则。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科学 · 10</div>
+        <h3>《自然》：单晶纳米膜范德华集成打破硅光异质外延瓶颈</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-11000-w">nature.com</a></div>
+        <p>16日发表的论文用剥离单晶纳米膜把钛酸钡、钴铁氧体、砷化镓和氮化镓转移到硅/氮化硅光子芯片。钛酸钡电光系数r42逾1290 pm/V、3 dB带宽超23 GHz；钴铁氧体法拉第旋转达33800°/cm，并可做紫外到近红外探测。</p>
+        <div class="why"><strong>为何重要</strong>不必受衬底晶格匹配限制，多种功能材料第一次能按需贴进同一套硅光工艺。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第259期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期三不是星期二的复述：阿莫林和阿拉格齐都已经走进会客室，一份备忘录、一条海峡和一个人机合作组织被写进同一天的外交口径。冯德莱恩要自建安全桌并给加拿大留座位，华盛顿则在马斯喀特确认不把也门叠进对伊战争。尼泊尔的死亡数字继续上修，吉隆一侧仍无新口径。科技栏交出Vera Rubin的第一组公开对照、一份不主张放缓的智能体十年图、一场为电网让路的算力联盟，和一块按需贴膜的硅光芯片。美联储加息要等到沪时周四凌晨才入账；国产互联网平台与手机芯片首发不足，不拿转载稿补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>王毅同伊朗外长会谈，吁回归伊斯兰堡备忘录并开峡</li>
+            <li>王毅会见阿莫林，赞巴西加入世界人工智能合作组织</li>
+            <li>郭嘉昆宣布丁薛祥出席东博会，评欧盟网安法案与台菲办事处</li>
+            <li>冯德莱恩提出欧洲安全理事会，并向加拿大伸出「准成员」邀请</li>
+            <li>美官员马斯喀特会见胡塞后决定不军事援沙</li>
+            <li>尼泊尔警方：泥石流遇难人数升至1409人</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>英伟达Vera Rubin NVL72首登MLPerf，吞吐最高达GB300的3.7倍</li>
+            <li>华为发布《智能世界2035》：智能体或贡献逾九成AI流量</li>
+            <li>谷歌、英伟达与Emerald AI成立人工智能能源管理联盟</li>
+            <li>《自然》：单晶纳米膜范德华集成打破硅光异质外延瓶颈</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-16，星期三）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。王毅—阿拉格齐会谈外交部时戳16:08，王毅—阿莫林会见21:37，均按当日发生收入。冯德莱恩盟情咨文于斯特拉斯堡当地白天发表，合沪时仍为16日。尼泊尔警方数字截至当地20时，中新网23:21入账。美联储FOMC声明16日14:00 EDT（18:00 UTC）发布，合沪时17日2:00，不提前收入。未混入15日阿莫林访华预告、特朗普「急于达成协议」、乌俄能源互不打击、金砖纪实、先进制造业综述、嫦娥月壤、iOS 27、华为3D机房、三家安全磋商、朱雀二号、15日《自然·通讯》硅光量子频率处理器，以及14日回款难、13日金砖二阶/移动云异构、10日iPhone Duo、9月7日麒麟9050 Pro。天玑9600 Pro为15日首发，IonQ量子电路论文属7月arXiv，均不收入。吉隆16日无新官方伤亡；国产互联网平台与海外手机芯片首发不足，已标明缺口。Firecrawl 未安装鉴权。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
