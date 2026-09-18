@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第260期 · 2026-09-17</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 22pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 22pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .wide { margin: 18px 0 40px; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 20pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第260期  ·  2026年9月17日  ·  星期四</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰陆零期  ·  二零二六年九月十七日  ·  星期四</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件，拒绝转载拼盘。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>通话 · 南宁 · 加息</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>超节点 · 虚拟药企</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周四首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：王毅同鲁比奥通话，把「筹备下阶段高层交往」和中东战事写进同一条官方口径；丁薛祥在南宁宣布第23届东博会开幕，东盟11国首次齐聚。美联储于沪时凌晨加息25个基点，众议院送出可对俄油气买家加征最高100%关税的法案，郭嘉昆当天反对长臂管辖。红海一侧，沙特与胡塞互袭升级，塔伊夫出现本轮首例死亡。科技栏：华为在全联接大会交出昇腾960超节点，Claude四周改写三十余个生物模型，《科学》刊出3.7万智能体的虚拟药企，黄仁勋在苏格兰称明年芯片出货翻倍。吉隆无新官方伤亡；尼泊尔新数字见诸沪时18日凌晨，不提前收入；国产互联网平台与海外手机芯片首发不足，已标明缺口。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期四先把两场预告写成事实：北京对华盛顿谈高层互动，南宁对东盟谈自贸区3.0。同一天凌晨，沃什任内第一次加息落地；傍晚，外交部把众议院的二级关税写成「长臂管辖」。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        「元首外交是中美关系的定盘星。双方要本着平等、尊重、互惠的精神，筹备好下阶段高层交往。」——王毅17日同鲁比奥通话
+      </div>
+      <div class="facts">
+        <div class="fact"><b>22:05</b><i>王毅—鲁比奥</i><p>新华社发稿：筹备高层交往，并谈中东局势。</p></div>
+        <div class="fact"><b>+25</b><i>美联储加息</i><p>沪时2:00落地，利率升至3.75%–4.00%。</p></div>
+        <div class="fact"><b>100%</b><i>二级关税上限</i><p>众议院通过格雷厄姆制裁俄伊法案。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">华盛顿的电话，南宁的开幕</h2>
+    <p class="section-sub">一条把访美窗口写进通话；一条把自贸区3.0从预告写成致辞。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京 / 华盛顿</div>
+        <h3>王毅同鲁比奥通话，称筹备好下阶段高层交往</h3>
+        <div class="src">来源：新华社 / 路透　·　<a href="https://www.news.cn/20260917/7ca297605a624af4b61701aa27592575/c.html">news.cn</a></div>
+        <p class="sum">17日王毅同美国国务卿鲁比奥通电话。中方称中美关系总体沿建设性战略稳定轨道前行，元首外交是定盘星；双方应本着平等、尊重、互惠精神筹备下阶段高层交往，管控分歧、尊重核心利益。双方还就中东局势交换意见。</p>
+        <div class="why"><strong>为何重要</strong>访美窗口临近，北京把高层互动和海湾战事写进同一条官方通话。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　区域 · 南宁</div>
+        <h3>丁薛祥出席第23届东博会开幕式，提自贸区3.0四点建议</h3>
+        <div class="src">来源：新华社　·　<a href="http://www.news.cn/20260917/9bf0f01ce13c41798dd99f7c5ece4499/c.html">news.cn</a></div>
+        <p class="sum">第23届中国—东盟博览会17日在南宁开幕，东盟11国首次齐聚，东帝汶以正式成员国共同主办方身份参会。丁薛祥致辞并宣布开幕，就自贸区3.0提出提升开放、贸易投资、数字与绿色、互联互通四点建议。缅越老政要及东盟秘书长致辞。</p>
+        <div class="why"><strong>为何重要</strong>16日还是行程预告，17日南宁把自贸区3.0和陆海新通道写成开幕口径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">凌晨的加息，傍晚的关税</h2>
+    <p class="section-sub">沃什用全票加息回击「通胀太久」；众议院把二级关税写成可对华落地的文本。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　宏观 · 华盛顿</div>
+        <h3>美联储三年来首次加息，利率升至3.75%–4.00%</h3>
+        <div class="src">来源：美联储 / CNBC / 法新社　·　<a href="https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260916.htm">federalreserve.gov</a></div>
+        <p class="sum">FOMC于美东16日14:00（沪时17日2:00）全票加息25个基点至3.75%–4.00%，为2023年来首次。沃什称通胀「太高、太久」，未达及时回落标准。点阵图中位年底利率4.1%。特朗普抨击此举「针对特朗普」。</p>
+        <div class="why"><strong>为何重要</strong>能源冲击与关税推高物价后，沃什任内第一次用加息回应「通胀太久」。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　经贸 · 华盛顿 / 北京</div>
+        <h3>美众议院通过制裁俄伊法案，郭嘉昆反对长臂管辖</h3>
+        <div class="src">来源：外交部 / 国会记录 / 法新社　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/202609/t20260917_12024556.shtml">mfa.gov.cn</a></div>
+        <p class="sum">美东16日晚（合沪时17日）众议院以262:159通过《格雷厄姆制裁俄伊法》，授权对俄油气前五大买家输美商品加征最高100%关税。郭嘉昆17日表示，中方反对无国际法依据、未经安理会授权的非法单边制裁和「长臂管辖」。</p>
+        <div class="why"><strong>为何重要</strong>二级关税第一次被写成可对华落地的法律文本，北京当天给出反对口径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">红海的第一例死亡，香港的信任票</h2>
+    <p class="section-sub">一边是塔伊夫的残骸；一边是一份把民间指数写成官方信心的答问。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">海湾 · 05</div>
+        <h3>沙特与胡塞互袭升级，塔伊夫出现本轮首例死亡</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透 / 半岛电视台　·　<a href="https://www.reuters.com/world/middle-east/trump-hopes-iran-war-nearing-end-houthi-saudi-fighting-escalates-2026-09-17/">reuters.com</a></div>
+        <p>沙特与胡塞17日持续互袭。沙特民防称拦截塔伊夫无人机残骸致一名也门籍居民死亡，为本月升级后沙特境内首例死亡；也门侧称空袭造成包括儿童在内的伤亡。东西石油管道仍关停。特朗普称希望对伊战争接近尾声。</p>
+        <div class="why"><strong>为何重要</strong>红海与东西管道同时承压时，海湾战场把能源缺口从霍尔木兹扩到半岛腹地。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">香港 · 06</div>
+        <h3>郭嘉昆：香港蝉联全球第三大金融中心</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/202609/t20260917_12024556.shtml">mfa.gov.cn</a></div>
+        <p>第40期《全球金融中心指数》16日公布香港续列全球第三、亚太第一。郭嘉昆17日称，今年上半年港股IPO融资2033亿港元、全球第二，报告再次肯定香港国际金融中心吸引力，是对「一国两制」前景的信任票。</p>
+        <div class="why"><strong>为何重要</strong>在外部质疑香港地位时，外交部把一份民间指数写成官方信心表述。</div>
+      </article>
+    </div>
+
+    <div class="split">
+      <div class="dark-note" style="margin:0;">
+        <div class="lab">信息不足 · 吉隆与尼泊尔</div>
+        吉隆「8·26」泥石流17日未见新的遇难、失联或搜救官方通报，不以9月5日的43/519复述凑数。新华社17日11:28转述尼方16日19时1403遇难/6150失联，与16日晚警方1409不一致，属昨日口径复述；遇难升至1410、失联6145的数字见诸沪时18日0:10稿，按日历日规则不提前收入。
+      </div>
+      <div class="dark-note" style="margin:0;">
+        <div class="lab">排除清单</div>
+        未混入16日王毅—阿拉格齐会谈、王毅—阿莫林会见、郭嘉昆宣布丁薛祥出席东博会、冯德莱恩欧洲安全理事会、美官员马斯喀特见胡塞后不军事援沙、尼方1409。上述均为星期三首发，星期四只作背景，不入账。
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>星期四的科技栏先记一套把光引擎写进机柜的超节点，再记两份把智能体送进实验室的科学稿，和一句在苏格兰说出口的出货翻倍。国产互联网平台与海外手机芯片当日首发不足，不以15日天玑9600 Pro复述补页。</p>
+      <div class="stat4">
+        <div><b>4096</b><i>卡规模</i><p>昇腾960超节点 · NPO</p></div>
+        <div><b>4×</b><i>平均提速</i><p>Claude 优化 30+ 生物模型</p></div>
+        <div><b>3.7万</b><i>智能体</i><p>《科学》虚拟药企编制</p></div>
+        <div><b>2×</b><i>出货预期</i><p>黄仁勋谈明年芯片销量</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：16日王毅两场会见、郭嘉昆东博会预告、冯德莱恩盟情咨文、马斯喀特拒援沙、Vera Rubin NVL72 登 MLPerf、华为《智能世界2035》、AEMA 柔性用电联盟、《自然》单晶纳米膜硅光、15日天玑9600 Pro。未混入9月8日纳维–斯托克斯宣称及17日 Nature 追访旧闻、8月 Jalapeño 复述、9月7日麒麟9050 Pro 与小米18 Fold。国产互联网平台与海外手机芯片17日首发不足，已标明缺口。Firecrawl 未安装鉴权，检索以公开网页交叉核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">机柜里的光，实验室里的智能体</h2>
+    <p class="section-sub">一套超节点把铜线换成近封装光学；一套模型把结构预测的工程活交给 Claude。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>07　算力 · 上海</div>
+        <h3>华为发布昇腾960超节点：4096卡、NPO光引擎</h3>
+        <div class="src">来源：华为　·　<a href="https://www.huawei.com/cn/news/2026/9/hc-ascend960-supernode">huawei.com</a></div>
+        <p class="sum">华为全联接大会17日在沪开幕。汪涛发布首个采用NPO的昇腾960超节点：可扩至4096卡，8 EFLOPS FP8；5500个Hi-ONE替代4.8万颗800G光模块，功耗降超550千瓦。公司称960DT提前至2027年一季度就绪。</p>
+        <div class="why"><strong>为何重要</strong>在出口管制下，华为把竞争从单芯片改写成超节点和光互联系统。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　科学 · 旧金山</div>
+        <h3>Claude四周优化三十余个生物分子模型，平均提速约4倍</h3>
+        <div class="src">来源：Anthropic　·　<a href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">anthropic.com</a></div>
+        <p class="sum">Anthropic 17日发文称，Claude在约四周内优化逾30个开源结构预测与蛋白质设计模型，平均提速约4倍，并做出可在单节点预测逾1万token体系的低内存模式。公司开源优化代码，并与Adaptyv合办蛋白质设计竞赛。</p>
+        <div class="why"><strong>为何重要</strong>前沿模型第一次把结构预测的工程加速写成可复用的开源工具链。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">虚拟编制，真实出货</h2>
+    <p class="section-sub">一边用3.7万个没有工位的雇员跑药研；一边用一句翻倍出货把需求写进苏格兰。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科学 · 09</div>
+        <h3>《科学》：3.7万智能体组成「虚拟药企」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Stanford Medicine / Science　·　<a href="https://www.science.org/doi/10.1126/science.aeg6779">science.org</a></div>
+        <p>斯坦福邹建团队17日在《科学》发表论文。虚拟药企以约3.7万个智能体分析约5万项试验，发现高细胞类型特异性且呈开关式表达的靶点，I期到II期成功率高40%。智能体提出的B7-H3抗体偶联物与药企后来的方案一致。</p>
+        <div class="why"><strong>为何重要</strong>多智能体第一次把从靶点到试验设计的药研流程跑成可发表的科学结果。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">产业 · 10</div>
+        <h3>黄仁勋：预计明年芯片出货量为今年两倍</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：彭博 / CNBC　·　<a href="https://www.bloomberg.com/news/articles/2026-09-17/nvidia-s-huang-expects-to-sell-twice-as-many-chips-next-year">bloomberg.com</a></div>
+        <p>黄仁勋17日在苏格兰国王查尔斯三世召集的会议上对媒体说，预计英伟达明年芯片出货量为今年两倍，因各国各行业继续加码人工智能。彭博稿时戳合沪时仍为17日晚间。他同时称须「负责任地乐观」，强调产品不够安全就应停住继续工程。</p>
+        <div class="why"><strong>为何重要</strong>在沃什加息与二级关税同日落地时，全球最大加速器供应商仍把需求写成翻倍。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A; box-shadow:0 1px 0 #F7F4EF; color:#F7F4EF;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#B8B0A4;">第260期 · 收束</span>
+        <span class="iss">10 / 10</span>
+      </header>
+      <h2>本日判断</h2>
+      <p class="judge">星期四不是星期三的复述：阿拉格齐和阿莫林已经走出会客室，鲁比奥的电话把访美窗口和中东战事接到同一条线上；丁薛祥在南宁把自贸区3.0从预告写成开幕。沃什用全票加息承认通胀太久，众议院把二级关税写成可对华落地的文本，郭嘉昆当天下午给出长臂管辖的反对口径。红海把死亡数字写进塔伊夫，香港则被写成又一张信任票。科技栏交出一套4096卡的光互联超节点、两份把智能体送进实验室的科学稿，和一句在苏格兰说出口的出货翻倍。吉隆仍无新口径；尼泊尔新数字要等到沪时周五凌晨才入账；国产互联网平台与海外手机芯片首发不足，不拿转载稿补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>王毅同鲁比奥通话，称筹备好下阶段高层交往</li>
+            <li>丁薛祥出席第23届东博会开幕式，提自贸区3.0四点建议</li>
+            <li>美联储三年来首次加息，利率升至3.75%–4.00%</li>
+            <li>美众议院通过制裁俄伊法案，郭嘉昆反对长臂管辖</li>
+            <li>沙特与胡塞互袭升级，塔伊夫出现本轮首例死亡</li>
+            <li>郭嘉昆：香港蝉联全球第三大金融中心</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>华为发布昇腾960超节点：4096卡、NPO光引擎</li>
+            <li>Claude四周优化三十余个生物分子模型，平均提速约4倍</li>
+            <li>《科学》：3.7万智能体组成「虚拟药企」</li>
+            <li>黄仁勋：预计明年芯片出货量为今年两倍</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 的昨天（2026-09-17，星期四）为采编窗口；只收该日发生或该日首发，交叉核验官方通报与两家以上报道。美联储FOMC声明于16日14:00 EDT（18:00 UTC）发布，合沪时17日2:00，按日历日规则收入。众议院262:159表决于美东16日晚间，合沪时17日，并以郭嘉昆17日17:46记者会交叉核验。王毅—鲁比奥通话新华社时戳22:05。黄仁勋苏格兰表态见彭博17日17:24 GMT+2（沪时23:24）稿，CNBC 13:52 EDT合沪时已入18日，不以晚发稿提前。未混入16日王毅—阿拉格齐/阿莫林、郭嘉昆东博会预告、冯德莱恩、马斯喀特拒援沙、尼方1409、Vera Rubin、智能世界2035、AEMA、硅光纳米膜、15日天玑9600 Pro。吉隆17日无新官方伤亡；尼泊尔1410见诸沪时18日0:10，不收入。国产互联网平台与海外手机芯片首发不足，已标明缺口。Firecrawl 未安装鉴权。</p>
+      <p class="end">完 · 可与 briefing.pptx 对照阅读 · 非投资建议</p>
+    </section>
+  </div>
+</body>
+</html>
