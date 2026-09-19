@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第261期 · 2026-09-18</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 22pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 22pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 20pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第261期  ·  2026年9月18日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰陆壹期  ·  二零二六年九月十八日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">九一八的官方口径、仙宾礁的擦碰、吉隆写入月报，以及五角大楼把驻欧撤军写成选项。科技栏把流体奇点、一人一药与两支脑祖细胞交给《自然》，网络层留给全联接大会次日。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>九一八 · 仙宾礁 · 吉隆</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>流体 · ALS · 后脑</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>沪时昨日首发</em></div>
+      </div>
+      <p class="spine">今日主线：郭嘉昆把九一八写成被隐瞒的战争阴谋，并点名人工智能过滤东京审判档案。仙宾礁上午擦碰，中菲各执航海日志。应急部第一次把吉隆口岸562人死亡失踪写进8月全国灾情。新华社沪时见报美国返还64件套文物。NBC于美东17日傍晚、合沪时18日凌晨披露五角大楼评估撤出近三分之一驻欧美军。科技栏不复述17日昇腾960，改记《自然》三篇与华为星河网络。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>星期五的政治栏先记纪念日上的历史定性，再记南海上午的船体接触，然后把口岸数字、文物回归与驻欧态势放上同一张台账。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头引语 · 外交部</div>
+      否认侵略罪行就是挑战历史定论、破坏战后国际秩序。我们敦促日方正视并深刻反省侵略历史……绝不允许日本军国主义死灰复燃。
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <b>95</b>
+        <i>周年</i>
+        <p>九一八事变当日，东京审判开庭80周年被写进同一条口径。</p>
+      </div>
+      <div class="fact">
+        <b>562</b>
+        <i>死亡失踪</i>
+        <p>吉隆口岸首次进入8月全国自然灾害月报，灾情仍在核查。</p>
+      </div>
+      <div class="fact">
+        <b>1/3</b>
+        <i>驻欧评估</i>
+        <p>约8万驻欧美军中，2.5万乃至更多被写成可撤出的选项。</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">纪念日与海面接触</h2>
+    <p class="section-sub">一条写进记者会的历史定性，一艘在仙宾礁被双方各指为肇事者的公务船。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 01 · 历史与再军事化</div>
+        <h3>郭嘉昆：九一八是被隐瞒的战争阴谋，日方用AI洗白档案</h3>
+        <p class="src">来源：<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202609/t20260918_12025801.shtml">中华人民共和国外交部</a>　·　新华社交叉</p>
+        <p class="sum">九一八事变95周年当天，郭嘉昆称事变是日本政府长期隐瞒的战争阴谋，东京审判开庭恰逢80周年。他指日本教科书淡化侵略，右翼用人工智能过滤战前档案与审判记录，否认主义意在为再军事化扫障。</p>
+        <div class="why"><strong>为何重要</strong>把历史否认、再军事化与AI档案清洗写进同一条官方口径，是对高市政府安全路线的直接政治定性。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 02 · 南海</div>
+        <h3>仙宾礁擦碰：中菲互指对方撞船</h3>
+        <p class="src">来源：<a href="https://www.news.cn/20260918/9391754aa35846859fa63193c493b34b/c.html">新华社 / 中国海警局</a>　·　联合早报交叉</p>
+        <p class="sum">18日上午，海警称三洲澳艇在仙宾礁附近执法时，菲3015号船突然加速斜插船艏发生擦碰，责任在菲。菲海警称中国海警21585号船两次横切，11时13分撞上BRP Datu Magat Salamat，右舷受损。郭嘉昆要求菲方停止侵权与虚假叙事。</p>
+        <div class="why"><strong>为何重要</strong>南海摩擦在联大周期前再起，双方各执视频与航海日志，误判成本上升。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">口岸月报与回归清单</h2>
+    <p class="section-sub">一张第一次收口的国家灾情台账，一份在纽约签字的64件套目录。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 03 · 公共事务</div>
+        <h3>应急部：吉隆口岸562人死亡失踪，8月全国受灾1262万人次</h3>
+        <p class="src">来源：<a href="https://www.mem.gov.cn/xw/yjglbgzdt/202609/t20260918_716876.shtml">应急管理部</a>　·　联合早报交叉</p>
+        <p class="sum">国家防减救灾委办公室与应急部18日发布8月灾情：全国1262万人次受灾，死亡失踪595人，直接损失360.3亿元。其中8月26日尼泊尔一侧泥石流造成吉隆口岸562人死亡失踪，灾情仍在核查。台风“白海豚”造成880.1万人次受灾。</p>
+        <div class="why"><strong>为何重要</strong>这是口岸灾害首次被写入全国月报的官方汇总数，把分散搜救数字收成一张国家台账。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 04 · 中美人文</div>
+        <h3>美国向中方返还64件套文物与化石，含天龙山菩萨身躯</h3>
+        <p class="src">来源：<a href="https://www.news.cn/world/20260918/ba9cd096c5264f9788f585c253d4bc5a/c.html">新华社</a>　·　外交部交叉</p>
+        <p class="sum">新华社纽约17日电、沪时18日见报：文物局在华盛顿、纽约接收美方两批共64件套文物与化石，含天龙山第17窟菩萨身躯。饶权签署确认书。郭嘉昆称这是落实元首北京会晤共识、构建建设性战略稳定关系的人文成果。</p>
+        <div class="why"><strong>为何重要</strong>在中美高层互动仍在沟通之际，文物返还被写成可核验的务实合作，而非口头预期。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">双栏对照 · 驻欧与汽车</h2>
+    <p class="section-sub">一边是华盛顿把驻欧美军写成可撤选项，一边是布鲁塞尔把混动份额写成15%的政治要价。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 05 · 大西洋</div>
+        <h3>五角大楼评估从欧洲撤出近三分之一美军</h3>
+        <p class="src">来源：<a href="https://www.nbcnews.com/politics/national-security/pentagon-weighs-pulling-nearly-third-us-forces-europe-rcna597722">NBC News</a>　·　<a href="https://www.reuters.com/business/aerospace-defense/top-nato-commander-joins-briefing-review-us-defence-engagement-europe-2026-09-18/">路透</a>交叉</p>
+        <p class="sum">NBC于美东17日16:06（沪时18日4:06）报道，五角大楼评估从欧洲撤出2.5万乃至更多美军，约占驻欧8万人的三分之一。路透证实北约盟军最高司令格林凯维奇18日参加对政策主官科尔比的通报，至少四套方案将于11月6日前呈赫格塞斯。</p>
+        <div class="why"><strong>为何重要</strong>驻欧态势审查从传闻进入决策简报，欧洲防务负担与俄乌、中东两条战线同时承压。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 06 · 中欧经贸</div>
+        <h3>郭嘉昆回应欧盟要求中国混动在欧份额压至15%</h3>
+        <p class="src">来源：<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202609/t20260918_12025801.shtml">中华人民共和国外交部</a></p>
+        <p class="sum">俄新社问及欧盟呼吁中方自愿将混合动力汽车在欧市场份额限制在15%以下以免贸易战。郭嘉昆称具体问题问主管部门，强调中欧经贸互利共赢，希望欧方遵守世贸规则，并将采取必要措施维护企业权益。</p>
+        <div class="why"><strong>为何重要</strong>继采购法「欧洲优先」之后，混动配额成为中欧汽车摩擦的新接口。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>星期五的科技栏把三篇《自然》系首发放在前，把全联接大会次日的网络设备放在后。17日昇腾960、麒麟与联发科峰会稿不混入。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>70nm</b><i>涡旋奇点</i><p>连续介质假设在分子自由程处失效</p></div>
+      <div><b>6剂</b><i>鞘内给药</i><p>CHCHD10 个性化反义核酸</p></div>
+      <div><b>2支</b><i>脑祖细胞</i><p>Otx2 与 Gbx2 互不混合</p></div>
+      <div><b>11μs</b><i>端到端时延</i><p>星河灵衢交换机新口径</p></div>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">信息缺口</div>
+      国产互联网平台、海外芯片流片与手机芯片18日未见可交叉核验的首发。科学栏以《自然》新闻与《自然神经科学》论文为主，不拿8日纳维–斯托克斯声明或17日昇腾960复述补页。
+    </div>
+
+    <h2 class="section-title">流体边界与一人一药</h2>
+    <p class="section-sub">一篇把数学奇点改写成物理尺度，一篇把超罕见突变写成可复述的临床改善。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 01 · 科学</div>
+        <h3>《自然》：纳维–斯托克斯奇点把连续介质假设推到分子尺度</h3>
+        <p class="src">来源：<a href="https://www.nature.com/articles/d41586-026-02922-6">Nature</a></p>
+        <p class="sum">18日《自然》新闻分析上周OpenAI声称的千禧年问题证明：涡旋拉长至约70纳米时出现奇点，宽度已接近空气分子自由程。物理学家指出，方程在该尺度不再描述真实流体，湍流研究正转向超越经典方程。</p>
+        <div class="why"><strong>为何重要</strong>把8日数学声明改写成18日的物理边界问题，焦点从「谁证明了」转到「方程在何处失效」。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 02 · 生物医学</div>
+        <h3>首例个性化反义核酸治疗罕见ALS，患者症状改善</h3>
+        <p class="src">来源：<a href="https://www.nature.com/articles/d41586-026-02945-z">Nature</a>　·　《Med》交叉</p>
+        <p class="sum">《自然》18日报道，《Med》发表首例针对CHCHD10突变的个性化反义寡核苷酸治疗。患者2024年4月至2025年4月接受6次鞘内给药，运动与呼吸评分改善，无严重不良反应，仍在执业。作者称持续改善在未治疗ALS中罕见。</p>
+        <div class="why"><strong>为何重要</strong>把「一人一药」的RNA疗法从试验登记推进到可核验的临床改善，为其他超罕见神经突变提供模板。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">两支祖细胞与网络层</h2>
+    <p class="section-sub">实验室第一次承认后脑走另一条轨道；展台上把时延与功耗写成可报价的交换机。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 03 · 发育生物学</div>
+        <h3>《自然神经科学》：大脑来自两支互不混合的祖细胞</h3>
+        <p class="src">来源：<a href="https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html">Stanford Medicine</a>　·　<a href="https://www.nature.com/articles/d41586-026-02943-1">Nature</a>交叉</p>
+        <p class="sum">斯坦福团队18日在《自然神经科学》发文：原肠胚期同时出现Otx2前脑/中脑祖细胞与Gbx2后脑祖细胞，谱系互不重叠。据此首次从人多能干细胞高效诱导后脑菱脑节5/6运动神经元。</p>
+        <div class="why"><strong>为何重要</strong>挑战「单一神经祖细胞生成全脑」的教科书模型，并给出后脑运动神经元的体外制备路径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 04 · 算力网络</div>
+        <h3>华为发布星河AI网络与NPO交换机，端到端时延降至11微秒</h3>
+        <p class="src">来源：<a href="https://www.prnasia.com/story/548450-1.shtml">美通社 / 华为</a></p>
+        <p class="sum">全联接大会次日，华为升级星河AI网络：UBG灵衢交换机SF9300把端到端时延从20微秒降至11微秒；NPO交换机XH9300-EN互联功耗从1000W降至600W。广域侧算网一体机将分支算卡从8张压到2张，银行现网称千公里算效损失低于2%。</p>
+        <div class="why"><strong>为何重要</strong>这是17日昇腾超节点之后的网络层落地，把柜间互联与跨城用算写成可报价的设备清单。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A;box-shadow:0 1px 0 #F7F4EF;margin-bottom:18px;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#C9C2B6;">第261期  ·  2026年9月18日</span>
+        <span class="iss">收束</span>
+      </header>
+      <h2>收束摘要</h2>
+      <p class="judge">星期五不是星期四的复述。九一八被写成战争阴谋与AI洗白档案，仙宾礁把两艘船的船艏写进同一上午。吉隆562第一次进入国家月报，64件套文物在沪时见报。驻欧撤军从NBC夜稿走进18日北约司令通报，混动15%成为中欧新接口。科技栏交出三篇《自然》系首发和一份星河网络清单。互联网平台与海外芯片首发不足，不拿17日超节点补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>郭嘉昆谈九一八与AI洗白档案</li>
+            <li>仙宾礁中菲互指撞船</li>
+            <li>吉隆口岸562人写入8月月报</li>
+            <li>美国返还64件套文物化石</li>
+            <li>五角大楼评估撤出近三分之一驻欧美军</li>
+            <li>外交部回应欧盟混动份额15%</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条</h4>
+          <ol>
+            <li>《自然》把纳维–斯托克斯奇点写成物理尺度</li>
+            <li>个性化反义核酸改善罕见ALS</li>
+            <li>大脑来自两支互不混合的祖细胞</li>
+            <li>华为星河AI网络与NPO交换机</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 日历 2026-09-18 为收集窗，只收该日发生或该日首发。交叉核验外交部、应急部、新华社、NBC、路透、《自然》与斯坦福医学院。未混入17日王毅—鲁比奥通话、丁薛祥东博会、美联储加息、格雷厄姆法案、昇腾960/Peerium、联发科Genio Pro 5100，以及8日纳维–斯托克斯声明复述。尼泊尔1410见诸17日深夜/18日0:10交叉口径不一，6055见诸19日凌晨，均不收入。</p>
+      <p class="end">第261期 · 时政6 · 科技4 · 合计10 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
