@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第263期 · 2026-09-20</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 22pt; line-height: 1.25; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 22pt; margin: 8px 0 8px; line-height: 1.25; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 12px 0 12px; }
+    .close .judge { font-family: Cambria, "STSong", serif; font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc { grid-template-columns: 1fr; }
+      .card h3, .compare h3 { font-size: 20pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第263期  ·  2026年9月20日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第贰陆叁期  ·  二零二六年九月二十日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">纽约摩根大通总部，何立峰与贝森特、格里尔把第八轮经贸磋商开到美国。董建华公祭在香港殡仪馆举行。联大高级别周拉开，习近平不去纽约。科技栏记下力箭一号一箭九星，以及阶跃把 600B MoE 写成 10 月 15 日开源日程。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>纽约 · 公祭 · 联大</em></div>
+        <div class="metric"><b>03</b><span>科技</span><em>九星 · Agent · 因果链</em></div>
+        <div class="metric"><b>08</b><span>合计</span><em>沪时昨日首发</em></div>
+      </div>
+      <p class="spine">今日主线：新华社 22:51 证实纽约开谈，是日内瓦以来首次在美举行的第八轮。董建华公祭由石泰峰致悼词。路透记下习近平跳过联大、美补缴 7.25 亿美元会费。科技栏不复述 17 日昇腾 960、19 日千问同传与 Gemini 越狱，改记力箭遥十八与 Step 5 Preview；芯片流片与科学期刊首发不足，已标明缺口。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>星期日没有例行记者会。政治栏先记下纽约开谈的现场，再记下香港殡仪馆的国葬礼宾，然后把联大周、美伊互威胁和尼泊尔外长启程排上同一张桌子。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头引语 · 贝森特</div>
+      我期待今天进行聚焦、充分而有建设性的会谈，为领导人会晤铺路。
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <b>第八轮</b>
+        <i>首次在美</i>
+        <p>日内瓦会谈以来第一次把磋商地点设在美国本土。</p>
+      </div>
+      <div class="fact">
+        <b>7.25亿</b>
+        <i>美元会费</i>
+        <p>美国本周补缴，以免在联大失去表决权，仍欠逾十亿。</p>
+      </div>
+      <div class="fact">
+        <b>89</b>
+        <i>岁</i>
+        <p>董建华 9 月 8 日逝世，20 日公祭，灵柩覆盖国旗。</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">纽约开谈与香港公祭</h2>
+    <p class="section-sub">一张写进新华社通稿的开谈电讯，一场覆盖国旗的公祭现场。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 01 · 经贸磋商</div>
+        <h3>中美经贸磋商在纽约开谈：第八轮、首次在美举行</h3>
+        <p class="src">来源：<a href="https://www.gov.cn/yaowen/liebiao/202609/content_7081615.htm">新华社 / 中国政府网</a>　·　<a href="https://www.zaobao.com.sg/news/china/story20260920-9706662">联合早报</a>　·　<a href="https://www.aljazeera.com/economy/2026/9/20/us-china-open-high-level-talks-ahead-of-trump-xi-summit">半岛电视台 / 路透</a>交叉</p>
+        <p class="sum">新华社 20 日 22:51 电，当地时间上午，何立峰与贝森特、格里尔在纽约摩根大通总部开谈。议题含 11 月 10 日到期的关税休战、稀土与关键矿产、AI 护栏及伊朗。此为日内瓦会谈以来第八轮、首次在美国举行。</p>
+        <div class="why"><strong>为何重要</strong>把工作层谈判接到 24 日元首会晤前夜，AI 首次进入这一轮经贸桌。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 02 · 公共事务</div>
+        <h3>董建华先生公祭仪式在香港举行</h3>
+        <p class="src">来源：<a href="https://www.news.cn/politics/20260920/4d3685b8005143d7a8f98e86452feead/c.html">新华社</a>　·　<a href="http://politics.people.com.cn/n1/2026/0920/c1001-40802106.html">人民网</a>交叉</p>
+        <p class="sum">新华社香港 20 日电，香港首任、第二任行政长官、全国政协原副主席董建华公祭仪式当日上午在香港殡仪馆举行。石泰峰受中央委托致悼词，梁振英主持，夏宝龙、李家超等出席。灵柩覆盖国旗。董建华 9 月 8 日逝世，享年 89 岁。</p>
+        <div class="why"><strong>为何重要</strong>这是中央对首位特区行政长官的国葬礼宾，把「一国两制」的人事记忆写成可核验的公祭现场。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">双栏对照 · 联大与霍尔木兹</h2>
+    <p class="section-sub">一边是元首不去纽约的联大周，一边是「可见面」与「可清除」写进同一天的美伊对峙。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 03 · 多边外交</div>
+        <h3>联大高级别周拉开，习近平不去纽约改赴白宫</h3>
+        <p class="src">来源：<a href="https://www.reuters.com/world/china/world-leaders-return-un-amid-wars-middle-east-ukraine-2026-09-20/">路透</a></p>
+        <p class="sum">路透 20 日沪时 13:05 电，近 130 位元首本周聚纽约。习近平跳过联大，改于 24 日在华盛顿会晤特朗普。古特雷斯把 AI 与中东、乌克兰并列核心议程。美国本周补缴 7.25 亿美元会费以免失去表决权，仍欠逾十亿。</p>
+        <div class="why"><strong>为何重要</strong>把联大周写成「元首不来纽约」的对照表，AI 护栏与战争同时挤进同一张议程。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 04 · 中东安全</div>
+        <h3>美伊周日互放威胁，伊朗称霍尔木兹须按六月协议才开峡</h3>
+        <p class="src">来源：<a href="https://www.al-monitor.com/originals/2026/09/iran-and-us-trade-threats-after-houthi-attacks-escalate-regional-conflict">路透 / Al-Monitor</a></p>
+        <p class="sum">路透 20 日电，特朗普周日对福克斯称伊朗领导层须达成协议，否则经济溃败或被清除，同时称可在联大见佩泽希齐扬。伊军称任何新打击将持续报复美基地。伊朗重申六月协议条款兑现前不开霍尔木兹。胡塞周六袭利雅得余波仍在。</p>
+        <div class="why"><strong>为何重要</strong>把「可见面」和「可清除」写进同一天，霍尔木兹与曼德海峡同时收紧能源出口。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">气候诉求与周日台账</h2>
+    <p class="section-sub">尼泊尔把博特科西洪灾带上联大；吉隆 20 日没有新的官方伤亡数字。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 05 · 公共事务</div>
+        <h3>尼泊尔外长启程赴联大，气候正义成核心诉求</h3>
+        <p class="src">来源：<a href="https://www.sicomedia.com/2026/0920/60270.shtml">南亚网视</a></p>
+        <p class="sum">南亚网视 20 日 15:19 电，外长卡纳尔当日启程赴纽约，总理沙阿将于 22 日率团、24 日演讲。尼方将办「从萨加玛塔到海洋」边会，把博特科西洪灾与喜马拉雅气候风险写入联大诉求，并参加最不发达国家、77 国集团和中国等部长会。</p>
+        <div class="why"><strong>为何重要</strong>把跨境泥石流从搜救台账推进到气候融资与损失损害的外交桌。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 · 信息对照</div>
+        <h3>吉隆与尼泊尔伤亡：星期日没有新的官方台账</h3>
+        <p class="src">来源：交叉检索后的缺口说明</p>
+        <p class="sum">20 日未见西藏救援指挥部或尼泊尔减灾局更新伤亡。应急部 8 月月报吉隆 562、尼方 1410/6055 均属 18–19 日口径，不收入。商务部格雷厄姆法案答问亦属 19 日首发，今日只作背景，不另立条。</p>
+        <div class="why"><strong>为何重要</strong>周日栏宁可标明没有新台账，也不拿昨天的数字再报一次。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>星期日的科技栏把一枚商业火箭放在前，把一款开源日程写进中，把一条因果世界模型放在后。17 日昇腾 960、19 日千问同传与 Gemini 越狱不混入。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>9星</b><i>力箭遥十八</i><p>12:03 东风商业航天试验区入轨</p></div>
+      <div><b>600B</b><i>Step 5</i><p>激活 27B，拟 10 月 15 日开源</p></div>
+      <div><b>Top-1</b><i>CausalWM</i><p>TriWorldBench 机器人世界模型</p></div>
+      <div><b>—</b><i>芯片流片</i><p>海外与国产手机芯片未见首发</p></div>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">信息缺口</div>
+      海外芯片流片、国产手机芯片与除阶跃外的互联网平台 20 日未见可交叉核验的首发。科学期刊栏未见 20 日署期论文。不拿 17 日昇腾 960、龙潭三期、Xing4.0、TorchX，以及 19 日千问同传、Gemini 越狱、Hy4 预览或脑内皮外泌体补页。
+    </div>
+
+    <h2 class="section-title">一箭九星与 600B 开源日程</h2>
+    <p class="section-sub">一枚把通感智算送上天的商业火箭，一款把开源日写成报价单的 MoE。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 01 · 航天产业</div>
+        <h3>力箭一号遥十八一箭九星，浦江四号与鹏城首发星入轨</h3>
+        <p class="src">来源：<a href="https://www.news.cn/tech/20260920/bfb42d6c5cfc4b9fa345f4c00ed823a7/c.html">新华社</a>　·　<a href="http://www.chinanews.com.cn/gn/2026/09-20/10700058.shtml">中新社</a>交叉</p>
+        <p class="sum">新华社酒泉 20 日 12:28 电，12 时 03 分力箭一号遥十八在东风商业航天创新试验区一箭九星入轨。载荷含秦岭 01/02、中国首颗二氧化碳甲烷点源探测卫星浦江四号，以及鹏城首发星、超智算一号等。力箭一号第 16 次飞行。</p>
+        <div class="why"><strong>为何重要</strong>把温室气体点源探测和通感智算验证写进同一枚商业火箭，是周日最硬的产业首发。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 02 · 人工智能</div>
+        <h3>阶跃发布 Step 5 Preview：600B MoE，10 月 15 日开源</h3>
+        <p class="src">来源：<a href="https://www.ithome.com/1/004/705.htm">IT之家</a>　·　<a href="https://www.stepfun.com/step-5-preview">阶跃官方</a>　·　<a href="https://finance.sina.com.cn/roll/2026-09-20/doc-inisnnkw9324395.shtml">智东西</a>交叉</p>
+        <p class="sum">阶跃 20 日发布 Step 5 Preview：600B MoE、激活 27B，百万 token 上下文，支持文本与视觉。AA 指数 44 分，开源前三。官方称单任务成本约为 Claude Opus 5 的八分之一。即日起 API 开放，权重拟 10 月 15 日释放。</p>
+        <div class="why"><strong>为何重要</strong>把国产旗舰从问答模型推进到可报价的长程 Agent，并给出明确开源日。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">因果链与芯片缺口</h2>
+    <p class="section-sub">实验室把光流写成可干预的推理步骤；芯片栏今天交白卷。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 03 · 具身智能</div>
+        <h3>Aether AI 发布 CausalWM：把因果思维链焊进世界模型</h3>
+        <p class="src">来源：<a href="https://www.163.com/dy/article/L79AMV6N0511AQHO.html">机器之心</a>　·　<a href="https://aetherlabsai.github.io/CausalWM/">项目主页</a></p>
+        <p class="sum">机器之心 20 日报道，Aether AI 发布 16B 因果世界模型 CausalWM，按光流→几何→未来画面显式推理，在 TriWorldBench 登顶。代码与权重同步公开。OpenReview 文稿署期 11 日，20 日为模型与基准的中文首发。</p>
+        <div class="why"><strong>为何重要</strong>把世界模型从「看起来合理」推进到可干预的因果链，是具身智能的一条非堆参路径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 · 信息不足</div>
+        <h3>芯片与科学期刊：星期日没有可核验的首发</h3>
+        <p class="src">来源：交叉检索后的缺口说明</p>
+        <p class="sum">20 日未见台积电、英伟达、AMD、高通或国产手机芯片的可交叉首发；《自然》《科学》无 20 日署期论文。龙潭三期属 17–18 日，Xing4.0 与 TorchX 属 17 日，A20 Pro 演示属 19 日开发者短片，均不收入。</p>
+        <div class="why"><strong>为何重要</strong>周日科技栏宁可标明信息不足，也不用展会复述或预印本日期错位的稿件填满版面。</div>
+      </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:#C41E3A;box-shadow:0 1px 0 #F7F4EF;margin-bottom:18px;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="date" style="color:#C9C2B6;">第263期  ·  2026年9月20日</span>
+        <span class="iss">收束</span>
+      </header>
+      <h2>收束摘要</h2>
+      <p class="judge">星期日不是星期六的复述。新华社把纽约开谈写成 22:51 的电讯，董建华公祭在香港殡仪馆落幕。路透记下习近平不去纽约、美补缴会费，以及美伊把「可见面」和「可清除」写进同一天。科技栏交出力箭一箭九星、阶跃 600B 开源日程和一篇因果世界模型。芯片流片与科学期刊首发不足，不拿全联接复述补页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>中美经贸磋商在纽约开谈</li>
+            <li>董建华先生公祭仪式在香港举行</li>
+            <li>联大高级别周拉开，习近平不去纽约</li>
+            <li>美伊周日互放威胁，霍尔木兹仍关</li>
+            <li>尼泊尔外长启程赴联大谈气候正义</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技三条 + 缺口</h4>
+          <ol>
+            <li>力箭一号遥十八一箭九星</li>
+            <li>阶跃 Step 5 Preview，10 月 15 日开源</li>
+            <li>CausalWM 把因果链焊进世界模型</li>
+            <li>芯片与科学期刊：信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 日历 2026-09-20 为收集窗，只收该日发生或该日首发。交叉核验新华社、中国政府网、联合早报、半岛电视台、路透、Al-Monitor、人民网、南亚网视、中新社、IT之家、阶跃官方、智东西与机器之心。未混入 19 日白宫访美行程、何立峰赴美官宣、格雷厄姆法案答问、尼泊尔 1410/6055、布伦特周线、联大场边见高市早苗预告、Gemini 三家闯入、千问 2.3 秒同传、Hy4 预览与脑内皮外泌体，以及 17 日昇腾 960、龙潭三期、Xing4.0、TorchX。油价周一开盘见诸 20 日 22:10 UTC（沪时 21 日 6:10），不提前收入。Firecrawl 已安装但未鉴权。</p>
+      <p class="end">第263期 · 时政5 · 科技3 · 合计8 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
