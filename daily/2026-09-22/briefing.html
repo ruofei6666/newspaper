@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日时政科技简报 · 2026年9月22日 · 第001期</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --red: #C41E3A;
+      --slate: #4A5568;
+      --cream: #EFE8DC;
+      --warm: #D8D2C8;
+      --ivory: #FFFCF7;
+      --muted: #6B7280;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, Georgia, "Songti SC", "STSong", "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: inherit; }
+    a:hover { color: var(--red); }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.7rem 0 0.45rem;
+    }
+    .folio .name { font-size: 1rem; font-weight: 700; }
+    .folio .meta { font-size: 0.8rem; color: var(--slate); }
+    .rule {
+      height: 1px;
+      background: var(--ink);
+      position: relative;
+    }
+    .rule::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 72px;
+      height: 3px;
+      background: var(--red);
+    }
+    .wrap {
+      width: min(1120px, calc(100% - 1.4rem));
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 2.4rem 0 2.6rem;
+    }
+    .cover .wrap { padding-bottom: 0; }
+    .cover .dot {
+      width: 12px; height: 12px;
+      background: var(--red);
+      display: inline-block;
+      margin-right: 0.55rem;
+      vertical-align: middle;
+    }
+    .kicker {
+      font-size: 0.8rem;
+      color: var(--warm);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+    .cover h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      line-height: 1.15;
+      margin: 1rem 0 0.6rem;
+    }
+    .cover .date {
+      font-size: 1.35rem;
+      margin: 0 0 0.8rem;
+    }
+    .accent { width: 140px; height: 4px; background: var(--red); margin: 0 0 1.1rem; }
+    .lede { font-size: 1.05rem; max-width: 40rem; color: var(--cream); }
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 0.9fr;
+      gap: 1.4rem;
+      margin-top: 1.6rem;
+    }
+    .toc {
+      background: #241818;
+      padding: 1.1rem 1.15rem 1.2rem;
+    }
+    .toc h3 { color: var(--red); font-size: 0.85rem; margin: 0 0 0.6rem; font-family: Calibri, Arial, sans-serif; }
+    .toc ol { margin: 0; padding-left: 1.15rem; color: var(--paper); }
+    .toc li { margin: 0.28rem 0; }
+    .fine { font-size: 0.78rem; color: var(--muted); margin-top: 1.4rem; }
+    section.page { padding: 1.8rem 0 0.4rem; }
+    .opener {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem 1.2rem;
+      align-items: end;
+    }
+    .big-num {
+      font-size: 3.6rem;
+      line-height: 0.9;
+      color: var(--red);
+      margin: 0;
+    }
+    .opener h2 { font-size: 2.4rem; margin: 0; }
+    .sub { color: var(--slate); font-size: 0.82rem; letter-spacing: 0.06em; }
+    .badge {
+      background: var(--ink);
+      color: var(--paper);
+      min-width: 9.5rem;
+      padding: 0.85rem 1rem;
+    }
+    .badge.red { background: var(--red); }
+    .badge strong { display: block; font-size: 1.35rem; font-family: Cambria, Georgia, serif; }
+    .intro { font-size: 1.05rem; margin: 1.1rem 0 0; max-width: 58rem; }
+    .quote {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 1.25rem 1.4rem 1.3rem;
+      margin: 1.3rem 0 0;
+    }
+    .quote .lab { color: var(--red); font-size: 0.8rem; font-weight: 700; }
+    .quote p {
+      font-family: Cambria, Georgia, "Songti SC", serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      margin: 0.55rem 0 0.7rem;
+    }
+    .quote cite { font-style: normal; color: var(--warm); font-size: 0.92rem; }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-top: 0.9rem;
+    }
+    .card {
+      background: var(--ivory);
+      border-left: 6px solid var(--red);
+      padding: 1rem 1.1rem 1.15rem;
+      min-height: 100%;
+    }
+    .card.alt { background: var(--cream); }
+    .card .no { color: var(--red); font-size: 1.35rem; font-weight: 700; }
+    .card .kick { color: var(--slate); font-size: 0.8rem; }
+    .card h3 { font-size: 1.25rem; margin: 0.45rem 0 0.35rem; line-height: 1.3; }
+    .src { color: var(--muted); font-size: 0.8rem; margin-bottom: 0.55rem; }
+    .src a { text-decoration: underline; text-underline-offset: 2px; }
+    .why {
+      border-top: 1px solid var(--warm);
+      margin-top: 0.85rem;
+      padding-top: 0.65rem;
+    }
+    .why strong { color: var(--red); display: block; font-size: 0.8rem; margin-bottom: 0.25rem; }
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-top: 0.9rem;
+    }
+    .col { padding: 1.15rem 1.15rem 1.25rem; }
+    .col.light { background: var(--ivory); }
+    .col.dark { background: var(--ink); color: var(--paper); }
+    .col .bar { height: 6px; background: var(--red); margin: -1.15rem -1.15rem 0.9rem; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+    .metric { background: var(--ivory); padding: 1.1rem 1.15rem 1.2rem; }
+    .metric.dark { background: var(--ink); color: var(--paper); }
+    .metric b {
+      display: block;
+      font-family: Cambria, Georgia, serif;
+      font-size: 2.3rem;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 0.55rem;
+    }
+    .feature {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 0.7rem;
+      margin-top: 0.9rem;
+    }
+    .note { background: var(--ink); color: var(--paper); padding: 1.15rem 1.2rem; }
+    .note h3 { color: var(--red); font-size: 0.85rem; font-family: Calibri, Arial, sans-serif; margin: 0 0 0.7rem; }
+    .note .q {
+      font-family: Cambria, Georgia, serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      margin: 0 0 0.8rem;
+    }
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 2rem 0 2.4rem;
+      margin-top: 2rem;
+    }
+    .close h2 { font-size: 2.2rem; margin: 1rem 0 0.8rem; }
+    .close-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 1rem;
+    }
+    .index { margin: 0; padding-left: 1.15rem; }
+    .index li { margin: 0.28rem 0; }
+    .tomorrow { background: #241818; padding: 1.1rem 1.15rem; }
+    .tomorrow h3 { color: var(--red); font-size: 0.85rem; margin: 0 0 0.6rem; font-family: Calibri, Arial, sans-serif; }
+    @media (max-width: 820px) {
+      .cover-grid, .cards, .compare, .metrics, .feature, .close-grid, .opener {
+        grid-template-columns: 1fr;
+      }
+      .opener { align-items: start; }
+    }
+    @media print {
+      body { background: #fff; }
+      .cover, .close, .quote, .col.dark, .note, .badge, .metric.dark, .toc, .tomorrow {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page { break-inside: avoid; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="cover">
+    <div class="wrap">
+      <div class="kicker">
+        <span><i class="dot"></i>THE MORNING FOLIO</span>
+        <span>第001期 · 上海刊</span>
+      </div>
+      <div class="rule" style="background:#F7F4EF;"></div>
+      <h1>每日时政科技简报</h1>
+      <p class="date serif">二零二六年九月二十二日  ·  星期二</p>
+      <div class="accent"></div>
+      <div class="cover-grid">
+        <p class="lede">只记昨日事，不贩未知风。昨夜截稿，时政六章，科技五章，凡十一则。联大一般性辩论与云栖大会同日开场，芯片与外交并行入版。</p>
+        <aside class="toc">
+          <h3>本期目录</h3>
+          <ol>
+            <li>沪上调研与耕地立法</li>
+            <li>联大双轨与美伊接触</li>
+            <li>能源停火对照红海</li>
+            <li>真武芯片与二十吉瓦</li>
+            <li>端侧模型与工控下沉</li>
+          </ol>
+        </aside>
+      </div>
+      <p class="fine">ASIA / SHANGHAI  ·  昨日日历 2026-09-22  ·  不收录更早稿件与今日凌晨之后首发</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <div class="opener" style="margin-top:1.2rem;">
+        <p class="big-num serif">01</p>
+        <div>
+          <h2>时政开篇</h2>
+          <div class="sub">POLICY  ·  DIPLOMACY  ·  PUBLIC AFFAIRS</div>
+        </div>
+        <div class="badge">
+          <strong>精选  6 条</strong>
+          国内三则  ·  国际三则
+        </div>
+      </div>
+      <p class="intro">昨日同时出现两条主线：一条在国内，先进制造与耕地红线被写入开局部署；一条在纽约，第81届联大一般性辩论开场，战争、能源与大国关系同台。本版只取当日发生或当日首发，不混入访美预告的前一日宣布稿。</p>
+      <figure class="quote">
+        <div class="lab">刊头引句</div>
+        <p>“要将我国制造业和数智技术两方面优势结合起来，纵深推进‘人工智能+制造’。”</p>
+        <cite>—— 李强　9月22日于上海电气国家人工智能应用中试基地</cite>
+      </figure>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">国内要闻</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="no serif">01</div>
+          <div class="kick">上海  ·  产业政策</div>
+          <h3>李强在沪调研：纵深推进人工智能加制造</h3>
+          <div class="src"><a href="https://www.gov.cn/yaowen/liebiao/202609/content_7081777.htm">新华社 / 中国政府网</a></div>
+          <p>总理9月22日在上海电气国家人工智能应用中试基地和未来启点社区调研，要求坚持智能化、绿色化、融合化，推进人工智能赋能先进制造，培育脑机接口、量子计算等未来产业，并发展耐心资本。</p>
+          <div class="why"><strong>为何重要</strong>把先进制造、耐心资本与人才培养并写，标示“十五五”开局的产业政策重心。</div>
+        </article>
+        <article class="card alt">
+          <div class="no serif">02</div>
+          <div class="kick">北京  ·  资源立法</div>
+          <h3>首部耕地保护专门立法明年施行</h3>
+          <div class="src"><a href="https://www.news.cn/politics/20260922/a2b9412a275b4823ba52dbadd498ef4c/c.html">新华社</a></div>
+          <p>国新办“十五五”自然资源发布会上，自然资源部称《耕地保护和质量提升法》将于2027年1月1日起施行。刘国洪提出稳数量、优结构、强监管，并建立新增城镇用地与常住人口挂钩机制。</p>
+          <div class="why"><strong>为何重要</strong>粮食安全从政策宣示进入专门法时代，占补平衡与党政同责将更硬。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">外交现场</h2>
+      <div class="cards">
+        <article class="card alt">
+          <div class="no serif">03</div>
+          <div class="kick">北京  ·  例行记者会</div>
+          <h3>韩正将出席第八十一届联大一般性辩论</h3>
+          <div class="src"><a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202609/t20260922_12028748.shtml">中华人民共和国外交部</a></div>
+          <p>发言人郭嘉昆宣布，韩正将于9月24日至26日赴纽约出席联大一般性辩论，并出席全球发展倡议五周年对话。同日外交部发布“建设性战略稳定”视频，重申愿与美方加强对话、管控分歧。</p>
+          <div class="why"><strong>为何重要</strong>元首访美前夜，北京以联大与华盛顿双轨并行，明确本周外交优先级。</div>
+        </article>
+        <article class="card">
+          <div class="no serif">04</div>
+          <div class="kick">纽约  ·  联合国大会</div>
+          <h3>特朗普称对伊面临歼灭或交易的抉择</h3>
+          <div class="src"><a href="https://www.bbc.com/news/articles/c52e0ywl9pr7o">BBC</a></div>
+          <p>美国总统在第81届联大称，将决定与伊朗达成重建协议，还是“迅速歼灭”伊斯兰共和国。会后他透露美方官员与伊方会谈约三小时；伊朗国家电视台确认外长阿拉格齐会见美特使威特科夫。</p>
+          <div class="why"><strong>为何重要</strong>战争近七月之际，最高层同时释放极限施压与直接接触的信号。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">对照 · 能源与战事</h2>
+      <p class="sub" style="margin-top:0;">同一日的两条能源战线</p>
+      <div class="compare">
+        <article class="col light">
+          <div class="bar"></div>
+          <div class="kick" style="color:var(--red);">05  ·  乌克兰  ·  纽约会晤</div>
+          <h3>泽连斯基称已与特朗普讨论能源停火</h3>
+          <div class="src"><a href="https://www.reuters.com/world/ukraines-zelenskiy-says-he-discussed-peace-efforts-energy-ceasefire-with-trump-2026-09-22/">路透社</a></div>
+          <p>乌克兰总统在纽约与特朗普通话约40分钟后表示，双方讨论了对俄能源停火与结束战争路径。基辅称可接受任何形式的能源停火，但未讨论单方面停止打击俄炼厂，并愿参加有特朗普在场的三方会晤。</p>
+          <div class="why"><strong>为何重要</strong>能源设施互袭已成为战事新轴线，停火谈判从领土转向基础设施。</div>
+        </article>
+        <article class="col dark">
+          <div class="bar"></div>
+          <div class="kick" style="color:var(--red);">06  ·  海湾  ·  七国集团</div>
+          <h3>G7谴责胡塞袭击沙特，红海通道再承压</h3>
+          <div class="src"><a href="https://www.france24.com/en/live-news/20260922-g7-leaders-condemn-houthi-strikes-on-saudi-arabia">法新社 / France24</a></div>
+          <p>七国集团要求也门胡塞武装立即停止对沙特的军事行动，并呼吁伊朗停止武装支持。胡塞近期夺取红海沿岸后袭击延布阿美设施，东西向输油管道亦因袭击关闭，英法表态可提供防御性支持。</p>
+          <div class="why"><strong>为何重要</strong>海湾设施遇袭叠加霍尔木兹风险，直接牵动全球油价与贸易航线。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <div class="opener" style="margin-top:1.2rem;">
+        <p class="big-num serif">02</p>
+        <div>
+          <h2>科技开篇</h2>
+          <div class="sub">CHIPS  ·  MODELS  ·  INDUSTRY</div>
+        </div>
+        <div class="badge red">
+          <strong>精选  5 条</strong>
+          云栖一日  ·  两端齐发
+        </div>
+      </div>
+      <p class="intro">杭州云栖大会与高通骁龙峰会、OpenAI模型更新同日落槌。云端比的是吉瓦与万卡，手机与工控比的是把模型塞进现场。本版不收17日已发布的华为互联旧闻，也不收营销味过重的耳机花絮。</p>
+      <div class="metrics">
+        <div class="metric">
+          <b>3×</b>
+          <div>真武V900相对M890</div>
+          <div class="src">平头哥自称单芯片性能</div>
+        </div>
+        <div class="metric dark">
+          <b>20 GW</b>
+          <div>阿里云目标装机</div>
+          <div class="src" style="color:#D8D2C8;">展望至2032年</div>
+        </div>
+        <div class="metric">
+          <b>30 B</b>
+          <div>骁龙端侧MoE</div>
+          <div class="src">Extreme版本地可跑</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">云栖现场</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="no serif">07</div>
+          <div class="kick">杭州  ·  芯片</div>
+          <h3>平头哥发布真武V900训推一体芯片</h3>
+          <div class="src"><a href="https://technode.com/2026/09/22/t-head-unveils-zhenwu-v900-ai-chip-in-alibabas-push-to-expand-its-ai-infrastructure-stack/">TechNode / 紫牛新闻</a></div>
+          <p>平头哥称V900性能为前代M890的三倍，配备216GB显存、1200GB/s片间互联，原生支持FP8与FP4，计划2027年一季度量产。配套超节点宣称单一集群可扩至50万卡，并公布倚天720、730路线图。</p>
+          <div class="why"><strong>为何重要</strong>国产AI芯片竞争从单卡算力，转向超节点与全栈互联。</div>
+        </article>
+        <article class="card alt">
+          <div class="no serif">08</div>
+          <div class="kick">杭州  ·  基础设施</div>
+          <h3>吴泳铭锚定二十吉瓦与十万亿参数</h3>
+          <div class="src"><a href="https://finance.sina.com.cn/roll/2026-09-22/doc-inissiti8906017.shtml">华尔街见闻</a></div>
+          <p>阿里巴巴CEO提出，目标至2032年将阿里云全球数据中心规模扩至逾20GW，并计划训练5至10万亿参数新一代模型。Qwen团队称递归自我改进已进入训练与芯模协同，Qwen4已在训练中。</p>
+          <div class="why"><strong>为何重要</strong>把电力容量与模型尺度绑定，说明大厂把AI当作长周期基建。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">模型两端</h2>
+      <div class="cards">
+        <article class="card alt">
+          <div class="no serif">09</div>
+          <div class="kick">美国  ·  终端芯片</div>
+          <h3>高通发布骁龙8至尊版第六代</h3>
+          <div class="src"><a href="https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/">TechCrunch</a></div>
+          <p>高通在骁龙峰会发布Snapdragon 8 Elite Gen 6与Extreme版。新感知中枢可本地运行约2亿参数小模型；Extreme宣称可本地运行300亿参数混合专家模型。摩托罗拉等将首发搭载。</p>
+          <div class="why"><strong>为何重要</strong>手机被重新定义为AI枢纽，端侧大模型与存储涨价同时挤压定价。</div>
+        </article>
+        <article class="card">
+          <div class="no serif">10</div>
+          <div class="kick">美国  ·  大模型</div>
+          <h3>OpenAI推出GPT-6 Sol与Luna</h3>
+          <div class="src"><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">TechCrunch</a></div>
+          <p>继GPT-6 Astra之后，OpenAI发布面向工作与高吞吐的Sol、Luna。公司称Sol在内部事实性评测中错误约为前代一半，API价格较5.6系列下调约50%。Luna向免费与Go用户开放桌面端。</p>
+          <div class="why"><strong>为何重要</strong>旗舰之后迅速铺开低价档，竞争已从最强模型转向成本与可靠性。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule"></div>
+      <h2 style="font-size:2.2rem;margin:1rem 0 0.2rem;">产业下沉</h2>
+      <div class="feature">
+        <article class="card">
+          <div class="no serif">11</div>
+          <div class="kick">深圳  ·  嵌入式</div>
+          <h3>海光发布1000系列嵌入式CPU，算力伸向工控与机器人</h3>
+          <div class="src"><a href="https://finance.sina.com.cn/roll/2026-09-22/doc-inissyrf2016092.shtml">科创板日报 / 财联社</a></div>
+          <p>海光信息发布首款嵌入式工控芯片1000系列，采用C86架构，集成核显，典型功耗低至10W，兼容DDR4与DDR5，宣称SPEC2006综合性能较同类高15%。总裁沙超群称，公司由此形成云端CPU、DCU与端侧处理器的完整布局。</p>
+          <div class="why"><strong>为何重要</strong>国产x86阵营从数据中心下沉工厂与机器人，争夺具身智能的入口算力。</div>
+        </article>
+        <aside class="note">
+          <h3>编辑观察</h3>
+          <p class="q">云端要比规模，边端要比待得住。</p>
+          <p>昨日芯片新闻若只看峰值算力，会漏掉真正的位移：阿里用吉瓦和万卡回答训练；高通把300亿参数塞进手机；海光把10瓦的工控核送到产线。三条线指向同一件事——模型要离开机房，去能发热、能停电、能被油污包围的地方工作。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="close">
+    <div class="wrap">
+      <div class="folio">
+        <div class="name serif">每日时政科技简报</div>
+        <div class="meta" style="color:#D8D2C8;">第001期 · 2026.09.22 · 星期二</div>
+      </div>
+      <div class="rule" style="background:#F7F4EF;"></div>
+      <h2>收束 · 十一则回目</h2>
+      <div class="close-grid">
+        <ol class="index">
+          <li>李强沪上调研，强调人工智能加制造与耐心资本</li>
+          <li>耕地保护专门立法定于明年元旦施行</li>
+          <li>韩正赴联大，外交部阐释建设性战略稳定</li>
+          <li>特朗普联大谈对伊抉择，并证实美伊官员接触</li>
+          <li>泽连斯基称已与美方讨论能源停火</li>
+          <li>七国集团谴责胡塞袭击沙特能源设施</li>
+          <li>平头哥真武V900发布，称性能三倍于前代</li>
+          <li>阿里锚定二十吉瓦智算与十万亿参数模型</li>
+          <li>高通骁龙第八代至尊版主打端侧智能体</li>
+          <li>OpenAI以半价推出GPT-6 Sol与Luna</li>
+          <li>海光1000系列把C86算力带入工控现场</li>
+        </ol>
+        <aside class="tomorrow">
+          <h3>明日关注</h3>
+          <p>习近平对美国国事访问启程（23–25日，21日已宣布，故未入昨日正刊）。韩正联大一般性辩论。全球数字贸易博览会在杭州开幕。金融产品网络营销管理办法将于30日施行，属4月旧法，不列入昨日首发。</p>
+        </aside>
+      </div>
+      <p class="fine">编辑说明：时区 Asia/Shanghai，日期 2026-09-22。时政6条，科技5条，合计11条。交叉核验官方与主流通讯社，拒绝标题党与重复转载。住房公积金新政为20日稿，未收录。</p>
+    </div>
+  </footer>
+</body>
+</html>
