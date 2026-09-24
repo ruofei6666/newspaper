@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 2026年9月23日 · 第002期</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --red: #C41E3A;
+  --slate: #4A5568;
+  --cream: #EFE8DC;
+  --warm: #D8D2C8;
+  --ivory: #FFFCF7;
+  --muted: #6B7280;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, Georgia, "Songti SC", "STSong", "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: inherit; }
+a:hover { color: var(--red); }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0 0.45rem;
+}
+.folio .name { font-size: 1rem; font-weight: 700; }
+.folio .meta { font-size: 0.8rem; color: var(--slate); }
+.rule {
+  height: 1px;
+  background: var(--ink);
+  position: relative;
+}
+.rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 72px;
+  height: 3px;
+  background: var(--red);
+}
+.wrap {
+  width: min(1120px, calc(100% - 1.4rem));
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2.4rem 0 2.6rem;
+}
+.cover .wrap { padding-bottom: 0; }
+.cover .dot {
+  width: 12px; height: 12px;
+  background: var(--red);
+  display: inline-block;
+  margin-right: 0.55rem;
+  vertical-align: middle;
+}
+.kicker {
+  font-size: 0.8rem;
+  color: var(--warm);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.cover h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.15;
+  margin: 1rem 0 0.6rem;
+}
+.cover .date {
+  font-size: 1.35rem;
+  margin: 0 0 0.8rem;
+}
+.accent { width: 140px; height: 4px; background: var(--red); margin: 0 0 1.1rem; }
+.lede { font-size: 1.05rem; max-width: 40rem; color: var(--cream); }
+.cover-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 1.4rem;
+  margin-top: 1.6rem;
+}
+.toc {
+  background: #241818;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+.toc h3 { color: var(--red); font-size: 0.85rem; margin: 0 0 0.6rem; font-family: Calibri, Arial, sans-serif; }
+.toc ol { margin: 0; padding-left: 1.15rem; color: var(--paper); }
+.toc li { margin: 0.28rem 0; }
+.fine { font-size: 0.78rem; color: var(--muted); margin-top: 1.4rem; }
+section.page { padding: 1.8rem 0 0.4rem; }
+.opener {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem 1.2rem;
+  align-items: end;
+}
+.big-num {
+  font-size: 3.6rem;
+  line-height: 0.9;
+  color: var(--red);
+  margin: 0;
+}
+.opener h2 { font-size: 2.4rem; margin: 0; }
+.sub { color: var(--slate); font-size: 0.82rem; letter-spacing: 0.06em; }
+.badge {
+  background: var(--ink);
+  color: var(--paper);
+  min-width: 9.5rem;
+  padding: 0.85rem 1rem;
+}
+.badge.red { background: var(--red); }
+.badge strong { display: block; font-size: 1.35rem; font-family: Cambria, Georgia, serif; }
+.intro { font-size: 1.05rem; margin: 1.1rem 0 0; max-width: 58rem; }
+.quote {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.25rem 1.4rem 1.3rem;
+  margin: 1.3rem 0 0;
+}
+.quote .lab { color: var(--red); font-size: 0.8rem; font-weight: 700; }
+.quote p {
+  font-family: Cambria, Georgia, "Songti SC", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  margin: 0.55rem 0 0.7rem;
+}
+.quote cite { font-style: normal; color: var(--warm); font-size: 0.92rem; }
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+.card {
+  background: var(--ivory);
+  border-left: 6px solid var(--red);
+  padding: 1rem 1.1rem 1.15rem;
+  min-height: 100%;
+}
+.card.alt { background: var(--cream); }
+.card .no { color: var(--red); font-size: 1.35rem; font-weight: 700; }
+.card .kick { color: var(--slate); font-size: 0.8rem; }
+.card h3 { font-size: 1.25rem; margin: 0.45rem 0 0.35rem; line-height: 1.3; }
+.src { color: var(--muted); font-size: 0.8rem; margin-bottom: 0.55rem; }
+.src a { text-decoration: underline; text-underline-offset: 2px; }
+.why {
+  border-top: 1px solid var(--warm);
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+}
+.why strong { color: var(--red); display: block; font-size: 0.8rem; margin-bottom: 0.25rem; }
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+.col { padding: 1.15rem 1.15rem 1.25rem; }
+.col.light { background: var(--ivory); }
+.col.dark { background: var(--ink); color: var(--paper); }
+.col .bar { height: 6px; background: var(--red); margin: -1.15rem -1.15rem 0.9rem; }
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+.metric { background: var(--ivory); padding: 1.1rem 1.15rem 1.2rem; }
+.metric.dark { background: var(--ink); color: var(--paper); }
+.metric b {
+  display: block;
+  font-family: Cambria, Georgia, serif;
+  font-size: 2.3rem;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 0.55rem;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+.note { background: var(--ink); color: var(--paper); padding: 1.15rem 1.2rem; }
+.note h3 { color: var(--red); font-size: 0.85rem; font-family: Calibri, Arial, sans-serif; margin: 0 0 0.7rem; }
+.note .q {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0 0 0.8rem;
+}
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2rem 0 2.4rem;
+  margin-top: 2rem;
+}
+.close h2 { font-size: 2.2rem; margin: 1rem 0 0.8rem; }
+.close-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+.index { margin: 0; padding-left: 1.15rem; }
+.index li { margin: 0.28rem 0; }
+.tomorrow { background: #241818; padding: 1.1rem 1.15rem; }
+.tomorrow h3 { color: var(--red); font-size: 0.85rem; margin: 0 0 0.6rem; font-family: Calibri, Arial, sans-serif; }
+@media (max-width: 820px) {
+  .cover-grid, .cards, .compare, .metrics, .feature, .close-grid, .opener {
+    grid-template-columns: 1fr;
+  }
+  .opener { align-items: start; }
+}
+@media print {
+  body { background: #fff; }
+  .cover, .close, .quote, .col.dark, .note, .badge, .metric.dark, .toc, .tomorrow {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { break-inside: avoid; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="kicker">
+      <span>THE MORNING FOLIO</span>
+      <span>第002期 · 上海刊</span>
+    </div>
+    <div><span class="dot"></span><span class="serif" style="letter-spacing:0.18em;font-size:0.85rem;">NEWSROOM · ASIA / SHANGHAI</span></div>
+    <h1>每日时政科技简报</h1>
+    <p class="date serif">二零二六年九月二十三日 · 星期三</p>
+    <div class="accent"></div>
+    <div class="cover-grid">
+      <p class="lede">只记昨日事，不贩未知风。元首专机离京，技能大会开幕，霍尔木兹开出一周时间表。昨夜截稿，时政六章，科技五章，凡十一则。访美现场与芯片设计同入一版，不混入廿二日云栖与联大旧稿。</p>
+      <aside class="toc">
+        <h3>本期目录</h3>
+        <ol>
+          <li>访美启程与四条红线</li>
+          <li>技能大会与外交划线</li>
+          <li>联大演说对照霍尔木兹</li>
+          <li>低轨组网与私有记忆</li>
+          <li>欧陆芯片与数贸开幕</li>
+        </ol>
+      </aside>
+    </div>
+    <p class="fine">ASIA / SHANGHAI · 昨日日历 2026-09-23 · 不收录更早稿件与今日凌晨之后首发</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="opener">
+      <p class="big-num serif">01</p>
+      <div>
+        <div class="sub">POLICY · DIPLOMACY · PUBLIC AFFAIRS</div>
+        <h2>时政开篇</h2>
+      </div>
+      <div class="badge red">
+        <span class="sub" style="color:#EFE8DC;">精选</span>
+        <strong>6 条</strong>
+        国内三则 · 国际三则
+      </div>
+    </div>
+    <p class="intro">昨日有两条主线同时拉开：一条在北京与上海，国事访问启程、技能大会开幕；一条在纽约，伊朗总统登上联大讲坛，霍尔木兹开出条件。本版只取当日发生或当日首发，不混入廿一日访美预告，也不重刊廿二日联大开场旧闻。</p>
+    <blockquote class="quote">
+      <div class="lab">刊头引句</div>
+      <p>“台湾问题、民主人权、道路制度、发展权利四条红线不容挑战。”</p>
+      <cite>—— 谢锋　《人民日报》9月23日署名文章</cite>
+    </blockquote>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="sub" style="margin-top:0.9rem;">国内要闻</div>
+    <div class="cards">
+      <article class="card">
+        <div class="no">01</div>
+        <div class="kick">北京 / 华盛顿 · 元首外交</div>
+        <h3>习近平离京展开对美国国事访问</h3>
+        <p class="src">新华社 · <a href="https://www.news.cn/world/20260923/93cd199b42da4dff840e3e932e7eac0e/c.html">原文</a></p>
+        <p>9月23日下午，习近平乘专机离开北京，应特朗普邀请对美国进行国事访问。彭丽媛、蔡奇、王毅等陪同。此行时隔十一年再赴美国国事访问，也是两国元首半年内完成互访。白宫将于当地时间二十四日举行欢迎仪式。</p>
+        <div class="why"><strong>为何重要</strong>访问从预告进入现场，关税、稀土、人工智能与台湾问题将在峰会上摊牌。</div>
+      </article>
+      <article class="card alt">
+        <div class="no">02</div>
+        <div class="kick">北京 · 公开立场</div>
+        <h3>谢锋刊文重申四条红线，反对人工智能版“星球大战”</h3>
+        <p class="src">人民日报 · <a href="https://paper.people.com.cn/rmrb/pc/content/202609/23/content_30182635.html">原文</a></p>
+        <p>驻美大使谢锋二十三日在《人民日报》撰文，称台湾问题、民主人权、道路制度、发展权利四条红线不容挑战，并指中美竞争应是良性的，“不能再设矽幕，更不能搞人工智能版星球大战”。</p>
+        <div class="why"><strong>为何重要</strong>元首会晤当天，中方把红线与人工智能军备竞赛一并写入公开立场。</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="sub" style="margin-top:0.9rem;">公共事务与外交</div>
+    <div class="cards">
+      <article class="card">
+        <div class="no">03</div>
+        <div class="kick">上海 · 技能与就业</div>
+        <h3>李强出席世界技能大会，倡议建设世界技能创新中心</h3>
+        <p class="src">中新社 · <a href="https://www.chinanews.com.cn/gn/2026/09-23/10702374.shtml">原文</a></p>
+        <p>李强二十三日上午在上海出席二〇二六年世界技能大会开幕式。他提出发展更有民生温度、更具创新活力、更加开放包容的技能，并呼吁开展人工智能通识教育。马来西亚总理安瓦尔等约一千九百名代表与会。</p>
+        <div class="why"><strong>为何重要</strong>把技能培训与人工智能转型并写，显示就业政策正跟着产业换代走。</div>
+      </article>
+      <article class="card alt">
+        <div class="no">04</div>
+        <div class="kick">北京 · 例行记者会</div>
+        <h3>外交部批日本“再军事化”，反对对伊单边制裁</h3>
+        <p class="src">中华人民共和国外交部 · <a href="https://bj.china-embassy.gov.cn/chn/fyrth/202609/t20260923_12029529.htm">原文</a></p>
+        <p>发言人郭嘉昆回应高市早苗联大呼吁删除《宪章》“敌国条款”，称日本现政权否认侵略历史、加速再军事化。就美方威胁制裁允许伊朗航班降落的国家，他重申反对未经安理会授权的非法单边制裁。</p>
+        <div class="why"><strong>为何重要</strong>联大周期里，北京同时对日本历史修正与中东次级制裁划线。</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="sub" style="margin-top:0.9rem;">对照 · 战争与能源</div>
+    <p class="intro" style="margin-top:0.55rem;">同一日的两条中东战线：讲坛上谈尊严，航道上谈条件。</p>
+    <div class="compare">
+      <article class="col light">
+        <div class="bar"></div>
+        <div class="no" style="color:var(--red);font-size:1.35rem;font-weight:700;">05 · 纽约 · 联合国大会</div>
+        <h3 class="serif" style="font-size:1.25rem;margin:0.45rem 0 0.35rem;">伊朗总统联大演说：不屈膝，但愿谈判</h3>
+        <p class="src">The Guardian · <a href="https://www.theguardian.com/world/2026/sep/23/iranian-leader-hits-back-at-bully-trump-signals-willingness-to-talk">原文</a></p>
+        <p>佩泽希基安在联大称美国才是中东的霸凌者，同时表示“我们准备对话、外交与谈判，但不接受武力语言”。美国代表团在其开讲时离场。这是伊美开战以来伊朗领导人首次在联大发言。</p>
+        <div class="why"><strong>为何重要</strong>战争近七月后，德黑兰在最高讲坛同时释放抵抗与外交信号。</div>
+      </article>
+      <article class="col dark">
+        <div class="bar"></div>
+        <div class="no" style="color:var(--red);font-size:1.35rem;font-weight:700;">06 · 海湾 · 霍尔木兹</div>
+        <h3 class="serif" style="font-size:1.25rem;margin:0.45rem 0 0.35rem;">伊朗称若美方解除封锁，一周内可重开海峡</h3>
+        <p class="src" style="color:#D8D2C8;">CNBC · <a href="https://www.cnbc.com/2026/09/23/us-iran-war-trump-hormuz.html">原文</a></p>
+        <p>伊朗官员称，若美国缓解军事压力并解除对伊朗港口封锁，可于一周内重开霍尔木兹海峡。战前该海峡承载全球约五分之一油气运输；目前日均过境约六百九十八万桶，约为战前三成八。布伦特原油在一百美元附近。</p>
+        <div class="why"><strong>为何重要</strong>能源通道与中期选举前的油价，成为停火谈判的硬筹码。</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="opener">
+      <p class="big-num serif">02</p>
+      <div>
+        <div class="sub">CHIPS · SPACE · PRIVACY</div>
+        <h2>科技开篇</h2>
+      </div>
+      <div class="badge">
+        <span class="sub" style="color:#EFE8DC;">精选</span>
+        <strong>5 条</strong>
+        组网一夜 · 设计两端
+      </div>
+    </div>
+    <p class="intro">昨夜火箭在海南升空，谷歌把记忆锁进飞地，欧陆用四千万欧元去抢芯片设计周期。云栖与骁龙峰会已在前一日落槌，本版不重刊真武、骁龙与 GPT-6 旧闻，只收廿三日首发。</p>
+    <div class="metrics">
+      <div class="metric">
+        <b>21:32</b>
+        长八甲海南升空<br>低轨二十六组入轨
+      </div>
+      <div class="metric dark">
+        <b>€40M</b>
+        德荷芯片设计挑战<br>要把数年压到数周
+      </div>
+      <div class="metric">
+        <b>996</b>
+        数贸会人工智能展商<br>超过两千家企业到场
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="sub" style="margin-top:0.9rem;">轨道与记忆</div>
+    <div class="feature">
+      <article class="card">
+        <div class="no">07</div>
+        <div class="kick">海南 · 航天</div>
+        <h3>长八甲成功发射卫星互联网低轨第二十六组</h3>
+        <p class="src">新华社 · <a href="https://www.news.cn/politics/20260923/53272bcd6b7d414faee867a2368d654c/c.html">原文</a></p>
+        <p>二十三日二十一时三十二分，长征八号甲火箭在海南商业航天发射场升空，将卫星互联网低轨二十六组卫星送入预定轨道。任务取得圆满成功。这是中国低轨卫星互联网持续组网的又一次夜间发射。</p>
+        <div class="why"><strong>为何重要</strong>星座补网进入高频节奏，商业航天场与长八甲成为主力通道。</div>
+      </article>
+      <aside class="note">
+        <h3>编辑观察</h3>
+        <p class="q">密钥留在手机里，记忆才能上云。</p>
+        <p>谷歌承认，端侧算力撑不起前沿模型的连续记忆。它给出的折中是：云端保险库加密存放，解密钥匙只在用户设备上。飞地处理完立刻再锁上。这不是产品发布，是一次把“谷歌自己也读不到”写成可审计协议的尝试。</p>
+      </aside>
+    </div>
+    <div class="cards" style="margin-top:0.7rem;">
+      <article class="card alt">
+        <div class="no">08</div>
+        <div class="kick">美国 · 人工智能隐私</div>
+        <h3>谷歌为私有人工智能计算加上跨设备安全记忆</h3>
+        <p class="src">Google DeepMind · <a href="https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/">原文</a></p>
+        <p>谷歌二十三日公布 Private AI Compute 新架构：云端持久记忆以加密保险库存放，解密密钥只留在用户设备。安全飞地临时解密处理请求后立即再加密，并发布可校验的服务器软件公开记录与独立审计结果。</p>
+        <div class="why"><strong>为何重要</strong>云端大模型要记住跨设备上下文，必须先证明平台自己也读不到。</div>
+      </article>
+      <article class="card">
+        <div class="no">09</div>
+        <div class="kick">阿姆斯特丹 / 柏林 · 芯片主权</div>
+        <h3>德荷投入四千万欧元，用人工智能加速芯片设计</h3>
+        <p class="src">路透社 · <a href="https://www.reuters.com/business/german-dutch-strategic-innovation-agencies-collaborate-ai-chip-design-2026-09-23/">原文</a></p>
+        <p>荷兰 NADI 与德国 SPRIND 宣布，二十个月内投入四千万欧元，资助小团队用人工智能把芯片设计周期从数年压缩到数周，聚焦训练与推理芯片。荷兰首相耶滕称，欧洲不能再一国一国创新。</p>
+        <div class="why"><strong>为何重要</strong>欧洲把主权缺口从晶圆厂前移到设计层，借阿斯麦生态补自己的架构短板。</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="folio">
+      <span class="name">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <div class="sub" style="margin-top:0.9rem;">设计工具与贸易现场</div>
+    <div class="cards">
+      <article class="card">
+        <div class="no">10</div>
+        <div class="kick">圣克拉拉 · 先进制程</div>
+        <h3>新思与台积电把智能体带进先进制程设计</h3>
+        <p class="src">Synopsys · <a href="https://news.synopsys.com/2026-09-23-Synopsys-and-TSMC-Partner-to-Accelerate-AI-Systems-Innovation-with-Agentic-AI-and-Advanced-Design">原文</a></p>
+        <p>新思科技与台积电二十三日宣布，在 A14 等先进制程上启用智能体工作流：Fusion Compiler 引入大模型辅助分析，3DIC Compiler 自动协同芯粒布局，并扩展 CoWoS 与多物理场签核。N2P 上已具备 PCIe 7.0、HBM4、LPDDR6 等接口 IP。</p>
+        <div class="why"><strong>为何重要</strong>芯片设计本身正在被智能体改写，先进制程的瓶颈从人手转向工具链。</div>
+      </article>
+      <article class="card alt">
+        <div class="no">11</div>
+        <div class="kick">杭州 · 数字贸易</div>
+        <h3>第五届全球数贸会开幕，近半展商来自人工智能</h3>
+        <p class="src">中新网 · <a href="https://www.chinanews.com.cn/cj/2026/09-23/10702523.shtml">原文</a></p>
+        <p>第五届全球数字贸易博览会二十三日在杭州开幕，主题围绕人工智能赋能数字贸易。超过两千家企业参展，其中人工智能企业九百九十六家；展区探索“模型即服务”跨境贸易，并展示具身智能与集成电路全链。</p>
+        <div class="why"><strong>为何重要</strong>数字贸易正从货物跨境转向模型、算力和数据的可交易化。</div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="close">
+  <div class="wrap">
+    <div class="folio" style="color:#D8D2C8;">
+      <span class="name" style="color:#F7F4EF;">每日时政科技简报</span>
+      <span class="meta">第002期 · 2026.09.23 · 星期三</span>
+    </div>
+    <div class="rule"></div>
+    <h2>收束 · 十一则回目</h2>
+    <div class="close-grid">
+      <ol class="index">
+        <li>习近平离京，展开对美国国事访问</li>
+        <li>谢锋重申四条红线，反对人工智能军备竞赛</li>
+        <li>李强在沪出席世界技能大会并致辞</li>
+        <li>外交部批日本再军事化，反对对伊单边制裁</li>
+        <li>伊朗总统联大演说：不屈膝，但愿谈判</li>
+        <li>伊朗开出条件，称一周内可重开霍尔木兹</li>
+        <li>长八甲夜间发射，低轨二十六组入轨</li>
+        <li>谷歌为云端助手加上跨设备私有记忆</li>
+        <li>德荷投入四千万欧元加速人工智能芯片设计</li>
+        <li>新思与台积电把智能体写入先进制程流程</li>
+        <li>杭州数贸会开幕，人工智能展商几近半数</li>
+      </ol>
+      <aside class="tomorrow">
+        <h3>明日关注</h3>
+        <p>白宫欢迎仪式与中美元首会谈（二十四日，当地时间）。韩正出席第八十一届联大一般性辩论（二十四日至二十六日，二十二日已宣布，故未入昨日正刊）。世界技能大赛与数贸会持续至二十七日。</p>
+        <p style="margin-top:0.85rem;font-size:0.85rem;color:#D8D2C8;">未收录：李强沪上调研、耕地立法、韩正赴联大预告、特朗普联大开场与美伊接触、平头哥真武 V900、阿里二十吉瓦、高通骁龙、OpenAI GPT-6、海光一千系列（均为二十二日及更早稿）。住房公积金新政为二十日稿。IonQ 量子纠错解码器为二十二日公司稿。</p>
+      </aside>
+    </div>
+    <p class="fine" style="color:#6B7280;">编辑说明：时区 Asia/Shanghai，日期 2026-09-23。时政 6 条，科技 5 条，合计 11 条。交叉核验官方与主流通讯社，拒绝标题党与重复转载。</p>
+  </div>
+</footer>
+
+</body>
+</html>
