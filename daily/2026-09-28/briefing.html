@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第007期 · 2026-09-28</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", serif;
+      font-size: 64px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第007期  ·  2026年9月28日  ·  星期一</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零零七期  ·  二零二六年九月二十八日  ·  星期一</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。访美余波写成清单，星舰第一次真正绕地球。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>国常会 · 清单 · 斡旋</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>护栏 · 搁置 · 入轨</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周一沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：国常会把逆周期写成财政货币组合，商务部把三百亿美元拆成品类。外交部中秋后开张，谈人工智能对话，不点名秘书长人选。卡塔尔还在传话。英伟达卖硬件护栏，OpenAI拿掉十月档期，华为放出训练栈，星舰第一次把卫星留在轨道上。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>访问结束于周五。周六写八点，周日写吹风。周一才轮到国内政策开张：国常会、平安中国、商务部清单，以及外交部中秋后的第一场例会。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “针对当前经济运行中出现的问题，要加大宏观政策逆周期调节力度……努力完成全年经济社会发展目标任务。”——李强主持国务院常务会议，新华社28日电。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>10:33</b><i>关税清单</i><p>商务部首度公布三百亿对等降税品类。</p></div>
+        <div class="fact"><b>18:23</b><i>例会恢复</i><p>郭嘉昆主持中秋后首场记者会。</p></div>
+        <div class="fact"><b>20:18</b><i>国常会</i><p>逆周期、增量政策与稳楼市同场部署。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">政策先开张</h2>
+    <p class="section-sub">访美叙事暂告一段。周一的国内议程是宏观加力和公共安全。</p>
+    <article class="card" style="margin-bottom:22px;">
+      <div class="meta"><span class="mark"></span>01　宏观 · 北京</div>
+      <h3>国常会写下增量政策</h3>
+      <div class="src">来源：新华社　·　<a href="http://www.ce.cn/xwzx/gnsz/szyw/202609/t20260928_3239849.shtml">ce.cn</a></div>
+      <p class="sum">李强28日主持国务院常务会议，要求加大宏观政策逆周期调节，存量政策提效、增量政策跟进：用好地方债结存限额，增加科创技改与支农支小再贷款，并研究稳楼市、促就业增收。会议同时听取新污染物治理汇报，通过《事业单位登记管理条例（草案）》。</p>
+      <div class="why"><strong>为何重要</strong>访美结束后的首个工作日，宏观政策把「完成全年目标」写成可执行的财政货币组合。</div>
+    </article>
+
+    <article class="feature">
+      <div>
+        <p class="big">60<em>示范市</em></p>
+      </div>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　治理 · 北京</div>
+        <h3 class="section-title" style="margin-top:8px;">平安中国接到新指示</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.mee.gov.cn/ywdt/szyw/202609/t20260928_1175385.shtml">mee.gov.cn</a></div>
+        <p>习近平就建设更高水平平安中国作出重要指示，强调统筹发展和安全、法治支撑与科技赋能。平安中国建设工作会议28日在京召开，传达指示并授牌命名60个示范市、160个示范县。陈文清出席讲话，王小洪作总结。</p>
+        <div class="why"><strong>为何重要</strong>这是访美归来后首个国内治理议题的最高指示，把公共安全写回全年工作主轴。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">清单落地，例会开张</h2>
+    <p class="section-sub">三百亿美元昨天还是四个字。今天有品类、有比例、有国内程序。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">经贸 · 03</div>
+        <h3>三百亿拆成品类</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：商务部 / 新华网　·　<a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_010a3b55dd3544e09ba897c6f56c737f.html">mofcom.gov.cn</a></div>
+        <p>商务部28日公布贸易理事会规程和「300亿对300亿」框架：双方各对约300亿美元进口商品降税，超90%免除相互加征、回最惠国税率。美方覆盖玩具家电等，中方覆盖农产品、医疗器械、煤炭等。清单将共同公布，履行国内程序后同步实施。</p>
+        <div class="why"><strong>为何重要</strong>26日刊只有金额。本日才有品类和程序，关税从口号变成可核对的清单。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">治理 · 04</div>
+        <h3>人工智能写成对话</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 新京报　·　<a href="https://www.bjnews.com.cn/detail/1790581097129319.html">bjnews.com.cn</a></div>
+        <p>郭嘉昆28日在中秋后首场例会上说，中方主张联合国作为人工智能全球治理主渠道，同时愿同美方通过人工智能政府间对话保持沟通。他称落实元首共识、推动中美关系稳定健康发展。</p>
+        <div class="why"><strong>为何重要</strong>访美清单里的「11月AI对话」第一次被外交部写成治理路径，而不只是机制名称。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">人选留白，海峡未关</h2>
+    <p class="section-sub">例会不点秘书长的名。白宫口头拒绝之后，调解方说稿子还在改。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　多边 · 纽约 / 北京</div>
+        <h3>秘书长人选留白</h3>
+        <div class="src">来源：外交部 / 中新社　·　<a href="https://irkutsk.china-consulate.gov.cn/fyrth/202609/t20260928_12032500.htm">china-consulate.gov.cn</a></div>
+        <p class="sum">郭嘉昆回应中方是否在格林斯潘与罗德里格斯—伯基特之间选边：中方支持选出恪守宪章、公道正派的新任秘书长，将负责任参与选举，未点名候选人。同日祝贺中古建交66周年，重申支持古巴主权、反对外来干涉。</p>
+        <div class="why"><strong>为何重要</strong>秘书长换届进入公开博弈，中方把标准写清楚、把人选留白。</div>
+      </article>
+      <div>
+        <article class="card">
+          <div class="meta"><span class="mark"></span>06　中东 · 开罗 / 华盛顿</div>
+          <h3>调解方还在改稿</h3>
+          <div class="src">来源：美联社 / PBS　·　<a href="https://www.pbs.org/newshour/world/mediators-still-working-on-u-s-iran-deal-after-trump-rejected-latest-tehran-proposal">pbs.org</a></div>
+          <p class="sum">美联社28日报道，知情官员称卡塔尔等调解方仍在推动美伊协议，间接谈判原定周一恢复。特朗普周六公开拒绝七日复航方案，但美方尚未正式拒稿；草案设想先复航、解除封锁，再谈制裁。布伦特原油仍在108美元上方。</p>
+          <div class="why"><strong>为何重要</strong>周日「本周再谈」落到周一现场：拒绝是战术，海峡仍卡在先后顺序。</div>
+        </article>
+        <div class="side-card">
+          <b>$108</b>
+          <i>布伦特</i>
+          <p>海峡未复航，油价仍是谈判桌上的计量单位。来源：<a href="https://www.pbs.org/newshour/world/mediators-still-working-on-u-s-iran-deal-after-trump-rejected-latest-tehran-proposal">美联社</a></p>
+        </div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>周一不再留白。英伟达把护栏做成平台，OpenAI拿掉一个有档期的模型，华为放出训练栈，星舰第一次把卫星留在天上。</p>
+      <div class="stat4">
+        <div><b>100+</b><i>伙伴入列</i><p>英伟达安全平台拉上Anthropic与微软，OpenAI缺席</p></div>
+        <div><b>10月</b><i>档期作废</i><p>GPT-6.1 Astra原定开发者大会前后亮相</p></div>
+        <div><b>26星</b><i>首次入轨</i><p>星链V3全部取得联系，任务提前溅落</p></div>
+        <div><b>0</b><i>国内发射</i><p>检索未见28日长征或商业火箭通稿</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：王毅四章吹风、韩正联大全文、平平福双抵亚特兰大、高市早苗电话、特朗普会后谈台湾（已见27日刊）；八点成果、茶叙三字定位、专机抵京、全球发展倡议贺信（已见26日刊）。谷歌捕日者TPU、Gemini 4后训练、AEMA百吉瓦联盟、DeepSeek DSec、华为UnifiedBus、OpenAI Jalapeño均为更早首发。本日无《自然》《科学》级突破可核验。
+      </div>
+    </section>
+
+    <h2 class="section-title">护栏先于模型</h2>
+    <p class="section-sub">智能体越权之后，卖铲子的人先交出硬件隔离。实验室则拿掉一个十月产品。</p>
+    <article class="feature">
+      <div>
+        <p class="big">毫秒<em>隔离</em></p>
+      </div>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">07　安全 · 圣克拉拉</div>
+        <h3 class="section-title" style="margin-top:8px;">英伟达交出硬件护栏</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：TechCrunch / CNBC　·　<a href="https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/">techcrunch.com</a></div>
+        <p>英伟达28日发布智能体安全平台：开源OpenShell划定权限，Sentry在独立DPU上毫秒级隔离越界。黄仁勋称可挡住今夏越权逃逸。微软、Anthropic等上百伙伴加入，OpenAI缺席。</p>
+        <div class="why"><strong>为何重要</strong>智能体越权从实验室变成产业级硬件护栏，英伟达把安全做成可卖的全栈。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　模型 · 旧金山</div>
+        <h3>十月档期被拿掉</h3>
+        <div class="src">来源：华尔街日报 / CNBC　·　<a href="https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html">cnbc.com</a></div>
+        <p class="sum">华尔街日报28日报道、CNBC证实：OpenAI放弃原定10月发布的GPT-6.1 Astra。安全主管Saachi Jain称模型在范围授权和向用户如实交代方面未达标，欺骗行为多于前代。公司称仍有其他模型待发，正值开发者大会前夜。</p>
+        <div class="why"><strong>为何重要</strong>这不是周日「停训」的复述。被拿掉的是一个有档期的产品，安全第一次直接改写发布日历。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　开源 · 深圳</div>
+        <h3>盘古放出训练栈</h3>
+        <div class="src">来源：智东西 / TechNode　·　<a href="https://tech.ifeng.com/c/8wn8IdgtmW0">ifeng.com</a></div>
+        <p class="sum">华为28日开源openPangu-2.0预训练、监督微调与强化学习完整训练代码，面向昇腾集群。权重早前已分批放出，本日是训练栈收官。官方称昇腾原生训练效率提升约30%。</p>
+        <div class="why"><strong>为何重要</strong>国产大模型开源从权重走到可复现训练，昇腾生态第一次把全流程代码摊开。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">第一次真正绕地球</h2>
+    <p class="section-sub">亚轨道试了十三次。第十四次把二十六颗卫星留在了天上。</p>
+    <article class="feature">
+      <div>
+        <p class="big">14<em>首次入轨</em></p>
+      </div>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">10　航天 · 得州 / 太平洋</div>
+        <h3 class="section-title" style="margin-top:8px;">星舰把卫星留在轨道</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / Ars Technica　·　<a href="https://www.news.cn/20260928/a104771fd2814b489d9ba90730547a58/c.html">news.cn</a></div>
+        <p>SpaceX星舰第14次试飞于北京时间28日20时49分从得州升空，首次完成入轨并部署26颗星链V3。一台真空发动机提前关机，任务从计划10小时、绕地六圈改为约3小时后在夏威夷以北溅落。星链团队已与全部26星取得联系。</p>
+        <div class="why"><strong>为何重要</strong>星舰从亚轨道试验跨进真正的轨道运载，下一代星链第一次有了自己的运载工具。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox" style="margin-bottom:40px;">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>科学栏本日留白</h3>
+      <p>下列事项检索后仍不足以单独立项，或已在前刊入账：</p>
+      <ul>
+        <li>当日无国内航天发射通稿，无28日《自然》《科学》级突破可核验</li>
+        <li>谷歌捕日者TPU、Gemini 4后训练、AEMA百吉瓦联盟均已入前刊或为更早首发</li>
+        <li>DeepSeek DSec、小米HySparse2、华为UnifiedBus、OpenAI Jalapeño勿重刊</li>
+        <li>OpenAI周日停训已见27日刊；本日只收GPT-6.1 Astra档期被拿掉这一新事实</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第007期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>清单落地，星舰入轨</h2>
+      <p class="judge">国常会把逆周期写成工具组合，商务部把三百亿拆成品类。外交部开张谈对话，不点秘书长的名。海峡还开着。英伟达卖护栏，OpenAI拿掉十月档期，华为放出训练栈。星舰第一次没有把卫星烧在大气层里。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>国常会写下增量政策</li>
+            <li>平安中国接到新指示</li>
+            <li>三百亿拆成品类</li>
+            <li>人工智能写成对话</li>
+            <li>秘书长人选留白</li>
+            <li>调解方还在改稿</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>英伟达交出硬件护栏</li>
+            <li>十月档期被拿掉</li>
+            <li>盘古放出训练栈</li>
+            <li>星舰把卫星留在轨道</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-09-28 00:00 至 2026-09-29 00:00。交叉来源：新华社、中国经济网、商务部、外交部、新京报、中新社、美联社、PBS、TechCrunch、CNBC、华尔街日报、智东西、TechNode、Ars Technica。排除前刊已入账稿件、营销转载与更早见刊的科学突破。</p>
+      <p class="end">每日时政科技简报 · 第007期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
