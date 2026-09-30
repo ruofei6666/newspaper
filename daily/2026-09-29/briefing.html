@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第008期 · 2026-09-29</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", serif;
+      font-size: 64px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 40pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第008期  ·  2026年9月29日  ·  星期二</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零零八期  ·  二零二六年九月二十九日  ·  星期二</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。财政先给刚需贴息，实验室把一个光点写成千层楼。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>贴息 · 再贷款 · 岩屋</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>极限 · 光子 · 生物</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周二沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：三部门把首套房利息写成中央财政账单，央行把「六张网」写进抵押补充贷款。郭嘉昆在邦交正常化纪念日点名纠错，何立峰在大会堂见岩屋毅。霍尔木兹仍卡在核问题谁先迈步。中科院启动极限突破计划，上理工把单光束光存储送上《自然·光子学》，科技部交出十五五攻关清单，微软把生物学世界模型命名为 Quine。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>周一写完国常会与关税清单。周二轮到工具落地：贴息通知印发，再贷款额度上调，外交部在一个纪念日里同时谈东京与马尼拉。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “这是中央财政首次对商业性个人住房贷款进行贴息。”——财政部、中国人民银行、金融监管总局，新华社 29 日电。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>18:01</b><i>房贷贴息</i><p>三部门通知 10 月 1 日起实施，年化一个百分点。</p></div>
+        <div class="fact"><b>18:39</b><i>货币政策</i><p>PSL 降至 1.5%，科创技改与支农支小加额。</p></div>
+        <div class="fact"><b>17:20</b><i>例会</i><p>郭嘉昆谈中日四个政治文件，并驳菲律宾海图。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">刚需先入账</h2>
+    <p class="section-sub">国常会昨夜写稳楼市。本日才有可核对的面积、总价与分担比例。</p>
+    <article class="feature">
+      <div>
+        <p class="big">1%<em>年化贴息</em></p>
+      </div>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">01　民生 · 北京</div>
+        <h3 class="section-title" style="margin-top:8px;">首套房利息改由财政分担</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 财政部　·　<a href="http://www.news.cn/20260929/21239f03ae064727933f59a74a098d0f/c.html">news.cn</a></div>
+        <p>财政部等三部门 29 日宣布，10 月 1 日起对不超过 120 平方米、总价不超过 150 万元的新发放首套房商贷，按本金年化 1 个百分点贴息、最长 5 年，单户上限 100 万元。实施期暂定一年，中央财政承担九成。这是中央财政首次对商业性个人房贷贴息。</p>
+        <div class="why"><strong>为何重要</strong>稳楼市从供给端收储存量，第一次直接改写刚需家庭的月供账单。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">工具加码，服务业对账</h2>
+    <p class="section-sub">一边给政策性银行降成本，一边把四月的服务业文件拆成半年来的进度表。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">宏观 · 02</div>
+        <h3>再贷款改写六张网</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="http://www.news.cn/20260929/a6ae7fa1f42847ef843c841c50215cc8/c.html">news.cn</a></div>
+        <p>央行 29 日下调一年期 PSL 利率 0.25 个百分点至 1.5%，并将水网、电网、算力网等「六张网」纳入支持。科创技改再贷款额度增 2000 亿元至 1.4 万亿元，支持比例提至 100%；支农支小再贷款增 5000 亿元，其中民企再贷款增 3000 亿元。</p>
+        <div class="why"><strong>为何重要</strong>这是对国常会增量政策的当日兑现：利率、额度与投向同时改写。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">产业 · 03</div>
+        <h3>服务业交出半年账</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 发改委　·　<a href="https://news.ifeng.com/c/8wok6Y3Ofsw">ifeng.com</a></div>
+        <p>发改委 29 日介绍服务业扩能提质进展：会同 40 个部门确定 131 项任务，半年来已出台 81 项配套，超六成重点工作取得明显进展；27 个省份召开省级服务业大会。前 7 个月境外人员在华消费同比增长 27.8%。</p>
+        <div class="why"><strong>为何重要</strong>四月文件第一次被拆成可核对的配套条数与地方落地进度。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">纪念日里的两条战线</h2>
+    <p class="section-sub">例会谈四个政治文件。大会堂见一位愿意来北京的前外相。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">外交 · 04</div>
+        <h3>54 周年点名纠错</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202609/t20260929_12033332.shtml">mfa.gov.cn</a></div>
+        <p>郭嘉昆 29 日在《中日联合声明》发表 54 周年记者会上说，四个政治文件是中日关系根基，敦促日方纠正涉台错误言行。同场回应菲律宾新版「海图」将中业岛、马欢岛列入，称其非法无效。</p>
+        <div class="why"><strong>为何重要</strong>邦交正常化纪念日被写成纠错期限，南海岛礁争议同场被点名。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">外交 · 05</div>
+        <h3>何立峰见岩屋毅</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：共同社 / 读卖新闻　·　<a href="https://china.kyodonews.net/articles/-/16235">kyodonews.net</a></div>
+        <p>何立峰 29 日在人民大会堂会见日本国贸促会长、前外相岩屋毅，指日中关系困难源于部分政客挑战台湾问题红线，同时表示经贸合作仍可推进。岩屋提出稀土等两用物项与邦人安全关切。这是高市答辩后中方高层连续第二天会见日方人士。</p>
+        <div class="why"><strong>为何重要</strong>官方渠道冷却时，北京用友好团体维持接触，并把红线说给东京听。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">海峡仍卡在先后顺序</h2>
+    <p class="section-sub">周六口头拒绝之后，纽约的间接谈判并未停。核问题被写成终战前提。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　中东 · 纽约 / 德黑兰</div>
+        <h3>调解方把核问题送上桌</h3>
+        <div class="src">来源：半岛电视台　·　<a href="https://www.aljazeera.com/news/2026/9/29/irans-araghchi-meets-qatari-mediators-as-us-insists-on-nuclear-talks">aljazeera.com</a></div>
+        <p class="sum">伊朗外长阿拉奇 29 日报道中在纽约会见卡塔尔调解方，讨论重开霍尔木兹条件，并称将离纽约等美方正式答复。美官员对半岛电视台称间接谈判「积极建设性」，但核问题不解决则无终战协议。特朗普周六已称伊方七日方案「不可接受」。</p>
+        <div class="why"><strong>为何重要</strong>28 日刊只写「稿子还在改」。本日第一次把核问题写成美方终战前提。</div>
+      </article>
+      <div>
+        <div class="side-card">
+          <b>7日</b>
+          <i>复航方案仍搁置</i>
+          <p>伊方要先解冻资产、解除封锁；美方要核进展同步换制裁。来源：<a href="https://www.aljazeera.com/news/2026/9/29/irans-araghchi-meets-qatari-mediators-as-us-insists-on-nuclear-talks">半岛电视台</a></p>
+        </div>
+        <div class="side-card">
+          <b>12.8</b>
+          <i>百万桶 / 日</i>
+          <p>路透援引 Kpler：中东原油出口 9 月回升，仍低于战前 1880 万桶。</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>周二的科学栏不再留白。中科院改评价规则，上理工把一个光点写成 1024 种状态，科技部交出十五五攻关清单，微软给生物学世界模型起了名字。</p>
+      <div class="stat4">
+        <div><b>10</b><i>首批项目</i><p>极限突破计划覆盖新元素、暗物质、人工细胞</p></div>
+        <div><b>0.4PB</b><i>理论容量</i><p>DVD 尺寸介质，单点 1024 级灰度</p></div>
+        <div><b>2.8%</b><i>研发强度</i><p>2025 年全社会研发投入首超 OECD 均值</p></div>
+        <div><b>0</b><i>国内发射</i><p>检索未见 29 日长征或商业火箭通稿</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：国常会、三百亿品类、星舰第 14 次入轨、英伟达护栏、Astra 十月档期、openPangu-2.0（已见 28 日刊）；八点成果、茶叙三字定位（已见 26 日刊）。OpenAI Jalapeño 为 6 月首发；富士通 MONAKA 为 14 日稿；新思 AgentEngineer、Gimlet–Cerebras、Manus 2.0 均为 28 日公司稿。OpenAI 开发者日 Dots / GPT-6.1 Sol 的英文首发落在沪时 30 日凌晨之后，留给次日刊。
+      </div>
+    </section>
+
+    <h2 class="section-title">评价改规则，光盘改维度</h2>
+    <p class="section-sub">一个计划允许失败。一篇论文让单个记录点不再只有 0 和 1。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科研 · 07</div>
+        <h3>极限计划允许失败</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.news.cn/20260929/f6c9f31414f94c11953f2b2dcabff995/c.html">news.cn</a></div>
+        <p>中科院 29 日发布「科学前沿极限突破计划」及首批 10 个项目，聚焦新元素合成、暗物质暗能量、化学键微观测量、人工合成细胞等。周琪称将以大科学装置和人工智能赋能科研为抓手，试点减少预设目标、不唯论文、宽容失败。</p>
+        <div class="why"><strong>为何重要</strong>基础研究第一次被写成可失败的建制化计划，而不是年度论文指标。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">存储 · 08</div>
+        <h3>一个光点存千层</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 《自然·光子学》　·　<a href="https://www.nature.com/articles/s41566-026-02004-z">nature.com</a></div>
+        <p>上理工顾敏、张启明团队 29 日在《自然·光子学》发表单光束多维光存储：单个三维记录点可区分 1024 级灰度，DVD 尺寸介质理论容量约 0.4 拍字节，读取可靠性超 99.99%。写入与读取各用单束光，避开双光束配准瓶颈。</p>
+        <div class="why"><strong>为何重要</strong>这是 29 日可核验的顶刊首发：容量不再只靠缩小光点，而靠一个点存更多信息。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">攻关清单与世界模型</h2>
+    <p class="section-sub">北京谈集成电路全链条。雷德蒙德把基因组和湿实验接进同一套界面。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　政策 · 北京</div>
+        <h3>十五五写下攻关单</h3>
+        <div class="src">来源：科技部 / 中新社　·　<a href="https://www.most.gov.cn/xwzx/twzb/fbh2026092901/index.html">most.gov.cn</a></div>
+        <p class="sum">阴和俊 29 日在国新办介绍「十五五」科技强国建设：2025 年全社会研发投入超 3.92 万亿元、占 GDP 2.8%，首次超过 OECD 平均；国家创新能力综合排名全球第 9。将全链条攻关集成电路、工业母机、高端仪器，并加强人工智能赋能科学研究。</p>
+        <div class="why"><strong>为何重要</strong>开局之年把芯片、母机、仪器写成同一条攻坚链，AI 被明确写成科研方法。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　人工智能 · 雷德蒙德</div>
+        <h3>生物学有了世界模型</h3>
+        <div class="src">来源：微软研究院　·　<a href="https://www.publicnow.com/view/5663B6562B2F04A1F3A127728D46C08315C92157">publicnow.com</a></div>
+        <p class="sum">微软研究院 29 日发布实验性生物 AI 系统 Quine，把基因组、蛋白质、细胞状态与文献、湿实验连成同一套研究界面。与 Broad 研究所合作，用其在一个周末内筛出可推动胰腺癌细胞状态转变的候选化合物，部分获湿实验验证。目前仅向 Fellows 与合作方开放。</p>
+        <div class="why"><strong>为何重要</strong>这不是又一个结构预测模型，而是把「该做哪组实验」交给可干预的世界模型。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox" style="margin-bottom:40px;">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>产业芯片栏偏薄</h3>
+      <p>下列事项检索后仍不足以单独立项，或已在前刊入账，或越过沪时日界：</p>
+      <ul>
+        <li>当日无国内航天发射通稿；科学栏以《自然·光子学》顶刊补足，不另留白</li>
+        <li>OpenAI 开发者日 Dots、GPT-6.1 Sol 英文首发在沪时 30 日 01:17 之后，不入本日</li>
+        <li>富士通 MONAKA（14 日）、EdgeCortix RAIDEN（24 日）、新思 AgentEngineer 与 Gimlet–Cerebras（28 日）勿重刊</li>
+        <li>IQuest-Q1 中文稿写「昨晚开源」，按 28 日夜首发处理，不当作 29 日突破</li>
+        <li>字节跳动采购英伟达 RTX Pro 5500 仅为市场传闻，未获官方确认</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第008期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>贴息入账，光点扩容</h2>
+      <p class="judge">三部门把刚需月供写成中央财政账单，央行把算力网写进抵押补充贷款。郭嘉昆在纪念日点名纠错，何立峰在大会堂见岩屋。霍尔木兹仍卡在核问题谁先迈步。中科院允许失败，上理工让一个光点区分一千零二十四态，科技部交出芯片与母机清单，微软给生物学世界模型起了名字。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>首套房利息改由财政分担</li>
+            <li>再贷款改写六张网</li>
+            <li>服务业交出半年账</li>
+            <li>54 周年点名纠错</li>
+            <li>何立峰见岩屋毅</li>
+            <li>调解方把核问题送上桌</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>极限计划允许失败</li>
+            <li>一个光点存千层</li>
+            <li>十五五写下攻关单</li>
+            <li>生物学有了世界模型</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-09-29 00:00 至 2026-09-30 00:00。交叉来源：新华社、财政部、外交部、科技部、中新社、共同社、读卖新闻、半岛电视台、发改委、《自然·光子学》、微软研究院。排除前刊已入账稿件、营销转载、更早见刊的芯片发布，以及沪时 30 日凌晨之后的开发者日稿件。</p>
+      <p class="end">每日时政科技简报 · 第008期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
