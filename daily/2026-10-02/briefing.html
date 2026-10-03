@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第011期 · 2026-10-02</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card:first-child { margin-top: 0; }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第011期  ·  2026年10月2日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹壹期  ·  二零二六年十月二日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。海峡再响一发，驾驶舱写成国家幕后，芯片第一次在轨应答。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>联大 · 海峡 · 长假</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>捕日者 · Astra · 对接</em></div>
+        <div class="metric"><b>09</b><span>合计</span><em>周五沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：傅聪代表28国在联大三委吁遏止单边强制措施。霍尔木兹油轮再遭不明飞行物击中；特朗普把迪拜航空喋血写成可能涉伊，以方暂无证据。谷歌确认捕日者入轨，Astra Ultrafast 可调用，Crew-13 以七小时五十五分对接，重型猎鹰首飞国家侦察局。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>升旗与招待会已入前刊。周五轮到多边人权场合的共同发言，以及美伊把一架客机写成可能报复的理由。</p>
+      <div class="quote">
+        <div class="lab">引　言</div>
+        “根据目前听到的消息，我会说答案是『是』。”——特朗普被问及 FZ1073 是否与伊朗有关；中央社华盛顿电，沪时 2 日 02:35 见报。
+      </div>
+      <div class="facts">
+        <div class="fact"><b>01:50</b><i>霍尔木兹</i><p>UKMTO 接报油轮遭不明飞行物击中起火，船员安全。</p></div>
+        <div class="fact"><b>02:35</b><i>白宫联访</i><p>特朗普称喋血「与伊朗有关」，若证实将予沉重打击。</p></div>
+        <div class="fact"><b>06:27</b><i>联大三委</i><p>新华社首发傅聪代表 28 国共同发言，点名关税胁迫。</p></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">二十八国，写进三委</h2>
+    <p class="section-sub">外交部休会至八日。中方把关税政治化写进联大人权场合。</p>
+    <article class="feature">
+      <div>
+        <p class="big">28<em>国共同发言</em></p>
+      </div>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">01　时政 · 联合国</div>
+        <h3 class="section-title" style="margin-top:8px;font-size:32pt;">中方吁遏止单边强制措施</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.news.cn/world/20261002/18382d4c4669498b945a6b5587cce0e0/c.html">news.cn</a></div>
+        <p>傅聪1日代表安提瓜和巴布达、白俄罗斯、古巴、朝鲜、伊朗、巴基斯坦、俄罗斯、中国等28国在联大第三委员会发言，指单边强制措施与次级制裁威胁粮能金融安全，并以关税作胁迫工具。28国要求立即无条件取消，请秘书长继续监测。新华社2日6时27分首发。</p>
+        <div class="why"><strong>为何重要</strong>国庆休会周里，这是中方把关税政治化写进多边人权场合的共同发言。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">海峡再响，驾驶舱上纲</h2>
+    <p class="section-sub">一发可核验的实弹，一句尚未核验的国家幕后。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">海峡 · 02</div>
+        <h3>霍尔木兹油轮再遭袭</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：UKMTO / 法新社　·　<a href="https://www.arabnews.com/middle-east/tanker-attacked-in-strait-of-hormuz-uk-maritime-agency-3004164">arabnews.com</a></div>
+        <p>英国海上贸易行动处1日17:50 UTC（沪时2日1:50）接报，一艘过峡油轮遭不明飞行物击中起火，船员安全，损毁未明。法新社2日转发。伊半官方媒体称一艘250万桶级超大油轮在阿曼海岸外起火。</p>
+        <div class="why"><strong>为何重要</strong>美伊口头威胁之外，海峡当天又写出一桩可核验的实弹记录。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">美伊 · 03</div>
+        <h3>特朗普指喋血涉伊</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：中央社　·　<a href="https://www.cna.com.tw/news/aopl/202610020004.aspx">cna.com.tw</a></div>
+        <p>中央社2日2:35见报：特朗普称FZ1073驾驶舱袭击「与伊朗有关」，若证实将予沉重打击。内塔尼亚胡称副驾阿曼籍、受极端思想影响，但指谈伊朗仍过早；以官员初步未见伊朗痕迹。</p>
+        <div class="why"><strong>为何重要</strong>同一事件上，白宫把国家幕后写成可能报复的理由，现场调查仍停在孤狼。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">半径拉长，祝酒续场</h2>
+    <p class="section-sub">假期次日把内需写成机票半径，把外交写成另一组总理名单。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">消费 · 04</div>
+        <h3>长假深度游改写半径</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="http://www.xinhuanet.com/fortune/20261002/b04351a1f0b14386a46804b6bee352fa/c.html">xinhuanet.com</a></div>
+        <p>新华社2日9:10综合：每十人中有一人将中秋国庆合并连休。美团称机票预订同比增44%，超2000公里长航线增76%，多目的地用户增70%。同程多国联游热度增65%，平均串联2.8国。</p>
+        <div class="why"><strong>为何重要</strong>假期次日把「十五五」开局年的内需，写成可核验的出行半径，而不是口号。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">外交 · 05</div>
+        <h3>巴捷总理续贺华诞</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.news.cn/world/20261002/5eea55071996423688fcb369d52c9ebd/c.html">news.cn</a></div>
+        <p>新华社2日15:31综合：巴基斯坦总理夏巴兹、捷克总理巴比什、巴哈马总理戴维斯等出席使领馆招待会。巴比什称双边关系正重返健康发展轨道；肯尼亚外长谈公路铁路与可再生能源；德国外交部国务秘书希望各层面继续对话。</p>
+        <div class="why"><strong>为何重要</strong>1日祝贺稿已见前刊。本日是另一组政要名单，休会周里仍是可见的官方外交色彩。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>周五的科技栏先核对接是否破纪录，再听捕日者第一次应答，夜里把一枚保密载荷送上高能轨道。</p>
+      <div class="stat4">
+        <div><b>07:05</b><i>沪时对接</i><p>Crew-13 以 7 小时 55 分成为最快美船</p></div>
+        <div><b>4</b><i>颗在轨 TPU</i><p>捕日者原型已取得联系，运行符合预期</p></div>
+        <div><b>8×</b><i>生成加速</i><p>Astra Ultrafast 在 Blackwell 上可调用</p></div>
+        <div><b>0</b><i>国内发射</i><p>检索未见 2 日长征或商业火箭通稿</p></div>
+      </div>
+      <div class="dark-note">
+        <div class="lab">编辑观察 · 排除清单与缺口</div>
+        未混入：天安门升旗、1日多国祝贺、村田闯馆开庭、《时代》专访与第三航母群（已见1日刊）；Gemini 4 Argon、Mate 90、Crew-13升空（1日首发）。捕日者确认博客、Astra Ultrafast、Crew-13对接均在1日16:00 UTC之后，折沪时入本日。
+      </div>
+    </section>
+
+    <h2 class="section-title">芯片上天，地面第一次应答</h2>
+    <p class="section-sub">九月二十四日只是计划。本日才把自研加速器写成在轨通电。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　航天计算 · 山景城</div>
+        <h3>捕日者原型已入轨</h3>
+        <div class="src">来源：Google Research　·　<a href="https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/">blog.google</a></div>
+        <p class="sum">Travis Beals于1日23:30 UTC（沪时2日7:30）确认：与Planet合造的原型随Transporter-18升空，地面已取得联系、运行符合预期。同行评审论文同日见《焦耳》。后续收集发射应力、辐射与热极端数据。</p>
+        <div class="why"><strong>为何重要</strong>9月24日只是计划。本日才把自研AI芯片第一次写成在轨通电。</div>
+      </article>
+      <div>
+        <div class="side-card">
+          <b>TPU</b>
+          <i>在轨验证</i>
+          <p>后续数周看振动、辐射与热循环，而不是地面质子束。</p>
+        </div>
+        <div class="side-card">
+          <b>Joule</b>
+          <i>同行评审</i>
+          <p>发射同日交出论文。经济可行性仍明确不在研究范围内。</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">更快一档，最快一艘美船</h2>
+    <p class="section-sub">一条是推理档位写成产品。一条是前刊留下的对接窗口。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">人工智能 · 07</div>
+        <h3>Astra Ultrafast 上线</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：NVIDIA Blog　·　<a href="https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/">blogs.nvidia.com</a></div>
+        <p>英伟达博客1日23:44 UTC（沪时2日7:44）称，GPT-6 Astra Ultrafast已在API及符合条件的ChatGPT Work、Codex上线，跑在Blackwell上，生成可比标准档最高快8倍。OpenAI用自有模型优化推理；API以gpt-6-astra加ultrafast档调用。</p>
+        <div class="why"><strong>为何重要</strong>前刊只记下档期。本日才把「更快一档」写成可调用的产品。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">航天 · 08</div>
+        <h3>七小时五十五分对接</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：NASA　·　<a href="https://www.nasa.gov/blogs/spacestation/2026/10/01/dragon-docks-bringing-spacex-crew-13-to-station/">nasa.gov</a></div>
+        <p>Dragon于1日19:05 EDT（沪时2日7:05）对接和谐号前向端口，发射至对接7小时55分，为空间站史上最快美国飞船。舱门21:19 EDT开启，沃特金斯、德莱尼、库特里克、捷捷里亚特尼科夫加入第75远征队。</p>
+        <div class="why"><strong>为何重要</strong>1日刊只记升空。对接破纪录发生在沪时2日清晨。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">第三射，保密载荷</h2>
+    <p class="section-sub">国内发射栏留白。佛罗里达夜里把重型猎鹰第一次交给国家侦察局。</p>
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　航天 · 肯尼迪</div>
+        <h3>重型猎鹰首飞国家侦察局</h3>
+        <div class="src">来源：SpaceX / Space.com　·　<a href="https://www.spacex.com/launches/nrol97">spacex.com</a></div>
+        <p class="sum">猎鹰重型1日23:54 EDT（沪时2日11:54）自肯尼迪39A发射NROL-97，为国家侦察局首次使用该型火箭。两侧助推器回收至1、2号着陆区，芯级消耗。载荷保密，为SpaceX同日第三射。</p>
+        <div class="why"><strong>为何重要</strong>公开信息止于火箭与回收。重型构型本身说明载荷重、轨道高，而不是又一次商业拼单。</div>
+      </article>
+      <aside class="gapbox">
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+        <h3 style="font-size:22pt;">发射栏与芯片栏留白</h3>
+        <ul>
+          <li>当日无国内航天发射通稿</li>
+          <li>《Nature Sensors》2日光子神经元简报，原文8月27日已刊，不写成周五突破</li>
+          <li>通义 / 混元开源稿为转载站，未核验官方首发</li>
+          <li>产业芯片栏偏薄：无 2 日可核验的晶圆或先进封装通稿</li>
+        </ul>
+      </aside>
+    </div>
+
+    <aside class="gapbox" style="margin-bottom:40px;">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>休会周，前刊不重写</h3>
+      <p>下列事项检索后仍不足以单独立项，或已在前刊入账，或越过沪时日界：</p>
+      <ul>
+        <li>外交部例会休会至 10 月 8 日；未见 2 日例行记者会</li>
+        <li>天安门升旗、1 日多国祝贺、村田闯馆开庭已见 1 日刊；驻日使馆 1 日表态不另立条</li>
+        <li>《时代》专访「中期后再炸」与第三航母群东移为 1 日首发，不因 2 日中文跟进重写</li>
+        <li>Gemini 4 Argon、Mate 90 逻辑折叠、Crew-13 升空已见 1 日刊</li>
+        <li>清华方路 FLARE 光子芯片原文 8 月 27 日；Siri AI 2 日稿为行业述评，非产品首发</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第011期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>海峡有弹，轨道有应答</h2>
+      <p class="judge">傅聪把关税胁迫写进28国共同发言。霍尔木兹再响一发，白宫把驾驶舱袭击写成可能涉伊，调查仍停在孤狼。长假把出行半径拉长，另一组总理到使馆祝酒。捕日者第一次在轨应答，Astra 更快一档可调用，Crew-13 破了美船对接纪录，重型猎鹰把保密载荷送上高能轨道。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>中方吁遏止单边强制措施</li>
+            <li>霍尔木兹油轮再遭袭</li>
+            <li>特朗普指喋血涉伊</li>
+            <li>长假深度游改写半径</li>
+            <li>巴捷总理续贺华诞</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>捕日者原型已入轨</li>
+            <li>Astra Ultrafast 上线</li>
+            <li>七小时五十五分对接</li>
+            <li>重型猎鹰首飞国家侦察局</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-02 00:00 至 2026-10-03 00:00。交叉来源：新华社、中央社、UKMTO、法新社、Google Research、NVIDIA、NASA、SpaceX、Space.com。排除前刊已入账稿件、8 月光子芯片原文，以及未核验的开源转载稿。</p>
+      <p class="end">每日时政科技简报 · 第011期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
