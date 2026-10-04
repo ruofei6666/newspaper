@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第012期 · 2026-10-03</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card:first-child { margin-top: 0; }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第012期  ·  2026年10月3日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹贰期  ·  二零二六年十月三日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。休会周里外交部开口，戴维营闭门，欧洲把主权模型做成可下载权重。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>APEC · 戴维营 · 伊油</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>Kolibri · Muse · 尾焰</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周六沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：郭嘉昆欢迎普京赴深圳APEC，三方会晤暂无信息；并首发94国「校正人权治理」四点文本。Axios记戴维营闭门会，贝森特称本周海上将无伊朗原油。Aleph Alpha开源Kolibri，Meta下放Muse外设协议。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>原定休会至八日。三日书面答问先把东道主日程写实，再把密室与油轮账对上同一条中东线。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 外交部</div>
+      「关于你提到的问题，我目前没有可以提供的信息。」——郭嘉昆谈普京所称俄中美三方会晤
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>94</b><i>共同发言国</i><p>9月30日人权理事会现场；3日外交部首发四点主张。</p></div>
+      <div class="fact"><b>11</b><i>月 · 深圳</i><p>中方欢迎普京出席APEC领导人非正式会议。</p></div>
+      <div class="fact"><b>0</b><i>海上伊油</i><p>贝森特自称本周「海上没有油」；独立油轮统计尚未当周坐实。</p></div>
+    </div>
+
+    <h2 class="section-title">东道主开口，三方留白</h2>
+    <p class="section-sub">休会周里的书面答问，把欢迎写成确认，把三方会晤写成空白。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　外交 · 北京</div>
+        <h3>欢迎普京赴深圳APEC</h3>
+        <div class="src">来源：外交部网站　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/202610/t20261003_12035446.shtml">mfa.gov.cn</a></div>
+        <p class="sum">国庆休会中，郭嘉昆3日答问：中方欢迎普京出席11月深圳APEC领导人非正式会议，愿同俄方推动「中国年」出成果。对普京所称俄中美三方会晤「可能」，称目前没有可提供的信息。</p>
+        <div class="why"><strong>为何重要</strong>休会周里第一次把东道主对普京行程写成欢迎，却把三方会晤留在空白。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　多边 · 日内瓦</div>
+        <h3>联94国校正人权治理</h3>
+        <div class="src">来源：外交部网站　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/202610/t20261003_12035446.shtml">mfa.gov.cn</a></div>
+        <p class="sum">郭嘉昆3日首度详述：9月30日人权理事会第63届会议上，中方依托「全球治理之友小组」联合94国作「校正国际人权治理」共同发言，提出人民判断本国人权、主权平等、公道改革、反对借人权干涉四点主张，并称全球治理倡议获近160个国家和组织响应。</p>
+        <div class="why"><strong>为何重要</strong>把9月30日的共同发言第一次写成可核验的四点文本，而不是口号。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">密室与油账</h2>
+    <p class="section-sub">同一条中东线拆成两栏：一边是未宣布的戴维营，一边是自称海上零库存。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　美国 · 戴维营</div>
+        <h3>闭门会谈伊朗与胡塞</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Axios　·　<a href="https://www.axios.com/2026/10/03/trumps-cabinet-camp-david-iran-war-yemen-houthis">axios.com</a></div>
+        <p>Axios 3日报道，万斯周五在戴维营主持未宣布的数小时闭门会，讨论伊朗战事与沙特—胡塞冲突。鲁比奥、赫格塞斯、维特科夫、拉特克利夫、凯恩、贝森特出席。官员称「有事已定，或至少深谈」。白宫拒评。</p>
+        <div class="why"><strong>为何重要</strong>谈判停摆之际，这是2025年6月以来同类密室；上次会后数日，以色列对伊开战。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　美国 · 财政</div>
+        <h3>贝森特称海上将无伊油</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Axios Show　·　<a href="https://www.axios.com/2026/10/03/scott-bessent-axios-show-extended-interview">axios.com</a></div>
+        <p>贝森特在3日11:35 UTC首发的专访中称，本周伊朗将「海上没有油」「没有收入」，并称自其开泵以来第一次。他把军事打击、封锁与「经济放逐」连成一条链。独立油轮统计尚未当周坐实。</p>
+        <div class="why"><strong>为何重要</strong>把封锁从「卡住出口」写成可核验的海上零库存叙事，数字仍停在美方自述。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      第三航母群东移、《时代》「中期后再炸」、霍尔木兹2日油轮遭袭、特朗普指迪拜航空喋血涉伊，均已见1–2日刊。本日只收密室首发与本周「海上无油」新口径。
+    </div>
+
+    <h2 class="section-title">制裁能进，也要能出</h2>
+    <p class="section-sub">纽约会场谈除名机制，伊斯兰堡把胡塞从拦截名单改写成可能的谈判对象。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　联合国 · 纽约</div>
+        <h3>孙磊吁完善制裁除名</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/20261003/beb3176dfdc44ba3ac2b718ae10e154c/c.html">news.cn</a></div>
+        <p class="sum">新华社3日13:10见报：孙磊2日在安理会制裁除名协调人非正式对话会上说，协调人须客观公正，成员应提供信息并尊重独立性；制裁是宪章工具，但一些机制缺少可行退出安排，成当事国长期桎梏。</p>
+        <div class="why"><strong>为何重要</strong>中方把「用好制裁」和「必须能退出」写进安理会改革口径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　中东 · 伊斯兰堡</div>
+        <h3>沙土巴将商胡塞接触</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/world/20261003/06b9bc723e2d4f6f8c66ffcc85317d3b/c.html">news.cn</a></div>
+        <p class="sum">新华社3日04:00见报：巴外长达尔2日称，麦加防务联盟战略委员会下周将在利雅得紧急开会，沙特、土耳其、巴基斯坦将商讨与胡塞政治接触。他称提议来自伊朗、尚无书面文本；至少六国希望加入该防务协议，全面运作前不接纳。</p>
+        <div class="why"><strong>为何重要</strong>把胡塞从拦截名单改写成可能的政治接触对象，且由伊朗牵线。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>开源权重、外设协议、国产超算流场。发射栏与《自然》《科学》级首发仍留白。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>78B</b><i>总参数</i><p>Kolibri 激活约 3.46B，上下文至 1M token。</p></div>
+      <div><b>1M</b><i>上下文</i><p>Apache 2.0 权重上线 Hugging Face。</p></div>
+      <div><b>5000</b><i>Home Link</i><p>Muse 外设试产，美国订阅用户免费。</p></div>
+      <div><b>6.77</b><i>万亿网格</i><p>曙光8000 上的33喷口尾焰仿真。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">78B<em>07　开源 · 海德堡</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Aleph Alpha · 德国统一日</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">Kolibri 开源主权权重</h3>
+        <div class="src">来源：Aleph Alpha　·　<a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/">aleph-alpha.com</a>　·　<a href="https://huggingface.co/Aleph-Alpha/Kolibri-1">Hugging Face</a></div>
+        <p class="sum">德国统一日 Aleph Alpha 开源 Kolibri：英德 MoE，78.1B 总参、约 3.46B 激活、1M 上下文，Apache 2.0。权重上 Hugging Face。自报 AIME 2025 达 96.9%，第三方尚未复核。</p>
+        <div class="why"><strong>为何重要</strong>欧洲把「主权模型」第一次写成可下载权重，而不是只卖给政府的黑箱。</div>
+      </div>
+    </article>
+
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　硬件 · 门洛帕克</div>
+        <h3>Muse 外设协议下放</h3>
+        <div class="src">来源：TechCrunch / Meta　·　<a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/">techcrunch.com</a></div>
+        <p class="sum">Meta 公布 Muse Gadgets：开源 ESP32 固件与 Linux SDK，供开发者为个人智能体做外设。Home Link 为 USB-C 小设备，试产 5000 台，美国订阅用户免费。美西 2 日下午宣布，沪时已入 3 日。</p>
+        <div class="why"><strong>为何重要</strong>把个人智能体从聊天窗口扩到可插的硬件协议，而不只是再发一款挂件。</div>
+      </article>
+      <div>
+        <div class="side-card">
+          <b>33</b>
+          <i>喷口阵列</i>
+          <p>西交大与曙光在国产十万卡上复现多发动机尾焰交汇。</p>
+        </div>
+        <div class="side-card">
+          <b>09</b>
+          <i>科学计算 · 合肥 / 西安</i>
+          <p style="margin-top:10px;"><strong style="font-family:Cambria,STSong,serif;font-size:22pt;color:var(--ink);display:block;margin-bottom:8px;">万亿网格拍下火箭尾焰</strong>快科技、界面 3 日报道：曙光联合西交大在曙光 8000 上完成 33 喷口超声速尾焰仿真，网格 6.774 万亿，称已知最大规模时空耦合射流算例。官网未见同题通稿。<br /><a href="https://news.mydrivers.com/1/1155/1155287.htm">mydrivers.com</a></p>
+          <div class="why" style="margin-top:12px;"><strong>为何重要</strong>把国产十万卡从气象预报推进到可回收火箭的流场，但还不是同行评审论文。</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="gapbox" style="margin-bottom:40px;">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>发射栏与芯片栏留白</h3>
+      <ul>
+        <li>当日无国内航天发射通稿，亦无 3 日《自然》《科学》级首发</li>
+        <li>产业芯片栏偏薄：NVIDIA DGX Spark 64GB 官方博客署 10 月 2 日，不入本日</li>
+        <li>Olmo-core 3 官方 10 月 1 日；OpenAI Jalapeño 为 6 月 24 日首发，3 日 Tom's 访谈越过沪时日界</li>
+        <li>谷歌捕日者中文通稿、NTU CRIMSON-1、TakeMe2Space 均为 1–2 日发射的滞后转述</li>
+        <li>Muse Spark 六篇数学论文官方博客署 10 月 2 日，不因 3 日中文跟进重写</li>
+        <li>加沙空袭、沙特拦截胡塞导弹为当日冲突电讯，未单独立项</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第012期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>东道主欢迎，密室不宣布</h2>
+      <p class="judge">郭嘉昆把普京写成深圳座上宾，却把中美俄三方会晤留白，并第一次写出 94 国校正人权治理的四点文本。戴维营闭门，贝森特把海上写成零油。海德堡交出可下载的主权权重，Muse 把智能体接到插座上，国产超算给火箭尾焰拍了一张网格极密的片子。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>欢迎普京赴深圳APEC</li>
+            <li>联94国校正人权治理</li>
+            <li>闭门会谈伊朗与胡塞</li>
+            <li>贝森特称海上将无伊油</li>
+            <li>孙磊吁完善制裁除名</li>
+            <li>沙土巴将商胡塞接触</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>Kolibri 开源主权权重</li>
+            <li>Muse 外设协议下放</li>
+            <li>万亿网格拍下火箭尾焰</li>
+            <li>发射栏 / 芯片栏信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-03 00:00 至 2026-10-04 00:00。交叉来源：外交部、新华社、Axios、Aleph Alpha、Hugging Face、TechCrunch、快科技。排除前刊已入账稿件、2 日及更早官方首发，以及越过沪时日界的访谈与评论。</p>
+      <p class="end">每日时政科技简报 · 第012期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
