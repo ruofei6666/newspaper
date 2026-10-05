@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第013期 · 2026-10-04</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .side-card:first-child { margin-top: 0; }
+    .side-card b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .side-card i { font-style: normal; font-weight: 700; font-size: 14px; color: var(--slate); }
+    .side-card p { margin: 8px 0 0; font-size: 14px; }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .split, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第013期  ·  2026年10月4日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹叁期  ·  二零二六年十月四日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。假期里商务部开口，总统把伊朗写成二选一，也门转入地面反攻。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>G20 · 伊朗 · 也门</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>Gemini · 苹果 · 色心</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周日沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：商务部把密尔沃基写成只保住粮食声明，并交出假期半程消费账。特朗普称将对伊朗作决断；德黑兰同日警告回击、议长称海峡不重开。阿里米在利雅得下令收复失地，默茨把远程打击写进基辅军援。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>外交部仍休会至八日。周日开口的是商务部：一场没谈拢的部长会，一份假期半程账单。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 白宫草坪</div>
+      「不是容易的方式，就是艰难的方式。」——特朗普谈即将对伊朗作出的决定
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>1</b><i>份联合声明</i><p>G20贸易部长会仅就粮食议题出成果，最惠国待遇未被动摇。</p></div>
+      <div class="fact"><b>3.4%</b><i>商圈客流</i><p>假期前三天78个重点商圈客流同比增；营业额增5.3%。</p></div>
+      <div class="fact"><b>13</b><i>亿欧元</i><p>默茨在基辅宣布新援助，约十亿为远程打击与无人机。</p></div>
+    </div>
+
+    <h2 class="section-title">假期里的两本账</h2>
+    <p class="section-sub">一本是多边谈判只保住粮食声明，一本是国内商圈与菜篮子的半程数字。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>01　商务 · 北京</div>
+        <h3>G20部长会只保住粮食声明</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/world/20261004/508b99e7c78448f28a10b404dbee9625/c.html">news.cn</a></div>
+        <p class="sum">商务部4日答问：密尔沃基G20贸易部长会仅就粮食议题达成联合声明。产能过剩、强迫劳动因多数反对未出成果。中方称绝大多数成员强调最惠国待遇是多边基石，主席国未就该议题提成果文件。</p>
+        <div class="why"><strong>为何重要</strong>假期里中方第一次把这场会写成「只保住粮食声明、守住最惠国待遇」。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　消费 · 北京</div>
+        <h3>假期过半：客流增、货足价稳</h3>
+        <div class="src">来源：央视新闻 / 商务部　·　<a href="https://www.21jingji.com/article/20261004/herald/e8f53227516700943e466a43d377a0f1.html">21jingji.com</a></div>
+        <p class="sum">商务部4日通报，假期前三天78个重点商圈客流、营业额同比增3.4%、5.3%；以旧换新带动196.3亿元。前四天200家大型农批库存充足，粮油肉果价格与节前基本持平，蔬菜鸡肉鸡蛋略降。</p>
+        <div class="why"><strong>为何重要</strong>这是假期半程第一份可核验的全国消费与保供账，而不是景区人流故事。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">二选一，与不重开</h2>
+    <p class="section-sub">同一条霍尔木兹线拆成两栏：一边是总统即将拍板，一边是德黑兰把海峡留在七条件之后。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　美国 · 白宫</div>
+        <h3>特朗普称将对伊朗作决断</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透社　·　<a href="https://english.alarabiya.net/News/middle-east/2026/10/04/-we-ll-have-it-the-easy-way-or-the-hard-way-trump-signals-decision-coming-on-iran">alarabiya.net</a></div>
+        <p>特朗普离白宫赴俄亥俄助选时对记者说，「我将对伊朗作一个决定」，「不是容易的方式，就是艰难的方式」。他称伊朗「几乎放弃」核武器计划。防长赫格塞斯称五角大楼正确保「所有选项」在桌上，并称对霍尔木兹的封锁「铁板一块」。</p>
+        <div class="why"><strong>为何重要</strong>把戴维营闭门会后的压力，第一次写成总统本人即将拍板。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　伊朗 · 德黑兰</div>
+        <h3>外长警告回击，议长称海峡不重开</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / CNBC　·　<a href="https://www.news.cn/world/20261004/0733bb5345c444b3851bbfb6cbe317d0/c.html">news.cn</a></div>
+        <p>阿拉格齐4日见驻伊外交官：仍愿寻「公正体面」方案，若再动武将予以「更具毁灭性」回击。议长加利巴夫称霍尔木兹须满足伊斯兰堡备忘录七条件才重开。UKMTO称周末阿曼以东与海峡内至少两艘油轮遭不明投射物击中。</p>
+        <div class="why"><strong>为何重要</strong>把「仍要谈判」和「海峡不先开」写在同一天，油轮账也没有停。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      戴维营闭门、贝森特「海上无伊油」、第三航母群东移、《时代》「中期后再炸」、霍尔木兹2日油轮遭袭，均已见1–3日刊。本日只收总统「即将作决定」新口径，以及4日外长、议长与新的油轮警报。
+    </div>
+
+    <h2 class="section-title">地面反攻，与远程军援</h2>
+    <p class="section-sub">红海一侧政府军公开转入收复；第聂伯河上，默茨把「能打到发射场」写进清单。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　也门 · 利雅得</div>
+        <h3>也门政府宣布收复胡塞新占区</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.xinhuanet.com/20261004/0a43d4286ef64024be4055ace203291d/c.html">xinhuanet.com</a></div>
+        <p class="sum">阿里米4日在利雅得通过国家电视台宣布，经数周动员，正式启动大规模军事行动，收复胡塞近期控制地区，并命令武装部队、安全部门及盟军执行作战计划。他称将对放下武器者赦免。胡塞当日在塔伊兹控制连接亚丁的公路，前线数千人流离。</p>
+        <div class="why"><strong>为何重要</strong>沙特—胡塞线从空袭互报，变成政府军公开转入地面反攻。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　乌克兰 · 基辅</div>
+        <h3>默茨承诺超13亿欧元新援助</h3>
+        <div class="src">来源：美联社 / 新华社　·　<a href="https://www.inquirer.com/news/nation-world/germany-ukraine-merz-aid-russia-war-20261004.html">inquirer.com</a>　·　<a href="https://www.news.cn/world/20261004/ffa8c8e7871443d99bbc82ef82b2649d/c.html">news.cn</a></div>
+        <p class="sum">默茨4日访基辅，宣布超13亿欧元新援助：约10亿军援含远程打击、无人机与卫星技术，约3.5亿能源过冬援助。泽连斯基称3日夜至4日俄军发射135架攻击无人机，基辅北桥等遭袭，1死6伤。俄国防部称将加码打击基辅等地军工设施。</p>
+        <div class="why"><strong>为何重要</strong>欧洲最大援助国把「能打到发射场」写进军援清单，俄方同日把加码写成政策。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>免费档被收回，设计拍板人坐回工作室，色心论文给出紫外窗口。发射栏仍留白。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>10/9</b><i>起限权</i><p>Gemini 免费档只留 3.5 Flash-Lite。</p></div>
+      <div><b>4.99</b><i>美元 / 月</i><p>AI Plus 将失去 Pro，仅留 Flash。</p></div>
+      <div><b>4.8</b><i>磅</i><p>现款 16 英寸 MacBook Pro；新款称将显著减重。</p></div>
+      <div><b>5.61</b><i>电子伏特</i><p>立方氮化硼双空位本征能级分裂，指向紫外窗口。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">10/9<em>07　产品 · 山景城</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Google · 支持文档更新</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">Gemini 免费档只留 Flash-Lite</h3>
+        <div class="src">来源：9to5Google　·　<a href="https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/">9to5google.com</a></div>
+        <p class="sum">谷歌更新支持文档：10月9日起，无订阅用户只能用3.5 Flash-Lite，失去Flash与Pro。月费4.99美元的AI Plus也将失去Pro。美西3日下午见报，沪时已入4日。</p>
+        <div class="why"><strong>为何重要</strong>把免费与入门付费从「能摸到 Pro」改写成算力配额，逼升级。</div>
+      </div>
+    </article>
+
+    <div class="split">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　硬件 · 库比蒂诺</div>
+        <h3>特纳斯亲自抓设计</h3>
+        <div class="src">来源：彭博 Power On　·　<a href="https://www.bloomberg.com/news/newsletters/2026-10-04/apple-s-john-ternus-leads-design-touch-screen-oled-macbook-pro-gets-lighter">bloomberg.com</a>　·　<a href="https://9to5mac.com/2026/10/04/apple-macbook-pro-redesign-to-be-much-lighter-report/">9to5mac.com</a></div>
+        <p class="sum">古尔曼4日称，新任CEO特纳斯每周数次亲临设计与人机界面工作室，实质兼任设计一把手。即将推出的触控OLED MacBook Pro内部重排，将「显著更轻」。芯片料沿用M5 Pro/Max。</p>
+        <div class="why"><strong>为何重要</strong>艾维离职后，硬件与软件设计第一次重新接到同一名拍板人。</div>
+      </article>
+      <div>
+        <div class="side-card">
+          <b>6</b>
+          <i>条政策路径</i>
+          <p>APEC 人力部长会把「人工智能赋能于人」写成可对照清单。</p>
+        </div>
+        <div class="side-card">
+          <b>09</b>
+          <i>多边 · 人力资源</i>
+          <p style="margin-top:10px;"><strong style="font-family:Cambria,STSong,serif;font-size:22pt;color:var(--ink);display:block;margin-bottom:8px;">人力部长会给出 AI 六路径</strong>新华社 4 日详述第八届 APEC 人力资源开发部长会：从创造岗位、劳动力转型、改善劳动条件、终身技能培训、服务智能化、经验交流六方面推动人工智能赋能。<br /><a href="https://www.news.cn/20261004/caa6e45c64db4fa0b51c871b3ba602e5/c.html">news.cn</a></p>
+          <div class="why" style="margin-top:12px;"><strong>为何重要</strong>东道主年里第一次把「AI 赋能于人」写成可对照的六条政策路径。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:0;">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　科学 · 宁波 / 乌鲁木齐</div>
+        <h3>立方氮化硼指向紫外色心</h3>
+        <div class="src">来源：科技日报　·　<a href="https://www.stdaily.com/web/gdxw/2026-10/04/content_591790.html">stdaily.com</a></div>
+        <p class="sum">科技日报 4 日获悉，魏苏淮与宋宇团队合作，比较金刚石与立方氮化硼双空位：后者本征能级分裂可达 5.61 电子伏特，并建立原子势、应变与轨道杂化三通道模型，预测多种紫外色心候选。成果见《美国化学会志》。此为理论设计，尚未做出器件。</p>
+        <div class="why"><strong>为何重要</strong>把「为什么金刚石色心难进紫外」写成可迁移的化学规则，而不是再筛一颗钻石。</div>
+      </article>
+      <aside class="gapbox">
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+        <h3>发射栏与芯片栏留白</h3>
+        <ul>
+          <li>当日无国内航天发射通稿，亦无 4 日《自然》《科学》级首发</li>
+          <li>谷歌捕日者、Crew-13、NROL-97、星舰第 14 次均已入前刊</li>
+          <li>OpenAI Jalapeño 为 6 月 24 日首发；Cutress 访谈英文首发越过或早于沪时日界，不重写</li>
+          <li>Aleph Alpha Kolibri、Gemini 4 Argon、DeepSeek 昇腾组件、华为 openPangu-2.0 均为更早首发</li>
+          <li>东芝 HDD 扩产为 10 月 2 日日经首发；谷歌 OSS VRP 停收为 10 月 1 日公告</li>
+          <li>海阳东方航天港英文电讯为 9 月 24 日中文特写的转译，不立项</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第013期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>部长会只出一份声明，总统说要作决定</h2>
+      <p class="judge">商务部把密尔沃基写成只保住粮食与最惠国待遇，并把假期半程的商圈和菜篮子数字交出来。特朗普把伊朗写成即将拍板的二选一；德黑兰同日警告回击，议长把海峡留在七条件之后。阿里米在利雅得下令收复，默茨在基辅把远程打击写进清单。山景城收回免费档的 Pro，库比蒂诺的新 CEO 自己坐回设计室，立方氮化硼给出一条通往紫外窗口的计算规则。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>G20部长会只保住粮食声明</li>
+            <li>假期过半：客流增、货足价稳</li>
+            <li>特朗普称将对伊朗作决断</li>
+            <li>外长警告回击，议长称海峡不重开</li>
+            <li>也门政府宣布收复胡塞新占区</li>
+            <li>默茨承诺超13亿欧元新援助</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>Gemini 免费档只留 Flash-Lite</li>
+            <li>特纳斯亲自抓设计</li>
+            <li>人力部长会给出 AI 六路径</li>
+            <li>立方氮化硼指向紫外色心</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-04 00:00 至 2026-10-05 00:00。交叉来源：新华社、商务部/央视、路透社、CNBC、美联社、9to5Google、彭博、科技日报。排除前刊已入账稿件、3 日及更早官方首发，以及越过沪时日界的转载。</p>
+      <p class="end">每日时政科技简报 · 第013期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
