@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第014期 · 2026-10-05</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第014期  ·  2026年10月5日  ·  星期一</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹肆期  ·  二零二六年十月五日  ·  星期一</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。假期里战区开口，大宗商品创四年半新高，东京对华重新定调，霍尔木兹周一再响。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>黄岩岛 · 东京 · 霍尔木兹</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>光子 · 传感器 · 海洋</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周一沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：南部战区就黄岩岛领空正告菲方。中物联把九月大宗商品写成四年半新高。高市早苗在国会称中国为「重要邻国」并划安全红线。霍尔木兹再有油轮机舱起火，伊美谈判口径撕裂。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>外交部仍休会至八日。周一开口的是战区、交通部和中物联；东京则把对华关系写进所信表明。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 南部战区</div>
+      「我们正告菲方立即停止侵权挑衅。」——南部战区新闻发言人翟士臣海军大校
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>C-208</b><i>黄岩岛领空</i><p>3日菲机侵入，5日战区正式正告并通报已警告驱离。</p></div>
+      <div class="fact"><b>137.6</b><i>大宗指数</i><p>9月CBPI环比涨4.1%，创2022年3月以来新高。</p></div>
+      <div class="fact"><b>12.44</b><i>亿人次</i><p>国庆前四日跨区域流动与去年同期基本持平。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>防务 · 黄岩岛</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">南部战区 · 5日谈话</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">正告菲方停止黄岩岛侵权挑衅</h3>
+        <div class="src">来源：南部战区 / 新华网 / 国防部　·　<a href="https://www.news.cn/politics/20261005/f328a1e69eb843afa6e0ae4aa92dc001/c.html">news.cn</a>　·　<a href="http://www.mod.gov.cn/gfbw/qwfb/16491197.html">mod.gov.cn</a></div>
+        <p class="sum">南部战区新闻发言人翟士臣海军大校5日表示，3日菲律宾1架C-208型机未经批准非法侵入黄岩岛领空，战区组织海空兵力跟踪监视、警告驱离。发言人强调黄岩岛是中国固有领土，菲方行为严重侵犯主权，极易引发海空意外。</p>
+        <div class="why"><strong>为何重要</strong>这是国庆假期期间南部战区就黄岩岛空域发布的正式正告，显示中方对侵权挑衅的即时反制并未因节假日停摆。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">假期里的两本新账</h2>
+    <p class="section-sub">一本是九月价格，一本是假期人流。4日已入刊的商圈客流与以旧换新数字，本日不重写。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　宏观 · 北京</div>
+        <h3>大宗商品指数创四年半新高</h3>
+        <div class="src">来源：中物联 / 中新社　·　<a href="https://www.chinanews.com.cn/cj/2026/10-05/10708105.shtml">chinanews.com.cn</a></div>
+        <p class="sum">中物联5日发布，9月中国大宗商品价格指数137.6点，环比涨4.1%、同比涨22.9%，创2022年3月以来新高。50种重点商品中38种上涨，甲醇、乙二醇、焦炭领涨；能源、化工指数分别涨14.8%、13.7%。中物联提醒输入性风险高、下游传导不畅。</p>
+        <div class="why"><strong>为何重要</strong>指数同时反映旺季需求回暖和外部能源冲击，是判断四季度PPI与中下游利润空间的关键先行信号。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　交通 · 北京</div>
+        <h3>国庆前四日流动12.44亿人次</h3>
+        <div class="src">来源：交通运输部 / 新华社　·　<a href="https://www.xinhuanet.com/politics/20261005/c41261e5aa834b0cac3dc7103346df61/c.html">xinhuanet.com</a></div>
+        <p class="sum">交通运输部5日通报，10月4日全社会跨区域人员流动量3.05亿人次，同比增长1.3%；假期前四日累计12.44亿人次，与去年同期基本持平。同日物流保通保畅数据显示，9月28日至10月4日铁路货运8415.7万吨、环比微增，高速公路货车与快递揽投量则因假期回落。</p>
+        <div class="why"><strong>为何重要</strong>人流持平、货流分化，说明假期热度更多写在客运与出行，而不是货运扩张。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">邻国定调，与海峡再响</h2>
+    <p class="section-sub">同一天拆成两栏：东京把对华关系写进国会，霍尔木兹把周末的袭击写成周一续篇。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　日本 · 东京</div>
+        <h3>高市称中国为「重要邻国」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：日本首相官邸 / 共同社　·　<a href="https://www.kantei.go.jp/jp/105/statement/2026/1005shoshinhyomei.html">kantei.go.jp</a></div>
+        <p>日本首相高市早苗5日在第222回国会发表所信表明演说，称中国是「重要邻国」，将全面推进战略互惠关系；同时就东海南海、日本周边军事活动、威压措施、邦人安全与人权问题「主张该主张的」，要求负责任行动，并推进「维护国家利益的对话」。</p>
+        <div class="why"><strong>为何重要</strong>这是对华关系探底后日方首次在国会定调，为11月深圳APEC接触预留台阶，但安全议题未松口。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　中东 · 霍尔木兹</div>
+        <h3>周一再袭，伊美口径撕裂</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：UKMTO / Iran International　·　<a href="https://www.ukmto.org/-/media/ukmto/products/20261005-ukmto_warning_156_26.pdf">ukmto.org</a></div>
+        <p>UKMTO通报，5日16:37 UTC一艘油轮在霍尔木兹遭不明投射物击中，机舱起火，暂无伤亡与溢油。当日另有油轮在阿曼哈萨布以北11海里被伊朗革命卫队喝令返航。美中央司令部称封锁重启以来已改道第130艘商船。伊朗总统佩泽希基安称与美谈判「无意义」，特朗普同日仍称对直接谈判持开放态度。</p>
+        <div class="why"><strong>为何重要</strong>周末两袭之后的周一续袭，叠加伊美口头分裂，说明海峡风险未因外交试探降温。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      特朗普「easy/hard way」、加利巴夫七条件、UKMTO周末两艘油轮、阿里米宣布收复胡塞新占区、默茨基辅军援、商务部假期半程78商圈账，均已见4日刊。本日只收战区正告、中物联指数、交通部流动账、高市国会演说，以及5日新的油轮警报与伊美新口径。
+    </div>
+
+    <article class="feature">
+      <p class="big">11/5<em>06　开放 · 上海</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">进博会 · 倒计时一个月</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">第九届进博会进入开幕倒计时</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/fortune/20261005/3510281fa1684e058b239577c669408e/c.html">news.cn</a></div>
+        <p class="sum">新华社5日详稿称，第九届中国国际进口博览会距11月5日至10日开幕整一个月。商务部负责人强调扩大优质进口、服务消费提振与进出口平衡。摩尔多瓦、罗马尼亚与联合国开发计划署将首次参展，加拿大第二次担任主宾国；企业展保留六大展区，首批奥地利展品约两周后抵沪。</p>
+        <div class="why"><strong>为何重要</strong>在保护主义抬头背景下，这是「十五五」开局年中国以国家级进口展释放开放信号的一次正式预告。</div>
+      </div>
+    </article>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>光子芯片学会在片上自己算梯度，RNA被写成可测序的条形码。发射栏仍留白。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>0.26%</b><i>相对误差</i><p>INSPIRE训练矩阵的实验误差。</p></div>
+      <div><b>251×</b><i>模型压缩</i><p>光子元学习单次适配的压缩倍数。</p></div>
+      <div><b>146</b><i>帧 / 秒</i><p>OG05D线性模式最高输出。</p></div>
+      <div><b>211%</b><i>磷储量降幅</i><p>模式给出的本世纪末颗粒有机磷下限情景。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>科学 · 北京 / 深圳</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">清华 · 《自然·计算科学》</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">光子芯片原位训练方法INSPIRE</h3>
+        <div class="src">来源：Nature Computational Science　·　<a href="https://www.nature.com/articles/s43588-026-01057-y">nature.com</a></div>
+        <p class="sum">清华大学方路、黄如琪等5日发表论文，提出片上原位物理梯度下降方法INSPIRE。该方法用合成时间反演全息术测量双向光场，在物理系统内直接计算梯度并更新参数，训练矩阵相对误差0.26%；元学习实验实现251倍模型压缩与136倍任务训练加速。</p>
+        <div class="why"><strong>为何重要</strong>光子计算长期卡在「仿真训练、实物失配」，原位训练若可泛化，将缩短光芯片从实验室到可学习系统的距离。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　生物 · 旧金山</div>
+        <h3>Detectrons把RNA写成DNA条码</h3>
+        <div class="src">来源：Nature Biotechnology　·　<a href="https://www.nature.com/articles/s41587-026-03334-7">nature.com</a></div>
+        <p class="sum">韩智勋与Seth Shipman 5日发表Detectrons：把可编程toehold开关与retron逆转录耦合，使活细胞内的RNA信号转成稳定DNA条形码，可用测序读出。团队用机器学习优化文库，并在混合培养中实现噬菌体感染的多重检测与宿主易感定量。</p>
+        <div class="why"><strong>为何重要</strong>把转瞬即逝的转录事件做成可测序档案，为噬菌体筛选和群落记录提供一条可扩展路径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　硬件 · 圣克拉拉</div>
+        <h3>豪威发布2.2微米全局快门HDR芯</h3>
+        <div class="src">来源：Business Wire / OMNIVISION　·　<a href="https://www.businesswire.com/news/home/20261005512474/en/OMNIVISION-Launches-Industrys-First-2.2-micron-Global-Shutter-HDR-Sensor-for-Flagship-Industrial-and-Robotics-Machine-Vision-Cameras">businesswire.com</a></div>
+        <p class="sum">豪威5日宣布推出OG05D，称其为业界首款2.2微米、500万像素全局快门高动态范围CMOS传感器，面向工业机器视觉与人形机器人取数。线性模式最高146帧/秒，较上代快143%；支持单次曝光HDR，功耗降30%，四季度量产。</p>
+        <div class="why"><strong>为何重要</strong>机器人训练依赖高质量视觉采集，像素缩小同时保住HDR，是端侧视觉硬件的一次规格卡位。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　芯片 · 首尔</div>
+        <h3>SEMIFIVE承接机器人AI芯片开发</h3>
+        <div class="src">来源：SEMIFIVE / Design &amp; Reuse　·　<a href="https://www.design-reuse.com/news/202531224-semifive-signs-turnkey-contract-with-mobilint-to-develop-robotics-ai-chip-under-k-on-device-ai-semiconductor-program/">design-reuse.com</a></div>
+        <p class="sum">韩国定制芯片公司SEMIFIVE 5日宣布，与Mobilint签署交钥匙合同，在产业通商资源部「K-On-Device AI半导体」项目下开发机器人AI芯片，集成LPDDR6、PCIe Gen6与UCIe-S，面向农业机器人等弱网户外场景的本地推理。</p>
+        <div class="why"><strong>为何重要</strong>这是韩国把端侧AI芯片从消费电子推向物理AI的一次政府资助落地，也补上当日全球产业芯片栏的可核验新单。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　海洋 · 青岛</div>
+        <h3>酸化改写浮游植物磷代谢</h3>
+        <div class="src">来源：Nature Geoscience　·　<a href="https://www.nature.com/articles/s41561-026-02113-y">nature.com</a></div>
+        <p class="sum">叶乃好、徐东、陈国福等5日发表超千代硅藻进化实验：高二氧化碳可遗传地提高生长与固碳，但酸化导致的颗粒有机磷下降在磷限制下可逆，主因是细胞磷库耗竭与非磷膜脂富集。地球系统模式给出本世纪末颗粒有机磷降211%至2185%的情景。</p>
+        <div class="why"><strong>为何重要</strong>把「酸化加磷限制」写成可遗传与可驯化两层机制，并给出全球磷循环失衡的量化区间。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>发射栏留白，大模型无首发</h3>
+      <ul>
+        <li>当日无国内航天发射通稿；长十二、Nuri、SDA传输层均为后续窗口预告，不立项</li>
+        <li>外交部仍休会至10月8日，无例行记者会</li>
+        <li>谷歌捕日者、Astra Ultrafast、Crew-13、NROL-97、Mate 90 τ芯片/9050 Pro均已入前刊</li>
+        <li>OpenAI Jalapeño为6月24日首发；More Than Moore访谈为9月30日，5日中文跟进不重写</li>
+        <li>GPT-Synopsys为9月30日投资者日首发；AMD XQRVC1902官方稿为10月1日</li>
+        <li>麒麟9050 Pro裸片详解源出9月30日Kurnal Insights，不写成周一突破</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第014期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>战区正告菲方，东京称邻国，海峡再起火</h2>
+      <p class="judge">南部战区把3日的黄岩岛侵入写成5日的正式正告。中物联交出四年半新高的大宗商品账，交通部交出与去年持平的假期人流。高市早苗在国会把中国写成「重要邻国」，同时把东海南海留在红线里。霍尔木兹周一再有油轮机舱起火，佩泽希基安说谈判无意义，特朗普仍说门开着。清华把梯度算回光子芯片上，青岛把酸化写成磷循环的数字。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>正告菲方停止黄岩岛侵权挑衅</li>
+            <li>大宗商品指数创四年半新高</li>
+            <li>国庆前四日流动12.44亿人次</li>
+            <li>高市称中国为「重要邻国」</li>
+            <li>周一再袭，伊美口径撕裂</li>
+            <li>第九届进博会进入开幕倒计时</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>光子芯片原位训练方法INSPIRE</li>
+            <li>Detectrons把RNA写成DNA条码</li>
+            <li>豪威发布2.2微米全局快门HDR芯</li>
+            <li>SEMIFIVE承接机器人AI芯片开发</li>
+            <li>酸化改写浮游植物磷代谢</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-05 00:00 至 2026-10-06 00:00。交叉来源：南部战区/新华网/国防部、中物联/中新社、交通运输部/新华社、日本首相官邸/共同社、UKMTO、新华社进博会稿、《自然·计算科学》《自然·生物技术》《自然·地球科学》、Business Wire、SEMIFIVE。排除前刊已入账稿件、4日及更早官方首发，以及越过沪时日界的转载。</p>
+      <p class="end">每日时政科技简报 · 第014期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
