@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第015期 · 2026-10-06</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第015期  ·  2026年10月6日  ·  星期二</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹伍期  ·  二零二六年十月六日  ·  星期二</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。假期里外交部提前开口，商务部顶住法德保护主义信，霍尔木兹首次写下伤亡。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>台湾 · 南海 · 东亚增速</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>制程 · 专利 · 代谢</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周二沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：郭嘉昆把台湾、售武和黄岩岛写进假期答问。商务部点名法德勿鼓动欧盟祭出保护主义工具。世界银行把东亚太平洋增速改写成4.5%。霍尔木兹一艘商船12人受伤。高通与华为就同一协议给出两套口径。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>原定休会至八日的外交部周二开口。商务部比外交口更硬地回了法德那封信。海峡则第一次把伤亡数字写进官方声明。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 外交部</div>
+      「美方应落实中美元首会晤重要共识，恪守一个中国原则和中美三个联合公报，慎重处理台湾问题。」——外交部发言人郭嘉昆
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>F-16V</b><i>对台军售</i><p>台方接收两架，计划年内再收64架。郭嘉昆重申坚决反对。</p></div>
+      <div class="fact"><b>4.5%</b><i>东亚增速</i><p>世界银行较4月预测上调0.3个百分点，主因AI价值链。</p></div>
+      <div class="fact"><b>12</b><i>人受伤</i><p>巴拿马旗商船在阿曼附近通过霍尔木兹时遭袭，11人为印籍。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>外交 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">外交部 · 6日答问</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">告美方慎重处理台湾问题</h3>
+        <div class="src">来源：外交部 / 新华网　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202610/t20261006_12035789.shtml">mfa.gov.cn</a>　·　<a href="https://www.news.cn/20261006/9973e6e1e1034587bd66f9c5e4bf5dca/c.html">news.cn</a></div>
+        <p class="sum">外交部发言人郭嘉昆6日答问。针对美官员称2028年前「入侵」台湾可能性下降，他强调台湾问题是中国内政，美方应落实元首共识、恪守一中原则与三个联合公报；就台方接收两架美制F-16V、年内再收64架，重申坚决反对对台军售。</p>
+        <div class="why"><strong>为何重要</strong>假期原定休会至八日，这场答问把台湾、售武重新写成官方口径，也回应了美方「2028年可能性下降」的放风。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">南海正告，与布鲁塞尔回信</h2>
+    <p class="section-sub">同一场外交：一边把战区正告写成外交照会，一边由商务部接手法德那份非正式文件。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　南海 · 北京</div>
+        <h3>正告菲方停止三岛礁侵权</h3>
+        <div class="src">来源：外交部 / 新华网　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202610/t20261006_12035789.shtml">mfa.gov.cn</a></div>
+        <p class="sum">针对菲方称中方在南海两处滋扰其飞机船只，郭嘉昆称中国对黄岩岛及南沙中业岛、铁线礁及其附近海域拥有主权。菲机船未经允许闯入中国管辖海空域，军队和海警依法应对，中方正告菲方立即停止侵权挑衅。</p>
+        <div class="why"><strong>为何重要</strong>5日战区只写黄岩岛，6日外交口把范围扩到中业岛与铁线礁，军政两套话合成一条。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　经贸 · 北京</div>
+        <h3>商务部批法德鼓动保护主义</h3>
+        <div class="src">来源：商务部 / 新华社　·　<a href="https://www.news.cn/world/20261006/99a8049fb47642c3a60af5ba58bfa8d6/c.html">news.cn</a></div>
+        <p class="sum">商务部新闻发言人6日回应：法德5日向欧委会提交非正式文件，要求强化贸易防御并推出保护主义新工具。中方称相互依赖不是风险，保护主义提升不了竞争力，希望法德遵守世贸规则，勿将经贸问题政治化和泛安全化。</p>
+        <div class="why"><strong>为何重要</strong>这是对欧委会贸易委员访华前的正式表态，比外交部「请询主管部门」更硬、也更具体。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">增速被改写，海峡写下伤亡</h2>
+    <p class="section-sub">一栏是世行把东亚写成AI供应链的受益者，一栏是霍尔木兹把袭击写成人员伤亡。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　宏观 · 纽约</div>
+        <h3>世行上调东亚增速至4.5%</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：世界银行 / 新华社　·　<a href="https://www.news.cn/fortune/20261006/807280966722408b8321410339b2237f/c.html">news.cn</a></div>
+        <p>世界银行6日将2026年东亚太平洋经济增速预测上调至4.5%，较4月高0.3个百分点，主因是人工智能价值链上的高技术投资与出口。越南、马来西亚、泰国分别上调1.1、0.7、0.7个百分点，太平洋岛国下调0.5个百分点。副行长哈拉米略称挑战是把「会造AI商品」变成「会用AI」。</p>
+        <div class="why"><strong>为何重要</strong>把本地区增长差写成制造优势尚未转化成应用与就业，点出下一阶段政策缺口。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　中东 · 霍尔木兹</div>
+        <h3>商船遇袭，12名船员受伤</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：印度外交部 / 新华社　·　<a href="https://www.news.cn/20261006/af5f256eab4d4c5da9803533ad787d7a/c.html">news.cn</a></div>
+        <p>印度外交部6日声明，一艘巴拿马旗商船当日在阿曼附近通过霍尔木兹海峡时遭袭，船上19人中12人受伤、11人为印籍船员，伤员已送阿曼海塞卜救治。印方谴责袭击，并称对该地区持续袭船深表关切。新华社同时回溯UKMTO 5日通报的连日三艘遭袭。</p>
+        <div class="why"><strong>为何重要</strong>周一续袭之后，周二首次出现明确伤亡数字，海峡风险从船损写成人员伤亡。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">47<em>06　人权 · 日内瓦</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">人权理事会 · 中文首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">再通过中国主提无障碍决议</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/20261006/79cbed4178874627b7a10a929cdac4f1/c.html">news.cn</a></div>
+        <p class="sum">新华社6日08:27首发日内瓦电：联合国人权理事会第63届会议5日协商一致通过中国代表47国提出的「无障碍建设促进所有人享有人权」决议，写入老龄化适老化，并呼吁在人工智能等新兴数字技术中坚持创新、包容、开放、公平、安全、可靠，促进无障碍信息交流。</p>
+        <div class="why"><strong>为何重要</strong>全球治理倡议一周年节点，把适老化与数字无障碍再次写进人权理事会协商一致文本。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      南部战区黄岩岛正告、中物联CBPI、交通部前四日12.44亿、高市所信表明、UKMTO周一三艘与革命卫队劝返、进博会倒计时一个月，均已见5日刊。本日只收外交部假期答问、商务部对法德信、世行东亚预测、印度商船伤亡，以及无障碍决议的中文首发。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>硅谷把晶体管和三维堆叠写进同一张合作稿。华为与高通则在同一协议上各说各话。发射栏仍留白。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>21:00</b><i>沪时见报</i><p>应用材料与英特尔EPIC合作的官方时间。</p></div>
+      <div><b>Asp31</b><i>结合位点</i><p>精氨酸咬住NLRP3、挡住ASC的那一处。</p></div>
+      <div><b>2套</b><i>专利口径</i><p>高通否认逻辑折叠，深视称华为证实涵盖。</p></div>
+      <div><b>0</b><i>国内发射</i><p>当日无国内航天发射通稿可核验。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>芯片 · 圣克拉拉 / 希尔斯伯勒</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">应用材料 · 英特尔</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">EPIC中心扩AI制程与封装合作</h3>
+        <div class="src">来源：Applied Materials / GlobeNewswire　·　<a href="https://www.globenewswire.com/news-release/2026/10/06/3375587/0/en/applied-materials-and-intel-collaborate-to-accelerate-chipmaking-innovations-for-ai-driven-computing.html">globenewswire.com</a></div>
+        <p class="sum">应用材料6日（美东09:00，沪时21:00）宣布与英特尔合作，在硅谷EPIC中心和俄勒冈研发园推进下一代晶体管、互连与Foveros三维堆叠，面向智能体人工智能算力。英特尔为创始合作伙伴，中心计划年内就绪。</p>
+        <div class="why"><strong>为何重要</strong>这是美方把先进逻辑与先进封装的材料研发收回本土协同的一次公开落子。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　专利 · 圣迭戈 / 深圳</div>
+        <h3>高通澄清：并非净付费</h3>
+        <div class="src">来源：高通声明 / 新浪科技 / IT之家　·　<a href="https://finance.sina.com.cn/tech/2026-10-06/doc-iniuhitk7060161.shtml">sina.com.cn</a></div>
+        <p class="sum">5日交叉许可见报后，高通6日声明：协议为多年期广泛交叉许可，条款保密，但「净支付方」报道不准确，亦与LogicFolding无关；将收购部分非蜂窝美国专利。同日深视新闻称华为证实涵盖近封装光学与逻辑折叠相关许可。</p>
+        <div class="why"><strong>为何重要</strong>同一协议出现公开口径分裂，监管审查与市场解读都会被这两套说法牵着走。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　医学 · 济南</div>
+        <h3>精氨酸咬住NLRP3的Asp31</h3>
+        <div class="src">来源：Nature Metabolism　·　<a href="https://www.nature.com/articles/s42255-026-01636-3">nature.com</a></div>
+        <p class="sum">刘锋、高成江等6日在《自然·代谢》报告，L-精氨酸直接结合NLRP3蛋白Asp31位点，阻断其与接头蛋白ASC组装。补剂抑制巨噬细胞炎症小体，缓解小鼠痛风性关节炎、腹膜炎及帕金森样神经炎症；患者血清精氨酸偏低。</p>
+        <div class="why"><strong>为何重要</strong>把「营养—代谢—炎症」写成可定点的分子机制，为NLRP3相关疾病提供一条可验证路径。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">10<em>神经 · 纽黑文</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">《自然·神经科学》</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">人屏状核编码不确定与预测误差</h3>
+        <div class="src">来源：Nature Neuroscience　·　<a href="https://www.nature.com/articles/s41593-026-02475-x">nature.com</a></div>
+        <p class="sum">胡明月、Eyiyemisi Damisah等6日报告人屏状核单细胞记录：在厌恶学习任务中，屏状核与前扣带均编码不确定性和预测误差，但时程不同——仅前扣带在试次间隔携带不确定信号；杏仁核对潜变量调制很弱。</p>
+        <div class="why"><strong>为何重要</strong>第一次在人脑里把屏状核写成追踪高阶认知潜变量的节点，而不只是皮层的中继站。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>发射栏留白，大模型无沪时首发</h3>
+      <ul>
+        <li>当日无国内航天发射通稿；韩国「世界号」第五次发射窗口在7日，只作预告，不立项</li>
+        <li>白宫「超级智能部队」章程、AI企业自律协定均为美西6日下午见报，折沪时已入7日，不抢刊</li>
+        <li>MedGemma为2025年5月开源，《自然·医学》6日只是定稿，不写成周二突破</li>
+        <li>STAR重子结论文为8月13日《科学》；6日Nature观点不重写</li>
+        <li>华为全联接徐直军、GPT-Synopsys、Jalapeño、捕日者、Mate 90 τ芯片均为更早或前刊</li>
+        <li>联发科Genio Pro 5100为3月10日Embedded World；文旅「8.26亿人次」系2023年旧数套新日期，弃用</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第015期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>外交部假期开口，海峡写下伤亡，专利各说各话</h2>
+      <p class="judge">郭嘉昆把台湾、售武和黄岩岛—中业岛—铁线礁写进假期答问。商务部点名法德勿鼓动欧盟祭出保护主义工具。世界银行把东亚太平洋增速改写成4.5%，并提醒会造AI商品还不够。霍尔木兹一艘商船12人受伤。应用材料与英特尔把晶体管和Foveros堆进同一座中心。高通说协议不含逻辑折叠，深视称华为证实涵盖。精氨酸咬住了NLRP3，屏状核记下了预测误差。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>告美方慎重处理台湾问题</li>
+            <li>正告菲方停止三岛礁侵权</li>
+            <li>商务部批法德鼓动保护主义</li>
+            <li>世行上调东亚增速至4.5%</li>
+            <li>商船遇袭，12名船员受伤</li>
+            <li>再通过中国主提无障碍决议</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>EPIC中心扩AI制程与封装合作</li>
+            <li>高通澄清：并非净付费</li>
+            <li>精氨酸咬住NLRP3的Asp31</li>
+            <li>人屏状核编码不确定与预测误差</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-06 00:00 至 2026-10-07 00:00。交叉来源：外交部网站/新华网、商务部/新华社、世界银行/新华社、印度外交部/新华社、应用材料GlobeNewswire、高通声明/新浪科技/IT之家、《自然·代谢》《自然·神经科学》。排除前刊已入账稿件、5日及更早官方首发，以及越过沪时日界的白宫AI稿。</p>
+      <p class="end">每日时政科技简报 · 第015期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
