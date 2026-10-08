@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第016期 · 2026-10-07</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第016期  ·  2026年10月7日  ·  星期三</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹陆期  ·  二零二六年十月七日  ·  星期三</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。假期账本收官，外储缩水，霍尔木兹要补漏，核光钟同日见刊。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>流动 · 外储 · 中东</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>核钟 · 发射 · 数学</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周三沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：交通部写下21.44亿人次，商务部把以旧换新改写成334.8亿元。外汇局记下外储3.4003万亿美元。特朗普说对伊行动必须收尾。清华与维也纳把钟摆放进原子核。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>假期最后一天，官方先交出行与消费的收官账。外交部仍休会，却提前写下普京幕僚的访华日程。中东则同时补漏海峡、袭击机场。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 白宫</div>
+      「我们必须收尾，只是以哪种方式：柔和，还是不那么柔和。很快就会知道。」——美国总统特朗普，马里兰斯帕罗斯角
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>21.44</b><i>亿人次</i><p>国庆七日跨区域流动，日均3.06亿，较去年八天日均增0.7%。</p></div>
+      <div class="fact"><b>334.8</b><i>亿元</i><p>1–6日以旧换新带动销售，智能机器人销售额同比增1.3倍。</p></div>
+      <div class="fact"><b>1.11%</b><i>外储回落</i><p>9月末外汇储备34003亿美元，较8月末少381亿美元。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>交通 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">交通运输部 · 7日账本</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">跨区域流动21.44亿人次</h3>
+        <div class="src">来源：交通运输部 / 澎湃新闻 / 新华网　·　<a href="https://www.thepaper.cn/newsDetail_forward_34209196">thepaper.cn</a>　·　<a href="https://www.xinhuanet.com/politics/20261007/34f487b127e74141a1cf8316b7c57430/c.html">xinhuanet.com</a></div>
+        <p class="sum">交通运输部7日公布，国庆假期全社会跨区域人员流动量预计21.44亿人次、日均3.06亿，较去年中秋国庆八天日均增0.7%。铁路预计1.5236亿人次、日均增13.1%；7日返程高峰预计2.9375亿人次。</p>
+        <div class="why"><strong>为何重要</strong>这是假期收官的官方流动账本，把「流动中国」从半程观察改写成完整七日数字。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">消费改写半程账，外储记下美元涨</h2>
+    <p class="section-sub">一栏是商务部把196.3亿元的半程数字改写成334.8亿元，一栏是外汇局交出9月账面。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　消费 · 北京</div>
+        <h3>以旧换新卖出334.8亿元</h3>
+        <div class="src">来源：商务部 / 新华社　·　<a href="https://www.news.cn/20261007/7dad035689d349ea907e599a79d01767/c.html">news.cn</a></div>
+        <p class="sum">商务部7日通报，10月1日至6日消费品以旧换新惠及639.2万人次、带动销售334.8亿元。具身智能机器人销售额同比增1.3倍，智能眼镜翻倍。重点监测78个商圈客流、营业额同比增2.5%、4.7%。</p>
+        <div class="why"><strong>为何重要</strong>半程196.3亿元的账本被改写成接近收官的334.8亿元，并首次点出机器人与智能眼镜的假日增速。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　宏观 · 北京</div>
+        <h3>外储降至3.4003万亿美元</h3>
+        <div class="src">来源：国家外汇管理局 / 新华社　·　<a href="https://www.news.cn/20261007/1cc5e9ae37fb4c46bc1c4479cf47448a/c.html">news.cn</a></div>
+        <p class="sum">外汇局7日公布，截至9月末外汇储备34003亿美元，较8月末下降381亿美元、降幅1.11%。官方称当月美元指数上涨、主要金融资产价格总体下跌，汇率折算与资产价格变化共同导致规模回落。</p>
+        <div class="why"><strong>为何重要</strong>这是假期里少有的官方宏观数据首发，记录美元走强对外储账面的一次挤压。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">休会日写下访华，马里兰催收尾</h2>
+    <p class="section-sub">一边是外交部假期罕见预告，一边是特朗普把「将作决定」改写成「很快揭晓」。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　外交 · 北京</div>
+        <h3>帕特鲁舍夫将访华</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/202610/t20261007_12035918.shtml">mfa.gov.cn</a></div>
+        <p>外交部发言人7日宣布，俄罗斯总统助理、海事委员会主席帕特鲁舍夫将于10月8日至13日访华，中央外办主任王毅将与其会谈交流。外交部例会仍休会至8日，此为假期书面预告。</p>
+        <div class="why"><strong>为何重要</strong>原定休会至八日的外交部，提前写下普京核心幕僚的访华日程，指向假期后的对俄接触。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　中东 · 马里兰</div>
+        <h3>对伊行动「必须收尾」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / Iran International　·　<a href="https://www.news.cn/world/20261007/58af618ea6f0405a8ee68500dc0e39b1/c.html">news.cn</a></div>
+        <p>特朗普6日（沪时7日）在马里兰斯帕罗斯角称，对伊朗军事行动「必须收尾」，只是「柔和还是强硬」的选择，「很快就会知道」。他宣称伊军「看不见」。此与4日「easy/hard way」为另一次表态。</p>
+        <div class="why"><strong>为何重要</strong>把周六的「将作决定」改写成「必须收尾、很快揭晓」，收紧了美伊谈判的时间预期。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>中东 · 德黑兰 / 亚丁</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">海峡与机场 · 同日</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">海峡要补漏，机场遇袭</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/world/20261007/cb1284460cb546ab9425a9173c0c1449/c.html">news.cn · 亚丁</a>　·　<a href="https://www.news.cn/world/20261007/1fbd297187114227bb6be7cd762f1067/c.html">news.cn · 沙特</a></div>
+        <p class="sum">法尔斯社7日引革命卫队顾问纳格迪称，霍尔木兹仍关闭，将封堵炸岩开辟的「非法航道」。同日胡塞以导弹和无人机袭亚丁国际机场，也门航空开罗航班改降吉达，暂无伤亡。</p>
+        <div class="why"><strong>为何重要</strong>海峡封堵从口号落到「补漏」，也门政府临时首都的机场同时遇袭，中东航运与航空同日承压。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      外交部6日台湾/F-16V与黄岩岛答问、商务部对法德信、世行东亚4.5%、霍尔木兹商船12人伤、人权理事会无障碍决议，均已见6日刊。4日「easy/hard way」不重写。本日只收交通部七日账、商务部1–6日以旧换新、9月外储、帕特鲁舍夫访华预告、马里兰「必须收尾」，以及海峡补漏与亚丁机场。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>原子核第一次被写成可运行的钟。韩国把五颗量产星送上轨道。白宫章程与OpenAI数学目录都在沪时清晨越过日界。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>148nm</b><i>紫外激光</i><p>清华用来锁定钍-229核跃迁的波长。</p></div>
+      <div><b>5星</b><i>同轨通信</i><p>世界号第五次把NEONSAT 2–6号全部送入轨道。</p></div>
+      <div><b>722</b><i>篇手稿</i><p>OpenAI未发布模型一次公开的数学目录。</p></div>
+      <div><b>400</b><i>亿美元</i><p>SpaceX拟借债购买英伟达芯片的谈判规模。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>计量 · 北京 / 维也纳</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">《自然》 · 7日双发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">核光钟同日见刊</h3>
+        <div class="src">来源：新华社 / Nature　·　<a href="https://www.xinhuanet.com/20261007/65ab398f85b748e1a5965c8bff08f5c2/c.html">xinhuanet.com</a>　·　<a href="https://www.nature.com/articles/s41586-026-11122-1">nature.com</a></div>
+        <p class="sum">清华团队7日在《自然》报告，用148纳米真空紫外激光锁定钍-229核跃迁，制成可稳定运行的核光钟，不稳定度达5×10⁻¹³/√τ。维也纳工大同日发表独立装置。新华社称测量已推进到原子核尺度。</p>
+        <div class="why"><strong>为何重要</strong>计时基准首次从电子跃迁写成核跃迁，中欧两队同日见刊，下一代秒定义竞赛公开起跑。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　航天 · 罗老</div>
+        <h3>世界号五射，五星同轨</h3>
+        <div class="src">来源：韩国宇宙航空厅 / 韩联社　·　<a href="https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=515">kasa.go.kr</a></div>
+        <p class="sum">韩国世界号7日12:25（韩时）从罗老升空，将NEONSAT 2–6号及9颗立方星送入约575公里轨道，五颗主星均完成双向通信。15颗载荷中14颗分离，PERSAT-02因发射管盖未开滞留。连续第四次成功。</p>
+        <div class="why"><strong>为何重要</strong>韩国首次把五颗量产遥感星同时送入轨道，把商业发射服务的可靠性写成可核验纪录。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　治理 · 华盛顿</div>
+        <h3>「超级智能」章程曝光</h3>
+        <div class="src">来源：POLITICO　·　<a href="https://www.politico.com/news/2026/10/06/white-house-super-intelligence-ai-charter-01109011">politico.com</a></div>
+        <p class="sum">POLITICO于6日17:30美东（沪时7日05:30）公布白宫「超级智能部队」章程：国家情报总监克莱顿任主席，获权评估AI对国安与公民自由的威胁，审查实验室通报漏洞与越狱机制，120日内提交报告。</p>
+        <div class="why"><strong>为何重要</strong>4日只宣布成立，7日沪时才见到授权文本，把「AI沙皇」写成可问责的任务书。</div>
+      </article>
+    </div>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">10　数学 · 旧金山</div>
+        <h3>722篇数学手稿公开</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：OpenAI / GitHub　·　<a href="https://openai.com/index/sharing-ai-progress-in-mathematics/">openai.com</a>　·　<a href="https://github.com/openai/math">github.com/openai/math</a></div>
+        <p>OpenAI于6日21:47 UTC（沪时7日05:47）上线GitHub仓库openai/math，公开未发布内部模型产出的722篇手稿、372组结果。多数附Lean形式化；公司称未形式化者「可能有问题」，并咨询了高等研究院顾问组。</p>
+        <div class="why"><strong>为何重要</strong>把「模型会不会做数学」从演示改写成可被学界逐条复核的公开目录。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">11　芯片 · 霍桑</div>
+        <h3>拟借400亿美元买芯片</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Financial Post / 金融时报　·　<a href="https://financialpost.com/technology/spacex-borrow-buy-nvidia-chips">financialpost.com</a></div>
+        <p>金融时报与彭博7日报道，SpaceX正与阿波罗等洽谈约400亿美元融资购买英伟达芯片，结构约为100亿银行贷款加300亿投资级债券。讨论仍处早期，可能无果，最早2027年完成。</p>
+        <div class="why"><strong>为何重要</strong>这是AI基建债务里少见的航天公司巨额订单，把马斯克的算力押注写成可交易的债券故事。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内发射仍留白，欧陆大模型不抢刊</h3>
+      <ul>
+        <li>当日无国内航天发射通稿；水利部「全年1万亿元」跟进稿沿用9月30日国新办1–9月数字，不单列</li>
+        <li>Mistral Large 4为10月6日欧陆白天首发，折沪时属6日，不抢刊</li>
+        <li>星舰第14次试飞已入9月28日刊；SpaceX与台积电独家代工为转载站拼接，证据不足</li>
+        <li>Lambda拟融资40亿美元与SpaceX债项主题重叠，不另立条</li>
+        <li>外交部例会仍休会至10月8日，仅有访华预告，无例行记者会</li>
+        <li>勿重刊：6日台湾/南海答问、法德保护主义信、世行4.5%、霍尔木兹12人伤、应用材料–英特尔、高通口径、精氨酸–NLRP3、人屏状核</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第016期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>账本收官，海峡补漏，钟摆放进原子核</h2>
+      <p class="judge">交通部写下21.44亿人次，商务部把以旧换新改写成334.8亿元。外汇局记下外储回落1.11%。外交部在休会日预告帕特鲁舍夫访华。特朗普在造船厂说对伊行动必须收尾。革命卫队要封「非法航道」，胡塞打了亚丁机场。清华与维也纳把钟摆放进钍核。世界号五星同轨。白宫章程与722篇数学手稿都在沪时清晨越过日界。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>跨区域流动21.44亿人次</li>
+            <li>以旧换新卖出334.8亿元</li>
+            <li>外储降至3.4003万亿美元</li>
+            <li>帕特鲁舍夫将访华</li>
+            <li>对伊行动「必须收尾」</li>
+            <li>海峡要补漏，机场遇袭</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>核光钟同日见刊</li>
+            <li>世界号五射，五星同轨</li>
+            <li>「超级智能」章程曝光</li>
+            <li>722篇数学手稿公开</li>
+            <li>拟借400亿美元买芯片</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-07 00:00 至 2026-10-08 00:00。交叉来源：交通运输部/澎湃/新华网、商务部/新华社、外汇局/新华社、外交部网站、新华社世界新闻、Iran International、韩国宇宙航空厅/韩联社、《自然》/新华社、POLITICO、OpenAI/GitHub、金融时报/Financial Post。排除前刊已入账稿件、9月30日水利部国新办数字，以及越过沪时日界的欧陆大模型稿。</p>
+      <p class="end">每日时政科技简报 · 第016期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
