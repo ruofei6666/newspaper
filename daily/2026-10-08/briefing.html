@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第017期 · 2026-10-08</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第017期  ·  2026年10月8日  ·  星期四</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹柒期  ·  二零二六年十月八日  ·  星期四</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。外交部例会归来，世卫人事摊牌，中欧坐下谈，霍尔木兹再封线。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>世卫 · 外事 · 海峡</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>整机 · 开源 · 论文</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周四沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：毛宁证实提名宋莉竞选世卫总干事。多哥、法国、俄罗斯三场外事同日写下。王文涛会见谢夫乔维奇。路透记下霍尔木兹未授权航线。交通部把流动改写成21.42亿。微软与英伟达在沪时清晨推出智能体电脑。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>假期结束的第一个工作日，外交部例会归来，先写下世卫人事与三场外事。中欧把分歧收进谈判桌，霍尔木兹把新航线写成军事目标。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 外交部</div>
+      「中方提名宋莉博士参与竞选，体现了同各方携手努力，共同推动构建人类卫生健康共同体的积极意愿。」——发言人毛宁
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>21.42</b><i>亿人次</i><p>交通部8日核账，国庆跨区域流动较去年中秋国庆日均增0.6%。</p></div>
+      <div class="fact"><b>10</b><i>亿美元</i><p>英伟达在华盛顿承诺五年资助美国科学，折沪时仍在8日夜。</p></div>
+      <div class="fact"><b>2599</b><i>美元起</i><p>Surface Laptop Ultra 预购价，旧金山发布会折沪时8日凌晨。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>卫生 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">外交部 · 国庆后首场例会</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">中方提名宋莉竞选世卫总干事</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.news.cn/world/20261008/078615c95b754c9aafcbf0d05fbb494c/c.html">news.cn</a>　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202610/t20261008_12036635.shtml">mfa.gov.cn</a></div>
+        <p class="sum">毛宁8日证实，中方提名宋莉博士竞选世界卫生组织总干事。谭德塞任期至2027年8月15日，执委会明年1月提名、大会5月表决。宋莉长期从事妇幼健康，2023年曾竞逐西太区主任未果。</p>
+        <div class="why"><strong>为何重要</strong>美国退出世卫之后，中方首次正式冲击总干事职位，把全球卫生治理的人事竞争摊到台面上。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">例会归来，三场外事落地</h2>
+    <p class="section-sub">一栏是非洲元首级访问，一栏是对法战略对话与对俄涉海会见同时写下。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　外交 · 洛美 / 北京</div>
+        <h3>多哥主席九日来华</h3>
+        <div class="src">来源：新华社 / 外交部　·　<a href="https://www.news.cn/world/20261008/159ffefc5a1e422ba8a0d2944e067b36/c.html">news.cn</a></div>
+        <p class="sum">福雷·纳辛贝将于10月9日至16日正式访华，系执政后第七次来华。习近平将会见，李强、赵乐际分别会谈会见，并将赴陕、闽、粤参访。</p>
+        <div class="why"><strong>为何重要</strong>假期后首个对非洲元首级访问落地，把中非全天候伙伴关系写成可核验的日程。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　外交 · 巴黎 / 莫斯科</div>
+        <h3>中法对话，俄方到访</h3>
+        <div class="src">来源：外交部 / 中新网　·　<a href="https://www.mfa.gov.cn/wjdt_674879/wsrc_674883/202610/t20261008_12036425.shtml">mfa.gov.cn</a>　·　<a href="https://www.chinanews.com.cn/gn/2026/10-08/10709169.shtml">chinanews.com.cn</a></div>
+        <p class="sum">博纳9日至13日来华，与王毅举行新一轮中法战略对话。帕特鲁舍夫已在华，毛宁称这是他首次以俄海事委员会主席身份到访，王毅等将谈双边与涉海合作。</p>
+        <div class="why"><strong>为何重要</strong>把7日书面预告改写成例会上的官方安排，节后对欧对俄同时开场。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">谈判桌与假日账本</h2>
+    <p class="section-sub">一栏是中欧要把第一阶段谈出结果，一栏是交通部把预计改写成核账。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　经贸 · 北京</div>
+        <h3>中欧磋商要出成果</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：商务部 / 联合报　·　<a href="https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_c98d6dc6f06f44c1abc49ca63590842b.html">mofcom.gov.cn</a></div>
+        <p>王文涛8日会见欧委会贸易和经济安全委员谢夫乔维奇，部里只发会见事实。谢夫乔维奇称，贸易投资磋商第一阶段必须取得具体成果。凌激上午已与欧方总司长预谈。</p>
+        <div class="why"><strong>为何重要</strong>法德此前要求强化贸易防御之后，双方把分歧收进同一张桌子，却仍未交出清单。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　消费 · 北京</div>
+        <h3>流动核账21.42亿</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 交通运输部 / 央广网　·　<a href="http://www.xinhuanet.com/20261008/0c717feb14514534ad175f8587baf8f9/c.html">xinhuanet.com</a></div>
+        <p>交通部8日发布，国庆跨区域流动21.42亿人次，较去年中秋国庆日均增0.6%。增值税发票显示旅游娱乐销售同比增23.6%，餐饮增9%，家电增40.1%，手机等通信器材增119.8%。</p>
+        <div class="why"><strong>为何重要</strong>把7日「预计21.44亿」改写成核账，并用发票补上消费侧，而不是再写以旧换新旧账。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>伦敦 / 霍尔木兹</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">路透 · 8日伦敦电</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">伊朗扬言封堵未授权航线</h3>
+        <div class="src">来源：路透社　·　<a href="https://www.al-monitor.com/originals/2026/10/attack-risks-rise-tankers-iran-vows-block-more-hormuz-routes">al-monitor.com</a>　·　<a href="https://www.bnnbloomberg.ca/markets/oil/2026/10/08/attack-risks-rise-for-tankers-as-iran-vows-to-block-more-hormuz-routes/">bnnbloomberg.ca</a></div>
+        <p class="sum">上周霍尔木兹油轮遇袭数创开战以来最高，过船量降至两个多月最低。接近德黑兰的官员称，地区国家若另辟未授权出口航线将被视为敌对，可能动用导弹、无人机或快艇驱离。</p>
+        <div class="why"><strong>为何重要</strong>封堵从「非法航道」口号扩到「未授权新航线」，把海湾绕行方案直接写成军事目标。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      7日交通部「预计21.44亿」、商务部以旧换新334.8亿元、外储、帕特鲁舍夫书面预告、马里兰「必须收尾」、海峡补漏与亚丁机场，均已见7日刊。人权理事会无障碍决议已入6日刊。本日只收例会确认的世卫提名、三场外事安排、中欧会见、交通部核账与发票，以及路透霍尔木兹新航线警告。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>个人电脑被改写成智能体整机。英伟达把十亿美元写进联邦科学。谷歌把端侧 GPU 开源。两份生命科学论文同日见刊。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>1</b><i>PFLOP</i><p>RTX Spark 宣称的端侧稀疏 FP4 算力。</p></div>
+      <div><b>10</b><i>亿美元</i><p>英伟达五年科学承诺，美东10:31仍在8日。</p></div>
+      <div><b>19</b><i>个靶点</i><p>阿尔茨海默欧洲裔可成药靶点，另有非洲裔7个。</p></div>
+      <div><b>130</b><i>万细胞</i><p>小鼠两周胚胎被重建亲缘的细胞数。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>旧金山 / 沪时凌晨</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">微软 × 英伟达 · 7日18:00 UTC = 8日02:00 沪时</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">智能体电脑开售预购</h3>
+        <div class="src">来源：Microsoft Devices Blog / Ars Technica　·　<a href="https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/">blogs.windows.com</a>　·　<a href="https://arstechnica.com/gadgets/2026/10/microsoft-event-debuts-new-ai-friendly-hardware-and-windows-changes/">arstechnica.com</a></div>
+        <p class="sum">Surface Laptop Ultra 搭载 RTX Spark，最高6144核 Blackwell GPU、20核 Grace、128GB 统一内存，起价2599美元，10月16日发货。Dev Box 5999美元。Windows 同步推出混合智能与执行容器，给本地智能体加沙箱。</p>
+        <div class="why"><strong>为何重要</strong>把端侧大模型从演示写成可预购的整机，并给智能体加上沙箱，是个人电脑路线的一次改写。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　科学 · 华盛顿</div>
+        <h3>五年十亿美元助科学</h3>
+        <div class="src">来源：NVIDIA / GlobeNewswire　·　<a href="https://www.globenewswire.com/news-release/2026/10/08/3377484/0/en/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years.html">globenewswire.com</a></div>
+        <p class="sum">英伟达8日10:31美东（沪时22:31）宣布，未来五年投入10亿美元，资助高校、量子计算与服务政府的云厂商，并参与能源部 Genesis Mission 二期的量子、聚变与微电子项目。</p>
+        <div class="why"><strong>为何重要</strong>把「超级智能」从口号写成可核对的联邦科学预算，加深与国家实验室的绑定。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　开源 · 山景城</div>
+        <h3>谷歌开源 ML Drift</h3>
+        <div class="src">来源：Google Developers Blog　·　<a href="https://developers.googleblog.com/en/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/">developers.googleblog.com</a></div>
+        <p class="sum">谷歌 AI Edge 以 Apache 2.0 开源 ML Drift，统一 OpenGL ES、OpenCL、Metal 与 WebGPU，作为 LiteRT 核心加速引擎。旧版 TFLite GPU 委托将停更，已用于 Shorts、Photos 与 Chrome。</p>
+        <div class="why"><strong>为何重要</strong>把端侧推理从各家私有后端收成一套开源引擎，直接影响手机与桌面本地模型的速度。</div>
+      </article>
+    </div>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">10　医学 · 克利夫兰</div>
+        <h3>阿尔茨海默新靶点</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Neuroscience　·　<a href="https://www.nature.com/articles/s41593-026-02472-0">nature.com</a></div>
+        <p>程飞雄团队筛出欧洲裔19个、非洲裔7个可成药靶点，含 EPHX2 保护性突变。患者源神经元与5xFAD小鼠验证有效；11.168万病历中，曲唑酮、巴氯芬等12种药与发病下降相关。</p>
+        <div class="why"><strong>为何重要</strong>把基因组、实验和真实病历写成同一条药物再利用路径，而不是再报一个相关性基因。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">11　发育 · 西雅图 / 剑桥</div>
+        <h3>重绘小鼠胚胎谱系</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature / Science / Cell　·　<a href="https://www.nature.com/articles/d41586-026-03193-x">nature.com</a></div>
+        <p>两项研究8日分见《科学》与《细胞》。西雅图团队用「DNA打字机」重建约130万个细胞、占两周胚胎约一成的亲缘；怀特黑德研究所一队用先导编辑追踪器官形成期的分裂。</p>
+        <div class="why"><strong>为何重要</strong>哺乳动物发育第一次被写成可回溯的细胞家谱，而不再只靠线虫那样的显微镜观察。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内发射仍留白，中期表态越过日界</h3>
+      <ul>
+        <li>当日无国内航天发射通稿；产业芯片栏无8日首发</li>
+        <li>特朗普「中期前不对伊动武」美联社11:50 CDT（沪时9日00:50）见报，入9日刊</li>
+        <li>核光钟与世界号第五次发射已入7日刊；Jalapeño为6月24日，Mistral Large 4为6日欧陆首发</li>
+        <li>真武V900为9月22日云栖首发，捕日者TPU入2日刊，麒麟9050 Pro裸片为9月30日行业稿</li>
+        <li>人权理事会无障碍决议已入6日刊，本日只是例会复述；村田闯馆案已入1日刊</li>
+        <li>勿重刊：7日21.44亿预计、以旧换新334.8亿、外储、马里兰「必须收尾」、亚丁机场</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第017期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>例会归来，人事摊牌，整机开售</h2>
+      <p class="judge">毛宁证实提名宋莉。多哥、法国、俄罗斯三场外事同日落地。王文涛会见谢夫乔维奇。路透记下霍尔木兹未授权航线。交通部写下21.42亿。微软在沪时凌晨开售智能体电脑，英伟达在华盛顿写下十亿美元。谷歌把端侧 GPU 开源。两份生命科学论文同日见刊。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>中方提名宋莉竞选世卫总干事</li>
+            <li>多哥主席九日来华</li>
+            <li>中法对话，俄方到访</li>
+            <li>中欧磋商要出成果</li>
+            <li>流动核账21.42亿</li>
+            <li>伊朗扬言封堵未授权航线</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>智能体电脑开售预购</li>
+            <li>五年十亿美元助科学</li>
+            <li>谷歌开源 ML Drift</li>
+            <li>阿尔茨海默新靶点</li>
+            <li>重绘小鼠胚胎谱系</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-08 00:00 至 2026-10-09 00:00。交叉来源：外交部/新华社/中新网、商务部、交通运输部/央广网、路透、微软博客/Ars Technica、英伟达通稿、谷歌开发者博客、《自然·神经科学》《科学》《细胞》。排除前刊已入账稿件，以及越过沪时日界的美联社伊朗稿。</p>
+      <p class="end">每日时政科技简报 · 第017期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
