@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第018期 · 2026-10-09</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第018期  ·  2026年10月9日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹捌期  ·  二零二六年十月九日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。新质生产力写出路线图，仁爱礁再对质，霍尔木兹把追惩写到海峡之外。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>意见 · 例会 · 海峡</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>芯片 · 光电 · 量子</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周五沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：中共中央、国务院印发《关于发展新质生产力的意见》。毛宁就仁爱礁与日本右翼大模型「投毒」作答，并宣布博茨瓦纳总统来华。特朗普把动武推迟到中期之后。革命卫队称打击非法航道船只。格罗方德在德累斯顿写下7纳米级FD-SOI。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>节后第二个工作日，顶层文件先落地。外交部例会把仁爱礁、博茨瓦纳访华与大模型史观写进同一场问答。华盛顿把动武日期推过中期，德黑兰把追惩写到海峡之外。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 中共中央 / 国务院</div>
+      「坚持先立后破、稳中求进，不能脱实向虚、贪大求全、搞泡沫化，不能出现产业空心化或产业断层现象。」——《关于发展新质生产力的意见》
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>19</b><i>项举措</i><p>意见分科技创新、产业融合、发展方式、体制机制、人才机制五章。</p></div>
+      <div class="fact"><b>11.3</b><i>中期日</i><p>特朗普称11月3日前不对伊朗动武，美联社折沪时9日凌晨见报。</p></div>
+      <div class="fact"><b>7</b><i>纳米级</i><p>格罗方德 FDX Fusion 第一代数字性能目标，德累斯顿2028年投产。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>政策 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社受权发布 · 9日18:02</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">新质生产力写出路线图</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/20261009/37bc898ce93f4c0899e926039f842891/c.html">news.cn 受权全文</a>　·　<a href="https://www.news.cn/politics/20261009/df52fc1f84d845bf8047ef394bc6ea47/c.html">news.cn 通稿</a></div>
+        <p class="sum">新华社9日受权发布中共中央、国务院《关于发展新质生产力的意见》。文件从科技创新、产业融合、发展方式、体制机制、人才机制五方面提出19项举措，要求全面实施「人工智能+」，并划出不能脱实向虚、搞泡沫化的红线。</p>
+        <div class="why"><strong>为何重要</strong>把「新质生产力」从口号写成可追责的路线图，并把盲目投资写进纪律。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">例会上的礁盘与访单</h2>
+    <p class="section-sub">一栏是仁爱礁后送之争，一栏是博茨瓦纳总统的国事访问预告。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>02　南海 · 北京</div>
+        <h3>仁爱礁再对质</h3>
+        <div class="src">来源：新华社 / 外交部　·　<a href="https://www.news.cn/world/20261009/40233c4c2eda49a48ea1607e8de0f5b8/c.html">news.cn</a>　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/jzhsl_673025/202610/t20261009_12037287.shtml">mfa.gov.cn</a></div>
+        <p class="sum">毛宁9日回应菲海警称8日在仁爱礁完成伤员后送。她说菲船未经允许侵入仁爱礁附近海域，中国海警依法处置；后出于人道允许小艇过驳并提供便利。她称菲方个别人士倒打一耙，中方将坚决回应恶意挑衅。</p>
+        <div class="why"><strong>为何重要</strong>把8日海警现场写成9日外交口径，假期后南海对质重新回到例会。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>03　外交 · 哈博罗内 / 北京</div>
+        <h3>博科十二日来华</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/jzhsl_673025/202610/t20261009_12037287.shtml">mfa.gov.cn</a></div>
+        <p class="sum">外交部9日宣布，应习近平邀请，博茨瓦纳总统博科将于10月12日至17日对中国进行国事访问，系就任后首次访华。习近平将举行欢迎仪式并会谈，李强、赵乐际分别会见，博科还将赴福建参访。</p>
+        <div class="why"><strong>为何重要</strong>节后第二份对非洲元首级日程落地，把中非战略伙伴写成可核验的欢迎仪式。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">史观投毒与中期停火口</h2>
+    <p class="section-sub">一栏是大模型被写成历史战场，一栏是白宫把动武日期推过11月3日。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　外交 · 东京 / 北京</div>
+        <h3>大模型被投毒</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/fyrbt_673021/jzhsl_673025/202610/t20261009_12037287.shtml">mfa.gov.cn</a></div>
+        <p>凤凰卫视问及日本右翼向国际大模型投喂篡改二战语料，将七七事变写成「日中军事冲突」、将南京大屠杀淡化为「南京陷落」。毛宁称这是歪曲侵略史的新伎俩，目的是为再军事化扫清舆论障碍，国际社会须共同抵制。</p>
+        <div class="why"><strong>为何重要</strong>把历史修正主义从教科书搬到语料库，例会第一次把大模型写成舆论战场。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　华盛顿 · 沪时凌晨</div>
+        <h3>中期前不对伊动手</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：美联社 / 半岛电视台　·　<a href="https://apnews.com/article/422b1799a1a06466279ac265f560e014">apnews.com</a>　·　<a href="https://www.aljazeera.com/news/2026/10/9/trump-says-us-will-not-strike-iran-before-midterm-elections">aljazeera.com</a></div>
+        <p>特朗普周四深夜在Truth Social称，11月3日中期选举前不会进攻伊朗，并称正与伊朗进行「富有成效的讨论」。美联社16:31 UTC见报，折沪时为9日凌晨。油价周五回落；阿拉格齐称数日内答复美方对霍尔木兹七日方案的对案。</p>
+        <div class="why"><strong>为何重要</strong>把4日「easy/hard way」和7日「必须收尾」收成一张可核对的日历，战争被写成选举变量。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>德黑兰 / 阿联酋</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社德黑兰电 · 9日22:43</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">追惩写到海峡之外</h3>
+        <div class="src">来源：新华社 / UKMTO / gCaptain　·　<a href="https://english.news.cn/20261009/eed42a86c9204fba914c6e1e77b09a06/c.html">english.news.cn</a>　·　<a href="https://gcaptain.com/second-ship-struck-inside-persian-gulf-in-three-days/">gcaptain.com</a></div>
+        <p class="sum">革命卫队海军9日称，数小时内打击经南部「非法航道」过峡的大型液化气船NV Sunshine，机舱起火，并称今后追惩不限于海峡。同日UKMTO报阿联酋杰济拉以西13海里油轮遭不明投射物击中起火，航运源指为满载原油的GEM NO.2。</p>
+        <div class="why"><strong>为何重要</strong>把8日「未授权航线」警告改写成可核验的打击与地理外溢，风险从霍尔木兹扩到海湾内侧。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      福雷访华安排、博纳中法对话、帕特鲁舍夫涉海会见已入8日刊，9日未见会见详稿，不重写预告。路透霍尔木兹未授权航线警告已入8日刊，本日只收革命卫队点名NV Sunshine与UKMTO阿联酋新袭击。特朗普「中期前不对伊动武」按8日刊预告入本日。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>欧洲把7纳米级FD-SOI写成具身智能路线。南京把光电探测器写成可调时钟。约克城把量子混沌写成可控相变。圣地亚哥把电池粘结剂写成可循环。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>7</b><i>纳米级</i><p>FDX Fusion 第一代数字性能目标，不用极紫外。</p></div>
+      <div><b>2028</b><i>年投产</i><p>格罗方德德累斯顿厂计划开出 Fusion 产能。</p></div>
+      <div><b>100</b><i>比特</i><p>IBM超导处理器上观察到量子—经典控制相变。</p></div>
+      <div><b>614</b><i>纳秒</i><p>偏压可重构光电探测器最快响应，最慢到8.28秒。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>德累斯顿</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">GlobalFoundries · 9日官方稿</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">欧洲写下7纳米级FD-SOI</h3>
+        <div class="src">来源：GlobalFoundries / EE Times　·　<a href="https://gf.com/news-and-events/news/gf-unveils-roadmap-to-deliver-worlds-most-advanced-platform-for-physical-ai/">gf.com</a>　·　<a href="https://www.eetimes.com/manfred-horstmann-globalfoundries-bets-on-fdx-fusion-for-physical-ai/">eetimes.com</a></div>
+        <p class="sum">格罗方德9日在德累斯顿发布FDX Fusion，称其为面向具身智能的新一代全耗尽绝缘体上硅平台，第一代瞄准7纳米级数字性能，密度较初代FDX提升一倍以上，射频可达0.5太赫兹。样品硅片目标2027年初，德累斯顿2028年量产。</p>
+        <div class="why"><strong>为何重要</strong>把「Physical AI」从口号写成欧洲可量产的工艺节点，并明确宣称7纳米级不必上极紫外。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　光电 · 南京</div>
+        <h3>一只器件两种时钟</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78366-3">nature.com</a></div>
+        <p class="sum">南京师范大学与东南大学团队9日报告偏压可重构势垒光电探测器，响应时间可在614纳秒至8.28秒间连续调节七个数量级，光谱覆盖可见光到中红外，并在车辆加减速识别等任务中实现传感内神经形态计算。</p>
+        <div class="why"><strong>为何重要</strong>把高速成像和突触计算收进同一只器件，而不是再叠一层后处理芯片。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　量子 · 约克城</div>
+        <h3>百比特上管住混沌</h3>
+        <div class="src">来源：Nature Physics　·　<a href="https://www.nature.com/articles/s41567-026-03470-6">nature.com</a></div>
+        <p class="sum">IBM与罗格斯大学等团队9日报告，在最多100比特的超导处理器上用中途测量与反馈控制量子混沌，观察到量子与经典动力学之间的相变，电路含近5000个纠缠门与5000次非幺正操作。</p>
+        <div class="why"><strong>为何重要</strong>把「测量诱导相变」从理论写成百比特硬件上的临界指数，说明中途测量已经能当控制旋钮。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">10<em>圣地亚哥</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Nature Communications · 9日</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">电池粘结剂去掉氟</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78215-3">nature.com</a></div>
+        <p class="sum">加州大学圣地亚哥分校与丰田北美研究院9日报告无氟水性粘结剂，以聚丙烯酸、羧甲基纤维素和柠檬酸交联。磷酸铁锂电池循环优于聚偏氟乙烯对照，并可直接回收正负极且不产生含氟残渣。</p>
+        <div class="why"><strong>为何重要</strong>把电池厂最难循环的氟粘结剂换成可水洗体系，回收不再先烧掉一层毒。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内发射越过日界，会见详稿未至</h3>
+      <ul>
+        <li>长征十二号发射卫星互联网低轨27组为10日03:27文昌通稿，越过沪时日界，入10日刊</li>
+        <li>9日未见福雷、博纳、帕特鲁舍夫会见详稿；8日预告不重写</li>
+        <li>清华INSPIRE 9日《自然·计算科学》只是5日论文的Research Briefing，已入5日刊</li>
+        <li>台积电–格罗方德20亿美元中介层、Astera Labs Aries 7均为8日公司稿</li>
+        <li>曙光8000尾焰仿真已入3日刊；DeepSeek昇腾组件已入9月30日刊；捕日者TPU入2日刊</li>
+        <li>北美大模型与云厂商无9日可核验产品首发；OpenAI数学论文包已入7日刊</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第018期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>路线图落地，海峡外溢，欧洲写节点</h2>
+      <p class="judge">《意见》把新质生产力写成19条。毛宁就仁爱礁与大模型史观作答，并预告博科来华。特朗普把动武推过中期。革命卫队点名NV Sunshine，UKMTO记下阿联酋新袭。格罗方德在德累斯顿写下7纳米级FD-SOI。三份《自然》系论文同日见刊：光电时钟、百比特混沌、无氟粘结剂。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>新质生产力写出路线图</li>
+            <li>仁爱礁再对质</li>
+            <li>博科十二日来华</li>
+            <li>大模型被投毒</li>
+            <li>中期前不对伊动手</li>
+            <li>追惩写到海峡之外</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>欧洲写下7纳米级FD-SOI</li>
+            <li>一只器件两种时钟</li>
+            <li>百比特上管住混沌</li>
+            <li>电池粘结剂去掉氟</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-09 00:00 至 2026-10-10 00:00。交叉来源：新华社/中国政府网、外交部、美联社/半岛电视台、UKMTO/gCaptain、格罗方德/EE Times、《自然·通讯》《自然·物理》。排除8日已入账的外事预告与霍尔木兹警告，以及越过沪时日界的文昌发射。</p>
+      <p class="end">每日时政科技简报 · 第018期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
