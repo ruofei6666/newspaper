@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第019期 · 2026-10-10</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 32pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 32pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 32pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第019期  ·  2026年10月10日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零壹玖期  ·  二零二六年十月十日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。大同写下中法对表，残疾预防列出十八项指标，利雅得机场再响，文昌夜间把国网送上第二十七组。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>对话 · 民生 · 中东</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>航天 · 脑科学 · 药物</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周六沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：王毅与博纳在大同举行第二十八次中法战略对话。国务院残工委印发「十五五」残疾预防计划。利雅得机场再传爆炸。佩斯科夫称已转达伊朗构想。长征十二号发射卫星互联网低轨27组。猎鹰9号为美军补上21颗传输星。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>周六没有例会全文，但大同把8日预告写成现场。民生栏补上一份可追责的「十五五」清单。中东与地震把风险写到机场和运河门口。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">现场摘句 · 王毅 / 大同</div>
+      信任是中欧关系的底色和基础，经贸分歧只是阶段性现象。双方应坚持伙伴定位和合作基调，促进「双赢」、避免「双输」。
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>28</b><i>次对话</i><p>中法战略对话机制自建立以来的新一轮对表，地点在大同。</p></div>
+      <div class="fact"><b>18</b><i>项指标</i><p>残疾预防计划同时列出六大行动、19条举措，目标写到2030年。</p></div>
+      <div class="fact"><b>15:00</b><i>利雅得</i><p>外交人士称胡塞约此时向哈立德国王国际机场发射导弹。</p></div>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 01 · 大同</div>
+        <h3>王毅会博纳，中法对表</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.mfa.gov.cn/wjbzhd/202610/t20261010_12038180.shtml">mfa.gov.cn</a></div>
+        <p class="sum">10日，王毅在大同与法国总统外事顾问博纳举行第二十八次中法战略对话，长时间沟通并达成广泛共识。双方肯定中欧贸易投资磋商机制进展；中方提出拓展航空核能与人工智能合作，并重申一个中国政策，法方承诺政策不变。双方还谈及乌克兰与中东。</p>
+        <div class="why"><strong>为何重要</strong>把8日预告写成可核验的大同现场，并把中欧经贸磋商从机制账改写成「不愿脱钩」的对表。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 02 · 民生</div>
+        <h3>残疾预防写出路线图</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7082898.htm">gov.cn</a></div>
+        <p class="sum">记者10日获悉，经国务院同意，国务院残工委印发《国家残疾预防行动计划（2026—2030年）》，列出18项主要指标、六大行动和19条举措。目标到2030年完善防控体系，控制出生缺陷、慢病、伤害等主要致残因素，并提升康复与无障碍。</p>
+        <div class="why"><strong>为何重要</strong>把「十五五」残疾预防从10月3日批复写成可追责的指标和行动清单。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">双栏对照</h2>
+    <p class="section-sub">一条写沙特首都机场，一条写克宫转话。战争被同时写成民航时刻表和外交黑箱。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 03 · 中东</div>
+        <h3>利雅得机场再响</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：联合早报 / 新华社快讯　·　<a href="https://www.zaobao.com.sg/news/world/story20261010-9816878">zaobao.com.sg</a></div>
+        <p class="sum">10日下午，利雅得哈立德国王国际机场再传巨响。法新社引述医院称数十人受伤、至少五人进重症监护；外交人士称胡塞约15时向机场发射导弹。阿提哈德、卡塔尔航空和科威特航空取消多趟航班，部分延至12日。</p>
+        <div class="why"><strong>为何重要</strong>把霍尔木兹外溢写进沙特首都民航枢纽。12死309伤为11日清晨政府口径，不入本日账。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 04 · 转话</div>
+        <h3>伊朗构想仍是黑箱</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://app.xinhuanet.com/news/article.html?articleId=202610100a09641412a94217858782a1a232bc6c">xinhuanet.com</a></div>
+        <p class="sum">佩斯科夫10日说，普京在土库曼斯坦与佩泽希基安协商后，于9日通话中向特朗普转达伊朗方面解决冲突构想，但未披露细节。他称此次通话由美方提议、主谈乌克兰，普京对美方部分缓和提议表示「理解」。</p>
+        <div class="why"><strong>为何重要</strong>把9日通话从柴油交易补成一条可核验的美伊转话渠道，构想本身仍未公开。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 05 · 救灾</div>
+        <h3>巴拿马强震，使馆值守</h3>
+        <div class="src">来源：法新社 / 外交部　·　<a href="https://ee.china-embassy.gov.cn/zgwjbfyrth/">china-embassy.gov.cn</a></div>
+        <p class="sum">美国地质调查局称，巴拿马中部艾雷拉省当地午后发生7.7级浅震，至少27人受伤、无死亡报告，首都机场一度关闭，运河照常。外交部22时08分书面慰问，称巴拿马10日地震、暂无中国公民伤亡，并提醒防范次生灾害。</p>
+        <div class="why"><strong>为何重要</strong>把一场跨日界地震写成可核验的领保口径，运河未停是当天最硬的经济数字。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 06 · 日程</div>
+        <h3>克宫给APEC留握手</h3>
+        <div class="src">来源：塔斯社　·　<a href="https://tass.com/politics/2200199">tass.com</a></div>
+        <p class="sum">总统助理乌沙科夫10日对记者说，俄美元首目前都有意出席在中国举行的亚太经合组织领导人非正式会议；若同场，料将寻找机会会面、握手并交谈。这是对9日通话之后日程的第一次克宫对表。</p>
+        <div class="why"><strong>为何重要</strong>把深圳APEC从接待名单改写成可能的双边会晤窗口，但仍取决于双方是否成行。</div>
+      </article>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>航天栏终于有国内发射。产业芯片与北美大模型仍空白，科学栏用两份脑回路论文和一份运动神经元模型补上。</p>
+    </section>
+
+    <div class="dark-note">
+      <div class="lab">夜间发射 · 文昌</div>
+      10日3时27分，长征十二号在海南商业航天发射场点火。这是长征系列第671次飞行，卫星互联网低轨星座写下第27组。
+    </div>
+
+    <div class="stat4">
+      <div><b>03:27</b><i>文昌点火</i><p>海南商业航天发射场，长十二低温液体芯级。</p></div>
+      <div><b>27</b><i>低轨组次</i><p>卫星互联网低轨27组进入预定轨道。</p></div>
+      <div><b>671</b><i>长征序号</i><p>中国商业火箭公司总承包发射服务。</p></div>
+      <div><b>21</b><i>美军传输星</i><p>猎鹰9号同日自范登堡补上SDA网格。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">671<em>长征序号</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 01 · 航天</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">长十二送上低轨27组</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 中国航天科技集团　·　<a href="https://www.news.cn/20261010/b9d7d13480c54145b957c3547f3619ed/c.html">news.cn</a></div>
+        <p class="sum">10日3时27分，长征十二号在海南商业航天发射场点火，将卫星互联网低轨27组送入预定轨道。航天科技集团所属中国商业火箭公司总承包，此为长征系列第671次发射。长十二为八院抓总的4米级单芯级低温液体火箭，全长约62米。</p>
+        <div class="why"><strong>为何重要</strong>把国网低轨组网从计划表写成可计数的第27组，并标出海南商业场的夜间发射节奏。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 02 · 低轨</div>
+        <h3>猎鹰9号补上21颗传输星</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Space.com / 诺斯罗普·格鲁曼　·　<a href="https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-rocket-launch-data-transport-satellites-military-proliferated-architecture">space.com</a></div>
+        <p class="sum">美东10日3时39分（沪时15时39分），猎鹰9号自范登堡升空，把太空发展局21颗数据传输卫星送入低轨，为推迟五日的第四次尝试。助推器B1103第六次飞行并返回着陆。诺斯罗普称卫星已入轨，传输层在轨增至84颗。</p>
+        <div class="why"><strong>为何重要</strong>把美军低轨战术通信网从图纸写成可核验的第四批发射，光学网格正在补齐轨道面。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 03 · 脑科学</div>
+        <h3>胼胝体调不准自信</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78475-z">nature.com</a></div>
+        <p class="sum">伦敦国王学院与华盛顿大学团队10日报告，三组胼胝体发育不良受试者在随机点运动任务中知觉准确率正常，却不能随难度调整信心。计算模型显示元认知效率与敏感度双降，提示胼胝体参与「知道自己是否知道」。</p>
+        <div class="why"><strong>为何重要</strong>把自我监测从哲学问题写成可测量的神经通路，为发育障碍评估提供新指标。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 04 · 回路</div>
+        <h3>皮层经上丘搬偏差</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78331-0">nature.com</a></div>
+        <p class="sum">Nam、Hong等10日报告，小鼠触须探测中灭活对侧初级体感皮层提高阈值、灭活同侧则降低阈值，改变的是选择偏差而非灵敏度。上丘单向损毁方向相同，双侧灭活则抹平偏差；体感皮层对偏差的调制依赖上丘。</p>
+        <div class="why"><strong>为何重要</strong>把「感觉皮层算证据」改写成皮层—中脑回路在搬偏差旋钮，而不是单独提高分辨率。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 05 · 药物</div>
+        <h3>纠正STMN2可部分挽救</h3>
+        <div class="src">来源：Communications Biology　·　<a href="https://www.nature.com/articles/s42003-026-10832-6">nature.com</a></div>
+        <p class="sum">默沙东新加坡团队10日发布TDP-43核定位缺失的人诱导多能干细胞运动神经元模型，复现轴突再生差与兴奋性过高，并出现STMN2、KCNQ2错剪。一条剪接转换反义寡核苷酸恢复STMN2正常剪接与功能。</p>
+        <div class="why"><strong>为何重要</strong>把TDP-43核缺失从病理切片写成可干预的早期表型，给RNA靶向疗法一条可重复的体外尺子。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>会见详稿未至，芯片栏留白</h3>
+      <ul>
+        <li>10日未见习近平会见福雷、王毅会见帕特鲁舍夫详稿；8日预告不重写</li>
+        <li>外交部10日无例会全文，仅书面答巴拿马地震；新质生产力《意见》已入9日刊</li>
+        <li>FAST脉冲星三体为9日《天体物理学杂志快报》及国家天文台通稿，不重写</li>
+        <li>北美大模型、云厂商与产业芯片无10日可核验产品首发；英伟达Open Agent Safety Platform已入9月28日刊</li>
+        <li>阶跃Step 5 Preview为9月20日官方发布，10日只是OpenRouter榜单，不立项</li>
+        <li>Jalapeño为6月24日首发；捕日者TPU入2日刊；WTO货物贸易上调为8日日内瓦稿</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第019期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>大同对表，机场再响，文昌补组</h2>
+      <p class="judge">王毅与博纳把中欧经贸写成「不愿脱钩」。残疾预防列出18项指标。利雅得机场再传爆炸，克宫称已转达伊朗构想并给APEC留握手。文昌夜间写下长征第671次，范登堡同日补上21颗传输星。科学栏没有芯片流片，但有两条脑回路和一条可纠正的剪接缺陷。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>王毅会博纳，中法对表</li>
+            <li>残疾预防写出路线图</li>
+            <li>利雅得机场再响</li>
+            <li>伊朗构想仍是黑箱</li>
+            <li>巴拿马强震，使馆值守</li>
+            <li>克宫给APEC留握手</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>长十二送上低轨27组</li>
+            <li>猎鹰9号补上21颗传输星</li>
+            <li>胼胝体调不准自信</li>
+            <li>皮层经上丘搬偏差</li>
+            <li>纠正STMN2可部分挽救</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-10 00:00 至 2026-10-11 00:00。交叉来源：外交部/新华社、中国政府网、联合早报/法新社、塔斯社、航天科技集团、Space.com/诺斯罗普、《自然·通讯》《通讯生物学》。排除9日已入账的《意见》与FAST三体，以及11日清晨利雅得12死更新。</p>
+      <p class="end">每日时政科技简报 · 第019期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
