@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第020期 · 2026-10-11</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 32pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 32pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 32pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第020期  ·  2026年10月11日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰零期  ·  二零二六年十月十一日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。政协写下中越议会对表，利雅得核出十二死，德黑兰否决霍尔木兹回信。科学栏用亚纳米电极和一步组装补上芯片留白。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>议会 · 中东 · 海难</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>材料 · 合成生物 · 治理</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周日沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：王沪宁会见陈青敏。沙特民航总局核出12死309伤。特朗普称将审视是否加入沙特打击。礼萨伊称美方霍尔木兹回应不足。清华把电解水过电位压到14毫伏。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>周日没有例会全文，也未见习近平、李强新会见。议会栏把8日预告写成抵京现场。中东把伤亡名单和回信否决同一天摊开。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">现场摘句 · 王沪宁 / 北京</div>
+      中方愿同越方遵循两党两国最高领导人战略指引，按照「六个更」总体目标，高质量推进各领域互利合作，推进中越命运共同体建设。
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>11–15</b><i>访华窗口</i><p>陈青敏以国会主席身份首次访华，并将与赵乐际共主立法机构联委会。</p></div>
+      <div class="fact"><b>12</b><i>官方死亡</i><p>沙特民航总局清晨核出周六机场遇袭死亡人数，伤者309人。</p></div>
+      <div class="fact"><b>139</b><i>吉布提海难</i><p>国际移民组织同日把死亡数字从109改写成至少139。</p></div>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 01 · 议会</div>
+        <h3>王沪宁会见陈青敏</h3>
+        <div class="src">来源：新华社 / 越通社　·　<a href="https://www.chinanews.com.cn/gn/2026/10-11/10711070.shtml">chinanews.com.cn</a></div>
+        <p class="sum">11日中午，越南国会主席陈青敏率团抵京，开始11–15日正式访问，并将与赵乐际共主中越立法机构联委会第二次会议。王沪宁当晚会见，强调按「六个更」推进中越命运共同体；陈青敏重申一个中国政策。赵乐际会见详稿未见。</p>
+        <div class="why"><strong>为何重要</strong>把8日预告写成可核验的访华首日现场，议会合作从日程改成政协对表。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 02 · 中东</div>
+        <h3>利雅得核出十二死</h3>
+        <div class="src">来源：新华社 / 沙特民航总局　·　<a href="https://english.news.cn/20261011/8e0599286b3141cdbb2914e53bc4f900/c.html">english.news.cn</a></div>
+        <p class="sum">沙特民航总局周日清晨通报，周六哈立德国王国际机场遇袭造成12人死亡、309人受伤，死者含4名沙特公民及美、埃、约、叙、巴勒斯坦、苏丹和2名孟加拉国公民。机场继续关闭。美联社称周日再有投射物击中同一客运航站楼。</p>
+        <div class="why"><strong>为何重要</strong>把10日「数十伤」改写成可追责的官方死亡名单，并标出首都机场连续两日遇袭。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">双栏对照</h2>
+    <p class="section-sub">一条写华盛顿要不要下场，一条写德黑兰把回信退回。战争同时出现在也门第二战线和霍尔木兹谈判桌上。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 03 · 华盛顿</div>
+        <h3>特朗普要看沙特战场</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：CNBC / 美联社　·　<a href="https://www.cnbc.com/2026/10/11/trump-saudi-arablia-iran-houthis.html">cnbc.com</a></div>
+        <p class="sum">特朗普白宫外称「我们可能会」加入沙特反击胡塞，「会很快决定」。沙特官员向美方求紧急防务支持。英防相斯特里廷周日称已与沙特沟通、现阶段不参与进攻。机场附近的世界石油大会仍如期举行。</p>
+        <div class="why"><strong>为何重要</strong>把利雅得遇袭从民航事故改写成美英是否开辟也门第二战线的决策窗口。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 04 · 海峡</div>
+        <h3>霍尔木兹回信不足</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：路透 / 阿拉比亚　·　<a href="https://english.alarabiya.net/News/middle-east/2026/10/11/iran-says-us-response-to-its-proposal-to-reopen-strait-of-hormuz-was-insufficient-">alarabiya.net</a></div>
+        <p class="sum">伊朗最高国家安全委员会秘书礼萨伊周日说，美方经卡塔尔转达的霍尔木兹「七日方案」七条件回应「不足」，部分已接受、部分仍不清楚；在条件满足前不重开海峡、不谈判。他称「伊朗外交已改变，不会回到原状」。</p>
+        <div class="why"><strong>为何重要</strong>把佩斯科夫10日「已转达构想」改写成德黑兰对美方回信的第一次公开否决。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">139<em>官方死亡</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">时政 05 · 海难</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">吉布提沉船再改数字</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：国际移民组织 / 新华社　·　<a href="https://www.iom.int/news/death-toll-djibouti-shipwreck-climbs-139-un-migration">iom.int</a></div>
+        <p class="sum">国际移民组织周日通报，一艘载约305人、自吉布提驶往也门的船只于8–9日夜在Obock以北Guehere倾覆。该组织先报109死，同日更新为至少139死、84人仍失踪，约82名埃塞俄比亚籍幸存者获救。</p>
+        <div class="why"><strong>为何重要</strong>把东线偷渡从背景数字写成周日可核验的年度最严重海难之一，并标出数字同日上修。</div>
+      </div>
+    </article>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>国内没有发射，芯片没有流片。北美栏靠两条沪时已入周日的治理与并购传闻。科学栏用电极、菌群和洋流补上。</p>
+    </section>
+
+    <div class="dark-note">
+      <div class="lab">实验室首发 · 清华化学</div>
+      油胺配体把亚纳米线上的镍就地还原。过电位掉到14.4毫伏，电解槽在1.62伏吐出2安培每平方厘米，室温跑过2200小时。
+    </div>
+
+    <div class="stat4">
+      <div><b>14.4</b><i>毫伏过电位</i><p>1 M KOH中达到10 mA cm⁻²所需过电位。</p></div>
+      <div><b>31/34</b><i>簇组装成功</i><p>OSAR一步重构7–78 kb的NRPS基因簇。</p></div>
+      <div><b>3.8%</b><i>十年增幅</i><p>大西洋海表近惯性流盆均强度的观测趋势。</p></div>
+      <div><b>02:14</b><i>沪时见报</i><p>金融时报英伟达—Reflection稿折入周日窗口。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">14.4<em>mV</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 01 · 材料</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">亚纳米界面做电解水</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications / 清华大学　·　<a href="https://www.nature.com/articles/s41467-026-78575-w">nature.com</a></div>
+        <p class="sum">清华王训、肖海、刘庆达团队11日报告，用油胺配体原位还原生成Ni/NiMoO₄亚纳米交替异质结。碱性电解达10 mA cm⁻²过电位仅14.4±2.9 mV；电解槽80°C下1.62 V输出2 A cm⁻²，室温稳定超2200小时。</p>
+        <div class="why"><strong>为何重要</strong>把亚纳米界面从结构化学写成可长时间大电流的电解水器件，给绿氢电极一条可重复的制备路径。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 02 · 合成生物</div>
+        <h3>一步组装NRPS簇</h3>
+        <div class="src">来源：Nature Communications / 中科院深圳先进院　·　<a href="https://www.nature.com/articles/s41467-026-78648-w">nature.com</a></div>
+        <p class="sum">罗小舟与Keasling等11日发布OSAR平台，用算法引物设计加酵母同源重组，无需定制合成即可组装7–78 kb的NRPS基因簇：34个组装成功31个，在枯草芽孢杆菌中得到10个簇的29种肽，并观察到模块跳跃等隐秘合成行为。</p>
+        <div class="why"><strong>为何重要</strong>把「基因组里有药、手上没有」改写成可自动化的一步重构，降低天然产物挖掘对DNA合成的依赖。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 03 · 治理</div>
+        <h3>纳德拉要紧急制动</h3>
+        <div class="src">来源：TechCrunch / CNBC　·　<a href="https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/">techcrunch.com</a></div>
+        <p class="sum">微软首席执行官纳德拉周六上午在X发文，英媒首发折沪时已入11日。他要求把模型与编排层分开，关键动作留下防篡改可读日志，授权人员可在任务中途暂停或关闭模型，并「从一开始就假定模型已被攻破」。</p>
+        <div class="why"><strong>为何重要</strong>把超级智能安全从训练暂停改写成运行时急停与权限隔离，是周日可核验的北美云厂商口径。</div>
+      </article>
+    </div>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 04 · 并购</div>
+        <h3>英伟达洽谈反射实验室</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：金融时报 / 路透　·　<a href="https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a">ft.com</a></div>
+        <p class="sum">金融时报周六18:14 UTC（沪时11日02:14）报道，英伟达正洽谈收购或加码开源权重初创Reflection AI，形式或为收购、增资或「收购式雇佣」。英伟达已投资8亿美元；谈判仍早，也可能破裂。该公司本周刚发布开源权重模型Beam。</p>
+        <div class="why"><strong>为何重要</strong>把开源权重实验室从投资组合改写成可能并入芯片商的模型团队，交易形态仍未敲定。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">科技 05 · 海洋</div>
+        <h3>大西洋近惯流在增强</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications / 中科院南海海洋所　·　<a href="https://www.nature.com/articles/s41467-026-78555-0">nature.com</a></div>
+        <p class="sum">杜岩、郑宇航等11日用漂流浮标给出观测证据：2003–2022年大西洋海表近惯性流盆均强度每十年增3.8±1.7%，南大西洋和高纬北大西洋增强、低纬北大西洋减弱，主因是中尺度天气系统的近惯性风强迫，而非混合层深度。</p>
+        <div class="why"><strong>为何重要</strong>把近惯性流从天气噪声写成可进入气候模式的二十年趋势，关系到物质输运和混合。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>会见详稿未至，芯片栏留白</h3>
+      <ul>
+        <li>11日未见习近平会见福雷、王毅会见帕特鲁舍夫、赵乐际会见陈青敏详稿；8–9日预告不重写</li>
+        <li>外交部周日无例会；新华社金秋外交特稿、健康中国综述为盘点，不含新会晤，不立项</li>
+        <li>友协会成立70周年会见为2024年10月11日旧稿，检索易与本年混淆，已剔除</li>
+        <li>无国内航天发射；长十二低轨27组、猎鹰9号SDA已入10日刊</li>
+        <li>产业芯片与大模型无11日产品首发；Jalapeño为6月24日；Nature Physics光子图态为9月30日论文，11日只是实验室中文跟进</li>
+        <li>发改委先行指标、海关前8月外贸为10日或更早首发；FAST脉冲星三体为9日《天体物理学杂志快报》</li>
+        <li>NS-Reasoner为营销站不可核验，不立项；Anthropic–三星2纳米为更早The Information线</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第020期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>议会对表，机场核灾，电极压到十四毫伏</h2>
+      <p class="judge">王沪宁把中越议会合作写成「六个更」。利雅得官方核出12死309伤，特朗普称将审视是否加入沙特打击，礼萨伊把霍尔木兹回信退回。吉布提沉船数字同日上修到139。科学栏没有芯片流片，但有亚纳米电解水、一步组装NRPS和二十年洋流趋势。纳德拉要急停，英伟达在谈反射实验室。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>王沪宁会见陈青敏</li>
+            <li>利雅得核出十二死</li>
+            <li>特朗普要看沙特战场</li>
+            <li>霍尔木兹回信不足</li>
+            <li>吉布提沉船再改数字</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>亚纳米界面做电解水</li>
+            <li>一步组装NRPS簇</li>
+            <li>纳德拉要紧急制动</li>
+            <li>英伟达洽谈反射实验室</li>
+            <li>大西洋近惯流在增强</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-11 00:00 至 2026-10-12 00:00。交叉来源：新华社/中新社、越通社、沙特民航总局、CNBC/美联社、路透/阿拉比亚、国际移民组织、《自然·通讯》、TechCrunch、金融时报。排除10日已入账的机场现场、长十二、佩斯科夫转话，以及2024年友协会旧稿。</p>
+      <p class="end">每日时政科技简报 · 第020期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
