@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第023期 · 2026-10-14</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第023期  ·  2026年10月14日  ·  星期三</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰叁期  ·  二零二六年十月十四日  ·  星期三</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。广交会七十周年开幕，外贸账本与物价同日见报，巴库亚信前夜会客，霍尔木兹出现本轮战争首艘沉船。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>广交会 · 外贸 · 海峡</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>星算 · 审稿 · 预报</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周三沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：习近平向第140届广交会致贺信，李强在广州讲三点启示。海关把前三季度写成39.94万亿元。王毅在巴库会见阿利耶夫。霍尔木兹货轮沉没。朱雀二号一箭十星送上星算02组。谷歌公开审稿智能体，亚季节预报与分子自旋链同日见刊于《自然》。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>广州把开放写成七十周年的贺信与演讲。北京同日交出外贸与物价两本账。巴库的会见是亚信峰会前夜。霍尔木兹第一次报出沉船。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 广州</div>
+      「新形势下，中国愿同世界各国携起手来，共同维护多边贸易体制，保障全球产业链供应链稳定畅通。」——习近平，第140届广交会贺信
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>70</b><i>广交会岁</i><p>贺信把这座展会写成扩大高水平开放、建设开放型世界经济的有效平台。</p></div>
+      <div class="fact"><b>39.94</b><i>万亿元</i><p>前三季度货物贸易进出口同比增长18.8%，9月单月首次突破5万亿元。</p></div>
+      <div class="fact"><b>15日</b><i>新桥开通</i><p>外交部14日宣布，中朝新鸭绿江大桥15日正式通车，双方将举行开通仪式。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>开放 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 14日15:31首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">贺信重申多边贸易体制</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.xinhuanet.com/20261014/dd462f1fe5b44a5faf18c5a73806b7b5/c.html">xinhuanet.com</a>　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083239.htm">gov.cn</a></div>
+        <p class="sum">10月14日，习近平向第140届广交会致贺信。他指出，广交会创办70年来已成为中国扩大高水平开放、推动建设开放型世界经济的有效平台。新形势下，中方愿同各国维护多边贸易体制，保障全球产供链稳定，拓展互利合作，推进普惠包容的经济全球化。</p>
+        <div class="why"><strong>为何重要</strong>在单边主义抬头的贸易季，国家元首把“维护多边贸易体制”写成可引用的开幕文本，而不是展会客套。</div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <p class="big">02<em>开放 · 广州</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 14日17:21首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">三点启示开幕演讲</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083250.htm">gov.cn</a></div>
+        <p class="sum">李强14日下午在广州出席第140届广交会开幕式并发表主旨演讲，提出三点启示：市场联通不是博弈工具，国际贸易不是账面数字，互利共赢不是单向妥协。本届3万多家企业参展、约34万境外采购商到会。世贸组织总干事伊维拉视频致辞。</p>
+        <div class="why"><strong>为何重要</strong>贺信定调开放，演讲把“超级卖家/超级买家”改写成惠邻与富邻，并把进口高附加值产品写成公开要约。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">两本账同日见报</h2>
+    <p class="section-sub">海关交出前三季度外贸增速，统计局交出物价。一个写量，一个写价，对照着读。</p>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　宏观 · 海关</div>
+        <h3>外贸39.94万亿</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：国新办 / 中新网　·　<a href="https://www.chinanews.com.cn/cj/2026/10-14/10714235.shtml">chinanews.com.cn</a>　·　<a href="https://xinwen.bjd.com.cn/content/s6acf0afbe4b0e42f8f018baa.html">图文实录</a></div>
+        <p>海关总署14日发布：前三季度货物贸易进出口39.94万亿元，同比增长18.8%；出口23.2万亿、增长16.4%，进口16.74万亿、增长22.3%。三季度增速升至22.3%，9月进出口5.16万亿元首次突破5万亿。</p>
+        <div class="why"><strong>为何重要</strong>这是秋季最完整的外贸核账：进口快于出口，自贸伙伴贡献超七成增量，把“量质齐升”写成可核对的分项。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　宏观 · 物价</div>
+        <h3>CPI平稳 PPI走高</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：国家统计局 / 新闻联播　·　<a href="https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261014_1965476.html">stats.gov.cn</a>　·　<a href="https://tv.cctv.cn/2026/10/14/VIDENkCPagrcNGpJ4YeAxTZO261014.shtml">cctv.cn</a></div>
+        <p>统计局14日发布：前三季度CPI同比上涨0.9%，9月同比上涨0.9%；前三季度PPI同比上涨2.3%，9月同比上涨5.0%、环比1.2%，已连续七个月上涨。能源受国际原油高位影响扩大，服务价格同比上涨0.8%。</p>
+        <div class="why"><strong>为何重要</strong>消费端仍温和，生产端被油价与算电协同推高。宏观叙事从“防通缩”滑向“输入性涨价能否向下游传导”。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　外交 · 巴库</div>
+        <h3>亚信前夜会客</h3>
+        <div class="src">来源：外交部 / 阿总统府　·　<a href="https://www.fmprc.gov.cn/wjbzhd/202610/t20261014_12040376.shtml">fmprc.gov.cn</a>　·　<a href="https://president.az/en/articles/view/74041">president.az</a></div>
+        <p class="sum">当地时间14日，阿塞拜疆总统阿利耶夫在巴库会见作为习近平特别代表出席亚信峰会的王毅。双方谈及能源、互联互通、中间运输走廊与互免签证。中方支持阿方维护独立、主权和领土完整，阿方重申一个中国原则。15日亚信第七次峰会在巴库举行。</p>
+        <div class="why"><strong>为何重要</strong>12日只宣布行程，14日才写下会见详稿。峰会前夜把中阿全面战略伙伴关系接到中间走廊上。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>06　中东 · 霍尔木兹</div>
+        <h3>海峡货轮沉没</h3>
+        <div class="src">来源：路透 / ABC / 美联社　·　<a href="https://www.al-monitor.com/originals/2026/10/iran-shifting-tactics-step-attacks-shipping-us-vote-officials-say">路透电</a>　·　<a href="https://abcnews.go.com/International/live-updates/iran-live-updates-trump-us-attack-iran-ahead/?id=137063637">abcnews.go.com</a></div>
+        <p class="sum">革命卫队海军14日称，一艘载逾2500箱货轮在“未经授权航道”触雷起火，于海峡以南沉没。美方官员称更可能遭导弹袭击。这是本轮战争首次通报触雷沉船。路透援引伊朗官员称，伊方正改换战术、扩大打击范围，以在美国中期选举前托住油价。</p>
+        <div class="why"><strong>为何重要</strong>13日刊只记两艘遭投射物击中。14日第一次出现沉船，并把袭击从海峡扩写到阿曼湾，油价与选期被绑在同一条船上。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      全国卫生与健康大会、习近平会见福雷/会谈博科、IMF10月WEO、UKMTO第170/171号通报已入13日刊。苹果HomeView为13日09:00 ET（沪时21:00）首发，本日不补收。丁薛祥见清华经管顾问委员为13日活动。工信部《“人工智能+软件”实施方案》成文9月2日、发布9月11日，不充当14日新政。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>东风把计算卫星写成一箭十星。谷歌把审稿智能体写成可试用的公共服务。《自然》同日交出亚季节预报与分子自旋链。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>10</b><i>颗星</i><p>朱雀二号改进型遥四一箭十星，含星算02组8颗。</p></div>
+      <div><b>2800</b><i>颗规划</i><p>国星宇航“星算”计划：2400推理 + 400训练。</p></div>
+      <div><b>16000+</b><i>篇试点</i><p>Deep Review前身PAT在四场顶会为作者提供预投稿审读。</p></div>
+      <div><b>2×</b><i>技巧</i><p>概率偏差校正把ECMWF人工智能亚季节系统的技巧翻倍。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>航天 · 东风</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 14日20:08首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">一箭十星送上星算</h3>
+        <div class="src">来源：新华社 / 人民网　·　<a href="https://www.news.cn/20261014/1fbb22249f5e42cb817fc86990fd7a8c/c.html">news.cn</a>　·　<a href="http://finance.people.com.cn/n1/2026/1014/c1004-40814857.html">people.com.cn</a></div>
+        <p class="sum">14日19时40分，朱雀二号改进型遥四在东风商业航天创新试验区升空，将星时代-39、44～50星及光传-03、04星共10颗卫星送入预定轨道。其中8颗为“星算”02组，将验证万瓦级液冷、激光通信与基础大模型在轨训练。</p>
+        <div class="why"><strong>为何重要</strong>国内航天发射在10日长十二之后再次入账。计算星座从01组协同组网，走到可验证在轨训练的02组。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　人工智能 · 谷歌</div>
+        <h3>审稿智能体公开</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Google Research　·　<a href="https://research.google/blog/analyzing-technical-documents-with-deep-review/">research.google</a></div>
+        <p>谷歌14日公开Deep Review：由预投稿工具PAT演进，已在STOC、ICML、NeurIPS、ICLR为逾1.6万篇稿件提供作者侧反馈。现每周两次免费审读，亦可接Gemini API；支持PDF与纯文本，声明上传文档不用于训练。</p>
+        <div class="why"><strong>为何重要</strong>顶会投稿量已压垮人工审稿。把核验从实验室试点改写成可调用的公共服务，审稿权力开始从会议委员会向外溢。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">09　气候 · 《自然》</div>
+        <h3>亚季节预报加倍</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-11126-x">nature.com</a></div>
+        <p>微软研究院等团队14日在《自然》发表概率偏差校正框架，学习修正历史概率预报的系统误差，使ECMWF人工智能亚季节（2–6周）技巧约翻倍，并在91%气压、92%气温、98%降水目标上改进业务去偏动力模式。</p>
+        <div class="why"><strong>为何重要</strong>两到六周一向被称作“可预报性沙漠”。轻量后处理把现有动力与人工智能模式改写成可业务部署的极端天气提前量。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　量子 · 《自然》</div>
+        <h3>分子链接上超导</h3>
+        <div class="src">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-11117-y">nature.com</a></div>
+        <p class="sum">研究组在近邻超导的金/铌表面上生长三角烯组成的霍尔丹自旋-1链，用扫描隧道谱看到：奇数链呈现S=1并与超导耦合出隙内束缚态，偶数链呈S=0并与超导脱耦。长度可调的端态耦合，为碳基分子自旋量子比特指出一条路径。</p>
+        <div class="why"><strong>为何重要</strong>分数自旋能否在超导近邻下存活，此前是开放问题。碳共轭骨架第一次被写成可调的自旋—超导接口。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　生态 · 《自然》</div>
+        <h3>保护地近三成</h3>
+        <div class="src">来源：Nature / 佛罗里达国际大学　·　<a href="https://news.fiu.edu/2026/nearly-27-of-earths-land-is-managed-for-conservation-but-critical-ecosystems-remain-vulnerable">news.fiu.edu</a></div>
+        <p class="sum">《自然》14日发表全球抽样研究：计入国家与地方管理的保护地后，陆地保护覆盖约26.81%，明显高于国际库约18.5%的口径。25个国家与地区样本显示，原住民、私人和社区土地被大量漏计。173个生态区中仍有51个保护不足10%。</p>
+        <div class="why"><strong>为何重要</strong>30×30看起来更近了，但空间仍不均匀。数字翻新不能代替把保护写到真正承压的生态系统上。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>芯片栏留白，美西午间稿不抢写</h3>
+      <ul>
+        <li>未见中国芯片或大模型14日产品首发；华为9050 Pro架构为1日刊复述，爱芯AX8860、千问眼镜为13日首发</li>
+        <li>英伟达SEMICON West的cuPotential库新闻稿时刻为14日12:10 ET，折沪时已入15日00:10，不入本日</li>
+        <li>苹果HomeView/Apple TV 4K/HomePod mini 2为13日09:00 ET首发，13日刊未收，本日亦不补收</li>
+        <li>微软Maia 300、英伟达OCP Vera Rubin为12日首发；Gemini 4 Argon、捕日者TPU已入前刊</li>
+        <li>谷歌Deep Review与Earth AI博客仅标注October 14、未公布精确时区；若美西上午见报则贴近15日00:00，次日勿仅因转载重写Earth AI</li>
+        <li>未见习近平会见博科/福雷之外的李强会谈详稿；赵乐际会见国际议员论坛未单列</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第023期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>贺信开幕，两本账对照，沉船改写海峡</h2>
+      <p class="judge">习近平把广交会七十周年写成维护多边贸易的贺信，李强在广州讲三点启示。海关把前三季度写成39.94万亿元，统计局把CPI留在0.9%、把PPI推到5.0%。王毅在巴库会客，新鸭绿江大桥定于15日通车。霍尔木兹第一次报出沉船。朱雀二号送上星算02组。谷歌公开审稿智能体。《自然》把亚季节预报和分子自旋链写成同一天的科学页。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>贺信重申多边贸易体制</li>
+            <li>三点启示开幕演讲</li>
+            <li>外贸39.94万亿</li>
+            <li>CPI平稳 PPI走高</li>
+            <li>亚信前夜会客</li>
+            <li>海峡货轮沉没</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>一箭十星送上星算</li>
+            <li>审稿智能体公开</li>
+            <li>亚季节预报加倍</li>
+            <li>分子链接上超导</li>
+            <li>保护地近三成</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-14 00:00 至 2026-10-15 00:00。交叉来源：新华社/中国政府网、国新办/海关总署、国家统计局/央视、外交部/阿总统府、路透/ABC、人民网、Google Research、《自然》、佛罗里达国际大学。排除13日卫生大会与中非双会、IMF增速修订、苹果HomeView、千问眼镜与爱芯芯片，以及折沪时已入15日的英伟达cuPotential。</p>
+      <p class="end">每日时政科技简报 · 第023期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
