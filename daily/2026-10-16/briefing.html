@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第025期 · 2026-10-16</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第025期  ·  2026年10月16日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰伍期  ·  二零二六年十月十六日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。习近平把黄旗海湿地与绿色算力写成同一天行程。李强把「人工智能+」写进国常会。英伟达把统一内存笔记本写成货架上的价格。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>北疆 · 国常会 · 萨格勒布</em></div>
+        <div class="metric"><b>06</b><span>科技</span><em>超芯 · 魔法态 · 开权</em></div>
+        <div class="metric"><b>12</b><span>合计</span><em>周五沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：乌兰察布把生态保护与东数西算一并定调。国常会讨论教师法、价格法，并听「人工智能+」进度。王毅三十三年后再访克罗地亚。特朗普点名镐山。RTX Spark 开售。Willow 的魔法态培养折入沪时凌晨。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>乌兰察布把干涸过的内陆湖写成湿地法。中南海把「人工智能+」写成落地账。萨格勒布把三十三年空白写成外长到访。霍尔木兹把深埋的山写成下一处打击名单。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 乌兰察布</div>
+      「绿色发展是高质量发展的应有之义。……算力网是国家规划建设的『六张网』之一。」——习近平，内蒙古乌兰察布
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>黄旗海</b><i>湿地修复</i><p>内陆封闭湖泊一度濒临干涸。考察强调自然恢复为主、人工干预为辅。</p></div>
+      <div class="fact"><b>东数西算</b><i>绿色算力</i><p>察哈尔高新区听枢纽节点。要求算电协同、算水协同。</p></div>
+      <div class="fact"><b>33年</b><i>首次访克</i><p>王毅在萨格勒布会见总统、总理并会谈外长。克方重申一个中国。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>考察 · 乌兰察布</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 16日 18:04 见报</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">黄旗海与绿色算力同日</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/leaders/20261016/2e0fa7c03c33497bafb504fc030839f7/c.html">news.cn</a>　·　<a href="https://www.xinhuanet.com/20261016/39f56b2d49da4be0a813897c39a8f5b7/c.html">xinhuanet.com</a></div>
+        <p class="sum">习近平16日上午在乌兰察布考察黄旗海自然保护区与察哈尔高新技术开发区。他强调绿色发展是高质量发展的应有之义，湿地保护贵在保持原生态；并指出东数西算与全国一体化算力网是党中央部署，算力网属「六张网」之一，要求算电协同、算水协同，推动绿色算力。</p>
+        <div class="why"><strong>为何重要</strong>把北疆湿地修复与绿色算力写进同一天行程，等于给「十五五」开局的生态优先和算力网同时定调。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　国常会 · 北京</div>
+        <h3>落地应用牵引「人工智能+」</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.news.cn/politics/20261016/d695d86820e34d2b91c8b262dc8e2764/c.html">news.cn</a></div>
+        <p>李强16日主持国务院常务会议，听取「人工智能+」行动进展，强调以落地应用牵引技术创新、算电协同与实体经济赋能，并守牢安全底线。会议原则通过教师法修订草案、价格法修正草案，将提请全国人大常委会审议，明确依法治理低价无序竞争。</p>
+        <div class="why"><strong>为何重要</strong>国常会把9日《关于发展新质生产力的意见》里的「人工智能+」写成执行账，并把低价内卷写进价格法修正。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　外交 · 萨格勒布</div>
+        <h3>三十三年首次访克</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部 / 新华社　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202610/t20261016_12042081.shtml">mfa.gov.cn</a>　·　<a href="https://www.mfa.gov.cn/web/wjb_673085/zzjg_673183/xws_674681/xgxw_674683/202610/t20261016_12042086.shtml">外长会谈</a></div>
+        <p>王毅16日在萨格勒布会见总统米拉诺维奇，并同外长拉德曼会谈、会见总理普连科维奇。这是33年来中国外长首次访克。克方重申一个中国、不支持「台独」；双方谈交通物流、可再生能源、汽车制造与直航，并以建交35周年谋划提升关系。</p>
+        <div class="why"><strong>为何重要</strong>亚信之后把欧洲线落到中东欧枢纽。33年首次到访本身就是可核验的外交日程，而不是峰会侧记。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">例会与民生立法前夜</h2>
+    <p class="section-sub">毛宁把日本核松绑与三边核裁军写成同场对质。发改委把普惠养老写成收费目录。</p>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　例会 · 核松绑</div>
+        <h3>无核三原则没有探讨余地</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部例行记者会　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202610/t20261016_12041978.shtml">mfa.gov.cn</a></div>
+        <p>毛宁16日宣布吉布提外长奥马尔、刚果（布）外长邦达19–25日访华。她谈国际消除贫困日、中欧磋商后勿出台保护主义、加沙停火与「两国方案」，批高市早苗讨论无核三原则例外与核潜艇，并称中美俄三边核裁军现阶段不公平、不可行。</p>
+        <div class="why"><strong>为何重要</strong>把日本核松绑与美方拉中国进三边核裁军写成同场对质，是国庆后最硬的安全表态。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　民生 · 养老价</div>
+        <h3>普惠养老首次标价</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：国家发展改革委 / 新华社　·　<a href="https://www.ndrc.gov.cn/xxgk/zcfb/tz/202610/t20261016_1408179.html">ndrc.gov.cn</a>　·　<a href="https://www.news.cn/politics/20261016/3a7be775ba1945258044272b311a10d6/c.html">news.cn</a></div>
+        <p>发改委、民政部、卫健委16日公布《指导意见》（发改价格〔2026〕1476号），首次明确普惠养老收费：兜底和普惠机构基本服务费实行政府指导价或参考区间，市场型机构市场调节；所有收费进目录清单，清单外不得收费，评估周期原则上不超过3年。</p>
+        <div class="why"><strong>为何重要</strong>把「普惠养老」从口号写成可执行的价格治理，直接对准老龄化下的收费乱象。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>中东 · 镐山</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">路透 / 伊海军 · 16日首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">再点名深埋的镐山</h3>
+        <div class="src">来源：路透 / 伊朗国际　·　<a href="https://wtbx.com/2026/10/16/trump-says-us-may-need-to-strike-irans-pickaxe-mountain/">路透转载</a>　·　<a href="https://www.straitstimes.com/world/middle-east/iran-ships-some-lpg-jet-fuel-despite-us-blockade-data-shows">海峡时报</a>　·　<a href="https://www.iranintl.com/en/202610168238">iranintl.com</a></div>
+        <p class="sum">路透16日引特朗普Newsmax访谈：美方「可能不得不」打击纳坦兹附近深埋的镐山，同时排除核武器与地面部队。同日独家称至少8艘液化气船7月中以来出阿曼湾、一艘航空煤油船抵缅甸；伊海军称海峡以东油轮起火。</p>
+        <div class="why"><strong>为何重要</strong>选期前把「再打一处深埋核设施」与「封锁并非铁板一块」写成同一天账本。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      王毅亚信四点倡议、会见赫尔佐格侧记、新鸭绿江大桥开通、李强中亚俄行程、中多/中博落实、靖国神社供奉记录、海峡控制权对质已入15日刊。16日新华社跟进的凡尔赛取消闰秒决议，事发15日，不重写。湖南大学百年贺信、丁薛祥天津职教大会、广交会续稿不单列。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>圣克拉拉把统一内存写成货架价。山景城把魔法态培养折进沪时凌晨。门洛帕克把开权模型搬上两台桌面Mac。深圳把一万个触觉单元写成分层编码。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>2599</b><i>美元起</i><p>RTX Spark 笔记本全球开售，六家整机厂首发。</p></div>
+      <div><b>40×</b><i>误差下降</i><p>Willow 上培养魔法态，相对未培养态约降四十倍。</p></div>
+      <div><b>816B</b><i>总参数</i><p>Muse Spark Open 开权 MoE，激活 42B，百万词元上下文。</p></div>
+      <div><b>1110</b><i>单元/厘米²</i><p>南科大离子电子皮肤，规模超一万单元，100 帧/秒。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>芯片 · 超芯</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">英伟达新闻室 · 16日 00:00 UTC</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">统一内存笔记本开售</h3>
+        <div class="src">来源：NVIDIA Newsroom / 联发科　·　<a href="https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs">nvidianews.nvidia.com</a>　·　<a href="https://www.nvidia.com/en-us/geforce/news/rtx-spark-october-16-2026-game-ready-driver/">驱动 617.42</a></div>
+        <p class="sum">英伟达16日宣布RTX Spark笔记本全球开售，六家整机厂首发，起价2599美元。超芯整合Blackwell RTX与Grace CPU，最高128GB统一内存、1 petaflop FP4算力，联发科参与定制，可本机跑智能体。</p>
+        <div class="why"><strong>为何重要</strong>把数据中心级统一内存第一次写成可买到的Windows笔记本，而不是发布会幻灯。15日刊已预告档期。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　量子 · Willow</div>
+        <h3>魔法态培养写成实验</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Science / 谷歌博客　·　<a href="https://www.science.org/doi/10.1126/science.aee7961">science.org</a>　·　<a href="https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/">blog.google</a></div>
+        <p>谷歌Quantum AI于15日18:00 UTC（沪时16日02:00）在《科学》发表Willow处理器上的「魔法态培养」实验：培养使误差约降40倍，T态逻辑保真度至少99.99(1)%，保留约8%尝试，并完成到距离5表面码的切换。</p>
+        <div class="why"><strong>为何重要</strong>容错量子计算最贵的非Clifford资源第一次在超导硬件上被写成可培养，而不是只靠蒸馏。15日刊已预告折入本日。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">09　开权 · 桌面</div>
+        <h3>开权模型跑上桌面Mac</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Meta / 苹果机器学习　·　<a href="https://research.meta.ai/blog/muse-spark-open">research.meta.ai</a>　·　<a href="https://machinelearning.apple.com/research/mlx-distributed-inference">apple.com</a></div>
+        <p>Meta于美西15日发布开权模型Muse Spark Open：8160亿总参、420亿激活、百万词元上下文。苹果同日更新MLX，称四台M5 Ultra Mac Studio可跑超36 token/秒。15日刊已预告，折沪时入本日。</p>
+        <div class="why"><strong>为何重要</strong>把「开权前沿模型」第一次写成可在两台桌面Mac上本地跑，而不是只在云上租卡。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　具身 · 南科大</div>
+        <h3>万单元分层触觉</h3>
+        <div class="src">来源：Nature Machine Intelligence　·　<a href="https://www.nature.com/articles/s42256-026-01325-6">nature.com</a></div>
+        <p class="sum">南科大郭传飞、王太宏等16日发表神经分层离子电子皮肤：密度1110单元/平方厘米、规模超1万单元，频率编码并行读出100帧/秒，后端压缩带宽数百倍，人形机器人可分辨300微米表面并做伤害性自我保护。</p>
+        <div class="why"><strong>为何重要</strong>把电子皮肤的瓶颈从「堆传感器」改写成分层编码，是具身智能可核验的感知台阶。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　航天 · 范登堡</div>
+        <h3>保密载荷折入清晨</h3>
+        <div class="src">来源：SpaceX / Spaceflight Now　·　<a href="https://www.spacex.com/launches/ussf481">spacex.com</a>　·　<a href="https://spaceflightnow.com/2026/10/15/live-coverage-spacex-to-launch-classified-payload-for-u-s-space-force/">spaceflightnow.com</a></div>
+        <p class="sum">猎鹰9号于16日00:01 UTC（沪时08:01）从范登堡4E发射美军太空部队保密任务USSF-481（亦称TH-2），助推器B1081第28飞，回收至太平洋无人船。载荷未披露，轨迹指向约80度倾角近极地低轨。</p>
+        <div class="why"><strong>为何重要</strong>15日刊已预告窗口折沪时入本日。这是周五可核验的轨道发射，国内航天当日留白。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">12<em>汽车 · 斯德哥尔摩</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">沃尔沃 / 英伟达 · 15日欧陆，折沪时入16日</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">自动驾驶交给Hyperion</h3>
+        <div class="src">来源：Volvo Cars / NVIDIA / Reuters　·　<a href="https://www.volvocars.com/intl/media/press-releases/6BDB4FC313366147/">volvocars.com</a>　·　<a href="https://nvidianews.nvidia.com/news/volvo-cars-and-nvidia-expand-partnership-to-advance-safe-automated-driving">nvidianews.nvidia.com</a></div>
+        <p class="sum">沃尔沃15日宣布扩大与英伟达合作，未来车将用Hyperion传感计算、Halos操作系统与Alpamayo驾驶软件，逐步引入eyes-off/mind-off，软件负责人称目标2030年前多区域同步、不含中国。15日刊已预告，折沪时入本日。</p>
+        <div class="why"><strong>为何重要</strong>把「安全第一的渐进自动驾驶」写成可点名的三件套，而不是又一份模糊的战略备忘录。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内航天留白，教育稿不抢头条</h3>
+      <ul>
+        <li>未见16日国内航天发射。朱雀二号改进型遥四为14日19:40，已入14日刊</li>
+        <li>第28届国际计量大会15日在凡尔赛通过取消闰秒、2027年5月20日起连续UTC；新华社16日跟进，不重写</li>
+        <li>习近平致信祝贺湖南大学建校100周年、丁薛祥出席天津世界职业技术教育发展大会，当日可核验但不单列，以免冲淡考察与国常会</li>
+        <li>英伟达新闻室同日另有梅赛德斯—英伟达十年自动驾扩展，与沃尔沃条主题重叠，不另立条</li>
+        <li>产业芯片与中国大模型无16日产品首发；《自然·纳米技术》毫秒声子寿命论文未单列</li>
+        <li>勿重刊：亚信四点、新桥、出访行程、台积电Q3、cuPotential、超流氦、珊瑚44%、树突注意力、广交会贺信</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第025期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>北疆写算力，国常会写落地，货架上出现超芯</h2>
+      <p class="judge">习近平在乌兰察布把黄旗海湿地与东数西算绿色算力写成同一天行程。李强主持国常会，听「人工智能+」进度，并把教师法、价格法草案送往常委会。王毅三十三年后再访萨格勒布。毛宁批日本核松绑，拒三边核裁军。特朗普点名镐山。RTX Spark 开售。Willow 的魔法态培养与 Muse Spark Open 按预告折入本日。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>黄旗海与绿色算力同日</li>
+            <li>落地应用牵引「人工智能+」</li>
+            <li>三十三年首次访克</li>
+            <li>无核三原则没有探讨余地</li>
+            <li>普惠养老首次标价</li>
+            <li>再点名深埋的镐山</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技六条 · 缺口</h4>
+          <ol>
+            <li>统一内存笔记本开售</li>
+            <li>魔法态培养写成实验</li>
+            <li>开权模型跑上桌面Mac</li>
+            <li>万单元分层触觉</li>
+            <li>保密载荷折入清晨</li>
+            <li>自动驾驶交给Hyperion</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-16 00:00 至 2026-10-17 00:00。交叉来源：新华社/外交部/发改委、路透/伊朗国际、NVIDIA/联发科、《科学》/谷歌、Meta/苹果MLX、《自然·机器智能》、SpaceX/Spaceflight Now、Volvo。排除15日亚信、新桥、出访行程、台积电季报，以及15日凡尔赛闰秒决议的中文跟进。</p>
+      <p class="end">每日时政科技简报 · 第025期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
