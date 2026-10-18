@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第026期 · 2026-10-17</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第026期  ·  2026年10月17日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰陆期  ·  二零二六年十月十七日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。李强上午谈传统医药，下午出现在塔什干。白宫把对俄新制裁写成豁免。周六的科技栏交给《自然·通讯》五篇论文。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>北京 · 塔什干 · 白宫</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>固态电池 · 创面 · HIV</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周六沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：传统医药大会把数智化与全球治理写进同一篇致辞。访乌首日以抵达稿入账，乌官方同日确认会谈。扶贫日交出「1+23+N」与1770亿元。格雷厄姆法案被按下。霍尔木兹两边同时宣示控制。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>北京把中医药写成全球治理的隐喻。塔什干把中亚铁路写成欢迎仪式后的下一句。白宫把国会刚签下的对俄关税写成可以关掉的开关。霍尔木兹把触雷与投射物写成同一条航道上的两种说法。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 传统医药大会</div>
+      「世界各国是一个有机整体，没有哪个国家能够独善其身，没有哪种模式能够包治百病。」——李强，2026世界传统医药大会
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>1200</b><i>人出席开幕式</i><p>李强上午在北京致辞，谈数智化、开放试点与药用资源保育。</p></div>
+      <div class="fact"><b>1770</b><i>亿元帮扶资金</i><p>扶贫日首次核出常态化帮扶「1+23+N」与中央财政盘子。</p></div>
+      <div class="fact"><b>500%</b><i>对俄关税被豁免</i><p>格雷厄姆法案写进行政令，又被同一份命令按下。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>卫生 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 17日 18:43 见报</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">传统医药写成全球治理</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/20261017/6a808151cd9647ef92dacd1ebcf5a5c6/c.html">news.cn</a>　·　<a href="https://www.news.cn/20261017/7498b937a1c1453c8b15dfb10523d763/c.html">致辞全文</a></div>
+        <p class="sum">李强17日上午在北京出席2026世界传统医药大会开幕式。他提出科技赋能、交流合作、普惠共享三点，宣布推动中医药数智化转型、扩大医疗服务开放试点，并愿推进「一带一路」药用资源保育中心。致辞末段以中医整体观谈全球治理。约1200人出席。</p>
+        <div class="why"><strong>为何重要</strong>把卫生大会写成外交语言：数智化是产业账，保育中心是「一带一路」账，整体观则是对保护主义的公开劝诫。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　出访 · 塔什干</div>
+        <h3>访乌首日写进欢迎仪式</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 乌通社 / 总统府　·　<a href="https://www.news.cn/politics/leaders/20261017/b8b4262ebe5f437c960cdaf1cb7bec54/c.html">news.cn</a>　·　<a href="https://uza.uz/cn/posts/prime-ministers-of-uzbekistan-and-china-hold-a-meeting_923936">uza.uz</a>　·　<a href="https://president.uz/en/lists/view/9736">president.uz</a></div>
+        <p>李强17日上午离京，下午抵塔什干胡莫机场，阿里波夫举行欢迎仪式。乌通社20:59与总统府同日确认总理会谈、总统接见，谈中吉乌铁路、经贸与人工智能。新华社会见详稿18日01:20见报，折入次日。</p>
+        <div class="why"><strong>为何重要</strong>15日只是行程预告。17日可核验的是人到了塔什干，乌方已把铁路与项目库写成同日公报。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　民生 · 扶贫日</div>
+        <h3>帮扶账写成1+23+N</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.xinhuanet.com/politics/20261017/75335b2dccdd4fb8b24872bcd5e0f8b6/c.html">xinhuanet.com</a></div>
+        <p>第十三个国家扶贫日，农业农村部称常态化帮扶「1+23+N」体系基本形成。中央财政安排1770亿元；1–8月东部援西227.3亿元；脱贫劳动力跨省务工1313.3万，上半年就业3285.1万人。</p>
+        <div class="why"><strong>为何重要</strong>16日例会只谈全球减贫贡献。17日才把国内配套文件数、资金盘子和就业账第一次写全。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">豁免与海峡</h2>
+    <p class="section-sub">白宫把国会的对俄新关税写成可以关掉的开关。霍尔木兹把触雷与投射物写成同一周的两种叙事。</p>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　白宫 · 豁免</div>
+        <h3>格雷厄姆法案被按下</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：白宫 / 美联社 / 华盛顿邮报　·　<a href="https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/">whitehouse.gov</a>　·　<a href="https://apnews.com/article/russia-sanctions-trump-ukraine-e50c561ab805883bb4e484c092d8fadd">apnews.com</a></div>
+        <p>白宫网站17日00:34 UTC（沪时08:34）公布16日行政令：援引格雷厄姆法案第115条，豁免对俄货物加征500%关税、对五大买家加征100%关税及多项新制裁，称符合国家利益，并写明不撤销既有对俄制裁。</p>
+        <div class="why"><strong>为何重要</strong>法案9月18日刚签署，原定18日生效的关税在生效前被关掉。这是选期前对俄能源账的一次公开改写。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　海峡 · 对质</div>
+        <h3>两边同时宣示控制</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：半岛电视台 / UKMTO　·　<a href="https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels">aljazeera.com</a></div>
+        <p>半岛17日报道：UKMTO称截至16日一周至少12艘遇袭，并承认漏报。IRGC称超级油轮走「未授权」航线后触雷起火；CENTCOM司令库珀称海峡由美方与地区伙伴控制，上周400艘船、1亿桶油过境。Kpler：至13日一周油运1160万桶/日。</p>
+        <div class="why"><strong>为何重要</strong>16日是镐山与穿封锁。17日可核验的是控制权对质被写成数字：12艘、400艘、1亿桶。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      乌兰察布考察纪实、国常会「人工智能+」、普惠养老1476号、外交部16日例会、王毅访克会见普连科维奇，均已入16日刊。禁出口技术目录第48号、氢能五城市群、科技经费公报、四部门车企座谈均为16日首发，不补收。李强会见米尔济约耶夫新华社详稿18日01:27见报，折入次日。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>周六没有可核验的芯片发布或轨道发射。《自然·通讯》把固态电池、糖尿病创面、HIV限制因子、异构体成像和圆偏振光手性写成同一天的五张实验账。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>4.11</b><i>毫西门子/厘米</i><p>锆基卤氧化物室温电导，2000圈后仍留81.2%。</p></div>
+      <div><b>TKT</b><i>代谢检查点</i><p>同济医院把巨噬细胞转酮酶写成糖尿病创面开关。</p></div>
+      <div><b>gp160</b><i>滞留内质网</i><p>ADAM17信号肽拦住HIV包膜，Nef再把它送出细胞。</p></div>
+      <div><b>0.24</b><i>发光不对称因子</i><p>圆偏振光单独导演手性COF，无需手性试剂。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>电池 · 福州</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Nature Communications · 17日首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">锆卤氧化物顶住4.8伏</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78813-1">nature.com</a></div>
+        <p class="sum">福州大学魏明灯、南科大曾林、宁波东方理工孙学良等17日发表非等摩尔阴阳离子无定形工程：Li₂Zr₀.₆₂₅Ta₀.₃Cl₄.₂O₀.₉室温电导4.11 mS/cm，靠自钝化正极界面在4.80 V vs Li⁺/Li下10 C循环2000圈，容量保持81.2%。</p>
+        <div class="why"><strong>为何重要</strong>多数高电导卤化物在4.30伏以上分解。这篇把高压耐受写成可循环两千圈的实验，而不是材料配方幻灯。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">07　医学 · 武汉</div>
+        <h3>转酮酶改写创面</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78765-6">nature.com</a></div>
+        <p>华中科技大学同济医院熊元、米博斌等把巨噬细胞转酮酶写成糖尿病创面血管再生的代谢检查点，并做纳米酶水凝胶贴片；在糖尿病猪模型上加速愈合与血管修复。</p>
+        <div class="why"><strong>为何重要</strong>把「代谢重编程」从机制图写成可贴上去的材料，并在大动物模型上交出愈合账。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　病毒 · 芝加哥</div>
+        <h3>ADAM17拦住包膜</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78949-0">nature.com</a></div>
+        <p>伊利诺伊大学芝加哥分校郑永辉组证明ADAM17不靠酶活、而靠信号肽把HIV包膜前体gp160滞留在内质网。Nef通过PxxP基序把ADAM17送出细胞外囊泡，恢复感染性。</p>
+        <div class="why"><strong>为何重要</strong>SERINC5主要限制实验室毒株。ADAM17把Nef的必要性写成对原代分离株也成立的宿主关卡。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　分析 · 伦敦</div>
+        <h3>OrbiSIMS分清异构体</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78604-8">nature.com</a></div>
+        <p class="sum">英国国家物理实验室在表面直接分辨棉子糖、麦芽三糖、松三糖三种同分异构三糖，并与离子淌度交叉验证。质量相同不再等于图像上无法分开。</p>
+        <div class="why"><strong>为何重要</strong>质谱成像的老盲区是同分异构。这篇把「看得到空间、分得清形状」写成可重复的表面方法。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　材料 · 光州</div>
+        <h3>圆偏振光导演手性</h3>
+        <div class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78524-7">nature.com</a></div>
+        <p class="sum">韩国光州科学技术院林贤燮组只用圆偏振光诱导化学手性共价有机框架，无需手性前体或催化剂。发光不对称因子达0.24，并可在亚微米尺度编程对映体图案。</p>
+        <div class="why"><strong>为何重要</strong>手性COF以往靠手性试剂。这篇把「光的左右」写成可写入晶体骨架的唯一导演。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内航天留白，产业芯片无首发</h3>
+      <ul>
+        <li>未见17日国内航天发射。下一窗口公开排期为21日谷神星一号海射、22日长八甲低轨28组</li>
+        <li>北美大模型/云厂商与中国芯片无17日产品首发。Nemotron 3.5、Muse Spark Open、RTX Spark均为15–16日</li>
+        <li>鹏城云脑Ⅲ一万P试运行在15–16日世界算力网大会开幕式宣布，17日仅为转载</li>
+        <li>科技日报芯片级陀螺仪跟进的是9月17日《光学快报》与14日Optica新闻稿，不充当周六突破</li>
+        <li>铌酸锂近垂直出光为1月期刊论文、13日新闻稿；华中科大衍射量子芯片为2025年7月旧文</li>
+        <li>外交部周六无例会。王毅黑山详稿未见。勿重刊：乌兰察布、国常会、访克、镐山、RTX Spark、Willow、离子皮肤</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第026期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>北京写药方，塔什干写抵达，白宫写下豁免</h2>
+      <p class="judge">李强上午把传统医药写成全球治理，下午出现在塔什干。扶贫日第一次核出「1+23+N」与1770亿元。特朗普在沪时早晨公布对格雷厄姆法案的豁免。霍尔木兹两边同时宣示控制。科技栏没有新品，只有五篇17日的《自然·通讯》。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>传统医药写成全球治理</li>
+            <li>访乌首日写进欢迎仪式</li>
+            <li>帮扶账写成1+23+N</li>
+            <li>格雷厄姆法案被按下</li>
+            <li>两边同时宣示控制</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>锆卤氧化物顶住4.8伏</li>
+            <li>转酮酶改写创面</li>
+            <li>ADAM17拦住包膜</li>
+            <li>OrbiSIMS分清异构体</li>
+            <li>圆偏振光导演手性</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-17 00:00 至 2026-10-18 00:00。交叉来源：新华社/乌通社/总统府、白宫/美联社/华盛顿邮报、半岛电视台、《自然·通讯》。排除16日考察纪实、国常会、例会、第48号目录、氢能试点，以及18日凌晨新华社会见详稿。</p>
+      <p class="end">每日时政科技简报 · 第026期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
