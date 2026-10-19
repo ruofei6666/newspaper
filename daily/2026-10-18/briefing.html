@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第027期 · 2026-10-18</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第027期  ·  2026年10月18日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰柒期  ·  二零二六年十月十八日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。访乌详稿在凌晨见报，人在中午落到杜尚别。王毅把黑山写成建交二十年。特朗普把以色列选票写成对伊战争的下一句。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>塔什干 · 杜尚别 · 波德戈里察</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>空间水稻 · 十万卡应用 · 电网</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周日沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：中亚出访从抵达稿改成会谈账。上合总理会还在前头。名古屋点燃亚残运会主火炬。算力栏交给曙光的应用，而不是机器本身。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>塔什干把中吉乌铁路写成文件清单。杜尚别把欢迎仪式写成上合总理会的前夜。波德戈里察把一座电影里的桥写成建交二十年。华盛顿把以色列选票写成对伊战争的下一句。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 杜尚别机场</div>
+      「中方期待同上合组织各方一道，落实比什凯克峰会成果，推动即将举行的上合组织总理会议取得圆满成功。」——李强，抵杜尚别
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>01:23</b><i>访乌详稿见报</i><p>会见总统、会谈总理的新华社电，落在18日凌晨，不计入17日刊。</p></div>
+      <div class="fact"><b>25</b><i>次上合总理会</i><p>人在中午落到杜尚别。会议还在前头，抵达稿先入账。</p></div>
+      <div class="fact"><b>20</b><i>年中黑建交</i><p>王毅外长历史上首次访问黑山，外长会谈周日见报。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>出访 · 塔什干</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 18日 01:23–01:27 首发</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">访乌收官写成铁路与文件</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083558.htm">阿里波夫会谈</a>　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083561.htm">会见总统</a></div>
+        <p class="sum">李强17日在塔什干会见米尔济约耶夫、同阿里波夫会谈，谈中吉乌铁路、能源矿产与人工智能。会后签署经贸、教育、海关、卫生、减贫等文件。乌方称关系处「黄金时代」，坚持一个中国。新华社18日凌晨首发。</p>
+        <div class="why"><strong>为何重要</strong>17日刊只收抵达与欢迎仪式。铁路、文件清单和「黄金时代」这三句，要等18日01:23之后才写得全。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　出访 · 杜尚别</div>
+        <h3>人到了，会还在前头</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083576.htm">gov.cn</a>　·　<a href="https://www.news.cn/20261018/02581b032954467a9faa4313a1756cc9/c.html">news.cn</a></div>
+        <p>当地时间18日中午，李强结束访乌后抵杜尚别，拉苏尔佐达举行欢迎仪式。李强称中塔是好邻居，愿落实5月元首会晤蓝图；期待落实比什凯克峰会成果，推动上合组织总理理事会第二十五次会议圆满成功。</p>
+        <div class="why"><strong>为何重要</strong>15日只是行程。18日可核验的是人到了杜尚别，上合总理会被写成下一句，而不是已经开完的公报。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　双边 · 中塔</div>
+        <h3>总理会谈签下基建账</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 外交部　·　<a href="https://www.news.cn/politics/leaders/20261018/c0fd738f96574475b51a5265f802cd81/c.html">news.cn</a>　·　<a href="https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202610/t20261018_12042432.shtml">mfa.gov.cn</a></div>
+        <p>18日下午李强同拉苏尔佐达会谈，谈共建「一带一路」、绿色矿产、互联互通、清洁能源与人工智能。会后见证签署基建、教育、反腐、标准化等文件。双方称明年迎建交35周年。</p>
+        <div class="why"><strong>为何重要</strong>抵达稿只写欢迎仪式。真正入账的是矿产、能源、人工智能被写进同一张合作菜单，并有文件可核验。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">黑山与名古屋</h2>
+    <p class="section-sub">王毅把一座电影里的桥写成建交二十年。名古屋把亚残运会主火炬写成18日晚的公共事务。</p>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　外交 · 波德戈里察</div>
+        <h3>外长首次踏上黑山</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202610/t20261018_12042439.shtml">外长会谈</a>　·　<a href="https://kr.china-embassy.gov.cn/zgwj/202610/t20261018_12042369.htm">总统会见</a></div>
+        <p>王毅18日同黑山副总理兼外长伊布拉希莫维奇会谈，称建交20年可探讨提升关系定位，支持黑方入盟努力。黑方重申一个中国，欢迎中企参与高速、电站与港口。总统17日会见详稿同日14:34见报。</p>
+        <div class="why"><strong>为何重要</strong>17日刊写明黑山详稿未见。18日才把一中表态、南北高速二期和塔拉河大桥写成可引用的会谈稿。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　公共事务 · 名古屋</div>
+        <h3>亚残运会主火炬点燃</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 国际残奥委会　·　<a href="https://www.xinhuanet.com/20261018/d74013aba3ff49e4b9f0ba0aea4cee8c/c.html">xinhuanet.com</a>　·　<a href="https://www.paralympic.org/news/aichi-nagoya-2026-opening-ceremony">paralympic.org</a></div>
+        <p>第五届亚残运会18日晚在名古屋开幕。新华社称45个国家和地区近3000名运动员参赛，设18个大项。中国代表团500人、运动员312人，旗手为闫盼盼、李羽洁。赛事至24日。</p>
+        <div class="why"><strong>为何重要</strong>这是中国第五次参赛、境外规模最大的一届。开幕式把残健融合写成可核验的公共外交现场，而不是口号。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>中东 · 华盛顿</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Truth Social / CBS / 伊通社 · 18日见报</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">背书写成对伊战争的下一句</h3>
+        <div class="src">来源：中央社 / CBS / 凤凰网转述　·　<a href="https://www.cna.com.tw/news/aopl/202610190002.aspx">cna.com.tw</a>　·　<a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/">cbsnews.com</a></div>
+        <p class="sum">特朗普18日发公开信，全力支持内塔尼亚胡竞选连任，称其为「战士总理」，并警告伊朗若不改弦更张将很快「完成相关行动」。阿拉格齐同日称七日重开霍尔木兹方案仍有效。</p>
+        <div class="why"><strong>为何重要</strong>16日是镐山，17日是控制权对质。18日新的一句是：以色列选票被写成继续打伊朗的条件，而德黑兰把海峡重开仍挂在九月那份七日稿上。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      传统医药大会、抵塔什干欢迎仪式、扶贫日「1+23+N」、格雷厄姆法案豁免、霍尔木兹美伊同时宣示控制，均已入17日刊。铁路车次编排、供热「温暖工程」、禁出口技术目录第48号、国常会「人工智能+」为16日首发，不补收。王毅会见黑山总理斯帕伊奇新华社19日03:02见报，折入次日。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>问天舱把第二代稻种写进培养盒。深圳把十万卡机器写成十张应用账。伦敦把一座脚手架场地写成电网要等到三十年代。首尔把三星和台积电写成同一块基底晶圆上的对手。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>两代</b><i>在轨水稻</i><p>神舟二十三号完成采集、播种、存储，样品待下行。</p></div>
+      <div><b>4万亿</b><i>暗物质粒子</i><p>曙光8000「千衍」模拟被写成数值宇宙学的新极限。</p></div>
+      <div><b>2.3万</b><i>块英伟达卡</i><p>微软退出洛顿，英国「主权」数据中心失去锚租户。</p></div>
+      <div><b>1.4%</b><i>Console用户</i><p>OpenCode称蒸馏攻击波及已绑定外部密钥的子集。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>航天 · 空间站</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">央视 / 载人航天工程办公室 · 18日 12:23 起</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">第二代稻种写进培养盒</h3>
+        <div class="src">来源：央视新闻 / 京报网　·　<a href="https://tv.cctv.com/2026/10/18/VIDERB708P4Ib32okBxUll0U261018.shtml">tv.cctv.com</a>　·　<a href="https://news.bjd.com.cn/2026/10/18/11999259.shtml">bjd.com.cn</a></div>
+        <p class="sum">神舟二十三号乘组完成新一批水稻样品采集、播种与存储。问天舱实验旨在微重力下连续培育两代。稻种5月随船入轨，含普通种子与2022年太空种子后代。样品将随返回舱下行。</p>
+        <div class="why"><strong>为何重要</strong>2022年完成「从种子到种子」。这次要看的是第二代会不会退化。地外原位产粮的前提，是品种在天上站得住。</div>
+      </div>
+    </article>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　超算 · 深圳</div>
+        <h3>十万卡交出十张应用账</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：IT之家 / 环球时报　·　<a href="https://www.ithome.com/1/014/550.htm">ithome.com</a>　·　<a href="https://www.globaltimes.cn/page/202610/1372462.shtml">globaltimes.cn</a></div>
+        <p>曙光18日在CCF HPC 2026发布8000十大应用：4万亿暗物质粒子宇宙模拟、万亿原子材料模拟、千亿神经元数字孪生脑等，数万卡弱扩展效率最高99%。机器本身已见3日刊，不重写首发。</p>
+        <div class="why"><strong>为何重要</strong>3日刊报过机器和6.77万亿网格。18日新的是应用包：宇宙、材料、数字脑被写成可引用的规模数字。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">09　芯片 · 首尔</div>
+        <h3>NVHBM要过台积电3纳米</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：首尔经济 / 路透　·　<a href="https://www.sedaily.com/article/20102991">sedaily.com</a>　·　<a href="https://www.streetinsider.com/Reuters/Samsung+to+use+TSMC+technology+for+Nvidias+next-generation+memory+chips%2C+Seoul+newspaper+reports/27199333.html">路透转述</a></div>
+        <p>《首尔经济》18日称，英伟达要求三星、SK海力士、美光以台积电3纳米工艺做NVHBM基底晶圆。三星内部审议后接受，标准HBM仍自产。五家公司均未发官方确认。</p>
+        <div class="why"><strong>为何重要</strong>存储三巨头若共用同一块逻辑底，英伟达就能在供应商之间挪单。这是报道，不是五家联合声明。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　算力基建 · 埃塞克斯</div>
+        <h3>微软退出洛顿</h3>
+        <div class="src">来源：电讯报 / 卫报　·　<a href="https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns">theguardian.com</a>　·　<a href="https://www.telegraph.co.uk/business/2026/10/18/microsoft-axes-ai-deal-setback-uk-data-centre-pioneer/">telegraph.co.uk</a></div>
+        <p class="sum">微软退出Nscale埃塞克斯洛顿数据中心协议。原计划租用约2.3万块英伟达芯片，作英国「主权」最大AI中心锚租户。电网接入或拖至2030年代。Nscale称其他微软合同不受影响。</p>
+        <div class="why"><strong>为何重要</strong>英国把这座中心写成AI产业政策样板。锚租户一撤，剩下的是场地、债务和一张要等到三十年代的电表。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　安全 · 编码代理</div>
+        <h3>蒸馏攻击拿走密钥</h3>
+        <div class="src">来源：OpenCode / On The Wire　·　<a href="https://onthewire.ai/article/opencode-says-a-breach-hit-1-4-of-its-console-users-an-email-shared-online-tells">onthewire.ai</a></div>
+        <p class="sum">OpenCode称大规模蒸馏攻击波及1.4% Console用户，限于已绑定外部模型商的子集。邮件指即将退役的遗留系统遭未授权访问，工作区中的OpenAI、Anthropic等密钥或已暴露。事件仍在处置。</p>
+        <div class="why"><strong>为何重要</strong>编码代理把第三方密钥存在托管层。蒸馏攻击一旦得手，账单和模型能力会一起被转走。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>周日无例会，轨道发射窗口在明天</h3>
+      <ul>
+        <li>外交部周日无例会。王毅会见黑山总理斯帕伊奇新华社19日03:02见报，入19日刊</li>
+        <li>未见18日国内航天发射。Bandwagon-5、H3火星卫星探测窗口均排在19日</li>
+        <li>无《自然》《科学》级18日首发。Nature Physics五比特并行门、GaP-on-diamond为15日；Willow魔法态已入16日刊</li>
+        <li>RISC-V中国峰会18日仅为会员日，正式开幕在19日。DeepSeek Search API为17日上线</li>
+        <li>Anthropic公益基金官方博客16:49 UTC，折沪时19日00:49，不入本日</li>
+        <li>勿重刊：传统医药大会、抵塔什干、扶贫日、格雷厄姆豁免、乌兰察布、国常会AI+、镐山、RTX Spark、Willow、曙光8000机器本身（3日）</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第027期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>塔什干写完文件，杜尚别写下抵达</h2>
+      <p class="judge">访乌详稿在凌晨见报，人在中午落到杜尚别，下午把矿产和人工智能写进中塔菜单。王毅首次访黑山。特朗普把以色列选票写成对伊战争的下一句。问天舱播下第二代稻种。十万卡交出应用账。微软在埃塞克斯把电表写成三十年代。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>访乌收官写成铁路与文件</li>
+            <li>人到了，会还在前头</li>
+            <li>总理会谈签下基建账</li>
+            <li>外长首次踏上黑山</li>
+            <li>亚残运会主火炬点燃</li>
+            <li>背书写成对伊战争的下一句</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>第二代稻种写进培养盒</li>
+            <li>十万卡交出十张应用账</li>
+            <li>NVHBM要过台积电3纳米</li>
+            <li>微软退出洛顿</li>
+            <li>蒸馏攻击拿走密钥</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-18 00:00 至 2026-10-19 00:00。交叉来源：新华社/外交部/政府网、CBS/中央社、国际残奥委会、央视/载人航天、IT之家/环球时报、首尔经济/路透、卫报/电讯报、OpenCode。排除16–17日旧稿，以及19日03:02黑山总理会见、19日00:49 Anthropic基金。</p>
+      <p class="end">每日时政科技简报 · 第027期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
