@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第029期 · 2026-10-20</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第029期  ·  2026年10月20日  ·  星期二</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零贰玖期  ·  二零二六年十月二十日  ·  星期二</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。杜尚别写下联合公报，圣彼得堡接下定期会晤。谷歌把TPU写进PyTorch，H3把取样船送往火卫一。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>上合 · 内需 · 海峡</em></div>
+        <div class="metric"><b>06</b><span>科技</span><em>TPU · 发射 · 神经</em></div>
+        <div class="metric"><b>12</b><span>合计</span><em>周二沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：李强在上合总理会谈「道」与「术」，晚间飞抵圣彼得堡。发改委与工信部同日交账。革命卫队称两艘油轮触雷。TorchTPU开源，MMX入轨。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>总理层把比什凯克峰会改写成联合公报，再把中亚多边日程接到对俄双边会晤。北京同日交出扩内需与工业账，霍尔木兹则公开承认布雷。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 杜尚别</div>
+      「这既需要我们在视野、理念、思维等『道』的层面更好凝聚共识，又需要在运行、操作等『术』的层面更好采取行动。」——国务院总理李强，上合总理会
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>1000</b><i>名医务进修</i><p>中方承诺资助上合组织国家医务人员来华进修。</p></div>
+      <div class="fact"><b>35%</b><i>工业贡献率</i><p>工信部称前三季度工业对经济增长贡献率仍约三成五。</p></div>
+      <div class="fact"><b>2艘</b><i>海峡触雷</i><p>革命卫队称南侧「非法」航线两艘油轮触雷起火。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>外交 · 杜尚别</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">上合总理会 · 20日18:47</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">上合总理会签署联合公报</h3>
+        <div class="src">来源：新华社 / 外交部　·　<a href="https://www.news.cn/politics/leaders/20261020/f9ef0ddade854afe907a877ca5359d94/c.html">news.cn</a>　·　<a href="https://english.news.cn/asiapacific/20261020/69b81e69b9694dffb29913648dc1e775/c.html">联合公报英译</a></div>
+        <p class="sum">李强20日在杜尚别出席上合总理会第二十五次会议，谈「道」「术」两端，承诺尽快完成「四个安全中心」建章立制并资助1000名医务人员来华进修。会后签署联合公报，批准贸易投资、工业、互联互通文件，呼吁改革全球治理、反对单边强制措施。</p>
+        <div class="why"><strong>为何重要</strong>把9月比什凯克峰会的政治共识改写成可执行的总理层文件，并首次写下医务人员培训的量化承诺。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">杜尚别收官，圣彼得堡接下</h2>
+    <p class="section-sub">一栏是中俄总理定期会晤的抵达急电，一栏是王毅欧亚之行的官方收口。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　外交 · 圣彼得堡</div>
+        <h3>李强抵圣彼得堡</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社英文急电　·　<a href="https://english.news.cn/20261020/6d945f633556437c868e92f91c41a1ff/c.html">english.news.cn</a></div>
+        <p>结束访塔并出席上合总理会后，李强当地时间20日晚抵达圣彼得堡普尔科沃机场，将举行中俄总理第三十一次定期会晤。新华社英文急电20日23:45首发；中文详稿见报时间为21日00:42，本条只记抵达。</p>
+        <div class="why"><strong>为何重要</strong>把中亚多边日程接到对俄双边定期会晤，是十五五开局年中俄总理机制的一次现场兑现。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　外交 · 北京</div>
+        <h3>王毅欧亚之行收官</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202610/t20261020_12043799.shtml">mfa.gov.cn</a></div>
+        <p>毛宁20日总结王毅14–20日亚信峰会及阿塞拜疆、克罗地亚、黑山、保加利亚之行，核心是「信任、友谊、合作、伙伴」。中欧经贸分歧可对话；美方停用深度求索遭反对政治化；中美俄三边会晤「暂无信息」。国际调解院成立一年，创始国48个。</p>
+        <div class="why"><strong>为何重要</strong>欧亚四国访问收成官方总结，同时把中欧经贸摩擦、DeepSeek禁令和三边会晤写成可引用的外交口径。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">北京同日交出两本账</h2>
+    <p class="section-sub">发改委写扩内需三条路径，工信部把工业贡献率与智能算力一并核账。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　宏观 · 北京</div>
+        <h3>扩内需拟从三方面发力</h3>
+        <div class="src">来源：国家发展改革委 / 新华社　·　<a href="https://www.news.cn/20261020/cb2d3cc9dfdc4f719a1b4c2e61866d30/c.html">news.cn</a></div>
+        <p class="sum">发改委左刚20日说，扩内需将从三方面发力：提振消费，提高公共服务支出并促进新能源车与智能产品；扩大有效投资，协同「十五五」109项重大工程与「六张网」；完善机制，出台全国统一大市场建设条例，统一产权保护与市场准入。</p>
+        <div class="why"><strong>为何重要</strong>这是假期后首场发改委发布会，把扩内需从原则改写成三条可核对的政策路径。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　工业 · 北京</div>
+        <h3>工业贡献率仍约三成五</h3>
+        <div class="src">来源：工业和信息化部 / 国新办　·　<a href="http://finance.people.com.cn/n1/2026/1020/c1004-40818330.html">people.com.cn</a>　·　<a href="http://www.xinhuanet.com/fortune/20261020/c99dbb5b863544a0b725439a607f58d0/c.html">xinhuanet.com</a></div>
+        <p class="sum">王卫明20日称，前三季度规上工业增加值同比增5.3%，工业对经济增长贡献率约35%；高技术制造业增14.3%。累计建成先进级智能工厂1.3万余家、卓越级500余家；截至9月底智能算力2592EFLOPS、同比增146%。将推进「人工智能+软件」。</p>
+        <div class="why"><strong>为何重要</strong>把统计局19日的工业数字改写成工信系统的结构账本，并首次交出智能工厂与智能算力的季度核账。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>中东 · 德黑兰</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">霍尔木兹 · 20日20:42</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">两艘油轮在海峡触雷</h3>
+        <div class="src">来源：新华社 / 赛帕新闻　·　<a href="https://www.news.cn/world/20261020/de534c2cb71e4012a36e6b65435d93c9/c.html">news.cn</a></div>
+        <p class="sum">革命卫队20日称，两艘「违规」油轮经霍尔木兹南侧「非法」航线时触碰其海军水雷，爆炸起火并停航。声明警告穿越布雷区将焚毁资产，并称19日夜在海峡上空击落一架美军MQ-9，为近数月第54架。</p>
+        <div class="why"><strong>为何重要</strong>海峡封锁从「导弹/触雷」争议推进到公开承认布雷并造成两艘起火，航运风险再抬升。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      李强会见拉赫蒙/阿雷夫、潘功胜五项工具、谴责靖国神社、佩斯科夫谈APEC、约托娃会见、进迭时空V100、Anthropic公益基金，均已见19日刊。科技兴商18条为19日国新办，国常会「人工智能+」为16日。王毅与佩特罗娃会谈为19日当地，并入本日例会收官，不单列。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>PyTorch大会把TPU写成一条配置。种子岛把取样船送往火卫一，佛罗里达把32个载荷送进中倾角轨道。南京把帕金森写成胆固醇通路。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>8192</b><i>颗Ironwood</i><p>TorchTitan称训练规模已验证到这一量级。</p></div>
+      <div><b>71分</b><i>确认分离</i><p>H3十号机把MMX送入预定轨道的时间。</p></div>
+      <div><b>32</b><i>个载荷</i><p>Bandwagon-5一次送上中倾角轨道的卫星与返回舱。</p></div>
+      <div><b>400</b><i>GOPS</i><p>Astra SR250端侧算力的顶档标称。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>算力 · 旧金山</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">Google Cloud · PyTorch Conference</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">TorchTPU开源上PyTorch</h3>
+        <div class="src">来源：Google Cloud Blog / Developers Blog　·　<a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus">cloud.google.com</a>　·　<a href="https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/">developers.googleblog.com</a></div>
+        <p class="sum">谷歌20日在PyTorch大会开源TorchTPU，使TPU成为与GPU并列的原生后端，可接vLLM、SGLang、Hugging Face与TorchTitan。TorchTitan称在最多8192颗Ironwood上训练；另发llm-d 1.0与TPU agent suite预览。</p>
+        <div class="why"><strong>为何重要</strong>把TPU从「要改代码」改写成一条配置即可迁移的PyTorch路径，直接冲击英伟达的软件护城河。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">一艘取样船，三十二个载荷</h2>
+    <p class="section-sub">沪时清晨是种子岛的火星卫星，傍晚是卡纳维拉尔角的中倾角拼车。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　航天 · 种子岛</div>
+        <h3>H3十号机送出MMX</h3>
+        <div class="src">来源：JAXA　·　<a href="https://www.jaxa.jp/press/2026/10/20261020-1_j.html">jaxa.jp</a>　·　<a href="https://global.jaxa.jp/press/2026/10/20261020-1_e.html">global.jaxa.jp</a></div>
+        <p class="sum">JAXA于20日4:41（日本时，沪时3:41）用H3火箭10号机从种子岛发射火星卫星探测器MMX，约71分钟后确认分离入轨。任务将取样火卫一表面物质，计划2031年返回地球。</p>
+        <div class="why"><strong>为何重要</strong>这是人类首次针对火星卫星的取样返回任务升空，把火卫一起源之争写成可带回实验室的日程。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　航天 · 佛罗里达</div>
+        <h3>Bandwagon-5送上32载荷</h3>
+        <div class="src">来源：SpaceX / NASA　·　<a href="https://www.spacex.com/launches/bandwagon5">spacex.com</a>　·　<a href="https://www.nasa.gov/blogs/smallsatellites/2026/10/20/two-nasa-commercial-satellite-communication-demonstrations-launch/">nasa.gov</a></div>
+        <p class="sum">猎鹰9号20日7:04（美东，沪时19:04）从卡纳维拉尔角发射Bandwagon-5，部署32个中倾角载荷，一级第19次飞行并海上回收。NASA资助的Maxwell与SES中继演示随箭升空，另有Xona导航与多颗雷达星。</p>
+        <div class="why"><strong>为何重要</strong>天气推迟后的唯一年度Bandwagon把商业遥感、导航与NASA商业中继同日送入轨道。</div>
+      </article>
+    </div>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">10　芯片 · 圣何塞</div>
+        <h3>新突发布Astra SR200</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Synaptics　·　<a href="https://www.synaptics.com/company/news/synaptics-astra-sr200-series-multimodal-edge-ai-processors">synaptics.com</a></div>
+        <p>Synaptics 20日发布Astra SR200系列，集成谷歌开源Coral NPU与Cortex-M85/M52，面向眼镜、摄像头与工业传感。SR210/230/250算力为200、300、400 GOPS，片上最高8MB SRAM并配可扩展定制DRAM，样品已出。</p>
+        <div class="why"><strong>为何重要</strong>这是Coral NPU开源架构的首个商业硅，把端侧多模态从应用处理器下放到微控制器功耗档。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">11　神经 · 南京</div>
+        <h3>ABCA1被写成帕金森通路</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Neuroscience　·　<a href="https://www.nature.com/articles/s41593-026-02487-7">nature.com</a></div>
+        <p>南京医科大学曹蕾、陆明团队20日报告，帕金森病脑内ABCA1升高，星形胶质过度外排、神经元溶酶体借其输入胆固醇，导致自噬受损与α-突触核蛋白病理。敲低Abca1或用柠檬酸镁抑制可减轻小鼠病变。</p>
+        <div class="why"><strong>为何重要</strong>把「降胆固醇合成无效」改写成可干预的转运通路，是当日少有的中国实验室《自然》子刊首发。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">12<em>物性 · 蒙特利尔</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">《自然·物理》 · 20日</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.15;">光把赝能隙打出对称</h3>
+        <div class="src">来源：Nature Physics　·　<a href="https://www.nature.com/articles/s41567-026-03446-6">nature.com</a></div>
+        <p class="sum">博斯基尼、米利斯、乔治等对最优掺杂铋系铜氧化物做时间分辨ARPES：强光激发在远低于临界温度时把对称超导态密度改写成不对称赝能隙；超导恢复则压制赝能隙，中间时刻两者共存。</p>
+        <div class="why"><strong>为何重要</strong>实验直接挑战「超导从赝能隙相位相干中长出」的图景，把两种态写成相互竞争。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>国内发射仍留白，聚合站不抢刊</h3>
+      <ul>
+        <li>当日无国内航天发射通稿；中国大模型与本土芯片无20日产品首发可核验</li>
+        <li>李强圣彼得堡中文详稿见报时间为21日00:42，只收20日23:45英文急电的抵达事实</li>
+        <li>上合联合公报中文全文未见，英文仅有全球治理改革与反对单边强制措施要点</li>
+        <li>NVIDIA「一天三发」、OpenAI约300亿美元融资、DeepSeek DeepInfer为聚合站，官方通稿未核验，不立项</li>
+        <li>科技兴商18条为19日国新办；统计局前三季度GDP 4.6%为19日；国常会「人工智能+」为16日</li>
+        <li>勿重刊：会见拉赫蒙/阿雷夫、央行五项、靖国神社、约托娃会见、进迭V100、Anthropic基金、Nscale洽谈、RTX Spark、Willow</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第029期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>公报落地，TPU开源，取样船离岛</h2>
+      <p class="judge">李强在杜尚别写下「道」与「术」，晚间飞抵圣彼得堡。发改委交出扩内需三条，工信部核出工业贡献率约35%。革命卫队称两艘油轮触雷。谷歌把TPU写进PyTorch，H3把MMX送往火卫一。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>上合总理会签署联合公报</li>
+            <li>李强抵圣彼得堡</li>
+            <li>王毅欧亚之行收官</li>
+            <li>扩内需拟从三方面发力</li>
+            <li>工业贡献率仍约三成五</li>
+            <li>两艘油轮在海峡触雷</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技六条 · 缺口</h4>
+          <ol>
+            <li>TorchTPU开源上PyTorch</li>
+            <li>H3十号机送出MMX</li>
+            <li>Bandwagon-5送上32载荷</li>
+            <li>新突发布Astra SR200</li>
+            <li>ABCA1被写成帕金森通路</li>
+            <li>光把赝能隙打出对称</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-20 00:00 至 2026-10-21 00:00。交叉来源：新华社/外交部、发改委/工信部国新办、赛帕新闻、Google Cloud、JAXA、SpaceX/NASA、Synaptics、《自然·神经科学》《自然·物理》。创刊期号：2026-09-22为第001期，本日为第029期。</p>
+      <p class="end">每日时政科技简报 · 第029期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
