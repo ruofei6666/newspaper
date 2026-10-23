@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第031期 · 2026-10-22</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第031期 · 2026年10月22日 · 星期四</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁壹期 · 二零二六年十月二十二日 · 星期四</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。人民大会堂把长征写成五个必须。新华社把圣彼得堡公报写成可核对的条款。那曲把高原浅源震写成四级响应。</p>
+  <div class="metrics">
+    <div class="metric"><b>06</b><span>时政</span><em>大会 · 公报 · 地震</em></div>
+    <div class="metric"><b>05</b><span>科技</span><em>星火 · 规划 · 分子转子</em></div>
+    <div class="metric"><b>11</b><span>合计</span><em>周四沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：习近平在纪念长征胜利90周年大会提出「五个必须」。中俄总理会晤联合公报全文见报。毛宁称台湾问题没有灰色地带。发改委公布对外投资管理办法。巴青7.0级地震启动四级响应。达曼机场伤亡核账。讯飞星火X2.6基于全国产算力发布。八部门印发产业基础「十五五」规划。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>大会堂把长征精神写成新征程动员。圣彼得堡把北极航道和天问三号写进公报。发改委把对外投资写成76条。那曲把浅源强震写成国家级响应。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 人民大会堂</div>
+  「新征程是充满光荣和梦想的远征，是党和人民的新长征。」——习近平，纪念中国工农红军长征胜利90周年大会
+</div>
+
+<div class="facts">
+  <div class="fact"><b>90</b><i>周年大会</i><p>22日上午在京举行，习近平提出走好新长征路的「五个必须」，约3000人参加。</p></div>
+  <div class="fact"><b>01:12</b><i>公报全文</i><p>新华社受权播发中俄总理第三十一次定期会晤联合公报，21日刊只收会晤通稿。</p></div>
+  <div class="fact"><b>7.0</b><i>巴青地震</i><p>22时33分那曲巴青县浅源强震，国务院抗震救灾指挥部办公室启动四级响应。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>大会 · 北京</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 · 22日 13:55 见报</p>
+    <h3 class="section-title">纪念长征胜利90周年大会在京举行</h3>
+    <p class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7084003.htm">gov.cn</a></p>
+    <p class="sum">10月22日上午，纪念中国工农红军长征胜利90周年大会在北京人民大会堂举行。习近平发表讲话，提出走好新长征路的「五个必须」：坚守理想信念、推动高质量发展、勇于伟大斗争、建成世界一流军队、坚持党的领导。赵乐际主持，李强等出席，约3000人参加。</p>
+    <div class="why"><strong>为何重要</strong>把长征精神写成新征程的组织动员，是「十五五」开局后的一次全党全军全国性宣示。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>02　公报 · 圣彼得堡</p>
+    <h3>联合公报全文见报</h3>
+    <p class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7083962.htm">gov.cn</a></p>
+    <p class="sum">新华社22日01:12受权播发联合公报全文。双方将加强北极航道、本币结算与人工智能治理合作，签署2026–2030科技创新路线图，并就天问三号轨道器搭载俄仪器达成备忘录。第三十二次会晤定于2027年。</p>
+    <div class="why"><strong>为何重要</strong>21日刊只收会晤通稿；全文把北极航道、天问三号和AI治理写成可核对的条款。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>03　例会 · 台湾 / 北极 / 红海</p>
+    <h3>没有灰色地带</h3>
+    <p class="src">来源：外交部例行记者会　·　<a href="https://www.mfa.gov.cn/wjdt_674879/fyrbt_674889/202610/t20261022_12045239.shtml">mfa.gov.cn</a></p>
+    <p class="sum">毛宁回应菲方拟与台湾深化海缆合作时称「在台湾问题上没有灰色地带」。对欧盟北极战略称中国活动符合国际法，不应以冷战思维划分阵营。并介绍王毅与吉布提外长关于红海航道安全的联合新闻公报。中俄美三方会晤仍暂无信息。</p>
+    <div class="why"><strong>为何重要</strong>把台海、北极与红海三条航线安全议题写进同一场例会，口径均是当日首发。</div>
+  </article>
+</div>
+
+<h2 class="section-title">对照 · 投资门槛与高原震情</h2>
+<p class="section-sub">发改委把对外投资从企业备案扩到个人主体。应急管理部把巴青浅源强震写成四级响应。伤亡核账以次日官方口径为准。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>04　政策 · 发改委</p>
+    <h3>对外投资办法12月施行</h3>
+    <p class="src">来源：新华社 / 国家发改委　·　<a href="https://www.news.cn/20261022/a84e6b7f651d4f46beb1b0f2d79f0873/c.html">news.cn</a></p>
+    <p class="sum">国家发展改革委22日公布《对外投资管理办法》，共76条，自12月1日起施行，2017年《企业境外投资管理办法》同步废止。投资者明确包括境内企业、其他组织和居民个人；完善重大不利情况与年度报告，大额涉外交项目须报告前期工作。</p>
+    <div class="why"><strong>为何重要</strong>把对外投资从企业备案扩到个人主体，并针对歧视性措施和境外风险重写报告义务。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>05　应急 · 那曲</p>
+    <h3>巴青县发生7.0级地震</h3>
+    <p class="src">来源：应急管理部 / 新华社　·　<a href="https://www.mem.gov.cn/xw/yjyw/202610/t20261022_736710.shtml">mem.gov.cn</a></p>
+    <p class="sum">22日22时33分，西藏那曲市巴青县（北纬32.40度、东经93.79度）发生7.0级地震，震源深度10千米，震中附近海拔约4800米。国务院抗震救灾指挥部办公室、应急管理部启动国家地震灾害四级应急响应，并派出工作组。截至当日夜间，伤亡仍在核查。</p>
+    <div class="why"><strong>为何重要</strong>高原浅源强震当晚即启动国家级响应。16人遇难等核账数字为23日凌晨首发，不抢入本日。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>中东 · 达曼 / 霍尔木兹</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>Arab News / Reuters / AP · 22日核账</p>
+    <h3 class="section-title">达曼机场核账，伊称七艘受损</h3>
+    <p class="src">来源：Arab News / Reuters / AP　·　<a href="https://www.arabnews.com/saudi-arabia/dammams-king-fahd-airport-resumes-operations-after-attack-kills-2-3007672">arabnews.com</a>　·　<a href="https://www.aljazeera.com/news/2026/10/22/iran-says-seven-ships-hit-in-hormuz-strait-warns-us-of-wider-response">aljazeera.com</a></p>
+    <p class="sum">沙特民航总局22日称，达曼法赫德国王国际机场袭击造成沙特公民与印度居民各1人遇难、8人受伤，机场当日恢复运行。伊朗革命卫队海军称隔夜四艘过驳油轮起火、三艘在霍尔木兹以西触雷，并警告将扩大报复；UKMTO未发对应通报。</p>
+    <div class="why"><strong>为何重要</strong>把沙特东部机场伤亡从21日预告写成官方核账，同时霍尔木兹单日宣称受损船只数升至开战以来高位。</div>
+  </div>
+</article>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  中办国办科产融合意见、李强会见米舒斯京与普京通稿、APEC财长会闭幕、数字人民币基础设施升级、前三季度用电量，均为21日首发。谷神星一号海射遥八、SHINE首次出光已入21日刊。联合公报中文全文按预告收入本日。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>讯飞把全国产算力写成可试用的智能体。八部门把产业基础再造成「十五五」目录。成都把科学智能写成省级平台。《自然》把分子旋转写成可调电导。</p>
+</section>
+
+<div class="stat4">
+  <div><b>293B</b><i>星火X2.6</i><p>A30B混合专家，百万token上下文，称全国产算力训练。</p></div>
+  <div><b>22</b><i>项重点任务</i><p>产业基础「十五五」规划七方面，目标2030年进入国际先进行列。</p></div>
+  <div><b>350亿</b><i>天府·慧研</i><p>科学基础大模型激活参数，对接干湿智能实验室。</p></div>
+  <div><b>100%</b><i>单向旋转</i><p>《自然》螺旋烯分子转子，电压极性可反转方向。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">07<em>模型 · 1024</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>科大讯飞 · 22日下午主论坛</p>
+    <h3 class="section-title">星火X2.6基于全国产算力发布</h3>
+    <p class="src">来源：IT之家 / 澎湃新闻　·　<a href="https://www.ithome.com/1/016/403.htm">ithome.com</a>　·　<a href="https://www.21jingji.com/article/20261022/herald/b6f789c83ebf712a4ca0bc832cb93833.html">21jingji.com</a></p>
+    <p class="sum">科大讯飞22日在全球1024开发者节发布星火X2.6：采用293B-A30B混合专家架构，上下文扩展至百万token，称首次基于全国产算力实现代码与智能体能力突破。长程训练效率约提升4倍、推理约4.5倍。同步开源端侧X2.6-4B。</p>
+    <div class="why"><strong>为何重要</strong>把「国产算力能训出可用智能体」写成可试用的产品，而不只是把现成模型迁移到国产卡上推理。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　规划 · 工信部</p>
+    <h3>产业基础再写成目录</h3>
+    <p class="src">来源：工信部 / 新华社　·　<a href="https://www.miit.gov.cn/jgsj/ghs/gzdt/art/2026/art_5fab903fabde41e3857ad4e7a939c8d8.html">miit.gov.cn</a>　·　<a href="https://www.gov.cn/zhengce/zhengceku/202610/content_7084022.htm">gov.cn</a></p>
+    <p class="sum">工信部等八部门22日发布《产业基础能力提升「十五五」规划》，提出到2030年产业基础能力总体进入国际先进行列。围绕自主可控、创新能力、技术基础、质量、企业竞争力、推广应用和发展生态七方面部署22项重点任务。</p>
+    <div class="why"><strong>为何重要</strong>把「产业基础再造」写成「十五五」可考核的目录与平台任务，承接21日科产融合意见的执行层。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>09　大会 · 成都</p>
+    <h3>「天府·慧研」上线</h3>
+    <p class="src">来源：新华社　·　<a href="https://www.news.cn/tech/20261022/15a3938d60194d06a14e9252e4efc56d/c.html">news.cn</a></p>
+    <p class="sum">第23届中国计算机大会22日在成都开幕，注册人数超过1.1万人，为创办二十余年来首次落地四川。会上，四川省「天府·慧研」平台上线，以约350亿激活参数科学基础大模型为核心，面向新材料、新药创制和清洁能源，打通预测—实验—验证闭环。</p>
+    <div class="why"><strong>为何重要</strong>把科学智能从口号写成带国产算力和干湿实验室的省级平台，是大会当日可核验的产品。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>10　科学 · 《自然》</p>
+    <h3>电流驱动分子单向转</h3>
+    <p class="src">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-11312-x">nature.com</a></p>
+    <p class="sum">《自然》22日发表魏茨曼科学研究所、华中科技大学等的研究：将螺旋烯分子悬于两电极之间，外加电压可驱动100%单向循环旋转，极性可反转；超过阈值后电导显著增强。计算显示电流诱导力矩使分子进入静止时无法到达的高电导构型。</p>
+    <div class="why"><strong>为何重要</strong>给出可反向、可调阈值的分子转子原型，把分子机器从「会转」推进到「转动改变电导」。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>11　边缘 · BrainChip</p>
+    <h3>SPI外挂神经形态芯</h3>
+    <p class="src">来源：BrainChip　·　<a href="https://brainchip.com/press/brainchip-unveils-akd1500-spi-chip-bringing-neuromorphic-ai-to-everyday-edge-devices/">brainchip.com</a></p>
+    <p class="sum">BrainChip 22日发布AKD1500 SPI神经形态协处理器，用微控制器常见的SPI接口把Akida事件驱动AI接到手表、门铃和工厂传感器，支持在芯片上学习新词、声音或故障模式，而无需把数据送回云端重训。</p>
+    <div class="why"><strong>为何重要</strong>把神经形态芯片从PCIe模组降到MCU外挂，瞄准无需更换主控的存量嵌入式市场。</div>
+  </article>
+</div>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>航天留白，21日稿不重写</h3>
+  <ul>
+    <li>无22日国内航天发射。谷神星一号海射遥八、SHINE首次出光已入21日刊</li>
+    <li>Micron垂直HBM路线图为21日10:00 ET技术网络会，22日只是跟进稿，不立项</li>
+    <li>听觉脑干植入体获批、数字人民币DCEPS、前三季度用电量、APEC财长会，均为20–21日首发</li>
+    <li>巴青地震16人遇难、32人受伤为23日02:25核账、04:00新华社见报，不抢收</li>
+    <li>DeepSeek约150亿美元融资、SemiAnalysis「华为—DeepSeek追赶英伟达」为传闻或研究札记，交叉不足不立项</li>
+    <li>勿重刊：科产融合意见、李强会见米舒斯京/普京通稿、OpenShell、Pinal、Coral NPU、TorchTPU、RTX Spark、Willow</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第031期 · 收束</p>
+  <h2>大会堂写五个必须，公报写北极航道，那曲写四级响应</h2>
+  <p class="judge">习近平在纪念长征胜利90周年大会提出走好新长征路的「五个必须」。中俄总理会晤联合公报全文把北极航道、天问三号和AI治理写成条款。毛宁称台湾问题没有灰色地带。发改委公布对外投资管理办法。巴青7.0级地震启动四级响应。达曼机场伤亡核账。讯飞星火X2.6与产业基础「十五五」规划同日见报。</p>
+  <div class="toc">
+    <div>
+      <h4>时政六条</h4>
+      <ol>
+        <li>纪念长征胜利90周年大会在京举行</li>
+        <li>联合公报全文见报</li>
+        <li>没有灰色地带</li>
+        <li>对外投资办法12月施行</li>
+        <li>巴青县发生7.0级地震</li>
+        <li>达曼机场核账，伊称七艘受损</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技五条 · 缺口</h4>
+      <ol>
+        <li>星火X2.6基于全国产算力发布</li>
+        <li>产业基础再写成目录</li>
+        <li>「天府·慧研」上线</li>
+        <li>电流驱动分子单向转</li>
+        <li>SPI外挂神经形态芯</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-22 00:00 至 2026-10-23 00:00。交叉来源：新华社/中国政府网/外交部/应急管理部/工信部/发改委、Arab News/Reuters/AP、科大讯飞1024、Nature、BrainChip。排除21日会晤通稿与科产融合意见、22日凌晨之后的地震伤亡核账，以及未交叉的融资传闻。</p>
+  <p class="end">每日时政科技简报 · 第031期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
