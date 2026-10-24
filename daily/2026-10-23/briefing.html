@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第032期 · 2026-10-23</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第032期 · 2026年10月23日 · 星期五</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁贰期 · 二零二六年十月二十三日 · 星期五</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。雄安把全球治理写成八项行动。中南海把人口与服务业写进同一场国常会。那曲把高原浅源震写成可核对的伤亡账。</p>
+  <div class="metrics">
+    <div class="metric"><b>06</b><span>时政</span><em>论坛 · 国常会 · 震情</em></div>
+    <div class="metric"><b>06</b><span>科技</span><em>规划 · 发射 · 开源权重</em></div>
+    <div class="metric"><b>12</b><span>合计</span><em>周五沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：习近平向2026全球治理论坛（雄安）致信，王毅宣布八项行动并发布外空治理立场。李强国常会研究人口与服务业。施泰因迈尔将访华。巴青地震核账16死76伤。财政部公布前三季度账。白宫称奥列什基局部停火。信息化「十五五」规划印发。长六改发射遥感五十号03星。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>雄安把全球治理倡议写成可核对的行动清单。国务院把人口红利与服务业扩能写进同一场常务会。那曲把昨夜强震写成下午核账。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 雄安新区</div>
+  「以信心汇聚力量，以合作破解难题，推动落实全球治理倡议，为变乱交织的世界注入更多确定性和正能量。」——习近平致2026全球治理论坛（雄安）
+</div>
+
+<div class="facts">
+  <div class="fact"><b>08</b><i>项行动</i><p>王毅在开幕式宣布办好APEC、发布外空治理立场、成立全球治理研究中心等。</p></div>
+  <div class="fact"><b>16</b><i>人遇难</i><p>巴青7.0级地震23日下午核账，伤者由凌晨32人修正为76人。</p></div>
+  <div class="fact"><b>5.1%</b><i>财政收入</i><p>前三季度一般公共预算收入17.23万亿元，增幅比上半年提高0.4个百分点。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>论坛 · 雄安</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 / 外交部 · 23日 19:35–21:53 见报</p>
+    <h3 class="section-title">习近平向雄安论坛致信</h3>
+    <p class="src">来源：中国政府网 / 外交部　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7084127.htm">gov.cn</a>　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/202610/t20261023_12046140.shtml">mfa.gov.cn</a></p>
+    <p class="sum">习近平23日向雄安全球治理论坛致信，称四重赤字有增无减，愿同各方落实全球治理倡议。王毅宣布八项行动：办好APEC、参与联合国改革、推动BBNJ协定、发布外空治理立场与人工智能能力建设进展报告、成立全球治理研究中心。近400人与会。</p>
+    <div class="why"><strong>为何重要</strong>把一年前提出的全球治理倡议写成可核对的八项行动，并同日发布外空治理十项主张。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>02　国常会 · 北京</p>
+    <h3>人口与服务业同场</h3>
+    <p class="src">来源：新华社　·　<a href="http://www.news.cn/20261023/4335a1f83d6c4f3db816710df887349c/c.html">news.cn</a></p>
+    <p class="sum">李强23日主持国务院常务会议，研究统筹人口与经济社会发展：完善终身学习与技能培训，促进高质量充分就业，引导城乡人口有序流动，建设生育友好型社会。会议并听取全国服务业大会部署落实情况，要求破除准入障碍、盘活闲置资源，把服务业潜力转为动能。</p>
+    <div class="why"><strong>为何重要</strong>把稳定新出生人口与服务业扩能提质写成同一场国常会的两条主线，是「十五五」开局的执行层。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>03　例会 · 中德 / 联合国 / 生物技术</p>
+    <h3>施泰因迈尔将访华</h3>
+    <p class="src">来源：外交部例行记者会　·　<a href="https://www.fmprc.gov.cn/fyrbt_673021/jzhsl_673025/202610/t20261023_12045868.shtml">fmprc.gov.cn</a></p>
+    <p class="sum">毛宁宣布德国总统施泰因迈尔将于10月27日至31日对华国事访问，时隔近八年再访；习近平将会谈，李强、赵乐际会见，并将访安徽。她纪念恢复联合国合法席位五十五周年；就美财政部拟把生物技术列入对外投资禁止领域，反对泛化国家安全、人为设限。</p>
+    <div class="why"><strong>为何重要</strong>把中德元首层互动日程、联合国2758号决议五十五周年与美方生物技术投资限制写进同一场例会。</div>
+  </article>
+</div>
+
+<h2 class="section-title">对照 · 高原核账与财政账本</h2>
+<p class="section-sub">那曲把昨夜浅源强震写成可核对的伤亡。财政部把前三季度收入写成5.1%，把土地出让写成两成七的跌幅。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>04　应急 · 巴青</p>
+    <h3>核账16死76伤</h3>
+    <p class="src">来源：新华社 / 中新社　·　<a href="https://www.news.cn/politics/20261023/8b16e009b30e481f9509e3e5a8f998db/c.html">news.cn</a>　·　<a href="https://www.chinanews.com.cn/sh/2026/10-23/10719832.shtml">chinanews.com.cn</a></p>
+    <p class="sum">那曲市政府23日下午首场发布会通报：截至15时，巴青7.0级地震造成16人遇难、76人受伤，房屋倒塌及受损339户，已转移12489人。18时前线指挥部称三轮排查未发现失联。玛如乡、岗切乡受灾最重，现场投入救援力量5000余人。</p>
+    <div class="why"><strong>为何重要</strong>22日刊只收四级响应与夜间未核伤亡。本日把16死76伤、未发现失联写成官方核账。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>05　财政 · 国库</p>
+    <h3>收入增，土地出让跌</h3>
+    <p class="src">来源：财政部 / 新华社　·　<a href="http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202610/t20261023_4003429.htm">mof.gov.cn</a></p>
+    <p class="sum">财政部23日公布：前三季度一般公共预算收入17.23万亿元，同比增长5.1%；税收增6.1%。支出21.02万亿元，增1%，卫生健康支出增7.7%。政府性基金收入降18.6%，土地出让收入降27.9%。促内需工具支持新发放信贷超28万亿元。</p>
+    <div class="why"><strong>为何重要</strong>税收随价格与外贸回升，土地出让仍是最大缺口。卫生健康支出增幅对应育儿补贴等「投资于人」。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>停火 · 奥列什基</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>白宫 / 新华社 / BBC · 23日声明</p>
+    <h3 class="section-title">奥列什基局部停火</h3>
+    <p class="src">来源：白宫 / 新华社 / BBC　·　<a href="https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-secures-ceasefire-between-russia-and-ukraine-localized-to-oleshky/">whitehouse.gov</a>　·　<a href="https://www.xinhuanet.com/20261023/3b34125bf73643628f59360bcdba1c74/c.html">xinhuanet.com</a></p>
+    <p class="sum">白宫23日声明称，梅拉尼娅促成俄乌在赫尔松州奥列什基局部停火，以便人道物资进入并安排平民撤离，声明称停火自10月29日起。新华社同日转述。BBC称乌俄总参将「静默」记为27日开始。该城现余约1700至2000人。</p>
+    <div class="why"><strong>为何重要</strong>这是一场限定单城、限定人道目标的局部停火，白宫与乌俄总参对起始日口径并不一致。</div>
+  </div>
+</article>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  长征胜利90周年大会、「五个必须」、中俄总理会晤联合公报全文、对外投资管理办法、达曼机场核账，均为22日首发。22日刊已预告巴青伤亡核账折入本日，不把大会评论当作新稿。霍尔木兹通航量下降见报时间为24日05:43，不抢收。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>网信委把6G与智能体写成2030年指标。太原把遥感星送进预定轨道。惠州把重离子装置缩到四分之一占地。开源权重与两篇《自然》子刊同日见刊。</p>
+</section>
+
+<div class="stat4">
+  <div><b>6G</b><i>适时商用</i><p>信息化规划写到2030年，陆海空天网络基本形成。</p></div>
+  <div><b>672</b><i>次飞行</i><p>长六改18:15于太原发射遥感五十号03星。</p></div>
+  <div><b>1200</b><i>平方米</i><p>惠州SIMM占地由4600平方米缩至约四分之一。</p></div>
+  <div><b>25.0%</b><i>EQE</i><p>热蒸发近红外钙钛矿LED，《自然·光子学》23日。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">07<em>规划 · 网信委</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>中央网信办 / 新华社 · 23日 18:00–21:55</p>
+    <h3 class="section-title">信息化「十五五」规划印发</h3>
+    <p class="src">来源：中国网信网 / 新华社　·　<a href="https://www.cac.gov.cn/2026-10/23/c_1794509044378569.htm">cac.gov.cn</a>　·　<a href="https://www.xinhuanet.com/20261023/84d41fe5c1674564aadcd67eb12fb62f/c.html">xinhuanet.com</a></p>
+    <p class="sum">中央网信委23日印发《国家信息化「十五五」规划》。到2030年陆海空天立体化网络基本形成，适时启动6G商用，国家区块链网络基本建成。指标包括智能体应用普及率超90%、数字经济核心产业占GDP12.5%、新建大型算力设施PUE低于1.2。</p>
+    <div class="why"><strong>为何重要</strong>把6G、区块链网络和智能体普及率写成可考核的2030年指标，是网信领域「十五五」总账本。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　航天 · 太原</p>
+    <h3>遥感五十号03星入轨</h3>
+    <p class="src">来源：新华社 / 航天科技集团　·　<a href="https://www.news.cn/tech/20261023/d3fe3e3c756a464ba655a60f217ee494/c.html">news.cn</a></p>
+    <p class="sum">23日18时15分，太原卫星发射中心用长征六号改成功发射遥感五十号03星，卫星进入预定轨道。该星用于国土普查、农作物估产和防灾减灾。任务为长征系列第672次飞行。长六改为新一代固液捆绑中型火箭，700公里太阳同步轨道运力不小于4.5吨。</p>
+    <div class="why"><strong>为何重要</strong>填补22日国内航天发射留白，把国土普查与防灾减灾载荷写进长征第672次飞行。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>09　医疗装备 · 惠州</p>
+    <h3>重离子装置缩到四分之一</h3>
+    <p class="src">来源：新华社 / 中科院　·　<a href="https://www.news.cn/20261023/5874261bb8c7484e881f6ae6b31fd1f4/c.html">news.cn</a>　·　<a href="https://www.cas.cn/cm/202610/t20261023_5122781.shtml">cas.cn</a></p>
+    <p class="sum">中科院23日通报，国产超紧凑旋转束重离子治疗系统（SIMM）首台示范装置在惠州建成，已进入设备检测，预计年底临床试验。占地由4600平方米缩至1200平方米，能耗约三分之一，年治疗能力可由1000例提至2000至5000例。</p>
+    <div class="why"><strong>为何重要</strong>把重离子放疗从「能做」推进到「占地和能耗可下沉到更多城市医院」。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>10　模型 · MiniMax</p>
+    <h3>M3.1-Flash权重上线</h3>
+    <p class="src">来源：Hugging Face / MiniMax　·　<a href="https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash">huggingface.co</a></p>
+    <p class="sum">MiniMax于23日08:59（沪时）在Hugging Face上线M3.1-Flash权重：约4280亿总参数、230亿激活的多模态MoE，支持图文视频与百万token上下文。社区许可要求商用署名，年营收超2000万美元须事先书面授权。</p>
+    <div class="why"><strong>为何重要</strong>模型本身19日已上线API。本日首发的是可本地下载的权重，且明确不是宽松开源许可。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>11　量子 · 《自然·物理》</p>
+    <h3>自主纠错过盈亏点</h3>
+    <p class="src">来源：Nature Physics　·　<a href="https://www.nature.com/articles/s41567-026-03486-y">nature.com</a></p>
+    <p class="sum">《自然·物理》23日发表中国科学技术大学林毅恒、杜江峰等的研究：在单颗囚禁离子多个自旋态编码逻辑比特，经自旋–运动耦合把错误熵转入运动模，再用辅助离子冷却耗散，无需测量反馈。逻辑比特寿命超越盈亏平衡点，环境噪声下亦延长。</p>
+    <div class="why"><strong>为何重要</strong>把量子纠错从「反复测量加反馈」改成硬件耗散过程，降低离子阱逻辑比特的控制开销。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">12<em>光电 · 《自然·光子学》</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>Nature Photonics · 23日发表</p>
+    <h3 class="section-title">热蒸发钙钛矿LED达25.0%</h3>
+    <p class="src">来源：Nature Photonics　·　<a href="https://www.nature.com/articles/s41566-026-02036-5">nature.com</a></p>
+    <p class="sum">《自然·光子学》23日发表南京大学鲍春雄、邹志刚与林雪平大学高飞等的研究：用双酰胺添加剂调控热蒸发钙钛矿结晶，近红外PeLED外量子效率达25.0%（805纳米），并在同一衬底集成双色器件，演示可穿戴脉搏血氧。</p>
+    <div class="why"><strong>为何重要</strong>把可像素化的真空蒸镀路线追到接近溶液法效率，为钙钛矿显示和传感的量产路径补上关键一步。</div>
+  </div>
+</article>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>芯片首发偏薄，22日稿不重写</h3>
+  <ul>
+    <li>北美云厂商与大模型无23日产品首发。TorchTPU为20日，OpenAI入谷歌云Model Garden为21日，星火X2.6为22日1024主论坛</li>
+    <li>产业先进制程芯片无当日产品首发。BrainChip AKD1500、八部门产业基础「十五五」规划、中国计算机大会均为22日</li>
+    <li>复旦大学EdenGNN电荷密度模型见《自然·机器智能》23日，篇幅让给离子阱纠错与钙钛矿LED，不另立条</li>
+    <li>遥感五十三号07–09星、霍尔木兹通航量下降见报时间为24日凌晨，不抢收</li>
+    <li>勿重刊：长征胜利90周年大会、中俄公报全文、对外投资办法、达曼机场、星火X2.6、OpenShell、Pinal、SHINE、谷神星遥八</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第032期 · 收束</p>
+  <h2>雄安写八项行动，国常会写人口，那曲写16死76伤</h2>
+  <p class="judge">习近平向雄安全球治理论坛致信，王毅宣布八项行动并发布外空治理立场。李强国常会同时部署人口高质量发展与服务业扩能。施泰因迈尔将访华。巴青地震核账16死76伤。财政部公布前三季度账。白宫称奥列什基局部停火。信息化「十五五」规划、长六改发射与两篇《自然》子刊同日见报。</p>
+  <div class="toc">
+    <div>
+      <h4>时政六条</h4>
+      <ol>
+        <li>习近平向雄安论坛致信</li>
+        <li>人口与服务业同场</li>
+        <li>施泰因迈尔将访华</li>
+        <li>核账16死76伤</li>
+        <li>收入增，土地出让跌</li>
+        <li>奥列什基局部停火</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技六条 · 缺口</h4>
+      <ol>
+        <li>信息化「十五五」规划印发</li>
+        <li>遥感五十号03星入轨</li>
+        <li>重离子装置缩到四分之一</li>
+        <li>M3.1-Flash权重上线</li>
+        <li>自主纠错过盈亏点</li>
+        <li>热蒸发钙钛矿LED达25.0%</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-23 00:00 至 2026-10-24 00:00。交叉来源：新华社/中国政府网/外交部/财政部/中央网信办/中科院、白宫/BBC、Hugging Face、Nature Physics、Nature Photonics。排除22日大会与星火X2.6，以及24日凌晨见报的霍尔木兹与遥感五十三号组。</p>
+  <p class="end">每日时政科技简报 · 第032期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
