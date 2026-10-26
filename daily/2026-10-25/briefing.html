@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第034期 · 2026-10-25</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第034期 · 2026年10月25日 · 星期日</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁肆期 · 二零二六年十月二十五日 · 星期日</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。中比把五十五年写成贺信。联合国把二七五八写成现职口径。那曲把余震写成五点七。海南把低轨星座写成第六百七十四次。</p>
+  <div class="metrics">
+    <div class="metric"><b>06</b><span>时政</span><em>贺信 · 席位 · 余震</em></div>
+    <div class="metric"><b>05</b><span>科技</span><em>长八甲 · 《自然》 · 超构表面</em></div>
+    <div class="metric"><b>11</b><span>合计</span><em>周日沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：习近平同比利时国王菲利普互致建交55周年贺信。联合国官员重申恪守第2758号决议。巴青发生主震以来最大余震。特朗普排除当日对伊动武。利雅得机场复航并拦截导弹。多哈世界投资论坛开幕。长八甲发射卫星互联网低轨28组。《自然》把术前ctDNA转阴写成肺癌分层指标。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>贺信把中比关系写成中欧稳定的支点。联合国把2758号决议写成现职官员的当日口径。那曲把余震序列写成五点七。福克斯把战争恫吓写成「今天不会打」。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 联合国驻华协调员</div>
+  「Happy 55th birthday。」——杰思衡谈中国与联合国关系，CGTN 25日访谈
+</div>
+
+<div class="facts">
+  <div class="fact"><b>55</b><i>年 · 席位</i><p>1971年10月25日第26届联大通过第2758号决议。赖德称联合国将一以贯之恪守该决议。</p></div>
+  <div class="fact"><b>5.7</b><i>级 · 余震</i><p>25日19时25分巴青县浅源余震，为22日7.0级主震以来监测到的最大一次。</p></div>
+  <div class="fact"><b>674</b><i>次 · 长征</i><p>海南商业场10时03分，长八甲将卫星互联网低轨28组送入轨道。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>纪念日 · 纽约 / 雄安</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>CGTN / 新华社 · 25日 10:29 见报</p>
+    <h3 class="section-title">联合国官员重申恪守第2758号决议</h3>
+    <p class="src">来源：CGTN / 新华社　·　<a href="https://news.cgtn.com/news/2026-10-25/-Happy-55th-birthday-UN-officials-reaffirm-stance-on-China-s-UN-seat-1Rvwzer6yZO/p.html">cgtn.com</a>　·　<a href="https://www.news.cn/world/20261025/de0c20d2dc144309a7af4f9c1583fd61/c.html">news.cn</a></p>
+    <p class="sum">10月25日是新中国恢复联合国合法席位55周年。联合国副秘书长盖伊·赖德称联合国「将一以贯之」恪守第2758号决议；驻华协调员杰思衡称那是「决定性时刻」，给全球南方在安理会带来有力声音。新华社同日刊发纪念图文。外交部23日预告口径不重写。</p>
+    <div class="why"><strong>为何重要</strong>把2758号决议写成联合国现职官员的纪念日口径，而不仅是纪念相册或周五例会预告。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>02　贺信 · 北京 / 布鲁塞尔</p>
+    <h3>中比建交五十五年</h3>
+    <p class="src">来源：新华社　·　<a href="https://www.news.cn/politics/leaders/20261025/7d90f31a5def4510ae49ce368fc5b8ef/c.html">news.cn</a></p>
+    <p class="sum">习近平25日同比利时国王菲利普互致贺信，庆祝建交55周年。习近平称愿以建交周年为契机，引领中比全方位友好合作伙伴关系迈上新台阶，为中欧关系健康稳定发展作贡献。菲利普表示愿推进开放对话、拓展务实合作。</p>
+    <div class="why"><strong>为何重要</strong>五中全会前夜，元首层面向欧洲释放「均衡互利、中欧稳定」的信号。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>03　应急 · 那曲</p>
+    <h3>巴青最大余震5.7级</h3>
+    <p class="src">来源：新华社　·　<a href="https://www.news.cn/20261025/5877682d792147c2bc2eb5147c1ad4c1/c.html">news.cn</a></p>
+    <p class="sum">25日19时25分，西藏那曲市巴青县（北纬32.43度、东经93.99度）发生5.7级地震，震源深度10公里，为22日7.0级主震以来最大余震。震感明显，但未影响群众生活与安置。扎若改村60间板房已建成，部分群众开始从帐篷迁入。</p>
+    <div class="why"><strong>为何重要</strong>把余震序列写成可核对的最大震级，同时说明板房安置已进入搬迁阶段。</div>
+  </article>
+</div>
+
+<h2 class="section-title">对照 · 霍尔木兹与利雅得</h2>
+<p class="section-sub">特朗普把战争恫吓写成「今天不会打」。联军把首都防空写成拦截公报。机场在关闭两周后重开国际航班。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>04　访谈 · 华盛顿</p>
+    <h3>「成交还是了结」</h3>
+    <p class="src">来源：CBS / Fox News　·　<a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/">cbsnews.com</a></p>
+    <p class="sum">特朗普25日晨在福克斯《Sunday Morning Futures》称，自己正在「同伊朗达成协议」与「了结他们」之间权衡，并宣称美方已控制霍尔木兹海峡。被问及是否将发动袭击时，他随后说「今天不会有打击」。</p>
+    <div class="why"><strong>为何重要</strong>把周末战争恫吓写成可核验的「排除当日动武」，中期选举前的措辞本身就是油价与航道的变量。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>05　中东 · 利雅得</p>
+    <h3>机场复航，导弹被拦</h3>
+    <p class="src">来源：新华社 / CBS　·　<a href="https://www.news.cn/world/20261025/bb57c5b649a846299d3c95564e9f6f81/c.html">news.cn</a></p>
+    <p class="sum">联军发言人马利基25日称，当天拦截并摧毁胡塞武装射向利雅得的一枚弹道导弹，稍早已在利雅得省击落两架无人机。当地约6时传出爆炸声并收到防空警报。哈立德国王国际机场同日重开1、2号航站楼，恢复国际航班。</p>
+    <div class="why"><strong>为何重要</strong>机场在10月上旬遇袭关闭两周后复航，与首都防空同日重叠，红海—海湾战场仍未降温。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>投资 · 多哈</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 / 海合会秘书处 · 25日开幕</p>
+    <h3 class="section-title">世界投资论坛开幕，中海自贸再提签署</h3>
+    <p class="src">来源：新华社 / 海合会　·　<a href="https://www.news.cn/20261025/2b75ddbfd10449a0829d5ff38db896d9/c.html">news.cn</a>　·　<a href="https://www.gcc-sg.org/en/MediaCenter/News/Pages/news2026-10-25-4.aspx">gcc-sg.org</a></p>
+    <p class="sum">贸发会议世界投资论坛25日在多哈开幕，主题「投资未来」，约5000人与会。贸发会议报告称上半年国际投资额上升，但新增项目续降，发展中国家基础设施等领域投资降幅超25%。海合会秘书长贾西姆会见李成钢，双方称自贸协定谈判正克服障碍、准备签署。</p>
+    <div class="why"><strong>为何重要</strong>把投资「金额升、项目降」的裂口，与中海自贸谈判并置，是海湾资本与中国市场的当日对表。</div>
+  </div>
+</article>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  金正恩访丹东、从严治党纪实、陈文清扫黑除恶专题会、王毅八项行动、商务部反制美对外投资限制、泽连斯基阿布扎比会谈、UKMTO周报、西岸驱离、对加关税清单、巴青电力恢复，均为23–24日首发。五中全会26日起召开，本日不抢收前瞻评论。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>文昌把低轨星座写成第六百七十四次。《自然》把血液DNA清除写成肺癌分层。技物所把对称性写成可调Q。上科大把相控阵换成一张全息片。</p>
+</section>
+
+<div class="stat4">
+  <div><b>674</b><i>长征发射</i><p>长八甲海南商业场，卫星互联网低轨28组入轨。</p></div>
+  <div><b>0.22</b><i>风险比</i><p>NeoCOAST-2：术前ctDNA转阴者无事件生存更优。</p></div>
+  <div><b>20000</b><i>Q因子</i><p>四聚体超构表面实验Q从约300调至约20000。</p></div>
+  <div><b>56%</b><i>脑萎缩降幅</i><p>全息超声两分钟开放血脑屏障后的小鼠结果。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">07<em>航天 · 文昌</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 / 中国航天科技集团 · 25日 10:03</p>
+    <h3 class="section-title">长八甲发射卫星互联网低轨28组</h3>
+    <p class="src">来源：新华社 / 航天科技集团　·　<a href="https://www.news.cn/politics/20261025/3573644b269e466f83510360cb84eff4/c.html">news.cn</a>　·　<a href="https://www.spacechina.com/n25/n2014789/n2414549/c4737080/content.html">spacechina.com</a></p>
+    <p class="sum">25日10时03分，长征八号甲在海南商业航天发射场点火，将卫星互联网低轨28组送入预定轨道。卫星由航天科技集团五院抓总；长八甲为两级半液体火箭，芯一级液氧煤油、芯二级氢氧，捆绑两枚液体助推器。此为长征系列第674次发射。</p>
+    <div class="why"><strong>为何重要</strong>低轨星座组网从文昌商业场继续加密，是国内周日可核验的航天首发。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　医学 · 《自然》</p>
+    <h3>术前ctDNA转阴</h3>
+    <p class="src">来源：Nature　·　<a href="https://www.nature.com/articles/s41586-026-11328-3">nature.com</a></p>
+    <p class="sum">NeoCOAST-2 II期平台试验探索可切除肺癌围手术期方案。术前ctDNA转阴者无事件生存更优（合并HR 0.22）；转阴且病理完全缓解者HR 0.10。Dato-DXd组ctDNA转阴率72.5%、病理完全缓解35.2%，为三组最高。作者称属探索性分析。</p>
+    <div class="why"><strong>为何重要</strong>把血液DNA清除写成可手术肺癌分层的候选指标，而不是又一份单臂缓解率新闻稿。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>09　光学 · 《自然·通讯》</p>
+    <h3>可编程超高Q</h3>
+    <p class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78953-4">nature.com</a></p>
+    <p class="sum">上海技物所、华东师大、南京信息工程大学等在四聚体超构表面中，用双点群与布里渊区折叠构造多重超高Q共振。实验显示模式劈裂可在0–70 nm间调节，Q因子从约300调至约20000。</p>
+    <div class="why"><strong>为何重要</strong>给出可寻址、可调Q的多共振超构表面路线，面向传感与光物质相互作用。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>10　医学工程 · 上科大</p>
+    <h3>全息超声多靶点</h3>
+    <p class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78847-5">nature.com</a></p>
+    <p class="sum">上海科技大学团队用3D打印全息片与单阵元超声，沿梗死边界开放血脑屏障。小鼠实验中一次两分钟治疗提高囊泡与间充质基质细胞递送，脑萎缩约降56%，血管新生约增1倍，神经前体增殖约增3倍。</p>
+    <div class="why"><strong>为何重要</strong>把昂贵相控阵换成低成本全息片，为卒中多靶点无创递送给出可扩展原型。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>11　医学AI · 复旦</p>
+    <h3>一张图生成罕见病变</h3>
+    <p class="src">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-78492-y">nature.com</a></p>
+    <p class="sum">复旦大学、中山医院等提出EndoRare：从单张参考图、无需重训即可合成罕见胃肠病变。在四种罕见病理上，专家判断图像临床可信，增强后分类器低假阳性下真阳性上升；探索性阅片显示新手识别改善。</p>
+    <div class="why"><strong>为何重要</strong>把罕见病样本短缺写成可验证的数据高效生成，而不是又一个通用医学大模型发布。</div>
+  </article>
+</div>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>产业芯片留白，24日稿不重写</h3>
+  <ul>
+    <li>外交部周日无例会；未见习近平/李强/王毅新会见详稿（比利时贺信除外）</li>
+    <li>北美云厂商与先进制程芯片无25日沪时产品首发</li>
+    <li>马斯克称SpaceX完成400亿美元GPU可赎回债务，路透25日16:05 ET=沪时26日04:05，入26日刊</li>
+    <li>Nemotron 3.5 Bolt E4B为23日开源；Kimi K3.1 Pro、OpenAI离线世界、英国AI生物安全实验室为24日</li>
+    <li>深圳国际量子研究院量子声学为光明日报「近日发表」，未核验25日期刊首发，不立项</li>
+    <li>勿重刊：金正恩访丹东、治理论坛致信/八项行动、商务部反制美投资限制、泽连斯基阿布扎比会谈、长四乙遥感五十三号、MiniMax M3.1-Flash</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第034期 · 收束</p>
+  <h2>贺信写中比，决议写现职口径，文昌写第六百七十四次</h2>
+  <p class="judge">习近平同比利时国王菲利普互致建交55周年贺信。联合国官员在恢复席位纪念日重申恪守第2758号决议。巴青发生主震以来最大余震。特朗普排除当日对伊动武。利雅得机场复航并拦截导弹。多哈世界投资论坛开幕，中海自贸谈判再提签署。长八甲发射卫星互联网低轨28组。《自然》把术前ctDNA转阴写成肺癌分层指标。</p>
+  <div class="toc">
+    <div>
+      <h4>时政六条</h4>
+      <ol>
+        <li>联合国官员重申恪守第2758号决议</li>
+        <li>中比建交五十五年</li>
+        <li>巴青最大余震5.7级</li>
+        <li>「成交还是了结」</li>
+        <li>机场复航，导弹被拦</li>
+        <li>世界投资论坛开幕，中海自贸再提签署</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技五条 · 缺口</h4>
+      <ol>
+        <li>长八甲发射卫星互联网低轨28组</li>
+        <li>术前ctDNA转阴</li>
+        <li>可编程超高Q</li>
+        <li>全息超声多靶点</li>
+        <li>一张图生成罕见病变</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-25 00:00 至 2026-10-26 00:00。交叉来源：新华社/CGTN/海合会、CBS/Fox、贸发会议、航天科技集团、Nature / Nature Communications。排除23–24日已入刊稿、周日凌晨之后折入26日的SpaceX债项，以及未核验期刊日期的量子声学跟进稿。</p>
+  <p class="end">每日时政科技简报 · 第034期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
