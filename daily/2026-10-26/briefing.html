@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第035期 · 2026-10-26</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第035期 · 2026年10月26日 · 星期一</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁伍期 · 二零二六年十月二十六日 · 星期一</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。北京把五中全会写成开幕电讯。国务院把事业单位写成第849号令。巴西把第二轮写成逆转。霍索恩把四百亿美元写成融资租赁。</p>
+  <div class="metrics">
+    <div class="metric"><b>06</b><span>时政</span><em>全会 · 条例 · 卢拉</em></div>
+    <div class="metric"><b>05</b><span>科技</span><em>融资租赁 · Maestro · NUS1</em></div>
+    <div class="metric"><b>11</b><span>合计</span><em>周一沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：二十届五中全会在京开幕。国务院公布《事业单位登记管理条例》。卢拉逆转连任，中方祝贺。外交部宣布冰岛外长访华并哀悼福田康夫。巴青烈度图发布。UKMTO迟报霍尔木兹油轮遭袭。SpaceX与阿波罗达成约400亿美元GPU租赁。楷登发布Maestro。《自然·神经科学》把NUS1写成铁死亡轴。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>全会把从严治党写成讨论稿说明。条例把事业单位写成法人登记。巴西把第二轮写成逆转。那曲把破坏写成烈度图。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 新华社开幕电</div>
+  「中央委员会总书记习近平代表中央政治局向全会作工作报告，并就《中共中央关于持之以恒推进全面从严治党若干重大问题的决定（讨论稿）》向全会作了说明。」
+</div>
+
+<div class="facts">
+  <div class="fact"><b>20</b><i>届 · 五中全会</i><p>26日上午在北京开始举行，将审议持之以恒推进全面从严治党决定讨论稿。</p></div>
+  <div class="fact"><b>849</b><i>号 · 国务院令</i><p>《事业单位登记管理条例》12月1日起施行，同时废止暂行条例。</p></div>
+  <div class="fact"><b>51.79</b><i>% · 卢拉</i><p>巴西高等选举法院宣布第二轮得票，对手弗拉维奥得48.21%。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>全会 · 北京</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 · 26日 12:00 见报</p>
+    <h3 class="section-title">二十届五中全会在京开幕</h3>
+    <p class="src">来源：新华社　·　<a href="https://www.news.cn/20261026/20273396088c475bb4d6391658ae598f/c.html">news.cn</a>　·　<a href="https://english.news.cn/20261026/f0b16b40d80f436881457e3c9fae5e48/c.html">english.news.cn</a></p>
+    <p class="sum">二十届五中全会26日上午在京开幕。习近平代表中央政治局作工作报告，并就《中共中央关于持之以恒推进全面从严治党若干重大问题的决定（讨论稿）》作说明。英文通稿称，讨论稿总结新时代成就经验，分析当前任务并作出战略部署。</p>
+    <div class="why"><strong>为何重要</strong>把四天全会写成可核验的开幕电讯与讨论稿题名，而不是会前前瞻或决议全文抢收。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>02　条例 · 北京</p>
+    <h3>事业单位登记管理条例公布</h3>
+    <p class="src">来源：新华社 / 中国政府网　·　<a href="https://www.news.cn/politics/leaders/20261026/0d24fbbd5a864dbf81c6e4843ef830db/c.html">news.cn</a>　·　<a href="https://www.gov.cn/zhengce/content/202610/content_7084279.htm">gov.cn</a></p>
+    <p class="sum">李强签署国务院令第849号，公布《事业单位登记管理条例》，自12月1日起施行，废止暂行条例。条例共6章34条，强调党的领导与公益性职责，规定未经登记不得以事业单位法人名义活动，并压实主管部门、行业管理部门与登记机关的监管联动。</p>
+    <div class="why"><strong>为何重要</strong>把沿用二十余年的暂行条例升格为正式条例，事业单位法人资格与公益主业从此有硬约束。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>03　大选 · 巴西利亚</p>
+    <h3>卢拉逆转连任，中方祝贺</h3>
+    <p class="src">来源：BBC / 新华社 / 外交部　·　<a href="https://www.bbc.com/zhongwen/articles/cwj34v4lvvlgo/simp">bbc.com</a>　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/202610/t20261026_12047012.shtml">mfa.gov.cn</a></p>
+    <p class="sum">巴西高等选举法院宣布，卢拉在第二轮以51.79%对48.21%击败弗拉维奥·博索纳罗，开启第四任期。对手拒认结果并寻求撤销选举。外交部祝贺胜选，称愿推进中巴命运共同体，并表示尊重巴西人民的选择。</p>
+    <div class="why"><strong>为何重要</strong>把拉美右翼连胜写成一次可核验的逆转，中巴关系与西半球格局同日对表。</div>
+  </article>
+</div>
+
+<h2 class="section-title">对照 · 例会与烈度</h2>
+<p class="section-sub">郭嘉昆把冰岛外长写成到访日程。自民党把福田康夫写成22日心衰。地震局把巴青破坏写成Ⅸ度图。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>04　例会 · 北京</p>
+    <h3>冰岛外长访华，哀悼福田康夫</h3>
+    <p class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/202610/t20261026_12047012.shtml">mfa.gov.cn</a></p>
+    <p class="sum">郭嘉昆宣布，应王毅邀请，冰岛外长贡纳尔斯多蒂尔26–31日访华。就福田康夫22日逝世表示哀悼，称其签署中日第四份政治文件。回应中印边境报道称属正常巡逻，望印方相向而行；反对美方将孔子学院列为国家安全威胁。</p>
+    <div class="why"><strong>为何重要</strong>把北欧到访、中日老一辈政治家讣闻与中印边境口径写进同一场周一例会。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>05　应急 · 那曲 / 玉树</p>
+    <h3>巴青烈度图：最高Ⅸ度</h3>
+    <p class="src">来源：应急管理部 / 新华社　·　<a href="https://www.mem.gov.cn/xw/yjglbgzdt/202610/t20261026_737156.shtml">mem.gov.cn</a>　·　<a href="https://www.news.cn/politics/20261026/c5e4535c22f64f77ae93aac993dae2cf/c.html">news.cn</a></p>
+    <p class="sum">中国地震局发布巴青7.0级地震烈度图：最高Ⅸ度，宏观震中玛如乡，地表破裂带约25公里，Ⅵ度及以上约35145平方公里，涉及藏青9县43乡镇。自然资源部完成震中50公里地灾排查，暂未发现冰湖溃决，新增隐患点35处。</p>
+    <div class="why"><strong>为何重要</strong>把主震破坏范围写成可对照的烈度分区，救援从伤亡核账转入次生灾害防控。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>航道 · 霍尔木兹</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>UKMTO / gCaptain · 26日迟报与起火警报</p>
+    <h3 class="section-title">UKMTO迟报出峡油轮遭袭瘫痪</h3>
+    <p class="src">来源：UKMTO / gCaptain　·　<a href="https://gcaptain.com/tanker-disabled-in-strait-of-hormuz-attack-another-vessel-reported-on-fire-in-persian-gulf/">gcaptain.com</a></p>
+    <p class="sum">UKMTO 26日核验迟报：23日08:39 UTC一艘出峡油轮遭不明投射物击中并瘫痪，船员安全，损毁与环境影响未评估。另接多方称伊拉克法奥东南约63海里有船起火，船员与环境状况未知。JMIC维持海峡威胁为SEVERE。</p>
+    <div class="why"><strong>为何重要</strong>把周五袭击写成周一才公开的核验稿，同时把火情从海峡扩到波斯湾北端。</div>
+  </div>
+</article>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  联合国2758纪念日、中比贺信、巴青5.7级余震、特朗普「成交或了结」、利雅得复航拦截、多哈投资论坛、长八甲低轨28组、治理论坛致信与外空立场、金正恩访丹东，均为23–25日首发。马斯克周日债项表态已预告折入本日正式租赁稿。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>霍索恩把四百亿美元写成融资租赁。圣何塞把芯片设计写成领域模型。苏州把帕金森风险基因写成铁死亡轴。</p>
+</section>
+
+<div class="stat4">
+  <div><b>400</b><i>亿美元</i><p>SpaceX–阿波罗GPU主融资租赁本金，Vera Rubin，2027上半年起租。</p></div>
+  <div><b>5×</b><i>token效率</i><p>楷登称Maestro较通用模型最高约5倍，质量最高升约30%。</p></div>
+  <div><b>NUS1</b><i>风险基因</i><p>小胶质细胞缺失经LCN2–SLC22A17轴诱发多巴胺能神经元铁死亡。</p></div>
+  <div><b>两环</b><i>碎片盘</i><p>白矮星四峰谱线对应0.14–0.34与0.54–1.93太阳半径气盘。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">07<em>算力 · 霍索恩</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>SpaceX / Apollo / 路透 · 26日正式稿</p>
+    <h3 class="section-title">SpaceX与阿波罗达成约400亿美元GPU租赁</h3>
+    <p class="src">来源：SpaceX / Apollo / 路透　·　<a href="https://ir.spacex.com/updates/releases-details/2026/SPACEX-SECURES-40-BILLION-IN-THE-LARGEST-GPU-FINANCING-EVER-2026-EnDqGhTAB3/default.aspx">ir.spacex.com</a>　·　<a href="https://www.apollo.com/insights-news/pressreleases/2026/10/spacex-secures--40-billion-in-the-largest-gpu-financing-ever">apollo.com</a></p>
+    <p class="sum">SpaceX与阿波罗管理实体达成约400亿美元GPU主融资租赁约束性承诺，将采购英伟达Vera Rubin并租给SpaceX地面算力。高盛任结构安排人，贝莱德、KKR锚定。年底前交割，2027上半年交付后起租。马斯克周日口头表态不单列。</p>
+    <div class="why"><strong>为何重要</strong>把周日「可赎回债务」写成可核验的8-K与官方新闻稿，是迄今最大一笔已承诺GPU融资。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　EDA · 圣何塞</p>
+    <h3>楷登发布Maestro领域模型</h3>
+    <p class="src">来源：Cadence / 路透　·　<a href="https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html">cadence.com</a></p>
+    <p class="sum">楷登发布Maestro领域模型组合，服务芯片与系统设计智能体，部分基于英伟达Nemotron并以OpenShell加固。公司称较通用模型质量最高升约30%、token效率最高约5倍；可云或本地部署，四季度向部分客户早鸟开放。</p>
+    <div class="why"><strong>为何重要</strong>把EDA智能体竞赛写成可对照的「本地可跑、可后训练」路线，对标新思—OpenAI。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>09　神经科学 · 苏州 / 长沙</p>
+    <h3>NUS1缺失驱动铁死亡</h3>
+    <p class="src">来源：Nature Neuroscience　·　<a href="https://www.nature.com/articles/s41593-026-02499-3">nature.com</a></p>
+    <p class="sum">苏州大学、中南大学团队报告：小胶质细胞缺失帕金森风险基因NUS1/NgBR，经内质网应激诱导LCN2外排铁，再由神经元受体SLC22A17内吞，导致多巴胺能神经元铁过载与铁死亡。抑制该轴或铁死亡可缓解模型中的神经元丢失与运动障碍。</p>
+    <div class="why"><strong>为何重要</strong>把胶质—神经元铁转运写成可干预的病理轴，而不是又一份α-突触核蛋白复述。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>10　天文 · 《自然·天文》</p>
+    <h3>白矮星双碎片盘</h3>
+    <p class="src">来源：Nature Astronomy　·　<a href="https://www.nature.com/articles/s41550-026-03004-3">nature.com</a></p>
+    <p class="sum">团队报告白矮星WD J132800.85–145019.95呈四峰发射线，对应两环气体碎片盘，分别位于0.14–0.34与0.54–1.93太阳半径。作者认为盘内各有一颗从数公里到冥王星尺度的行星体，挑战现有单盘演化模型。</p>
+    <div class="why"><strong>为何重要</strong>把白矮星残骸盘从「单盘双峰」改写成稳定双盘，要求重写行星体扰动图像。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>11　神经科学 · 慕尼黑</p>
+    <h3>慢性脱髓鞘的小胶质状态</h3>
+    <p class="src">来源：Nature Neuroscience　·　<a href="https://www.nature.com/articles/s41593-026-02489-5">nature.com</a></p>
+    <p class="sum">比较急慢性脱髓鞘小鼠模型后，发现慢性损伤中小胶质细胞持续促炎、溶酶体囤脂、胆固醇外排下降。一种抑制24-脱氢胆固醇还原酶的脱硫甾醇类似物可逆转该状态，减轻白质损伤并改善运动表现。</p>
+    <div class="why"><strong>为何重要</strong>把慢性脱髓鞘写成可逆转的代谢—溶酶体状态，而不是笼统的神经炎症口号。</div>
+  </article>
+</div>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>国内航天与先进制程留白</h3>
+  <ul>
+    <li>无国内航天发射；Starlink 15-16窗口在美西26日夜=沪时27日，不抢收</li>
+    <li>无中国大模型或先进制程芯片产品首发；北美云厂商无26日产品首发</li>
+    <li>3.2Pb/s多芯光纤为22日极目新闻首发，26日科技日报跟进不重写</li>
+    <li>紫金山UTC-PD太赫兹芯片为16日未来网络大会首发，不重写</li>
+    <li>英伟达Flora为15日Hugging Face、25日跟进；TorchTPU为20日；OpenShell为21日</li>
+    <li>勿重刊：五中全会前瞻、联合国2758、中比贺信、巴青5.7级余震、特朗普周日访谈、长八甲低轨28组、Kimi K3.1 Pro、Jalapeño（6/24）</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第035期 · 收束</p>
+  <h2>全会写开幕，条例写849号，霍索恩写四百亿</h2>
+  <p class="judge">二十届五中全会在京开幕，习近平作工作报告并说明从严治党决定讨论稿。国务院公布《事业单位登记管理条例》。卢拉逆转连任，中方祝贺。外交部宣布冰岛外长访华并哀悼福田康夫。巴青烈度图发布最高Ⅸ度。UKMTO迟报出峡油轮遭袭。SpaceX与阿波罗达成约400亿美元GPU租赁。楷登发布Maestro。《自然·神经科学》把NUS1写成铁死亡轴。</p>
+  <div class="toc">
+    <div>
+      <h4>时政六条</h4>
+      <ol>
+        <li>二十届五中全会在京开幕</li>
+        <li>事业单位登记管理条例公布</li>
+        <li>卢拉逆转连任，中方祝贺</li>
+        <li>冰岛外长访华，哀悼福田康夫</li>
+        <li>巴青烈度图：最高Ⅸ度</li>
+        <li>UKMTO迟报出峡油轮遭袭瘫痪</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技五条 · 缺口</h4>
+      <ol>
+        <li>SpaceX与阿波罗达成约400亿美元GPU租赁</li>
+        <li>楷登发布Maestro领域模型</li>
+        <li>NUS1缺失驱动铁死亡</li>
+        <li>白矮星双碎片盘</li>
+        <li>慢性脱髓鞘的小胶质状态</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-26 00:00 至 2026-10-27 00:00。交叉来源：新华社/中国政府网/外交部/应急管理部、BBC、UKMTO、SpaceX/Apollo/SEC、Cadence、Nature Neuroscience / Nature Astronomy。排除23–25日已入刊稿、22日光纤纪录与16日太赫兹芯片跟进稿，以及折入27日的范登堡发射窗口。</p>
+  <p class="end">每日时政科技简报 · 第035期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
