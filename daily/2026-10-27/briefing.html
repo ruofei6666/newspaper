@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第036期 · 2026-10-27</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第036期 · 2026年10月27日 · 星期二</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁陆期 · 二零二六年十月二十七日 · 星期二</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。北京把贺电写成连任。合肥把国事访问写成试驾。特拉维夫把出口民调写成胶着。圣克拉拉把三十亿写成入股。</p>
+  <div class="metrics">
+    <div class="metric"><b>06</b><span>时政</span><em>贺电 · 特使 · 组阁</em></div>
+    <div class="metric"><b>05</b><span>科技</span><em>Muse · Terra · OCR</em></div>
+    <div class="metric"><b>11</b><span>合计</span><em>周二沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：习近平致电祝贺卢拉连任，并向福田康夫遗属致唁电。外交部宣布派特使赴中东劝和，同日伊海军称霍尔木兹油轮触雷。施泰因迈尔抵合肥开启访华。规上工业利润前三季度增15.5%。以色列大选出炉出口民调胶着。英伟达向Meta投资30亿美元。OpenAI发布GPT-6.1 Terra。百度开源Unlimited OCR 2。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>贺电把中巴命运共同体写成新台阶。唁电把四个政治文件写成对日提醒。例会把特使写成劝和。特拉维夫把61席写成谁都没够到。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 习近平贺电</div>
+  「两国关系的全球性、战略性、长远性更加突出，成为全球南方国家团结合作的典范。……愿同卢拉总统一道努力，引领中巴命运共同体建设不断迈上新台阶。」
+</div>
+
+<div class="facts">
+  <div class="fact"><b>15.5</b><i>% · 工业利润</i><p>1–9月规上工业利润6.03万亿元，电子行业翻倍，高技术制造业增52.0%。</p></div>
+  <div class="fact"><b>61</b><i>席 · 未过线</i><p>以色列出口民调：内塔尼亚胡与艾森科特阵营均约50–52席，皆未获多数。</p></div>
+  <div class="fact"><b>5</b><i>日 · 访华</i><p>施泰因迈尔抵合肥，时隔近八年再访，北京将与习近平、李强、赵乐际会见。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>贺电 · 巴西利亚</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 · 27日 17:59 见报</p>
+    <h3 class="section-title">习近平致电祝贺卢拉连任</h3>
+    <p class="src">来源：新华社 / 中国政府网　·　<a href="https://www.xinhuanet.com/politics/leaders/20261027/4e958b7f878a4d46a496f9232615d920/c.html">news.cn</a>　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7084340.htm">gov.cn</a></p>
+    <p class="sum">10月27日，习近平致电祝贺卢拉当选连任巴西总统，称中巴命运共同体全球性、战略性、长远性更加突出，愿引领建设迈上新台阶。韩正向连任副总统阿尔克明致贺电。</p>
+    <div class="why"><strong>为何重要</strong>把26日开票结果写成元首贺电，中巴关系从选举夜转入可核验的政治承诺。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>02　唁电 · 东京</p>
+    <h3>习近平向福田康夫遗属致唁电</h3>
+    <p class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202610/content_7084342.htm">gov.cn</a>　·　<a href="https://cpc.people.com.cn/n1/2026/1027/c64094-40822666.html">cpc.people.com.cn</a></p>
+    <p class="sum">习近平向福田康夫遗属致唁电，称其签署中日第四个政治文件、曾任博鳌亚洲论坛理事长，并希望日本当政者恪守四个政治文件、维护双边关系政治基础。</p>
+    <div class="why"><strong>为何重要</strong>把26日讣闻写成对现任日方的政治基础提醒，而不是单纯的悼词转述。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>03　例会 · 北京 / 霍尔木兹</p>
+    <h3>外交部将派特使赴中东劝和</h3>
+    <p class="src">来源：外交部 / 新华社　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/202610/t20261027_12047706.shtml">mfa.gov.cn</a>　·　<a href="https://english.news.cn/20261027/ae8e1326cb8b4d5bbae1fa92fddad086/c.html">english.news.cn</a></p>
+    <p class="sum">郭嘉昆宣布中方将派特使赴中东海湾、红海和非洲之角劝和。同日伊海军称一艘关闭追踪的油轮在霍尔木兹东部触雷起火。例会并评东京审判80周年、交涉英边境扣查，望欧盟避免滥用贸易救济。</p>
+    <div class="why"><strong>为何重要</strong>把劝和特使与当日触雷写进同一条海峡账，中方从口头关切转入可核验的出访安排。</div>
+  </article>
+</div>
+
+<h2 class="section-title">对照 · 访华与组阁</h2>
+<p class="section-sub">施泰因迈尔把国事访问写成合肥试驾。艾森科特把出口民调写成组阁优先权。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>04　国事访问 · 合肥</p>
+    <h3>施泰因迈尔抵合肥开启访华</h3>
+    <p class="src">来源：新华社 / 德国总统府　·　<a href="https://www.xinhuanet.com/politics/20261027/0e7cb4e091e743c48a7c3c5a59ec08b4/c.html">news.cn</a>　·　<a href="https://english.news.cn/20261027/240f3c7838454991bb1ff9b1d756e14d/c.html">english.news.cn</a></p>
+    <p class="sum">德国总统施泰因迈尔抵合肥，开始为期5天、时隔近8年的国事访问。当日参观李鸿章故居、骆岗公园，并到访大众中国科技公司，试驾搭载本土智能驾驶系统的新能源车。北京将与习近平、李强、赵乐际会见。</p>
+    <div class="why"><strong>为何重要</strong>把23日预告写成可核验的到访现场，中德关系先从安徽产业合作起笔。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>05　大选 · 特拉维夫</p>
+    <h3>以色列出口民调：两阵营均未过61席</h3>
+    <p class="src">来源：美联社 / 路透　·　<a href="https://apnews.com/article/israel-election-netanyahu-eisenkot-latest-782c69f4a5389da8073b1c27aafa606f">apnews.com</a>　·　<a href="https://www.reuters.com/graphics/ISRAEL-ELECTION/RESULTS/akvelybkapr/">reuters.com</a></p>
+    <p class="sum">以色列第26届议会选举结束。三大电视台出口民调显示，内塔尼亚胡阵营与艾森科特反对派均约50–52席，皆未过61席多数。艾森科特当晚宣称应获组阁优先权。最终结果预计11月4日前公布。</p>
+    <div class="why"><strong>为何重要</strong>把中东战事背景下的以色列选举写成可对照的胶着，而不是胜负已定的口号。</div>
+  </article>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>统计 · 北京</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>国家统计局 · 27日 09:30 首发</p>
+    <h3 class="section-title">规上工业利润前三季度增15.5%</h3>
+    <p class="src">来源：国家统计局　·　<a href="https://www.stats.gov.cn/sj/zxfb/202610/t20261027_1965697.html">stats.gov.cn</a>　·　<a href="https://www.stats.gov.cn/xxgk/jd/sjjd2020/202610/t20261027_1965698.html">解读</a></p>
+    <p class="sum">统计局：1–9月规上工业利润6.03万亿元、同比+15.5%，9月+14.4%。电子行业利润翻倍，高技术制造业+52.0%；汽车利润-22.8%，黑色金属-73.3%。营收106.21万亿元、+6.6%。</p>
+    <div class="why"><strong>为何重要</strong>把两位数利润增长写成可拆开的结构账：算力链拉动明显，汽车与黑色仍在拖后腿。</div>
+  </div>
+</article>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  二十届五中全会开幕、国务院令第849号、卢拉开票本身、外交部26日哀悼福田、风光装机破20亿千瓦，均为26日首发。奥列什基停火、治理论坛致信、信息化十五五、长八甲低轨28组不重写。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>圣克拉拉把三十亿写成入股。旧金山把计算机操作写成半价。百度把任意页数写成开源权重。范登堡把27颗星链写成第26次回收。</p>
+</section>
+
+<div class="stat4">
+  <div><b>30</b><i>亿美元</i><p>英伟达拟认购Meta股权发行，并扩大Muse系列模型与Vera Rubin部署。</p></div>
+  <div><b>50%</b><i>API降价</i><p>GPT-6.1 Terra标准价较GPT-5.6 Terra与GPT-6.1 Sol低一半，任务速度快逾3倍。</p></div>
+  <div><b>3600</b><i>页</i><p>文心Unlimited OCR 2称可一次解析《哈利·波特》七部，MPDocBench 84.6分。</p></div>
+  <div><b>2000</b><i>小时</i><p>《自然·合成》：Pt/Fe-NC电化学裂氨，10 mA/cm²下产氢逾2000小时。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">07<em>算力 · 圣克拉拉</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>NVIDIA / Reuters · 27日 02:07 ET 见报</p>
+    <h3 class="section-title">英伟达向Meta投资30亿美元，扩大Muse合作</h3>
+    <p class="src">来源：NVIDIA / 路透 / Axios　·　<a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx">investor.nvidia.com</a>　·　<a href="https://www.axios.com/2026/10/27/nvidia-meta-muse-investment">axios.com</a></p>
+    <p class="sum">英伟达与Meta宣布扩大Muse系列模型合作，Meta将加码部署Vera Rubin、Vera CPU、Spectrum-X与BlueField-4；双方还将评估OpenShell与Sentry。英伟达拟向Meta股权发行投资30亿美元。</p>
+    <div class="why"><strong>为何重要</strong>把智能体竞赛写成可核验的入股与机架扩容，而不是又一份「深化合作」空话。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　大模型 · 旧金山</p>
+    <h3>OpenAI发布GPT-6.1 Terra</h3>
+    <p class="src">来源：OpenAI / The Verge　·　<a href="https://openai.com/index/introducing-gpt-6-1-terra">openai.com</a>　·　<a href="https://www.theverge.com/ai-artificial-intelligence/1018854/gpt-6-1-terra-is-very-good-at-computer-use-openai-says">theverge.com</a></p>
+    <p class="sum">OpenAI发布GPT-6.1 Terra（沪时27日02:06首发）。公司称计算机操作快逾3倍，标准API价较GPT-5.6 Terra与GPT-6.1 Sol低50%，Agents' Last Exam中等推理较上代高15个百分点。</p>
+    <div class="why"><strong>为何重要</strong>把「会用电脑的模型」写成可对照的单价与时延，竞争从榜单转向单位任务成本。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>09　开源 · 北京</p>
+    <h3>百度开源文心Unlimited OCR 2</h3>
+    <p class="src">来源：新华网　·　<a href="https://www.news.cn/tech/20261027/f97d067ddf65432f9e8024515d949784/c.html">news.cn</a></p>
+    <p class="sum">百度开源文心Unlimited OCR 2，以稀疏参考滑动窗口注意力实现任意页数解析，称可一次处理《哈利·波特》七部逾3600页。MPDocBench 84.6分，权重上线GitHub与Hugging Face。</p>
+    <div class="why"><strong>为何重要</strong>把超长文档OCR从「几十页拼接」改写成可核验的开源权重与公开榜。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>10　航天 · 范登堡</p>
+    <h3>星链15-16组27星入轨</h3>
+    <p class="src">来源：SpaceX / Spaceflight Now　·　<a href="https://www.spacex.com/launches/sl-15-16">spacex.com</a>　·　<a href="https://spaceflightnow.com/2026/10/27/west-coast-falcon-9-rocket-to-launch-27-starlink-satellites/">spaceflightnow.com</a></p>
+    <p class="sum">SpaceX猎鹰9号于加州范登堡12:25 PDT（沪时15:25）发射星链15-16组27颗卫星。一级B1082第26次飞行后降落太平洋无人船「Of Course I Still Love You」。约62分钟后部署。</p>
+    <div class="why"><strong>为何重要</strong>26日刊已预告折沪时入本日，把西海岸夜射写成可核验的回收与部署。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>11　化学 · 《自然·合成》</p>
+    <h3>电化学裂氨产氢逾2000小时</h3>
+    <p class="src">来源：Nature Synthesis　·　<a href="https://www.nature.com/articles/s44160-026-01201-6">nature.com</a></p>
+    <p class="sum">《自然·合成》27日发表：铂纳米颗粒负载于含铁单原子的氮掺杂碳（Pt/Fe-NC），氨氧化质量活性733 A/gPt，结合脉冲电解等可再生路径，10 mA/cm²下产氢逾2000小时。</p>
+    <div class="why"><strong>为何重要</strong>把氨作为氢载体的电化学裂解写成可耐久的再生路径，而不只是实验室峰值活性。</div>
+  </article>
+</div>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>国内航天与先进制程留白</h3>
+  <ul>
+    <li>无国内航天发射；无中国先进制程芯片产品首发</li>
+    <li>英伟达–甲骨文Vera Rubin多吉瓦扩容，GlobeNewswire 27日12:00 ET=沪时28日00:00，入28日刊</li>
+    <li>大连化物所全固态锂二氧化碳电池为24日《自然·通讯》论文，27日中文跟进不重写</li>
+    <li>王盛组迷幻药β-arrestin机制为23日《自然·神经科学》，中科院英文稿27日跟进不重写</li>
+    <li>风光装机破20亿千瓦为国家能源局26日宣布；华为Atlas 350为20日伙伴大会</li>
+    <li>勿重刊：五中全会开幕、第849号令、卢拉开票、Kimi K3.1 Pro、RTX Spark、OpenShell、TorchTPU、Jalapeño（6/24）</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第036期 · 收束</p>
+  <h2>贺电写连任，特使写劝和，圣克拉拉写三十亿</h2>
+  <p class="judge">习近平致电祝贺卢拉连任，并向福田康夫遗属致唁电。外交部宣布派特使赴中东劝和，同日伊海军称霍尔木兹油轮触雷。施泰因迈尔抵合肥开启访华。规上工业利润前三季度增15.5%。以色列大选出炉出口民调胶着。英伟达向Meta投资30亿美元。OpenAI发布GPT-6.1 Terra。百度开源Unlimited OCR 2。星链15-16组入轨。《自然·合成》把裂氨写成两千小时。</p>
+  <div class="toc">
+    <div>
+      <h4>时政六条</h4>
+      <ol>
+        <li>习近平致电祝贺卢拉连任</li>
+        <li>习近平向福田康夫遗属致唁电</li>
+        <li>外交部将派特使赴中东劝和</li>
+        <li>施泰因迈尔抵合肥开启访华</li>
+        <li>以色列出口民调：两阵营均未过61席</li>
+        <li>规上工业利润前三季度增15.5%</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技五条 · 缺口</h4>
+      <ol>
+        <li>英伟达向Meta投资30亿美元，扩大Muse合作</li>
+        <li>OpenAI发布GPT-6.1 Terra</li>
+        <li>百度开源文心Unlimited OCR 2</li>
+        <li>星链15-16组27星入轨</li>
+        <li>电化学裂氨产氢逾2000小时</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-27 00:00 至 2026-10-28 00:00。交叉来源：新华社/中国政府网/外交部/统计局、美联社/路透、NVIDIA/OpenAI/SpaceX、Nature Synthesis。排除26日已入刊稿、24日锂二氧化碳电池与23日迷幻药论文跟进，以及折入28日的英伟达–甲骨文OCI稿。</p>
+  <p class="end">每日时政科技简报 · 第036期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
