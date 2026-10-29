@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第037期 · 2026-10-28</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --card: #FFFCF7;
+  --rule: #D6CFC4;
+  --mute: #8A847A;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+  font-size: 15pt;
+  line-height: 1.55;
+}
+h1, h2, h3, .serif {
+  font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--crimson);
+  box-shadow: 0 1px 0 var(--ink);
+  margin-bottom: 28px;
+}
+.folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.folio .date { color: var(--slate); }
+.folio .iss { color: var(--crimson); font-weight: 700; }
+
+.cover {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 40px 40px;
+  margin: 0 0 40px;
+  border-radius: 4px;
+}
+.cover .kicker {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #C9C2B6;
+  text-transform: uppercase;
+}
+.cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+.cover hr {
+  border: 0;
+  border-top: 2px solid var(--crimson);
+  border-bottom: 1px solid var(--paper);
+  margin: 16px 0 22px;
+}
+.cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+.cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+.cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+.metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+.metric span { display: block; font-size: 20px; margin-top: 8px; }
+.metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+.cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+.opener { margin: 8px 0 36px; }
+.opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+.opener h2 { font-size: 40pt; margin: 0 0 8px; }
+.opener p { color: var(--slate); font-size: 16px; margin: 0; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+.fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+.fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+.fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+.fact p { margin: 8px 0 0; font-size: 14px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px 20px;
+}
+.card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+.card .meta .mark {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+.card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+.card .sum { font-size: 15pt; margin: 0 0 14px; }
+.why {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  font-size: 14pt;
+  color: var(--slate);
+}
+.why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+.compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+.compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+.section-title { font-size: 36pt; margin: 8px 0 6px; }
+.section-sub { color: var(--slate); margin: 0 0 16px; }
+
+.dark-note {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 8px 0 36px;
+}
+.dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+.stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+.stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+.stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+.stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+.stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 30px 24px;
+  margin: 18px 0 40px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+}
+.feature .big {
+  font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+  font-size: 52px;
+  color: var(--crimson);
+  line-height: 0.9;
+  margin: 0;
+}
+.feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+.gapbox {
+  background: var(--card);
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+.gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+.gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+.close {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+.close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+.toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+.toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+.close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 18px 16px 48px; }
+  .cover { padding: 28px 20px; }
+  .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+  .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+  .section-title { font-size: 28pt; }
+  .cover h1 { font-size: 36pt; }
+  .opener h2, .close h2 { font-size: 28pt; }
+}
+@media print {
+  body { background: #fff; }
+  .wrap { max-width: none; padding: 12mm; }
+  .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: var(--ink); text-decoration: none; }
+  .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="folio">
+  <strong>每日时政科技简报</strong>
+  <span class="iss">第037期 · 2026年10月28日 · 星期三</span>
+  <span class="date">晨刊</span>
+</header>
+
+<section class="cover">
+  <div class="kicker">
+    <span><span class="dot"></span>THE MORNING DISPATCH</span>
+    <span>ASIA / SHANGHAI　昨日新闻</span>
+  </div>
+  <hr>
+  <p class="issue">第零叁柒期 · 二零二六年十月二十八日 · 星期三</p>
+  <h1>每日时政科技简报</h1>
+  <p class="lead">只收录该日发生或该日首发的稿件。北京把帕姆兰写成会见窗口。华盛顿把中期后对伊再动武写成盟国预警。拉斯维加斯把Vera Rubin写成多吉瓦。首尔把存储写成百万亿韩元。</p>
+  <div class="metrics">
+    <div class="metric"><b>05</b><span>时政</span><em>帕姆兰 · 默茨 · 霍尔木兹</em></div>
+    <div class="metric"><b>05</b><span>科技</span><em>Rubin · Genie 4 · 海力士</em></div>
+    <div class="metric"><b>10</b><span>合计</span><em>周三沪时首发可核验</em></div>
+  </div>
+  <p class="spine">今日主线：外交部宣布瑞士联邦主席帕姆兰访华。郭嘉昆回应默茨去风险并反对胡塞袭击民用目标。美联社称美方预警中期后或对伊再动武。以色列计票两阵营均未过半。阿拉格齐仍推七日霍尔木兹方案。甲骨文把Vera Rubin扩至多吉瓦并引入TPU。谷歌发布Genie 4。海力士营收首破百万亿韩元。Ceva更新NeuPro。脑虎完成七亿元B轮。</p>
+</section>
+
+<section class="opener">
+  <p class="num">01</p>
+  <h2>时政开篇</h2>
+  <p>五中全会第三日仍在京举行，闭幕公报未见。外交部把伯尔尼写成会见窗口。华盛顿把中期后窗口写成盟国预警。特拉维夫把出口民调改写成计票。</p>
+</section>
+
+<div class="quote">
+  <div class="lab">刊头摘句 · 外交部例会</div>
+  「中方欢迎瑞士联邦主席帕姆兰来华访问。习近平主席将同他会见。」
+</div>
+
+<div class="facts">
+  <div class="fact"><b>10/30</b><i>帕姆兰访华</i><p>瑞士联邦主席10月30日至11月1日工作访问，习近平将会见，自贸升级谈判已于8月完成。</p></div>
+  <div class="fact"><b>11/3</b><i>中期窗口</i><p>美联社称美方已告知中东盟国，为中期选举后可能对伊再动武及能源报复做准备。</p></div>
+  <div class="fact"><b>53</b><i>席 · 利库德阵营</i><p>计票显示内塔尼亚胡阵营约53席、艾森科特约48席，均未过61席门槛。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">01<em>外交 · 伯尔尼</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>新华社 / 外交部 · 28日 15:38–17:44 见报</p>
+    <h3 class="section-title">瑞士联邦主席帕姆兰将访华</h3>
+    <p class="src">来源：新华社 / 外交部　·　<a href="https://www.xinhuanet.com/20261028/b8252679eafd450f9983b5716c462938/c.html">xinhuanet.com</a>　·　<a href="https://www.news.cn/20261028/a8905d72b1844af9abc4cb0bf358d9ad/c.html">news.cn</a></p>
+    <p class="sum">外交部28日宣布，瑞士联邦主席帕姆兰将于10月30日至11月1日来华工作访问，习近平将会见。今年是中瑞创新战略伙伴关系10周年。瑞士是最早同中国签订自贸协定的欧洲大陆国家，8月率先完成升级谈判。</p>
+    <div class="why"><strong>为何重要</strong>把中瑞自贸升级从8月谈成写成可核验的元首会见窗口，而不是瑞方26日单方面预告。</div>
+  </div>
+</article>
+
+<h2 class="section-title">对照 · 例会两问</h2>
+<p class="section-sub">郭嘉昆把默茨的去风险写成相向而行。胡塞把利雅得机场写成民用目标。</p>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>02　例会 · 北京 / 新加坡</p>
+    <h3>回应默茨，反对袭机场</h3>
+    <p class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202610/t20261028_12048462.shtml">mfa.gov.cn</a></p>
+    <p class="sum">郭嘉昆回应默茨在新加坡称须减少对华「不健康单方面依赖」：中德中欧互补互嵌，望德欧客观理性、相向而行。就胡塞27日宣称袭击沙特国防部、利雅得机场及炼油厂，中方反对攻击民航机场等民用目标。</p>
+    <div class="why"><strong>为何重要</strong>把欧洲去风险口径与红海战火写进同一场周三例会，而不是复述施泰因迈尔抵皖。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>03　中东 · 华盛顿</p>
+    <h3>美方预警中期后或对伊再动武</h3>
+    <p class="src">来源：美联社　·　<a href="https://apnews.com/article/trump-iran-strikes-midterm-elections-c7df622f1e87de6035173be8fb8c4add">apnews.com</a></p>
+    <p class="sum">美联社28日援引官员称，美方已告知多个中东盟国，为11月3日中期选举后可能对伊朗再动武、以及伊方报复能源设施做好准备。特朗普当天在安德鲁斯联合基地登机。</p>
+    <div class="why"><strong>为何重要</strong>把「中期前不对伊动武」写成可核验的会后窗口预警，而不是4日或9日旧稿。</div>
+  </article>
+</div>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>04　大选 · 特拉维夫</p>
+    <h3>以选举计票两阵营均未过半</h3>
+    <p class="src">来源：美联社　·　<a href="https://apnews.com/article/israel-elections-netanyahu-eisenkot-arab-coalition-results-d4680e90210c9a8611853fda9d0deb61">apnews.com</a>　·　<a href="https://apnews.com/article/israel-elections-netanyahu-eisenkot-gaza-iran-28102026-52c6f5a0a720a4ffc08633229e796415">计票跟踪</a></p>
+    <p class="sum">美联社28日跟踪计票：内塔尼亚胡阵营约53席、艾森科特约48席、阿拉伯政党约19席，均未过61席执政门槛。组阁谈判或持续数周；特朗普称或协助内塔尼亚胡组阁。</p>
+    <div class="why"><strong>为何重要</strong>把27日出口民调改写成周三计票稿，确认「无明确多数」而不是胜负已定。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>05　航道 · 德黑兰</p>
+    <h3>伊外长仍推七日霍尔木兹方案</h3>
+    <p class="src">来源：自由欧洲电台 / 路透　·　<a href="https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html">rferl.org</a></p>
+    <p class="sum">伊外长阿拉格齐28日称，武装力量已做好防御，同时仍给外交机会，正与调解方讨论可在一周内落实的七日方案；并警告若以色列在海湾再启军事冒险，将对国际能源市场造成毁灭性冲击。</p>
+    <div class="why"><strong>为何重要</strong>把霍尔木兹重开条件写成伊方当日口径，与美方会后动武预警对读。</div>
+  </article>
+</div>
+
+<div class="dark-note">
+  <div class="lab">对照 · 不重写前刊</div>
+  五中全会开幕电、第849号令、卢拉贺电、福田唁电、施泰因迈尔抵合肥、以色列出口民调、工业利润、英伟达认购Meta、GPT-6.1 Terra、文心OCR 2、Starlink 15-16，均为26–27日首发。求是第20期文章为15日见报。施泰因迈尔会见排30日，不抢收黄山行程。
+</div>
+
+<section class="opener">
+  <p class="num">02</p>
+  <h2>科技开篇</h2>
+  <p>拉斯维加斯把Vera Rubin写成多吉瓦。伦敦把世界模型写成带音频的两分钟。利川把存储写成百万亿韩元。上海把脑机接口写成七亿元。</p>
+</section>
+
+<div class="stat4">
+  <div><b>多GW</b><i>Vera Rubin</i><p>甲骨文把NVL72超级集群扩至多吉瓦，Vera CPU同步在OCI全面供应。</p></div>
+  <div><b>2′</b><i>Genie 4</i><p>实时交互世界模型原生出声，时长约为Genie 3的两倍。</p></div>
+  <div><b>104.6</b><i>万亿韩元</i><p>海力士三季度营收首破100万亿，营业利润率约80%。</p></div>
+  <div><b>7</b><i>亿元B轮</i><p>脑虎「三全」脑机接口推进三类注册临床与超级工厂。</p></div>
+</div>
+
+<article class="feature">
+  <p class="big">06<em>算力 · 拉斯维加斯</em></p>
+  <div>
+    <p class="meta"><span class="mark"></span>Oracle / NVIDIA · 27日 12:00 ET＝沪时28日 00:00</p>
+    <h3 class="section-title">甲骨文把Vera Rubin扩至多吉瓦</h3>
+    <p class="src">来源：Oracle / GlobeNewswire　·　<a href="https://www.oracle.com/news/announcement/ai-world-nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-2026-10-27/">oracle.com</a>　·　<a href="https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/">TPU稿</a></p>
+    <p class="sum">甲骨文与英伟达宣布，将把OCI上Vera Rubin NVL72扩至多吉瓦，Vera CPU同步全面供应，并规划八卡HGX Rubin NVL8。同日宣布OCI将成谷歌云外首家提供TPU的超大规模云，并引入Cerebras。</p>
+    <div class="why"><strong>为何重要</strong>把27日美西新闻稿折沪时写入28日，云端算力从「单押英伟达」改写成可点名的多元组合。</div>
+  </div>
+</article>
+
+<div class="grid2">
+  <article class="card">
+    <p class="meta"><span class="mark"></span>07　模型 · 伦敦 / 山景城</p>
+    <h3>谷歌发布Genie 4世界模型</h3>
+    <p class="src">来源：Google / DeepMind / The Verge　·　<a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/">blog.google</a>　·　<a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">deepmind.google</a></p>
+    <p class="sum">谷歌DeepMind发布Genie 4：实时交互生成虚拟环境，原生输出环境音与对话，可用自然语言改天气或加入角色；时长约两分钟，约为Genie 3两倍。研究预览向受邀测试者开放，随后进入Google AI Ultra。</p>
+    <div class="why"><strong>为何重要</strong>把世界模型从静帧短片推进到可实时改写的带音频场景，时区卡在沪时28日零时。</div>
+  </article>
+  <article class="card">
+    <p class="meta"><span class="mark"></span>08　存储 · 利川 / 首尔</p>
+    <h3>海力士营收首破百万亿韩元</h3>
+    <p class="src">来源：SK hynix / 韩联社　·　<a href="https://news.skhynix.com/en/q3-2026-business-results/">news.skhynix.com</a>　·　<a href="https://www.yna.co.kr/view/AKR20261028028052527">yna.co.kr</a></p>
+    <p class="sum">SK海力士公布三季度营收104.6155万亿韩元，首次单季破100万亿；营业利润83.3338万亿、利润率约80%。公司预计存储短缺将持续至2030年，HBM4四季度成主流，已锁定2027–2028逾半数产能长约。</p>
+    <div class="why"><strong>为何重要</strong>把AI存储景气写成可核验的百兆韩元营收与「短缺至2030」官方判断。</div>
+  </article>
+</div>
+
+<div class="compare">
+  <article>
+    <p class="meta"><span class="mark"></span>09　芯片IP · 罗克维尔</p>
+    <h3>Ceva发布下一代NeuPro</h3>
+    <p class="src">来源：Ceva / PR Newswire　·　<a href="https://www.ceva-ip.com/press/ceva-unveils-next-generation-neupro-npu-portfolio-and-announces-expansion-into-ai-infrastructure/">ceva-ip.com</a></p>
+    <p class="sum">Ceva发布下一代NeuPro NPU组合（Nano至Ultra），称较上代单位面积吞吐最高约2倍、能效提升约50%，支持FP4/FP8与分页KV缓存，并首次伸向云端推理。计划2027年二季度全面供货。</p>
+    <div class="why"><strong>为何重要</strong>把边缘NPU厂商的升级写成「从传感器到机房」同一架构，而不是又一份TOPS口号。</div>
+  </article>
+  <article>
+    <p class="meta"><span class="mark"></span>10　脑机 · 上海</p>
+    <h3>脑虎科技完成七亿元B轮</h3>
+    <p class="src">来源：中国证券报 / 经济参考报　·　<a href="https://www.cs.com.cn/ssgs/01/2026/10/28/detail_2026102810047908.html">cs.com.cn</a>　·　<a href="http://jjckb.xinhuanet.com/20261028/7d7a190f9aca43df913272ffb612cfbb/c.html">jjckb.xinhuanet.com</a></p>
+    <p class="sum">脑虎科技28日宣布完成7亿元B轮，国投聚力、深创投、勤智资本联合领投。资金用于「三全」系统多中心注册临床、1.43万平方米超级工厂及BCI+AI。其硬膜下半侵入式产品今年7月在华山医院进入三类注册临床，已完成65例试验。</p>
+    <div class="why"><strong>为何重要</strong>把脑机接口从概念验证写成可对照的注册临床与量产融资，而不是营销口径。</div>
+  </article>
+</div>
+
+<section class="gapbox">
+  <p class="meta"><span class="mark"></span>信息不足</p>
+  <h3>国内航天与《自然》级留白</h3>
+  <ul>
+    <li>无国内航天发射；Starlink 15-16已入27日刊，下一窗口约30日</li>
+    <li>无《自然》《科学》级28日沪时首发；NVision单分子自旋–光子接口Nature稿为28日12:00 ET＝沪时29日00:00，入29日刊</li>
+    <li>五中全会仍在进行，闭幕公报与《决定》全文未见28日首发；新华社「中国之治」述评为配合稿，不单列</li>
+    <li>未见习近平、李强、王毅新会见详稿；施泰因迈尔黄山行程不单列，正式会谈排30日</li>
+    <li>无中国大模型或先进制程芯片产品首发；BrainChip Sequora为14日官方稿，28日日文跟进不重写</li>
+    <li>DREAMS巡天数据为27日西湖大学宣布；Lumina宇宙模拟论文为25日；灵光2.0为27日</li>
+    <li>勿重刊：五中全会开幕、第849号令、卢拉贺电、福田唁电、工业利润、英伟达–Meta 30亿、GPT-6.1 Terra、文心OCR 2、TorchTPU、OpenShell、Jalapeño（6/24）</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p class="issue" style="color:#C41E3A;margin:0 0 8px;">THE EVENING LEDGER　·　第037期 · 收束</p>
+  <h2>伯尔尼写会见，拉斯维加斯写多吉瓦，首尔写百万亿</h2>
+  <p class="judge">外交部宣布瑞士联邦主席帕姆兰访华，习近平将会见。郭嘉昆回应默茨去风险并反对胡塞袭击民用目标。美联社称美方预警中期后或对伊再动武。以色列计票两阵营均未过半。阿拉格齐仍推七日霍尔木兹方案。甲骨文把Vera Rubin扩至多吉瓦并引入TPU。谷歌发布Genie 4。海力士营收首破百万亿韩元。Ceva更新NeuPro。脑虎完成七亿元B轮。</p>
+  <div class="toc">
+    <div>
+      <h4>时政五条</h4>
+      <ol>
+        <li>瑞士联邦主席帕姆兰将访华</li>
+        <li>回应默茨，反对袭机场</li>
+        <li>美方预警中期后或对伊再动武</li>
+        <li>以选举计票两阵营均未过半</li>
+        <li>伊外长仍推七日霍尔木兹方案</li>
+      </ol>
+    </div>
+    <div>
+      <h4>科技五条 · 缺口</h4>
+      <ol>
+        <li>甲骨文把Vera Rubin扩至多吉瓦</li>
+        <li>谷歌发布Genie 4世界模型</li>
+        <li>海力士营收首破百万亿韩元</li>
+        <li>Ceva发布下一代NeuPro</li>
+        <li>脑虎科技完成七亿元B轮</li>
+      </ol>
+    </div>
+  </div>
+  <p class="method">日期窗口：Asia/Shanghai 2026-10-28 00:00 至 2026-10-29 00:00。交叉来源：新华社/外交部、美联社、自由欧洲电台、Oracle/NVIDIA、Google DeepMind、SK hynix/韩联社、Ceva、中国证券报/经济参考报。排除26–27日已入刊稿、15日求是文章、14日Sequora、25日Lumina、27日DREAMS/灵光2.0，以及折入29日的NVision Nature稿。</p>
+  <p class="end">每日时政科技简报 · 第037期 · 完</p>
+</section>
+
+</div>
+</body>
+</html>
