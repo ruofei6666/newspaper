@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第039期 · 2026-10-30</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 26pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 28pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第039期  ·  2026年10月30日  ·  星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零叁玖期  ·  二零二六年十月三十日  ·  星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。全会《决定》走出人民大会堂，欧洲两场元首外交同一天下午落槌。海峡再响爆炸装置，DeepSeek 的股东名册被写成公开账本。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>全会 · 欧洲 · 海峡</em></div>
+        <div class="metric"><b>04</b><span>科技</span><em>融资 · 星算 · 代工</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周五沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：中共中央新闻发布会解读全面从严治党《决定》。习近平同施泰因迈尔会谈、会见帕姆兰并见证中瑞自贸升级。阿曼苏丹将国事访华。霍尔木兹油轮遇袭。DeepSeek 第二轮融资细节曝光。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>全会已在29日闭幕，30日的新闻是把《决定》讲给记者听。人民大会堂下午连续接待德国与瑞士，霍尔木兹在黎明时分再起火。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 中央政策研究室</div>
+      「全会最重要的成果，是审议通过了《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》。」——唐方裕，10月30日新闻发布会
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>99%</b><i>零关税覆盖</i><p>中瑞自贸升级后，最终实施零关税的产品覆盖双边贸易额超99%。</p></div>
+      <div class="fact"><b>48</b><i>年首次</i><p>阿曼国家元首将于11月1日至2日国事访华，建交以来尚属首次。</p></div>
+      <div class="fact"><b>06:12</b><i>海峡起火</i><p>UKMTO记协调世界时29日22:12一艘出峡油轮被安放爆炸装置。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>党建 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">中共中央 · 30日新闻发布会</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">新闻发布会解读五中全会《决定》</h3>
+        <div class="src">来源：新华社　·　<a href="https://www.news.cn/politics/20261030/182601ea80c249a8bcd9373e6ef9f252/c.html">news.cn</a>　·　<a href="https://www.xinhuanet.com/photo/20261030/9e65841c0b114a23a729d0221d75c08a/c.html">xinhuanet.com</a></div>
+        <p class="sum">10月30日中共中央举行新闻发布会，解读五中全会通过的全面从严治党《决定》。唐方裕称《决定》分总论、七项战略任务与监督责任三大板块，习近平任起草组组长；胡和平称增强党性是根本性任务；黄建发部署新兴领域党建。</p>
+        <div class="why"><strong>为何重要</strong>全会公报已于29日17:42受权发布。30日这场发布会是把「持之以恒」写成可执行的党建任务单，不重复闭幕通稿本身。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">欧洲两场元首外交，同日落槌</h2>
+    <p class="section-sub">一栏是中德把「政贵有恒」写成公开口径，一栏是中瑞把自贸协定升到数字贸易专章。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　外交 · 北京 / 柏林</div>
+        <h3>习近平同施泰因迈尔会谈</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 外交部　·　<a href="https://www.chinanews.com.cn/gn/2026/10-30/10723602.shtml">chinanews.com.cn</a>　·　<a href="https://www.mfa.gov.cn/eng/xw/zyxw/202610/t20261030_12050589.html">mfa.gov.cn</a></div>
+        <p>习近平30日下午在人民大会堂同来华国事访问的德国总统施泰因迈尔会谈，介绍五中全会，强调政贵有恒，望德方坚持理性、务实、友好对华政策，打造平等互利、战略稳定的合作新范式。施泰因迈尔重申一个中国政策。会谈前举行欢迎仪式，当晚设国宴。</p>
+        <div class="why"><strong>为何重要</strong>中欧经贸摩擦升温之际，元首把「要开放不要封闭」写成对德、对欧的公开口径。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　经贸 · 北京 / 伯尔尼</div>
+        <h3>中瑞签署自贸升级议定书</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社 / 商务部 / 瑞士SECO　·　<a href="https://www.news.cn/politics/leaders/20261030/b33ca93dc25e4f348b2f8c2fae0207e4/c.html">news.cn</a>　·　<a href="http://www.news.cn/20261030/d100336f8c1d4d51b802a0a26e7f84e3/c.html">商务部通稿</a></div>
+        <p>习近平30日下午会见瑞士联邦主席帕姆兰，双方见证签署自贸升级议定书及科研、劳动、媒体文件。商务部称双方将对近300个税目再降税，最终零关税覆盖双边贸易额超99%；新增数字贸易专章，中国首次纳入源代码保护条款。协定仍待国内审批。</p>
+        <div class="why"><strong>为何重要</strong>这是中国与欧洲大陆国家首份自贸协定的制度升级，也是中国数字贸易规则对欧的一次突破。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">海湾元首首访入账，例会写下外空与电信</h2>
+    <p class="section-sub">阿曼把国家元首访华写成48年第一次；郭嘉昆同场宣布奥总理行程，并回应联大外空决议与美电信限制。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>04　外交 · 马斯喀特</div>
+        <h3>阿曼苏丹将国事访华</h3>
+        <div class="src">来源：外交部 / 新华社　·　<a href="https://www.xinhuanet.com/20261030/af468958d53e4051b58c1ca5221670b4/c.html">xinhuanet.com</a>　·　<a href="https://www.mfa.gov.cn/eng/xw/wsrc/202610/t20261030_12049987.html">mfa.gov.cn</a></div>
+        <p class="sum">应习近平邀请，阿曼苏丹海赛姆将于11月1日至2日对中国进行国事访问。外交部称此访是海赛姆继任以来首次访华，也是中阿建交48年来阿曼国家元首首次访华。习近平将会谈，李强将会见。</p>
+        <div class="why"><strong>为何重要</strong>海湾产油国元首首访把中阿战略伙伴关系推到国家元首层级，也叠在霍尔木兹持续紧张的窗口上。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　多边 · 北京</div>
+        <h3>奥总理将访华，外空决议再写入共同体</h3>
+        <div class="src">来源：外交部　·　<a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202610/t20261030_12050300.shtml">mfa.gov.cn</a></div>
+        <p class="sum">郭嘉昆30日宣布奥地利总理施托克尔11月2日至7日正式访华，首站上海出席进博会。他称第81届联大一委高票通过防外空军备竞赛、不首先在外空部署武器两项决议，人类命运共同体连续第10年写入联大外空决议。中方反对美拟禁中国电信获取美号码、禁中国实验室测美电子产品。</p>
+        <div class="why"><strong>为何重要</strong>访华日程、外空治理与对美电信反制写进同一场例会，中方在欧洲、多边与对美三条线上同步发声。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>航运 · 霍尔木兹</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">UKMTO · 沪时30日06:12 / 革命卫队晚间</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">出峡油轮遇袭起火，伊方称拦截两艘</h3>
+        <div class="src">来源：新华社 / UKMTO　·　<a href="https://www.news.cn/20261030/d1d5c9b6cf294643a01fcefd5e34c55c/c.html">news.cn 遇袭</a>　·　<a href="http://www.news.cn/20261030/d11c711f551f4af5937f250bcdfbc455/c.html">news.cn 拦截</a></div>
+        <p class="sum">UKMTO通报，协调世界时29日22:12（沪时30日6:12）一艘出峡油轮在阿曼海塞卜东北约46公里被小船安放爆炸装置，船舱起火后扑灭，船员安全。革命卫队晚间称两艘关闭导航、走未经授权航道的油轮在海峡以南被拦停，并指美军提供支持。</p>
+        <div class="why"><strong>为何重要</strong>把「清航后仍有安放爆炸物」写成可核验的当日事故，海峡通行风险没有因美军清航而下降。</div>
+      </div>
+    </article>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      五中全会公报为29日17:42受权发布，本期只收30日新闻发布会，不重写闭幕通稿、增选递补与审查处分名单。施泰因迈尔抵合肥、帕姆兰访华预告、对加50%关税清单10月30日生效，均已见前刊。商务部29日进博会筹备数字、海南自贸港通知不补收。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>没有火箭升空，也没有折进沪时日历日的《自然》《科学》首发。钱与调度先到：DeepSeek 的股东名册被摊开，北京把40余颗卫星写成一朵算力云。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>1055</b><i>亿元</i><p>DeepSeek第二轮募资，近30家机构入场。</p></div>
+      <div><b>40+</b><i>颗卫星</i><p>太空算力云称已统一纳管在轨算力。</p></div>
+      <div><b>6</b><i>栋厂房</i><p>鸿海休斯敦AI服务器基地，刘扬伟称仍要扩建。</p></div>
+      <div><b>—</b><i>科学栏</i><p>《自然》《科学》级30日沪时首发不足。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>资本 · 杭州 / 旧金山</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">The Information · 30日细节稿</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">DeepSeek第二轮：1055亿元、近30家机构</h3>
+        <div class="src">来源：The Information / 21世纪经济报道　·　<a href="https://www.theinformation.com/briefings/deepseek-raises-nearly-16-billion-second-funding-round">theinformation.com</a>　·　<a href="https://www.21jingji.com/article/20261030/herald/f1f3146963f1de19418d797341443e46.html">21jingji.com</a></div>
+        <p class="sum">The Information 30日援引知情人士称，DeepSeek第二轮募资1055亿元，近30家机构参与，估值约6155亿元。腾讯、宁德时代各出资约100亿元，国资约占27%；长鑫存储、中芯国际等产业资本入场。公司未公开置评。10月22日彭博已报约千亿元量级。</p>
+        <div class="why"><strong>为何重要</strong>这不是新一轮「突然落地」，而是把国产大模型融资写成半导体、运营商与互联网的资本同盟名单。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>08　航天计算 · 北京</div>
+        <h3>太空算力云覆盖40余颗卫星</h3>
+        <div class="src">来源：新京报 / 人民网 / 北京日报　·　<a href="https://www.bjnews.com.cn/detail/1793351149129003.html">bjnews.com.cn</a>　·　<a href="http://bj.people.com.cn/n2/2026/1030/c349239-41737520.html">people.com.cn</a></div>
+        <p class="sum">北京太空算力创新中心30日发布天地一体化太空算力云平台，称已完成核心功能建设，覆盖40余颗卫星算力，可与地面CPU、GPU、NPU统一纳管，支持大模型在轨推理。平台分五层，打通资源汇聚、模型上传、在轨推理与结果回传。</p>
+        <div class="why"><strong>为何重要</strong>把「计算星座」从概念写成可调度的云入口，在轨算力第一次被按地面服务器的方式纳管。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　制造 · 台北</div>
+        <h3>刘扬伟会见奥尔特曼，称正洽谈新合作</h3>
+        <div class="src">来源：路透社　·　<a href="https://www.investing.com/news/stock-market-news/foxconn-working-on-a-new-tieup-with-openai-says-there-is-no-ai-bubble-4986121">investing.com / Reuters</a></div>
+        <p class="sum">路透社台北30日电，鸿海董事长刘扬伟在公司年度技术展称，当日已会见OpenAI首席执行官奥尔特曼，细节确认后将宣布。合作将建立在去年数据中心机架与AI硬件设计协议之上。他否认AI泡沫，并称休斯敦六栋AI服务器厂房仍需扩建。</p>
+        <div class="why"><strong>为何重要</strong>在AI基建股承压之际，全球最大AI服务器代工厂把下一笔订单预期写成「见了面、细节待宣布」。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">10<em>产业 · 杭州</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">零一万物 · 30日公司稿</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">杭州国资数亿元入股，总部落地临平</h3>
+        <div class="src">来源：经济观察网 / 新浪科技　·　<a href="http://www.eeo.com.cn/2026/1030/1079496.shtml">eeo.com.cn</a>　·　<a href="https://finance.sina.com.cn/roll/2026-10-30/doc-iniwysmw2287433.shtml">sina.com.cn</a></div>
+        <p class="sum">零一万物30日宣布，已于28日与杭州市、临平区达成合作，市区两级国资联动投资数亿元，总部将落地临平并建设产业AI转型基地。李开复称杭州民营经济是产业AI主战场。公司已转向企业级方案，未披露具体估值。</p>
+        <div class="why"><strong>为何重要</strong>这是地方国资对「从通用大模型转向产业交付」路线的一次押注，也把总部从概念迁到临平。</div>
+      </div>
+    </article>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>无国内发射，科学栏沪时留白</h3>
+      <ul>
+        <li>无国内航天发射；ISRO IRNSS-1L 18:21 UTC、Starlink 15-18 折沪时入31日，不抢收</li>
+        <li>无《自然》《科学》级30日沪时首发。Nature Energy 反应捕获、Nature Synthesis 中性海水光电分解为30日16:00 GMT（沪时31日00:00），入次日刊</li>
+        <li>中科大戊庚环碳纳米带、华中科大硫化铅红外芯片为28日《自然》在线，科技日报30日跟进不重写</li>
+        <li>华中科大声子热霍尔《科学》为22日论文，湖北新华网30日跟进不重写</li>
+        <li>Gemini 4 Carbon、XHEART X7 Ultra、天数智芯天垓300、苹果触控 MacBook 为26–29日首发</li>
+        <li>甲骨文–英伟达 Vera Rubin、Genie 4、SK海力士Q3、Ceva NeuPro、脑虎B轮已入28日刊</li>
+        <li>产业先进制程芯片无30日产品首发；OpenAI–博通–台积电自研芯片为2024年旧稿误植，弃用</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第039期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>发布会讲完《决定》，自贸议定书落纸，海峡再起火</h2>
+      <p class="judge">中共中央用一场发布会把五中全会《决定》拆成三大板块。习近平同一天下午会德国、见瑞士，中瑞自贸升级把零关税写到贸易额的99%。阿曼苏丹的国事访问被宣布为48年第一次。郭嘉昆把奥总理行程、联大外空决议和对美电信反制写进同一场例会。霍尔木兹在黎明被安放爆炸装置，革命卫队晚间称拦下两艘油轮。DeepSeek 的1055亿元股东名册被摊开。北京把40余颗卫星写成一朵可调度的算力云。刘扬伟说见了奥尔特曼。李开复把总部迁到临平。科学栏今日留白。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>新闻发布会解读五中全会《决定》</li>
+            <li>习近平同施泰因迈尔会谈</li>
+            <li>中瑞签署自贸升级议定书</li>
+            <li>阿曼苏丹将国事访华</li>
+            <li>奥总理将访华，外空决议再写入共同体</li>
+            <li>出峡油轮遇袭起火，伊方称拦截两艘</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技四条 · 缺口</h4>
+          <ol>
+            <li>DeepSeek第二轮：1055亿元</li>
+            <li>太空算力云覆盖40余颗卫星</li>
+            <li>刘扬伟会见奥尔特曼</li>
+            <li>杭州国资入股零一万物</li>
+            <li>科学栏：信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-30 00:00 至 2026-10-31 00:00。交叉来源：新华社新闻发布会通稿、新华社/外交部中德会谈与中瑞会见、商务部国际司解读与瑞士SECO、外交部例会全文与阿曼访华宣布、新华社伦敦/德黑兰霍尔木兹双电、The Information/21世纪经济报道、新京报/人民网/北京日报太空算力云、路透社台北电、经济观察网/新浪科技零一万物稿。排除29日公报、28日及更早产品与论文首发，以及折沪时入31日的《自然》子刊与航天窗口。</p>
+      <p class="end">每日时政科技简报 · 第039期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
