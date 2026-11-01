@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第040期 · 2026-10-31</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 26pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 28pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第040期  ·  2026年10月31日  ·  星期六</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零肆零期  ·  二零二六年十月三十一日  ·  星期六</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。统计局把十月景气写成收缩，机关把《决定》写成落实热潮。海峡再起火，谷歌在轨 TPU 第一次答了一句俳句。</p>
+      <div class="metrics">
+        <div class="metric"><b>05</b><span>时政</span><em>景气 · 全会 · 海峡</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>在轨推理 · 论文 · 导航</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>周六沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：十月制造业 PMI 回落至 49.3%。中央和国家机关学习贯彻五中全会。霍尔木兹再袭、哈梅内伊令无地理限制反击。谷歌捕日者原型首次在轨给出 AI 应答。印度 NVS-03 补网，星链再送 27 星。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>周六没有外交部例会，也没有新的元首会见详稿。统计局先交上「十五五」开局后第一个完整月的景气账，新华社夜里才把机关学习《决定》写成全景通稿。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 国家统计局</div>
+      「受“十一”假期前部分需求提前释放以及国际环境复杂多变等因素影响，10月份我国制造业采购经理指数为49.3%。」——新华社北京10月31日电
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>49.3</b><i>制造业PMI</i><p>较上月下降0.8个百分点，生产49.8%、新订单49.4%，双双跌破荣枯线。</p></div>
+      <div class="fact"><b>51.3</b><i>高技术制造</i><p>装备制造业50.6%仍扩张；中型48.4%、小型47.5%，景气继续回落。</p></div>
+      <div class="fact"><b>49.7</b><i>非制造业</i><p>商务活动指数降0.5个百分点，服务业持平临界点，建筑业落到48.0。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>宏观 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">国家统计局 · 31日发布</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">十月制造业PMI回落至49.3%</h3>
+        <div class="src">来源：新华社 / 中国新闻社　·　<a href="https://www.news.cn/20261031/80c42faedaae4f22bf5a5f8242bee1fb/c.html">news.cn</a>　·　<a href="https://www.chinanews.com.cn/cj/2026/10-31/10723856.shtml">chinanews.com.cn</a></div>
+        <p class="sum">统计局31日公布，10月制造业PMI为49.3%，较上月降0.8个百分点。生产49.8%、新订单49.4%；高技术51.3%、装备50.6%仍扩张，消费品48.8%、高耗能47.3%。购进与出厂价格指数56.8%、51.7%，涨幅收窄。非制造业商务活动49.7%。</p>
+        <div class="why"><strong>为何重要</strong>假期需求回吐后总量重返收缩，政策能否把新动能扩张写进整本账，是「十五五」开局第一个完整月的成绩单。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">全会走出大会堂，进博会进入实景演练</h2>
+    <p class="section-sub">一栏是机关把《决定》写成落实热潮，一栏是上海把4142家境外企业和44万平方米展区写成冲刺指标。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　党建 · 北京</div>
+        <h3>中央和国家机关学习贯彻五中全会</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.news.cn/20261031/bc619d6800054fe487400f0611182ce2/c.html">news.cn</a>　·　<a href="http://politics.people.com.cn/n1/2026/1031/c1001-40825166.html">people.com.cn</a></div>
+        <p>新华社31日22:36综合稿称，全会闭幕后中央和国家机关、人民团体第一时间传达学习《决定》。稿件重申七条原则，并写明全会决定中国共产党第二十一次全国代表大会于2027年下半年在北京召开。</p>
+        <div class="why"><strong>为何重要</strong>这是把29日公报、30日发布会写成机关落实热潮的第一份全景通稿，二十一大时间表进入日常动员。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　经贸 · 上海</div>
+        <h3>进博会冲刺：展区首破44万平方米</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：解放日报　·　<a href="https://www.shanghai.gov.cn/nw4411/20261031/da01e0d731754b1cb6dc5f5bc5bb082e.html">shanghai.gov.cn</a></div>
+        <p>解放日报31日报道，陈吉宁、朱忠明到国家会展中心检查服务保障。第九届进博会将有162个国家、地区和国际组织参与，4142家境外企业参展，整体展览面积首次突破44万平方米。商务部副部长鄢东同行。</p>
+        <div class="why"><strong>为何重要</strong>五中全会后首场重大经济外交活动进入实景演练，展区规模与客流保障被写成「越办越好」的硬指标。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">04<em>航运 · 霍尔木兹</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">UKMTO · 沪时31日02:00 / 革命卫队与领袖办公室</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">拉万岛以南油轮遇袭，哈梅内伊令无地理限制反击</h3>
+        <div class="src">来源：新华社 / 半岛电视台　·　<a href="https://english.news.cn/20261031/b150ed4d429747d19ab7e611307c262f/c.html">UKMTO电</a>　·　<a href="https://english.news.cn/20261031/aad954082144401fa7dd1ba4fd5f5736/c.html">IRGC电</a>　·　<a href="https://www.aljazeera.com/news/2026/10/31/iran-warns-of-unfettered-retaliation-if-attacked-as-mediators-try-for-peace">aljazeera.com</a></div>
+        <p class="sum">UKMTO称周五18:00 UTC拉万岛以南约40海里船舶遭不明投射物击中起火，船员安全。IRGC 31日称第四艘「违规」超级油轮触雷、载油逾200万桶，并称在格什姆拦截美MQM-170无人机。哈梅内伊周六要求一旦遇袭立即、无地理限制反击。卡塔尔外交官周五在德黑兰斡旋。</p>
+        <div class="why"><strong>为何重要</strong>海峡袭击从投射物、水雷扩到无人机对质，美伊在中期选举前的谈判窗口更窄。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>05　海权 · 台湾以东</div>
+        <h3>海警虎狮舰编队巡查台湾岛以东海域</h3>
+        <div class="src">来源：中国海警局 / 新华社　·　<a href="https://www.ccg.gov.cn/wqzf/202610/t20261031_3272.html">ccg.gov.cn</a>　·　<a href="http://www.mod.gov.cn/gfbw/qwfb/16497345.html">mod.gov.cn</a></div>
+        <p class="sum">海警发言人姜略31日称，虎狮舰编队当日在台湾岛以东海域开展常态化执法巡查。通报强调10月以来持续加强管控，将继续在相关管辖海域巡查，维护领土主权和海洋权益。</p>
+        <div class="why"><strong>为何重要</strong>这是把「以东海域」写成可核验的单日行动通报，而不是一般性表态。</div>
+      </article>
+      <aside class="gapbox">
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足 · 时政栏</div>
+        <h3>周六无例会，元首会见未见新稿</h3>
+        <ul>
+          <li>外交部周六无例行记者会；未见习近平、李强、王毅31日新会见详稿</li>
+          <li>李强国务院党组会、会见施泰因迈尔为30日新华社电，不补收</li>
+          <li>商务部反FCC检测实验室限制新华社30日23:27，不补收</li>
+          <li>达喀尔青奥会开幕式当地31日晚，央视中文稿11月1日04:40，入次日刊</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">对照 · 不重写前刊</div>
+      五中全会公报为29日17:42，新闻发布会为30日，本期只收31日机关学习通稿，不重写闭幕与发布会。施泰因迈尔会谈、帕姆兰会见与中瑞自贸升级、阿曼访华预告、海塞卜东北油轮遇袭，均已见30日刊。
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>没有国内火箭升空，也没有北美大模型或先进制程芯片的产品首发。折进沪时日历日的，是一颗在轨答俳句的 TPU、两篇零点见刊的能源论文，以及印度补网与星链扩容。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>20</b><i>分钟</i><p>捕日者一次只开一颗TPU，受1千瓦供电限制。</p></div>
+      <div><b>1000</b><i>小时</i><p>反应捕获分子催化剂连续运行门槛被写成可核验数字。</p></div>
+      <div><b>4</b><i>星最低</i><p>NVS-03入轨后，NavIC回到独立定位所需最低配置。</p></div>
+      <div><b>118</b><i>次</i><p>猎鹰9号2026年迄今发射次数，本日再送27颗星链。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>在轨计算 · 谷歌</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">TechCrunch · 30日10:00 PDT＝沪时31日01:00</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">谷歌捕日者原型首次在轨给出AI应答</h3>
+        <div class="src">来源：TechCrunch / IT之家　·　<a href="https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/">techcrunch.com</a>　·　<a href="https://www.ithome.com/1/020/402.htm">ithome.com</a></div>
+        <p class="sum">搭载四颗TPU的捕日者原型完成约三周在轨调试，地面提示词令预装Gemma 4写出俳句。受1千瓦供电限制，一次仅能开启一颗TPU约20分钟。若测试过关，2027年计划再发射两星验证更高功率与星间光链路。</p>
+        <div class="why"><strong>为何重要</strong>这是数据中心级TPU第一次在轨完成端到端推理，也把太空算力的散热与功耗瓶颈写成可测量的20分钟窗口。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">零点见刊的两篇能源论文</h2>
+    <p class="section-sub">Nature 子刊 30日16:00 GMT 上线，折沪时正好踏进31日。一篇写捕碳转化的千小时耐久，一篇写中性海水直接制氢。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">07　科学 · 多伦多</div>
+        <h3>反应捕获催化剂连续运行逾1000小时</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Energy　·　<a href="https://www.nature.com/articles/s41560-026-02159-7">nature.com</a></div>
+        <p>Sinton组报告，碳纳米管负载共价钴酞菁在反应捕获体系中于50 mA/cm²连续运行逾1000小时，一氧化碳法拉第效率约80%、2.9伏下能量效率39%。早期约一半钴溶出，反而强化剩余Co–N配位、抑制继续失活。</p>
+        <div class="why"><strong>为何重要</strong>把「捕碳后再再生」省掉的能耗，写成可连续千小时的分子催化剂路径。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　科学 · 密歇根</div>
+        <h3>亚纳米三相界面实现中性海水光电分解</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Synthesis　·　<a href="https://www.nature.com/articles/s44160-026-01179-1">nature.com</a></div>
+        <p>Mi组报告，原子级Cr(OH)x簇负载于铂修饰氮化镓纳米线，在中性盐水、聚光、相对可逆氢电极0伏条件下光电电流约100 mA/cm²、稳定逾50小时。肼辅助电解槽无偏压约70 mA/cm²。</p>
+        <div class="why"><strong>为何重要</strong>直接用海水而不是高纯淡水制氢，把氢供给与传递的动力学瓶颈写成可工程化的三相界面。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">一发补网，一发扩容</h2>
+    <p class="section-sub">折沪时进入31日的两发：印度把NavIC拉回四星最低配置，SpaceX继续以周频次铺星链。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>09　导航 · 斯里哈里科塔</div>
+        <h3>印度NVS-03入轨，NavIC恢复四星</h3>
+        <div class="src">来源：ISRO　·　<a href="https://www.isro.gov.in/Orbit_manoeuvring_of_NVS03_spacecraft.html">isro.gov.in</a>　·　<a href="https://www.thehindu.com/sci-tech/science/to-overcome-technical-hurdles-isro-flew-nvs-03-satellite-with-pyro-valves-open-narayanan/article71648408.ece">thehindu.com</a></div>
+        <p class="sum">GSLV-F18于30日23:51 IST（沪时31日02:21）将NVS-03送入170.3×38080公里轨道。卫星携国产原子钟并新增L1信号。31日16:48 IST完成首次轨道机动，近地点抬至5477.6公里，目标槽位东经111.75度。</p>
+        <div class="why"><strong>为何重要</strong>NavIC此前仅三星无法独立定位，这一发把区域导航从「不够用」拉回最低可用。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　低轨 · 范登堡</div>
+        <h3>猎鹰9号再送27颗星链</h3>
+        <div class="src">来源：Space.com　·　<a href="https://www.space.com/space-exploration/launches-spacecraft/spacex-starlink-launch-falcon-9-group-15-18-landing-ocisly">space.com</a></div>
+        <p class="sum">猎鹰9号31日04:04 UTC（沪时12:04）从范登堡升空，约62分钟后部署27颗星链。助推器B1093第18次飞行，在太平洋无人机船回收。这是SpaceX本年第118次猎鹰9号发射。</p>
+        <div class="why"><strong>为何重要</strong>在谷歌在轨推理与印度导航补网的同一天，星链继续以周频次扩容，低轨互联网的产能差被再次拉大。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>无国内发射，芯片与大模型栏留白</h3>
+      <ul>
+        <li>无国内航天发射；北美云厂商与先进制程芯片无31日沪时产品首发</li>
+        <li>国产卫星互联网北极测试为10月19日新华社首发，人民日报31日跟进不重写</li>
+        <li>天地一体化太空算力云、DeepSeek第二轮融资、零一万物临平为30日刊，不重写</li>
+        <li>Nature Water 光电提锂与 Nature Energy 同窗见刊，篇幅让给反应捕获与海水制氢，不另立条</li>
+        <li>昇腾950DT汕头点亮为10月19/29日事件；XHEART X7 Ultra、Gemini 4 Carbon 为26–29日首发</li>
+        <li>Mistral Large 4 为10月6日首发，聚合站「改进版开源」未核验官方31日稿，不立项</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第040期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>景气跌回收缩，海峡再起火，在轨TPU第一次开口</h2>
+      <p class="judge">统计局把十月写成49.3%与49.7%两道收缩线，高技术仍在扩张。新华社夜里才把机关学习《决定》和二十一大时间表写成全景通稿。上海把进博会展区写到44万平方米。霍尔木兹在拉万岛以南再起火，哈梅内伊要求无地理限制反击。海警虎狮舰出现在台湾岛以东。谷歌捕日者用20分钟窗口答了一句俳句。两篇能源论文在沪时零点见刊。印度把NavIC拉回四星，星链再铺27颗。国内火箭与芯片产品栏今日留白。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>十月制造业PMI回落至49.3%</li>
+            <li>中央和国家机关学习贯彻五中全会</li>
+            <li>进博会冲刺：展区首破44万平方米</li>
+            <li>拉万岛以南油轮遇袭，哈梅内伊令反击</li>
+            <li>海警虎狮舰编队巡查台湾岛以东</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>谷歌捕日者原型首次在轨给出AI应答</li>
+            <li>反应捕获催化剂连续运行逾1000小时</li>
+            <li>亚纳米三相界面实现中性海水光电分解</li>
+            <li>印度NVS-03入轨，NavIC恢复四星</li>
+            <li>猎鹰9号再送27颗星链</li>
+            <li>国内发射 / 芯片产品：信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-10-31 00:00 至 2026-11-01 00:00。交叉来源：新华社/中新社PMI通稿、新华社机关学习综合稿、解放日报进博会检查稿、新华社伦敦与德黑兰霍尔木兹双电、半岛电视台哈梅内伊声明、中国海警局/国防部巡查通报、TechCrunch捕日者专稿、Nature Energy与Nature Synthesis 30日16:00 GMT论文、ISRO轨道机动公报、Space.com星链发射。排除30日元首会见与商务部反FCC稿、19日北极卫星互联网首发，以及当地31日晚、中文稿11月1日见报的达喀尔青奥会开幕式。</p>
+      <p class="end">每日时政科技简报 · 第040期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
