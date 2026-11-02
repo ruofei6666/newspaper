@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第041期 · 2026-11-01</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 28pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 26pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 28pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2, .close h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note, .metric, .toc div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); text-decoration: none; }
+      .card, .compare article, .gapbox, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第041期  ·  2026年11月1日  ·  星期日</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零肆壹期  ·  二零二六年十一月一日  ·  星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。新华社把《决定》写成可对照的全文，海赛姆第一次踏进北京。伊朗把复航窗口从七日改成两日。载人登月的飞行构型第一次被写成工程方案。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>全文 · 到访 · 海峡</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>登月 · 论坛 · 论文</em></div>
+        <div class="metric"><b>11</b><span>合计</span><em>周日沪时首发可核验</em></div>
+      </div>
+      <p class="spine">今日主线：从严治党《决定》受权全文见报。阿曼苏丹抵京。马朝旭在亚特兰大谈产供链。中秘自贸升级落地。伊朗提出两日重开霍尔木兹。载人登月写成「两次发射、环月对接」。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num">01</p>
+      <h2>时政开篇</h2>
+      <p>周日没有外交部例会。全会走出大会堂的第三天，新华社把1.7万字《决定》整本交到读者手里。海湾有一位苏丹抵达北京，也有一位外长把海峡复航从七日改成两日。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">刊头摘句 · 中共中央</div>
+      「持之以恒推进全面从严治党必须一以贯之、一严到底。」——习近平关于《决定》的说明，新华社11月1日受权播发
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>1.7万</b><i>《决定》全文</i><p>三大板块、八个部分、七条原则。10月29日通过，11月1日受权公开。</p></div>
+      <div class="fact"><b>48年</b><i>元首首访</i><p>阿曼苏丹海赛姆抵京，建交以来阿曼国家元首第一次踏上中国。</p></div>
+      <div class="fact"><b>48小时</b><i>复航方案</i><p>阿拉格齐称原七日计划压成两日，美方第一天履约，第二天海峡复航。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">01<em>党建 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 1日受权全文</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">从严治党《决定》全文与说明同日见报</h3>
+        <div class="src">来源：新华社 / 中国政府网　·　<a href="https://www.gov.cn/yaowen/liebiao/202611/content_7084714.htm">gov.cn</a>　·　<a href="https://cpc.people.com.cn/n1/2026/1101/c64387-40825406.html">people.com.cn</a></div>
+        <p class="sum">新华社1日受权播发五中全会10月29日通过的《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》全文约1.7万字，分三大板块八部分，提出七条原则。习近平所作说明约4500字，交代议题考虑、起草过程与框架。</p>
+        <div class="why"><strong>为何重要</strong>公报与发布会之后，管党治党的完整条文第一次公开，后续落实有了可对照的文本。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">一位苏丹抵达，一位特使到场</h2>
+    <p class="section-sub">一栏是海湾能源通道国元首48年来首次访华，一栏是把达喀尔夜场开幕式写成可核验的中文官方现场稿。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">02　外交 · 北京</div>
+        <h3>阿曼苏丹海赛姆抵达北京开始国事访问</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：新华社　·　<a href="https://www.xinhuanet.com/20261101/4e2e7fe29d4143759e45f25773db8bc7/c.html">xinhuanet.com</a></div>
+        <p>应习近平邀请，海赛姆1日抵京，开始为期两天的国事访问。此访是其继任后首次访华，也是两国建交48年来阿曼国家元首首次访华。习近平将会谈，李强将会见。会见详稿未见当日首发。</p>
+        <div class="why"><strong>为何重要</strong>海湾能源通道国元首第一次走进北京，正值霍尔木兹谈判窗口收窄。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">03　外交 · 达喀尔</div>
+        <h3>习近平主席特使出席第四届青奥会开幕式</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.fmprc.gov.cn/zyxw/202611/t20261101_12050924.shtml">fmprc.gov.cn</a></div>
+        <p>外交部1日09:28发稿：10月31日，国家体育总局局长高志丹作为习近平特使在达喀尔出席第四届青奥会开幕式，并会见塞内加尔总统法耶，转达问候。法耶称中国是塞最重要合作伙伴之一。</p>
+        <div class="why"><strong>为何重要</strong>当地31日晚的开幕式，到1日才有可核验的中文官方现场稿，中塞关系进入体育外交现场。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">产供链进会场，自贸规则落地</h2>
+    <p class="section-sub">一栏是中方在美国主持的G20外长会上谈筑墙设垒，一栏是中秘升级议定书在11月1日变成可减税的证书。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">04　多边 · 亚特兰大</div>
+        <h3>马朝旭在G20外长会提出产供链四点建议</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：外交部　·　<a href="https://www.mfa.gov.cn/wjdt_674879/wjbxw_674885/202611/t20261101_12050891.shtml">mfa.gov.cn</a></div>
+        <p>外交部1日00:52播发马朝旭10月31日在亚特兰大G20外长会第三阶段发言，提出深化政策协调、加强贸易畅通、挖掘创新赋能、推动普惠发展。他称前三季度中国货物进口额同比增长22.3%。</p>
+        <div class="why"><strong>为何重要</strong>这是中方在美国主持的G20外长会上，把反保护主义与人工智能治理写成可核验文本。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">05　经贸 · 北京 / 深圳</div>
+        <h3>中秘自贸协定升级议定书正式生效</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：商务部 / 中新社　·　<a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_cf67440f7a964a5da18365d1ba2455b8.html">mofcom.gov.cn</a>　·　<a href="https://www.chinanews.com.cn/dwq/2026/11-01/10724252.shtml">chinanews.com.cn</a></div>
+        <p>1日起中秘自贸升级议定书生效，新增标准合作、竞争政策、电子商务、全球供应链、环境等章节。深圳海关当日签发首份升级后原产地证书，该批货物在秘鲁进口环节可减税约1.9万元。</p>
+        <div class="why"><strong>为何重要</strong>拉美首份全面自贸协定完成规则升级，全球供应链专章是双方的创新安排。</div>
+      </article>
+    </div>
+
+    <article class="feature">
+      <p class="big">06<em>航运 · 霍尔木兹</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">半岛电视台 / Middle East Eye · 1日07:33 GMT</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">伊朗提出两日重开霍尔木兹方案</h3>
+        <div class="src">来源：半岛电视台 / Middle East Eye　·　<a href="https://www.aljazeera.com/news/liveblog/2026/11/1/iran-war-live-araghchi-says-talks-under-way-on-2-day-plan-to-reopen-hormuz">aljazeera.com</a>　·　<a href="https://www.middleeasteye.net/live-blog/live-blog-update/araghchi-says-hormuz-could-be-reopened-two-days-if-conditions-met">middleeasteye.net</a></div>
+        <p class="sum">外长阿拉格齐1日称，经卡塔尔斡旋，原七日复航方案压缩为两日：美方第一天落实条件，第二天海峡复航。条件含解除制裁、恢复石油豁免、释放冻结资金、承认伊阿曼航道。美方尚未公开接受。这是提案，不是成交。</p>
+        <div class="why"><strong>为何重要</strong>中期选举前两天，海峡复航从「七日」改成「四十八小时」，仍取决于华盛顿是否接条件。</div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <aside class="gapbox">
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足 · 时政栏</div>
+        <h3>周日无例会，元首会见未见新稿</h3>
+        <ul>
+          <li>外交部周日无例行记者会；未见习近平会见海赛姆、李强会见详稿</li>
+          <li>奥地利总理施托克尔访华为11月2日起程，不抢收</li>
+          <li>UKMTO 1日18:09 GMT霍尔木兹投射物通报折沪时入2日刊</li>
+          <li>傅成玉审查调查为10月31日17:32新华社首发，不补收</li>
+        </ul>
+      </aside>
+      <div class="dark-note" style="margin:0;">
+        <div class="lab">对照 · 不重写前刊</div>
+        五中全会公报为29日、新闻发布会为30日，本期只收1日受权全文，不重写闭幕与发布会。施泰因迈尔会谈、帕姆兰会见与中瑞自贸升级、阿曼访华预告、31日PMI与进博会冲刺、海警虎狮舰，均已见前刊。
+      </div>
+    </div>
+
+    <section class="opener">
+      <p class="num">02</p>
+      <h2>科技开篇</h2>
+      <p>没有国内火箭升空，也没有北美大模型或先进制程芯片的产品首发。折进周日日历的，是一套登月飞行构型、一份四十项技术清单，以及三篇同日见刊的科学论文。</p>
+    </section>
+
+    <div class="stat4">
+      <div><b>2</b><i>次发射</i><p>揽月与梦舟分乘两枚长征十号，在环月轨道对接。</p></div>
+      <div><b>40</b><i>项技术</i><p>《颠覆性技术前瞻2026》覆盖人工智能到先进制造。</p></div>
+      <div><b>11</b><i>种氧化物</i><p>机器学习筛出日照区太阳风制水的候选宿主。</p></div>
+      <div><b>210</b><i>兆赫</i><p>里德堡蒸汽池阵列把瞬时带宽写成可扩展架构。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">07<em>航天 · 北京</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">新华社 · 1日00:20首发</div>
+        <h3 class="serif" style="font-size:32pt;margin:8px 0 8px;line-height:1.15;">载人登月采用「两次发射、环月对接」</h3>
+        <div class="src">来源：新华社 / 中新网　·　<a href="http://www.xinhuanet.com.cn/20261101/0ba5e468cfe14cf1a6c26beeb1b8a81e/c.html">xinhuanet.com</a>　·　<a href="https://www.chinanews.com.cn/gn/2026/11-01/10724130.shtml">chinanews.com.cn</a></div>
+        <p class="sum">新华社1日00:20首发：月球探测工程总设计师王翔介绍，两枚长征十号分别送揽月着陆器与梦舟飞船入地月转移轨道，再在环月轨道对接。梦舟、揽月与长征十号已完成逃逸、着陆起飞与低空验证，后续将首飞。</p>
+        <div class="why"><strong>为何重要</strong>这是官方把2030年前登月的飞行构型写成可核验的工程方案，而不是概念图。</div>
+      </div>
+    </article>
+
+    <h2 class="section-title">一份技术清单，一条代谢轴</h2>
+    <p class="section-sub">南沙把四十项颠覆性技术写成年度前瞻，杭州把慢性肾病的心肌肥厚写成可干预的磷酸盐—GLS1轴。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">08　科学政策 · 广州</div>
+        <h3>大湾区科学论坛开幕，发布40项颠覆性技术</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：科技日报 / 新华社　·　<a href="https://www.stdaily.com/web/gdxw/2026-11/01/content_606408.html">stdaily.com</a>　·　<a href="http://www.news.cn/tech/20261101/247f83a668454c548f4b433a2a848deb/c.html">news.cn</a></div>
+        <p>科技部、中科院指导的2026大湾区科学论坛1日上午在广州开幕。中信所发布《颠覆性技术前瞻2026》，遴选人工智能、信息技术、生命健康、新能源、新材料与先进制造五领域40项技术，并启动两项「十五五」重点专项。</p>
+        <div class="why"><strong>为何重要</strong>把未来产业方向写成可对照的年度清单，并与大湾区科创中心专项同步启动。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">09　医学 · 杭州</div>
+        <h3>浙大团队发现CKD心肌肥厚的磷酸盐—GLS1轴</h3>
+        <div class="src" style="color:var(--slate);font-size:13px;font-style:italic;margin-bottom:10px;">来源：Nature Communications　·　<a href="https://www.nature.com/articles/s41467-026-79129-w">nature.com</a></div>
+        <p>邵逸夫医院吴俊楠组1日报告，慢性肾病通过增强谷氨酰胺分解、抑制氧化磷酸化诱发心肌肥厚。谷氨酰胺酶GLS1在人肾病人心肌上调；敲除或抑制GLS1可减轻小鼠肥厚，磷酸盐是关键调控物。</p>
+        <div class="why"><strong>为何重要</strong>把尿毒症心肌肥厚写成可干预的代谢轴，为占肾病主要死因的左室肥厚提供靶点。</div>
+      </article>
+    </div>
+
+    <h2 class="section-title">日照区取水，原子接收机扩频</h2>
+    <p class="section-sub">一篇论文把月球取水从极区冰扩到日照区铁氧化物，一篇把里德堡传感的瞬时带宽写成210兆赫架构。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>10　月面资源 · 滑铁卢</div>
+        <h3>机器学习筛出11种月球铁氧化物作制水宿主</h3>
+        <div class="src">来源：npj Space Exploration　·　<a href="https://www.nature.com/articles/s44453-026-00059-4">nature.com</a></div>
+        <p class="sum">刘志超等1日报告，用DFT与XGBoost筛查月表氧化物，发现高价或混价铁氧化物比常见二价铁矿物更利于滞留太阳风氢并生成水。11种可合成氧化物与月表磁铁矿被列为日照区原位制水候选。</p>
+        <div class="why"><strong>为何重要</strong>把月球取水从极区冰扩展到日照区矿物化学，服务载人登月的就地资源利用。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>11　量子传感 · 太原</div>
+        <h3>斯塔克梳把里德堡接收机带宽扩到210兆赫</h3>
+        <div class="src">来源：Communications Physics　·　<a href="https://www.nature.com/articles/s42005-026-02941-9">nature.com</a></div>
+        <p class="sum">山西大学焦月春、赵建明组1日报告，以微波频率梳和位置相关斯塔克场把各蒸汽池变成独立外差通道。21线梳验证210兆赫瞬时带宽架构，灵敏度326.6纳伏每厘米根赫兹。</p>
+        <div class="why"><strong>为何重要</strong>原子微波传感长期受相干时间限制，这条路径把雷达与频谱监测需要的瞬时带宽写成可扩展架构。</div>
+      </article>
+    </div>
+
+    <aside class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.06em;">信息不足</div>
+      <h3>无国内发射，芯片与大模型栏留白</h3>
+      <ul>
+        <li>无国内航天发射；北美云厂商与先进制程芯片无1日沪时产品首发</li>
+        <li>谷歌捕日者Hello World、Nature Energy反应捕获、ISRO NVS-03、星链15-18为31日刊，不重写</li>
+        <li>天地一体化太空算力云为30日刊；DeepSeek Super-agent为31日晚公众号稿，不补收</li>
+        <li>长鑫第六代4F²样片、英伟达OOI共封装光学为30–31日业绩会或展会稿</li>
+        <li>惠州新一代医用重离子加速器为10月23日刊已报装置，科技日报1日周热词不重写</li>
+        <li>中科大戊庚环碳纳米带为28日Nature在线，30日科技日报已跟进</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <div class="kicker" style="display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.14em;color:#C9C2B6;">
+        <span>THE EVENING LEDGER</span>
+        <span>第041期 · 收束</span>
+      </div>
+      <hr style="border:0;border-top:2px solid var(--crimson);border-bottom:1px solid var(--paper);margin:16px 0 18px;" />
+      <h2>全文落地，苏丹抵京，海峡改成两日窗口</h2>
+      <p class="judge">新华社把1.7万字《决定》交到公开文本里。海赛姆第一次以阿曼国家元首身份抵达北京，会见详稿还要等。马朝旭在亚特兰大谈产供链，中秘升级议定书在深圳变成第一张减税证书。阿拉格齐把复航从七日改成两日，华盛顿尚未接招。科技栏没有火箭，也没有新芯片：登月构型、四十项技术清单，以及三条同日见刊的科学论文，把周日写成「工程方案 + 实验室」。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>从严治党《决定》全文与说明同日见报</li>
+            <li>阿曼苏丹海赛姆抵达北京开始国事访问</li>
+            <li>习近平主席特使出席达喀尔青奥会开幕式</li>
+            <li>马朝旭在G20外长会提出产供链四点建议</li>
+            <li>中秘自贸协定升级议定书正式生效</li>
+            <li>伊朗提出两日重开霍尔木兹方案</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条 · 缺口</h4>
+          <ol>
+            <li>载人登月采用「两次发射、环月对接」</li>
+            <li>大湾区科学论坛开幕，发布40项颠覆性技术</li>
+            <li>浙大团队发现CKD心肌肥厚的磷酸盐—GLS1轴</li>
+            <li>机器学习筛出11种月球铁氧化物作制水宿主</li>
+            <li>斯塔克梳把里德堡接收机带宽扩到210兆赫</li>
+            <li>国内发射 / 芯片产品：信息不足</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">日期窗口：Asia/Shanghai 2026-11-01 00:00 至 2026-11-02 00:00。交叉来源：中国政府网/人民网《决定》全文、新华社海赛姆抵达电、外交部高志丹现场稿与马朝旭发言全文、商务部国际司负责人介绍与中新社深圳海关证书稿、半岛电视台/中东之眼阿拉格齐访谈、新华社/中新网载人登月通稿、科技日报/新华社大湾区论坛与40项技术报告、Nature Communications、npj Space Exploration、Communications Physics。排除29–30日全会公报与发布会、30日元首会见、31日PMI与捕日者Hello World，以及1日18:09 GMT之后折沪时入次日的UKMTO投射物通报。</p>
+      <p class="end">每日时政科技简报 · 第041期 · 完</p>
+    </section>
+  </div>
+</body>
+</html>
