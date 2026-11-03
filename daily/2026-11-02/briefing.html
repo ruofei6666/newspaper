@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第042期 · 2026-11-02</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .gapbox h3 { font-size: 36pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .metrics, .facts, .grid2, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .cover h1 { font-size: 36pt; }
+      .opener h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: #fff; }
+      .cover, .close, .dark-note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); }
+      .wrap { max-width: none; padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="iss">第042期</span>
+      <span class="date">2026年11月2日 · 星期一 · Asia/Shanghai</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING GAZETTE</span>
+        <span>VOL. I · NO. 042</span>
+      </div>
+      <hr />
+      <p class="issue serif">第〇四二期 · 昨日刊</p>
+      <h1>海湾来客，海峡未歇</h1>
+      <p class="lead">阿曼苏丹海赛姆完成建交四十八年来元首首次访华；北京同日会见沙特与伊朗官员。霍尔木兹仍有投射物通报，算力校园则开始谈让电。</p>
+      <div class="metrics">
+        <div class="metric"><b>5</b><span>时政</span><em>会谈 · 例会 · 海峡</em></div>
+        <div class="metric"><b>5</b><span>科技</span><em>电网 · 芯片 · 材料</em></div>
+        <div class="metric"><b>10</b><span>合计</span><em>只收沪时昨日首发</em></div>
+      </div>
+      <p class="spine">创刊于二〇二六年九月二十二日。本期对应日历日 2026-11-02，不含十一月三日凌晨以后见报稿。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>海湾国家元首走进人民大会堂的同一天，霍尔木兹和波斯湾北沿各记下一则投射物。外交日程排满，航道并未因此安静。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">今日引语 · 人民大会堂</div>
+      中东海湾地区不应成为大国博弈和地缘冲突的角力场。地区的和平稳定需要各方共同营造呵护。
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <b>48</b>
+        <i>年</i>
+        <p>阿曼国家元首首次访华。联合声明写明建交四十八年、战略伙伴自二〇一八年起。</p>
+      </div>
+      <div class="fact">
+        <b>21</b>
+        <i>响礼炮</i>
+        <p>习近平在北大厅举行欢迎仪式，海赛姆检阅仪仗队。中午设欢迎宴会。</p>
+      </div>
+      <div class="fact">
+        <b>2</b>
+        <i>条劝和线</i>
+        <p>王毅同日会见沙特国安顾问艾班与伊朗国安会副秘书巴盖里。</p>
+      </div>
+    </div>
+
+    <article class="feature">
+      <p class="big">48<em>年首次</em></p>
+      <div>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;"><span class="mark" style="display:inline-block;width:8px;height:8px;background:#C41E3A;margin-right:8px;"></span>时政 · 01 / 05</p>
+        <h3 class="section-title">习近平同阿曼苏丹海赛姆会谈，发表深化战略伙伴关系联合声明</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">外交部 13:46 / 16:16　新华社　李强会见稿 19:09<br />
+          <a href="https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202611/t20261102_12051267.shtml">会谈通稿</a>
+          ·
+          <a href="https://www.fmprc.gov.cn/web/zyxw/202611/t20261102_12051564.shtml">联合声明</a>
+          ·
+          <a href="https://www.news.cn/20261102/02199ca9cc4642c1bb0ffc4749bf8f5f/c.html">李强会见</a>
+        </p>
+        <p class="sum">11月2日上午习近平在人民大会堂会见海赛姆，此访为建交48年来阿曼元首首次访华，欢迎仪式鸣礼炮21响。双方见证北斗、产供链、本币互换与数字支付等文件，联合声明呼吁霍尔木兹恢复通航。李强下午会见。</p>
+        <div class="why"><strong>为何重要</strong>海湾能源枢纽国家元首第一次走进北京，把能源、金融和航道安全写进同一份声明。</div>
+      </div>
+    </article>
+
+    <section class="compare">
+      <article>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;">时政 · 02 / 05</p>
+        <h3>王毅同日会见沙特国安顾问与伊朗国安会副秘书</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">新华社 21:40　外交部 17:07<br />
+          <a href="https://www.news.cn/politics/leaders/20261102/999b5832234041069daa45d018ca2d21/c.html">会见艾班</a>
+          ·
+          <a href="https://www.mfa.gov.cn/wjdt_674879/wjbxw_674885/202611/t20261102_12051622.shtml">会见巴盖里</a>
+        </p>
+        <p class="sum">王毅在京会见沙特国务大臣、国安顾问艾班，对方转交王储穆罕默德致习近平信函；同日会见伊朗最高国安会副秘书巴盖里，强调对话谈判而非再启兵戎。巴盖里称伊愿接触谈判。</p>
+        <div class="why"><strong>为何重要</strong>中方在利雅得与德黑兰两条线上同日劝和，对准中东战和路口。</div>
+      </article>
+      <article>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;">时政 · 03 / 05</p>
+        <h3>加蓬总统将访华，王毅将主持 APEC 双部长会与澜湄外长会</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">外交部例会 17:44<br />
+          <a href="https://www.fmprc.gov.cn/web/fyrbt_673021/jzhsl_673025/202611/t20261102_12051610.shtml">例会全文</a>
+        </p>
+        <p class="sum">毛宁宣布加蓬总统恩圭马11月3–7日国事访问并出席进博会；王毅与王文涛3日主持 APEC 第37届双部长视频会；王毅3–4日主持澜湄第十一次外长会。翟隽、刘显法、胡长春将分赴中东与非洲之角。</p>
+        <div class="why"><strong>为何重要</strong>进博会前夜外交日程排满，区域机制与热点劝和同步铺开。</div>
+      </article>
+    </section>
+
+    <h2 class="section-title">航道对照</h2>
+    <p class="section-sub">谈判信号与投射物通报写在同一张日历上。欧盘油价回落，纽约收盘折入三日刊。</p>
+    <section class="compare">
+      <article>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;">时政 · 04 / 05</p>
+        <h3>美伊释放谈判信号，欧盘油价回落逾百分之四</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">Axios　CNA 18:20 沪时　IRNA 转述<br />
+          <a href="https://www.channelnewsasia.com/business/oil-drops-over-4-hopes-progress-in-talks-ending-us-iran-war-6511686">CNA 欧盘稿</a>
+        </p>
+        <p class="sum">特朗普对 Axios 称「不急再动手」但仍将有所行动；伊朗总统称最高领袖授权以对话解决问题。伦敦时段布伦特跌约 4.2% 至 108.64 美元。纽约收盘与林肯纪念堂答问折沪时入 3 日。</p>
+        <div class="why"><strong>为何重要</strong>中期选举前夜，市场交易的是战和预期，而不是新的军事事实。</div>
+      </article>
+      <article>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;">时政 · 05 / 05</p>
+        <h3>UKMTO 通报霍尔木兹 Mayday 与哈夫吉以东油轮遭两枚投射物击中</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">UKMTO 191-26 / 192-26<br />
+          <a href="https://www.ukmto.org/-/media/ukmto/products/20261101-ukmto_warning_191_26.pdf">191-26</a>
+          ·
+          <a href="https://www.ukmto.org/-/media/ukmto/products/20261102-ukmto_warning-192-26.pdf">192-26</a>
+        </p>
+        <p class="sum">191-26：1 日 15:09 UTC 商船在 16 频道转发霍尔木兹另一艘船遭不明投射物击中。192-26：1 日 23:47 UTC＝沪时 2 日 07:47，哈夫吉以东 72 海里油轮左舷遭两枚不明投射物，船员均在、暂无环境损害。</p>
+        <div class="why"><strong>为何重要</strong>外交信号升温的同时，海峡与海湾袭击并未停。</div>
+      </article>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>没有国内航天发射，也没有北美大模型产品首发。算力开始谈让电，近存计算走出路线图，实验室则交出一张超低热导单晶。</p>
+    </section>
+
+    <div class="quote">
+      <div class="lab">今日引语 · OpenAI</div>
+      Families and small businesses should not be asked to subsidize a compute campus’s electricity needs.
+    </div>
+
+    <div class="stat4">
+      <div><b>1000</b><i>兆瓦</i><p>OpenAI 佐治亚校园最高可调度需求响应，约合 70 万户空调用电。</p></div>
+      <div><b>18×</b><i>带宽</i><p>高通第一代 HBC 样品相对外置 LPDDR5X 的有效带宽。</p></div>
+      <div><b>0.24</b><i>W/(m·K)</i><p>东南大学 7.9 纳米碘化铅单晶室温热导率。</p></div>
+      <div><b>6</b><i>台</i><p>智元精灵 G2 在便利店连续 24 小时营业直播。</p></div>
+    </div>
+
+    <article class="feature">
+      <p class="big">1 GW<em>可让出</em></p>
+      <div>
+        <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;letter-spacing:.06em;">科技 · 01 / 05</p>
+        <h3 class="section-title">OpenAI 启动「电网守护」计划，佐治亚校园最高可让出一千兆瓦</h3>
+        <p class="src" style="color:#4A5568;font-size:13px;font-style:italic;">OpenAI 11 月 2 日　佐治亚电力配套说明<br />
+          <a href="https://openai.com/index/grid-protectors-program/">Grid Protectors</a>
+        </p>
+        <p class="sum">OpenAI 宣布 Grid Protectors，承诺未来算力校园在电网紧张时降负荷。埃芬汉县校园将支付全部配套电费，与佐治亚电力约定最高 1000 兆瓦需求响应；该校园规划用电约 3200 兆瓦，项目仍在建设。</p>
+        <div class="why"><strong>为何重要</strong>把数据中心从单向吃电，改写成可被调度的电网资源。</div>
+      </div>
+    </article>
+
+    <section class="grid2">
+      <article class="card">
+        <p class="meta"><span class="mark"></span>科技 · 02 / 05</p>
+        <h3>高通验证第一代 HBC 硅片，带宽约为 LPDDR5X 的十八倍</h3>
+        <p class="src">ServeTheHome　Next Platform　11 月 2 日<br />
+          <a href="https://www.servethehome.com/qualcomm-validates-hbc-stacked-memory-ahead-of-2027-dragonfly-ai250-sampling/">实验室核验稿</a>
+        </p>
+        <p class="sum">高通称圣地亚哥实验室验证第一代高带宽计算硅片：晶圆键合把 LPDDR 叠在加速器上，两层样品有效带宽约为外置 LPDDR5X 的 18 倍、带宽每瓦优于预期 HBM4 五倍以上。量产拟用四层，搭载 Dragonfly AI250，2027 年上半年送样。</p>
+        <div class="why"><strong>为何重要</strong>推理瓶颈在搬数据。这是近存计算从路线图走到可测硅片。</div>
+      </article>
+      <article class="card">
+        <p class="meta"><span class="mark"></span>科技 · 03 / 05</p>
+        <h3>东南大学测得 7.9 纳米碘化铅单晶热导率仅 0.24 瓦每米开尔文</h3>
+        <p class="src">Nature Communications　Published 02 November 2026<br />
+          <a href="https://www.nature.com/articles/s41467-026-79261-7">论文</a>
+        </p>
+        <p class="sum">孙立涛、尹奎波、聂萌等报告：7.9 纳米碘化铅单晶纳米片室温热导率 0.24 W/(m·K)，属超薄单晶实验低值。溶液生长加气流定位实现无损上桥；压扁的弯曲声子与厚度软化共同抑制导热。</p>
+        <div class="why"><strong>为何重要</strong>给柔性热管理提供可测的超低热导单晶，而不是只能算不能量的材料。</div>
+      </article>
+    </section>
+
+    <section class="grid2">
+      <article class="card">
+        <p class="meta"><span class="mark"></span>科技 · 04 / 05</p>
+        <h3>《自然·材料》：柔性配体可让球形颗粒自发形成低配位晶格</h3>
+        <p class="src">Nature Materials　Published 02 November 2026<br />
+          <a href="https://www.nature.com/articles/s41563-026-02787-0">论文</a>
+        </p>
+        <p class="sum">特拉华大学等团队证明，各向同性纳米颗粒不必预先做形状或表面图案；配体冠层足够可变形时，配体沿界面重排，自发产生有效配位数。配体越软，晶格配位数、堆积密度和对称性越低。</p>
+        <div class="why"><strong>为何重要</strong>把「价态」从粒子几何里解放出来，给可编程超晶格多了一条设计旋钮。</div>
+      </article>
+      <article class="card">
+        <p class="meta"><span class="mark"></span>科技 · 05 / 05</p>
+        <h3>智元六台精灵 G2 便利店上岗，开启二十四小时营业直播</h3>
+        <p class="src">上海证券报 10:47<br />
+          <a href="https://finance.sina.com.cn/roll/2026-11-02/doc-inixichz2389868.shtml">上证报稿</a>
+        </p>
+        <p class="sum">2 日 10 时智元启动「机器人打工不能停」直播，六台精灵 G2 承担迎宾、咖啡、熟食、补货和清洁，连续 24 小时在岗。公司称依托 10 月 27 日发布的 Genie Master 与 GO-3 做真实营业验证。框架本身不是当日首发。</p>
+        <div class="why"><strong>为何重要</strong>把具身智能从演示厅推进到按班次营业的公开考核。</div>
+      </article>
+    </section>
+
+    <div class="dark-note">
+      <div class="lab">信息不足 · 科技栏缺口</div>
+      无国内航天发射；USSF-432 窗口已推迟，不记发射。北美云厂商与先进制程芯片无产品首发。施托克尔已启程访华，会见详稿未见。纽约油市正式收盘与林肯纪念堂「No」答问均在沪时 3 日，不入本期。
+    </div>
+
+    <aside class="gapbox">
+      <p class="meta" style="color:#C41E3A;font-size:12px;font-weight:700;">已核验、不立项</p>
+      <h3>次日勿重刊与排除</h3>
+      <ul>
+        <li>从严治党《决定》全文、阿曼抵京预告、马朝旭 G20、中秘自贸升级、载人登月「两次发射」、大湾区科学论坛：1 日刊已收。</li>
+        <li>DeepSeek Super-agent 为 10 月 31 日公众号；太空算力云为 10 月 30 日；OpenSpace 开源星座为 10 月 17 日大会。</li>
+        <li>华中科大硫化铅红外芯片、中科大戊庚环碳纳米带为 10 月 28 日《自然》在线，跟进稿不重写。</li>
+        <li>英伟达 OOI 为 10 月 31 日 SEMICON；文心 Unlimited OCR 2 为 10 月 27 日；MiniMax M3.1 Flash 权重为 10 月 23 日。</li>
+        <li>工信部《人工智能＋信息通信》实施意见为 6 月印发，聚合站当日转述不立项。</li>
+      </ul>
+    </aside>
+
+    <section class="close">
+      <header class="folio" style="border-color:#C41E3A;box-shadow:0 1px 0 #F7F4EF;margin-bottom:22px;">
+        <strong style="color:#F7F4EF;">每日时政科技简报</strong>
+        <span class="iss">第042期</span>
+        <span class="date" style="color:#C9C2B6;">收束 · 2026-11-02</span>
+      </header>
+      <h2>十日账：海湾来客把航道写进声明，电网则开始给算力做减法。</h2>
+      <p class="judge">时政五条以元首外交和劝和日程为骨，霍尔木兹两则通报提醒读者：声明不能代替航道。科技五条里，OpenAI 让电与高通近存计算是产业主线，东南大学与《自然·材料》补上实验室，智元直播是公开考核而非新品发布。科学栏有论文，航天栏留白。</p>
+      <div class="toc">
+        <div>
+          <h4>时政五条</h4>
+          <ol>
+            <li>习近平会见海赛姆并发表联合声明</li>
+            <li>王毅同日见沙特艾班、伊朗巴盖里</li>
+            <li>加蓬访华、APEC 双部长、澜湄外长会</li>
+            <li>美伊谈判信号与欧盘油价回落</li>
+            <li>UKMTO 191-26 / 192-26</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技五条</h4>
+          <ol>
+            <li>OpenAI Grid Protectors</li>
+            <li>高通 HBC 硅片实验室验证</li>
+            <li>东南大学碘化铅超低热导</li>
+            <li>《自然·材料》自发配位超晶格</li>
+            <li>智元精灵 G2 二十四小时上岗</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">检索以新华社、外交部、UKMTO、OpenAI、《自然》系列与交叉英文稿为准，时间按 Asia/Shanghai 日历日 2026-11-02。创刊期号：2026-09-22 为第 001 期，本期为第 042 期。两种成品共用墨黑、新闻纸白、朱红与石板灰。</p>
+      <p class="end">—— 完 · 第042期 · 明日续刊 ——</p>
+    </section>
+  </div>
+</body>
+</html>
