@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第046期 · 2026-11-06</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+      --warm: #C9C2B6;
+      --dark-card: #242424;
+      --cream: #E8E2D8;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "文泉驿微米黑", "Droid Sans Fallback", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif", "Liberation Serif", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 4px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+      text-transform: uppercase;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 16px; margin: 0 0 8px; }
+    .cover h1 { font-size: 54pt; line-height: 1.1; margin: 0 0 16px; }
+    .cover .lead { font-size: 18px; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; border-radius: 6px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+    .cover .spine { margin-top: 24px; font-size: 15px; color: var(--paper); }
+
+    .opener { margin: 8px 0 36px; }
+    .opener .num { font-size: 72px; color: var(--crimson); line-height: 0.9; margin: 0; }
+    .opener h2 { font-size: 40pt; margin: 0 0 8px; }
+    .opener p { color: var(--slate); font-size: 16px; margin: 0; }
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .quote .lab { color: var(--crimson); font-family: Calibri, Arial, "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .fact { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; border-radius: 6px; }
+    .fact b { font-size: 40px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; line-height: 1; }
+    .fact i { font-style: normal; color: var(--slate); font-size: 14px; font-weight: 700; }
+    .fact p { margin: 8px 0 0; font-size: 14px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 18px 0 40px; }
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin: 18px 0 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px 20px;
+    }
+    .card .meta { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .card .meta .mark {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--crimson);
+      margin-right: 8px;
+      vertical-align: 1px;
+    }
+    .card h3 { font-size: 36pt; line-height: 1.2; margin: 10px 0 8px; }
+    .card .src { color: var(--slate); font-size: 13px; font-style: italic; margin-bottom: 10px; }
+    .card .sum { font-size: 15pt; margin: 0 0 14px; }
+    .why {
+      border-top: 1px solid var(--rule);
+      padding-top: 12px;
+      font-size: 14pt;
+      color: var(--slate);
+    }
+    .why strong { color: var(--crimson); display: block; font-size: 12pt; margin-bottom: 4px; letter-spacing: 0.06em; }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+    .compare article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; }
+    .compare h3 { font-size: 36pt; margin: 8px 0 8px; line-height: 1.2; }
+    .section-title { font-size: 36pt; margin: 8px 0 6px; }
+    .section-sub { color: var(--slate); margin: 0 0 16px; }
+
+    .dark-note {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 8px 0 36px;
+    }
+    .dark-note .lab { color: var(--crimson); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    .stat4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
+    .stat4 div { background: var(--card); border: 1px solid var(--rule); padding: 16px; border-radius: 6px; }
+    .stat4 b { font-size: 32px; color: var(--crimson); font-family: Cambria, "STSong", "Noto Serif CJK SC", serif; display: block; }
+    .stat4 i { font-style: normal; font-weight: 700; font-size: 14px; }
+    .stat4 p { margin: 8px 0 0; font-size: 13px; color: var(--slate); }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 28px 30px 24px;
+      margin: 18px 0 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+    }
+    .feature .big {
+      font-family: Cambria, "STSong", "Noto Serif CJK SC", serif;
+      font-size: 52px;
+      color: var(--crimson);
+      line-height: 0.9;
+      margin: 0;
+    }
+    .feature .big em { display: block; font-style: normal; font-size: 16px; color: var(--slate); margin-top: 10px; font-weight: 700; }
+
+    .gapbox {
+      background: var(--card);
+      border: 1px dashed var(--rule);
+      border-radius: 6px;
+      padding: 22px 24px;
+      margin: 0 0 36px;
+    }
+    .gapbox h3 { font-size: 22pt; margin: 8px 0 10px; }
+    .gapbox ul { margin: 0; padding-left: 18px; color: var(--slate); font-size: 14pt; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+    .close h2 { font-size: 36pt; margin: 0 0 14px; line-height: 1.15; }
+    .close .judge { font-size: 16px; color: #E8E2D8; margin: 0 0 24px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .toc div { background: #242424; padding: 16px 18px; border-radius: 6px; }
+    .toc h4 { color: var(--crimson); margin: 0 0 10px; font-size: 13px; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+    .close .method { color: #C9C2B6; font-size: 13px; margin-top: 22px; }
+    .close .end { color: var(--crimson); font-size: 13px; margin-top: 10px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover { padding: 28px 20px; }
+      .cover h1 { font-size: 36pt; }
+      .metrics, .facts, .grid2, .grid3, .compare, .stat4, .toc, .feature { grid-template-columns: 1fr; }
+      .card h3, .compare h3, .gapbox h3 { font-size: 22pt; }
+      .section-title { font-size: 28pt; }
+      .opener h2 { font-size: 28pt; }
+    }
+    @media print {
+      body { background: white; }
+      .wrap { max-width: none; padding: 12mm; }
+      .cover, .close, .dark-note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); }
+      .card, .compare article, .feature { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <strong>每日时政科技简报</strong>
+      <span class="date">第046期　·　2026年11月6日　·　星期五</span>
+      <span class="iss">晨刊</span>
+    </header>
+
+    <section class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING DISPATCH</span>
+        <span>ASIA / SHANGHAI　　昨日新闻</span>
+      </div>
+      <hr />
+      <p class="issue">第零肆陆期　·　二零二六年十一月六日　·　星期五</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录该日发生或该日首发的稿件。常委会一揽子立法收官，加蓬与奥地利同日访华。世界人工智能合作组织获批，国产第二艘大型邮轮交付。</p>
+      <div class="metrics">
+        <div class="metric">
+          <b>06</b>
+          <span>时政</span>
+          <em>立法 · 外交 · 换届</em>
+        </div>
+        <div class="metric">
+          <b>06</b>
+          <span>科技</span>
+          <em>治理 · 芯片 · 装备</em>
+        </div>
+        <div class="metric">
+          <b>12</b>
+          <span>合计</span>
+          <em>周五沪时首发可核验</em>
+        </div>
+      </div>
+      <p class="spine">今日主线：反跨境腐败法即日起施行。中加关系升格为新时代命运共同体。台积电被曝筹划3D DRAM。岳阳完成4000米级浮空风电城市首飞。</p>
+    </section>
+
+    <section class="opener">
+      <p class="num serif">01</p>
+      <h2>时政开篇</h2>
+      <p>星期五的北京同时处理立法、外交与基层选举。人民大会堂上午闭幕表决，下午接待两位外国领导人；西城区投票站则把换届写成一次公开程序。</p>
+      <div class="quote">
+        <div class="lab">本日判词</div>
+        立法供给、元首外交与地方人大换届叠在同一天，国家机器的三套节奏被放在同一张日程上。
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <b>5</b>
+          <i>新法或修订法</i>
+          <p>检察公益诉讼、南极活动、水法、反跨境腐败，外加修改突发事件应对法等十五部法律。</p>
+        </div>
+        <div class="fact">
+          <b>2</b>
+          <i>国事与正式访问</i>
+          <p>加蓬总统恩圭马、奥地利总理施托克尔同日在人民大会堂会见。</p>
+        </div>
+        <div class="fact">
+          <b>1.3万</b>
+          <i>北京投票站</i>
+          <p>区和乡镇两级人大代表换届投票日，差额选举区代表4898人、乡镇代表11137人。</p>
+        </div>
+      </div>
+    </section>
+
+    <article class="feature">
+      <p class="big">86–91<em>主席令</em></p>
+      <div>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:.06em;">时政 01　·　立法</div>
+        <h3 class="serif" style="font-size:36pt;margin:8px 0 8px;line-height:1.2;">常委会闭幕：反跨境腐败等五法通过</h3>
+        <p class="src" style="color:var(--slate);font-size:13px;font-style:italic;">新华社 / 中国人大网　·　<a href="http://www.npc.gov.cn/npc/c2/kgfb/202611/t20261106_458558.html">原文链接</a></p>
+        <p>十四届全国人大常委会第二十五次会议6日上午在京闭幕，表决通过检察公益诉讼法、南极活动与环境保护法、新修订水法、反跨境腐败法，并决定修改突发事件应对法等十五部法律；免去李乐成的工信部长职务。习近平签署第86至91号主席令。</p>
+        <div class="why"><strong>为何重要</strong>立法一揽子落地，跨境反腐、极地治理与检察公益诉讼同时入法，工信系统人事同步调整。</div>
+      </div>
+    </article>
+
+    <p class="section-title serif">稿件卡片</p>
+    <p class="section-sub">国内议程：收官稳增长，与地方换届、跨境执法并行。</p>
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 02　·　行政</div>
+        <h3>国务院部署收官与救助</h3>
+        <p class="src">中国政府网 / 新华社　·　<a href="https://www.gov.cn/yaowen/liebiao/202611/content_7085401.htm">原文链接</a></p>
+        <p class="sum">李强6日主持国务院常务会议，要求加快重大项目和“六张网”建设、畅通投资消费循环，抓好稳就业、防风险和民生保障，并研究明年政策衔接。会议同时听取社会救助工作汇报，强调推进法治化、数智化，健全“一门受理、协同办理”。</p>
+        <div class="why"><strong>为何重要</strong>四季度收官与跨年政策同时布置，把稳市、化债和困难群体兜底绑在同一议程。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>时政 03　·　选举</div>
+        <h3>北京区乡人大换届投票</h3>
+        <p class="src">新华社　·　<a href="http://www.news.cn/politics/20261106/21d1b5a90e2540638eacd62e81d63e70/c.html">原文链接</a></p>
+        <p class="sum">6日是北京市区和乡镇两级人大代表换届选举投票日。习近平下午在西城区中南海选区怀仁堂投票站投票，强调践行全过程人民民主并加强选举全过程监督。当天全市设投票站13054个，将差额选举产生区代表4898人、乡镇代表11137人。</p>
+        <div class="why"><strong>为何重要</strong>地方人大换届是人民代表大会制度运行的基础环节，高层到站投票把程序与监督放到明处。</div>
+      </article>
+    </div>
+
+    <p class="section-title serif">双栏对照</p>
+    <p class="section-sub">同一下午的两场外事：非洲伙伴升格，欧洲中等强国谈产业与多边。</p>
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">时政 04　·　非洲</div>
+        <h3 class="serif">中加宣布构建命运共同体</h3>
+        <p class="src" style="color:var(--slate);font-size:13px;font-style:italic;">新华社　·　<a href="http://www.news.cn/politics/leaders/20261106/6fe4d18347994f04b331ac160041f051/c.html">原文链接</a></p>
+        <p>习近平6日下午在人民大会堂同来华进行国事访问的加蓬总统恩圭马举行会谈，两国领导人共同宣布将双边关系定位提升为新时代中加命运共同体。会谈后双方见证签署落实全球安全倡议、“零关税”、产供链、中文教育等领域多项合作文件，并发表联合声明。</p>
+        <div class="why"><strong>为何重要</strong>这是全球南方伙伴关系的一次定位升级，把零关税与产供链合作写进元首外交成果。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">时政 05　·　欧洲</div>
+        <h3 class="serif">会见奥地利总理施托克尔</h3>
+        <p class="src" style="color:var(--slate);font-size:13px;font-style:italic;">新华社 / 外交部　·　<a href="http://www.news.cn/politics/leaders/20261106/ffa1bb1f71c243d3bc5b4b0e62677d81/c.html">原文链接</a></p>
+        <p>习近平6日下午会见来华正式访问的奥地利总理施托克尔。值中奥建交55周年，中方愿拓展新能源汽车、人工智能、数字经济与绿色发展合作。施托克尔重申坚持一个中国政策，希望欧中通过对话协商解决经贸分歧。</p>
+        <div class="why"><strong>为何重要</strong>在保护主义升温背景下，欧洲中等强国被明确拉进“对话而非对抗”的经贸轨道。</div>
+      </article>
+    </div>
+
+    <div class="dark-note">
+      <div class="lab">时政 06　·　执法</div>
+      <h3 class="serif" style="font-size:36pt;margin:0 0 10px;line-height:1.2;">中菲合作遣返百余名涉赌诈嫌疑人</h3>
+      <p style="margin:0 0 12px;color:#C9C2B6;font-size:13px;font-style:italic;">新华社　·　<a href="https://www.xinhuanet.com/20261106/c119a9c64bfb4009a6b8cf05bc3cab72/c.html">原文链接</a></p>
+      <p style="margin:0 0 12px;">中国驻菲律宾大使馆6日发布消息，中菲两国执法部门当日合作遣返100余名涉赌诈犯罪嫌疑人。2023年以来双方累计遣返2600余名。使馆表示，中方愿同菲方采取必要措施，维护两国正常人员和经贸往来秩序。</p>
+      <p style="margin:0;color:#E8E2D8;"><strong style="color:var(--crimson);">为何重要　</strong>在海上争议之外，执法合作仍在推进；跨国电诈治理靠的是可持续的双边行动能力。</p>
+    </div>
+
+    <section class="opener">
+      <p class="num serif">02</p>
+      <h2>科技开篇</h2>
+      <p>治理机制、存储供给、开源基座与高端装备同日露面。中国把人工智能国际组织送进批准程序，产业端则同时出现内存扩产传闻与两件可触摸的工程交付。</p>
+      <div class="stat4">
+        <div>
+          <b>7.16</b>
+          <i>上海签署</i>
+          <p>世界人工智能合作组织协定完成国内批准。</p>
+        </div>
+        <div>
+          <b>4.7万</b>
+          <i>清理信息</i>
+          <p>网信部门处置AI假冒账号3961个。</p>
+        </div>
+        <div>
+          <b>3460亿</b>
+          <i>训练token</i>
+          <p>Cola2以更小预算在两项评测上超过Llama-3-8B。</p>
+        </div>
+        <div>
+          <b>14.19万</b>
+          <i>总吨</i>
+          <p>第二艘国产大型邮轮完成系列化交付。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 01　·　治理</div>
+        <h3>批准成立世界人工智能合作组织</h3>
+        <p class="src">新华社 / 中国人大网　·　<a href="https://www.news.cn/politics/20261106/c4af584570ec48bd889cd079cae2e034/c.html">原文链接</a></p>
+        <p class="sum">十四届全国人大常委会第二十五次会议6日决定，批准中国政府代表今年7月16日在上海签署的《关于成立世界人工智能合作组织的协定》。该组织意在推动国际人工智能治理与合作机制落地。</p>
+        <div class="why"><strong>为何重要</strong>中国倡议的AI国际组织走完国内批准手续，全球治理从倡议进入法律程序。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 02　·　监管</div>
+        <h3>网信部门清查AI假冒公众人物</h3>
+        <p class="src">中央网信办　·　<a href="https://www.cac.gov.cn/2026-11/06/c_1795720746219974.htm">原文链接</a></p>
+        <p class="sum">中央网信办6日通报，针对利用AI假冒公众人物带货、造谣、引流和恶搞等问题，已清理违法违规信息4.7万余条、处置账号3961个，并公布微信、抖音、小红书、快手、B站等平台典型案例。问题突出的网站平台将被依法查处。</p>
+        <div class="why"><strong>为何重要</strong>深度伪造从营销话术变成监管执法对象，平台对合成人声人像的审核责任被再次压实。</div>
+      </article>
+    </div>
+
+    <div class="compare">
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科技 03　·　芯片</div>
+        <h3 class="serif">台积电筹划进军3D DRAM</h3>
+        <p class="src" style="color:var(--slate);font-size:13px;font-style:italic;">The Information / 路透社　·　<a href="https://finance.sina.com.cn/stock/bxjj/2026-11-06/doc-inixvmnq8627549.shtml">原文链接</a></p>
+        <p>科技媒体The Information 6日援引知情人士称，台积电应最大客户英伟达要求，开始规划生产垂直堆叠的3D DRAM，并评估新建晶圆厂或收购改建现有产线。内存芯片目前由三星、SK海力士和美光主导。台积电与英伟达暂未置评。</p>
+        <div class="why"><strong>为何重要</strong>若代工巨头切入存储，AI内存短缺的供给格局将被改写，三星—海力士—美光的寡头结构面临挑战。</div>
+      </article>
+      <article>
+        <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;">科技 04　·　模型</div>
+        <h3 class="serif">字节跳动发布Cola2基座</h3>
+        <p class="src" style="color:var(--slate);font-size:13px;font-style:italic;">Hugging Face / ByteDance Seed　·　<a href="https://huggingface.co/ByteDance-Seed/Cola2">原文链接</a></p>
+        <p>字节跳动Seed团队6日在Hugging Face发布约9B参数连续潜空间模型Cola2，并公开权重与推理代码。检查点仅用3460亿源token训练，八项评测均分60.10，两项超过Llama-3-8B。该模型仍为未收敛基座。</p>
+        <div class="why"><strong>为何重要</strong>它把“少token、潜空间压缩”的路线公开验证，挑战以堆数据换分数的主流预训练假设。</div>
+      </article>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 05　·　装备</div>
+        <h3>第二艘国产大型邮轮交付</h3>
+        <p class="src">新华社 / 中国船舶集团　·　<a href="https://www.news.cn/20261106/d45d9824d6764036827572164822c372/c.html">原文链接</a></p>
+        <p class="sum">中国船舶集团旗下上海外高桥造船6日向爱达邮轮交付第二艘国产大型邮轮“爱达·花城号”。该船长341米、总吨14.19万，客房2130间、满载5232人，建造效率较首制船提升约20%。计划11月22日自广州南沙开启首航季。</p>
+        <div class="why"><strong>为何重要</strong>国产大型邮轮从“零到一”走到系列化，高端装备的产业链协同得到工程验证。</div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="mark"></span>科技 06　·　能源</div>
+        <h3>浮空风电完成城市首飞</h3>
+        <p class="src">央视新闻 / 央广网　·　<a href="https://news.cnr.cn/native/gd/kx/20261106/t20261106_527864402.shtml">原文链接</a></p>
+        <p class="sum">全球首台4000米级浮空风力发电系统S4000，6日在湖南岳阳完成首次城市场景放飞。系统长67米、宽40米、高23米，经系留缆绳回传10至35千伏电力，重点验证接网性能与城市周边安全飞行。</p>
+        <div class="why"><strong>为何重要</strong>高空风能从高原试验场走进用电负荷中心，工程化与适航取证进入可检验阶段。</div>
+      </article>
+    </div>
+
+    <div class="gapbox">
+      <div class="meta" style="color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:.06em;">编务说明　·　未入选</div>
+      <h3 class="serif">日期墙外的重要稿件</h3>
+      <ul>
+        <li>英国央行加息至4%：事件发生于11月5日伦敦午间，沪时仍属周四晚间，不计入本日。</li>
+        <li>鸿蒙台式机擎云HM650、英特尔18A进博会展示、超聚变IPO上会安排：均在11月5日首发或发生。</li>
+        <li>高通HBC硅验证、Thinking Machines的Inkling 2 Small：分别于11月2日、11月5日公布。</li>
+        <li>美国中期选举翻盘、土耳其批准《麦加共同防务协议》：分别为11月3日与11月5日事件，本日仅为后续报道。</li>
+      </ul>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color:var(--crimson);box-shadow:0 1px 0 var(--paper);margin-bottom:22px;">
+        <strong style="color:var(--paper);">每日时政科技简报</strong>
+        <span class="date" style="color:var(--warm);">第046期　·　2026年11月6日　·　星期五</span>
+        <span class="iss">收束</span>
+      </header>
+      <h2>收束摘要</h2>
+      <p class="judge">星期五把两件慢变量推到台前：国内以立法和换届确认治理节奏，产业以存储、开源与大型装备测试供给能力。外交场上的加蓬升格与奥地利对话，则是把“全球南方”和“欧洲中等强国”并排放进同一下午。</p>
+      <div class="toc">
+        <div>
+          <h4>时政六条</h4>
+          <ol>
+            <li>常委会通过反跨境腐败等五法</li>
+            <li>国务院布置收官稳增长与救助</li>
+            <li>北京区乡人大代表换届投票</li>
+            <li>中加关系升格为命运共同体</li>
+            <li>习近平会见奥地利总理</li>
+            <li>中菲遣返百余赌诈嫌疑人</li>
+          </ol>
+        </div>
+        <div>
+          <h4>科技六条</h4>
+          <ol>
+            <li>批准世界人工智能合作组织</li>
+            <li>网信办清查AI假冒公众人物</li>
+            <li>台积电筹划3D DRAM</li>
+            <li>字节跳动发布Cola2基座</li>
+            <li>爱达·花城号正式交付</li>
+            <li>浮空风电完成城市首飞</li>
+          </ol>
+        </div>
+      </div>
+      <p class="method">方法：以 Asia/Shanghai 确定昨日为 2026-11-06；交叉核验新华社、中国人大网、中国政府网、中央网信办、央视新闻、The Information / 路透社、Hugging Face。拒绝营销稿、标题党与重复转载。摘要均不超过120字。</p>
+      <p class="end">第046期完　·　明日续刊</p>
+    </section>
+  </div>
+</body>
+</html>
