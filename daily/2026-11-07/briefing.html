@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 2026年11月7日 · 立冬</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --red: #C41E3A;
+    --slate: #4A5568;
+    --card: #EFE8DC;
+    --cream: #FFFCF7;
+    --rule: #D4CBBE;
+    --muted: #B8B0A4;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Calibri, Arial, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .serif {
+    font-family: Cambria, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  }
+  a { color: var(--red); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px 64px; }
+  .folio {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 0 10px;
+    border-bottom: 1.5px solid var(--red);
+    font-size: 13px;
+  }
+  .folio strong { font-family: Cambria, "Noto Serif CJK SC", serif; letter-spacing: 0.08em; }
+  .folio span { color: var(--slate); }
+
+  .cover {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 0 28px;
+    margin-bottom: 36px;
+  }
+  .cover .wrap { padding-bottom: 8px; }
+  .cover .kicker { color: var(--muted); letter-spacing: 0.18em; font-size: 13px; }
+  .cover .rule { height: 1.5px; background: var(--red); margin: 14px 0 18px; border: 0; }
+  .cover .brand { color: var(--red); font-size: 18px; margin: 0 0 8px; }
+  .cover h1 {
+    font-size: 64px;
+    line-height: 0.95;
+    margin: 0 0 18px;
+    font-weight: 700;
+  }
+  .cover .date-line { font-size: 20px; margin: 0 0 18px; }
+  .cover .dek {
+    max-width: 42em;
+    font-size: 16px;
+    color: #D8D0C4;
+    line-height: 1.6;
+  }
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+  }
+  .giant-date {
+    text-align: right;
+    color: var(--red);
+    font-size: 108px;
+    line-height: 0.85;
+    font-weight: 700;
+  }
+  .giant-date small {
+    display: block;
+    color: var(--paper);
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    margin-top: 8px;
+  }
+  .stamp {
+    width: 86px;
+    height: 86px;
+    margin: 18px 0 0 auto;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 18px;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  .chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--red);
+  }
+  .chips h3 { margin: 0 0 4px; font-size: 16px; color: var(--paper); }
+  .chips p { margin: 0; color: var(--muted); font-size: 13px; }
+
+  .section-head { margin: 48px 0 22px; }
+  .section-head .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  .section-head h2 {
+    font-size: 64px;
+    margin: 0;
+    line-height: 0.95;
+  }
+  .section-head .count {
+    font-size: 64px;
+    color: var(--red);
+    line-height: 0.95;
+    margin: 0;
+  }
+  .section-head .dek {
+    margin: 16px 0 0;
+    font-size: 16px;
+    max-width: 52em;
+  }
+  .quote {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 22px;
+    margin: 18px 0 28px;
+  }
+  .quote .label { color: var(--red); font-size: 12px; margin-bottom: 6px; }
+  .quote p { margin: 0; font-size: 20px; line-height: 1.4; }
+
+  .mini-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .mini {
+    background: var(--cream);
+    border: 0.75px solid var(--rule);
+    padding: 14px 16px;
+  }
+  .mini .n { color: var(--red); font-size: 12px; font-weight: 700; }
+  .mini h3 { margin: 6px 0 4px; font-size: 16px; }
+  .mini p { margin: 0; color: var(--slate); font-size: 13px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+  article.card {
+    background: var(--cream);
+    border: 0.75px solid var(--rule);
+    padding: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .numbar {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .num {
+    background: var(--red);
+    color: var(--paper);
+    font-size: 22px;
+    font-weight: 700;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+  }
+  .num.ink { background: var(--ink); }
+  .kicker-wrap { padding: 8px 18px 0 0; }
+  .kicker { color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+  article h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 2px 0 0;
+  }
+  .source {
+    color: var(--slate);
+    font-size: 13px;
+    padding: 0 18px;
+    margin: 8px 0 10px;
+  }
+  article .summary {
+    padding: 0 18px;
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .stat {
+    margin: 0 18px 12px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 14px 12px;
+  }
+  .stat .n {
+    color: var(--red);
+    font-size: 28px;
+    line-height: 1;
+    min-width: 0;
+    background: none;
+    display: block;
+    padding: 0;
+    text-align: left;
+  }
+  .stat .l { font-size: 13px; color: var(--paper); margin-top: 4px; }
+  .why {
+    margin: auto 18px 0;
+    background: var(--card);
+    padding: 12px 14px;
+  }
+  .why .label { color: var(--red); font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .why p { margin: 0; font-size: 14px; }
+
+  .contrast-note {
+    color: var(--slate);
+    font-size: 14px;
+    margin: -8px 0 36px;
+  }
+  .closer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px 0 48px;
+    margin-top: 24px;
+  }
+  .closer h2 { font-size: 44px; margin: 0 0 22px; }
+  .point {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+    align-items: stretch;
+  }
+  .point .n {
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .point p {
+    margin: 0;
+    background: #242424;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  .gap {
+    margin-top: 22px;
+    color: #C8C0B4;
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 58em;
+  }
+  .gap strong { color: var(--red); display: block; margin-bottom: 6px; font-size: 13px; }
+
+  @media (max-width: 820px) {
+    .cover h1, .section-head h2, .section-head .count { font-size: 40px; }
+    .giant-date { font-size: 72px; }
+    .cover-grid, .grid, .mini-row, .chips { grid-template-columns: 1fr; }
+    .wrap { padding: 0 18px 48px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .cover, .quote, .closer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover, .closer { break-inside: avoid; }
+    article.card { break-inside: avoid; }
+    a { color: var(--ink); }
+    a::after { content: " (" attr(href) ")"; font-size: 10px; color: var(--slate); }
+  }
+</style>
+</head>
+<body>
+  <header class="cover">
+    <div class="wrap">
+      <div class="folio" style="border-color:#C41E3A;color:#F7F4EF">
+        <strong>每日时政科技简报</strong>
+        <span style="color:#B8B0A4">第 20261107 期 · 立冬 · 星期六 · 上海</span>
+      </div>
+      <p class="kicker serif">THE MORNING GAZETTE · 报馆晨报</p>
+      <hr class="rule">
+      <div class="cover-grid">
+        <div>
+          <p class="brand serif">每日时政科技简报</p>
+          <h1 class="serif">时政 · 科技</h1>
+          <p class="date-line serif">二零二六年十一月七日 · 立冬 · 星期六</p>
+          <p class="dek">二十一大代表选举启幕。商务部回应美方涉古巴制裁。天宫将迎首位外籍航天员。以色列指定艾森科特组阁，伊朗称解除导弹射程限制。商业火箭升空，空芯光纤跑过一千公里。</p>
+        </div>
+        <div>
+          <div class="giant-date serif">07<small>NOVEMBER 2026</small></div>
+          <div class="stamp serif"><span>晨</span><span>印</span></div>
+        </div>
+      </div>
+      <div class="chips">
+        <div>
+          <h3 class="serif">时政六章</h3>
+          <p>党内 · 经贸 · 中东</p>
+        </div>
+        <div>
+          <h3 class="serif">科技六章</h3>
+          <p>航天 · 算力 · 能源</p>
+        </div>
+        <div>
+          <h3 class="serif">十二稿</h3>
+          <p>只收昨日首发</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="folio">
+        <strong>每日时政科技简报</strong>
+        <span>第 20261107 期 · 立冬 · 星期六 · 上海</span>
+      </div>
+      <div class="section-head">
+        <div class="row">
+          <h2 class="serif">时政</h2>
+          <p class="count serif">06</p>
+        </div>
+        <p class="dek">立冬这一天，国内政治进入二十一大代表选举周期，中美经贸再起摩擦；空间站首次对外国航天员开放。海外则是组阁与导弹两条线并行：耶路撒冷的授权仪式尚未举行，霍尔木兹的油轮已经起火。</p>
+      </div>
+      <div class="quote">
+        <div class="label serif">今日引句</div>
+        <p class="serif">「二十一大代表选举工作从现在开始，到明年6月底前结束。」——新华社北京11月7日电</p>
+      </div>
+      <div class="mini-row">
+        <div class="mini">
+          <div class="n serif">01–02</div>
+          <h3 class="serif">选举与制裁</h3>
+          <p>党内程序 · 商务部</p>
+        </div>
+        <div class="mini">
+          <div class="n serif">03–04</div>
+          <h3 class="serif">开放与储备</h3>
+          <p>天宫 · 外储黄金</p>
+        </div>
+        <div class="mini">
+          <div class="n serif">05–06</div>
+          <h3 class="serif">中东对照</h3>
+          <p>以色列 · 伊朗</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">01</div>
+            <div class="kicker-wrap">
+              <div class="kicker">党内政治</div>
+              <h3 class="serif">二十一大代表选举全面部署</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.gov.cn/yaowen/liebiao/202611/content_7085448.htm">新华社</a></p>
+          <p class="summary">新华社7日受权播发：中共中央印发二十一大代表选举工作通知。大会拟于2027年下半年在北京召开，代表共2360名、由38个选举单位产生，差额比例应多于15%。选举即日起至明年6月底结束。</p>
+          <div class="stat"><div class="n serif">2360</div><div class="l">二十一大代表名额</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>这是2027年党代会的组织起点，将决定新一届中央委员会的人员基础。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">02</div>
+            <div class="kicker-wrap">
+              <div class="kicker">中美经贸</div>
+              <h3 class="serif">商务部反对美以涉古巴制裁中企</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_617408aa9caf4271af369c053ff0a961.html">商务部</a></p>
+          <p class="summary">商务部发言人7日回应：美东时间5日美国务院以涉古巴为由制裁中国电子进出口总公司、北京恒驰科技，据称为首次。中方指单边制裁违反国际法，敦促纠正，并保留采取必要措施的权利。</p>
+          <div class="stat"><div class="n serif">2</div><div class="l">首次以此为由制裁中企</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>元首会晤后美方仍加码制裁，考验中美经贸磋商机制能否稳住双边关系。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">03</div>
+            <div class="kicker-wrap">
+              <div class="kicker">外交航天</div>
+              <h3 class="serif">天宫将迎首位外籍航天员</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.news.cn/politics/20261107/d26e5afe563043d49104e2de306d725d/c.html">新华社</a></p>
+          <p class="summary">载人航天工程办公室7日通报，神舟二十四号将有一名巴基斯坦航天员以载荷专家身份参加，短期在轨后随神舟二十三号返回。这是中国载人航天首次中外联合飞行，两名巴预备航天员已完成在华训练。</p>
+          <div class="stat"><div class="n serif">1st</div><div class="l">外籍航天员访中国空间站</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>空间站首次对外国航天员开放，标志载人航天从独立运行走向国际合作。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">04</div>
+            <div class="kicker-wrap">
+              <div class="kicker">宏观经济</div>
+              <h3 class="serif">外储站稳3.4万亿，黄金二十四连增</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.safe.gov.cn/safe/2026/1106/28067.html">国家外汇管理局</a></p>
+          <p class="summary">外汇局7日公布，10月末外汇储备34052亿美元，较上月升49亿美元，连续第七个月站上3.4万亿美元。央行黄金储备7830万盎司，环比增83万盎司，连续第24个月增持。</p>
+          <div class="stat"><div class="n serif">24</div><div class="l">黄金连续增持月数</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>外储稳定与持续购金，反映美元波动和地缘风险下的储备多元化选择。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="folio">
+        <strong>每日时政科技简报</strong>
+        <span>双栏对照 · 中东同一夜</span>
+      </div>
+      <div class="section-head" style="margin-top:18px">
+        <h2 class="serif" style="font-size:36px">一组阁，一解限</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="numbar">
+            <div class="num ink serif">05</div>
+            <div class="kicker-wrap">
+              <div class="kicker">中东政局</div>
+              <h3 class="serif">以色列总统指定艾森科特组阁</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://apnews.com/article/israel-elections-75934bfce1f2f2e43e1823de3761b12d">美联社 / 卫报</a></p>
+          <p class="summary">总统赫尔佐格7日晚告知亚沙尔党领袖、前总参谋长艾森科特，拟授权其组阁，正式仪式8日举行。10月27日大选后内塔尼亚胡联盟失去多数。艾森科特有28天（可延期14天）凑足至少61席。</p>
+          <div class="stat"><div class="n serif">61</div><div class="l">组阁所需议会席位</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>执政最长的内塔尼亚胡面临下台窗口，以色列政局与地区安排可能改写。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">06</div>
+            <div class="kicker-wrap">
+              <div class="kicker">地区安全</div>
+              <h3 class="serif">伊朗称解除导弹射程自我限制</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://apnews.com/article/mideast-news-november-7-2026-c26759ac66e6c022a3256adeae40c965">美联社</a></p>
+          <p class="summary">革命卫队发言人7日称，弹道导弹2000公里自我限制“已解除”。同日伊方称霍尔木兹附近油轮因进入限制水域触雷起火。美方6日称打击伊朗防空装置，伊方称击落美无人机。</p>
+          <div class="stat"><div class="n serif">2000km</div><div class="l">自我限制已被宣称解除</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>射程限制解除叠加油运风险，霍尔木兹紧张可能推高能源价格与冲突烈度。</p>
+          </div>
+        </article>
+      </div>
+      <p class="contrast-note">对照阅读：艾森科特获得组阁权，并不等于马上执政；伊朗宣称解除射程限制，也不等于已经部署更远导弹。两条消息同日发出，地区风险溢价同时抬升。</p>
+    </section>
+
+    <section>
+      <div class="folio">
+        <strong>每日时政科技简报</strong>
+        <span>第 20261107 期 · 立冬 · 星期六 · 上海</span>
+      </div>
+      <div class="section-head">
+        <div class="row">
+          <h2 class="serif">科技</h2>
+          <p class="count serif">06</p>
+        </div>
+        <p class="dek">商业火箭在酒泉天亮时升空，空芯光纤把一千公里压缩进3.43毫秒。核能把蒸汽送进石化园区，大模型公司则把估值送进路演。存储短缺逼出跨界传闻，人形机器人在仿真里学会进门。</p>
+      </div>
+      <div class="quote">
+        <div class="label serif">今日引句</div>
+        <p class="serif">「千公里信号单程传输只需3.43毫秒。」——央视新闻客户端 11月7日</p>
+      </div>
+      <div class="mini-row">
+        <div class="mini">
+          <div class="n serif">01–02</div>
+          <h3 class="serif">上天入网</h3>
+          <p>火箭 · 光纤</p>
+        </div>
+        <div class="mini">
+          <div class="n serif">03–04</div>
+          <h3 class="serif">能源与资本</h3>
+          <p>核能 · IPO</p>
+        </div>
+        <div class="mini">
+          <div class="n serif">05–06</div>
+          <h3 class="serif">芯片与身体</h3>
+          <p>存储 · 机器人</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">01</div>
+            <div class="kicker-wrap">
+              <div class="kicker">商业航天</div>
+              <h3 class="serif">谷神星二号遥三一箭四星成功</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.news.cn/20261107/08afd8491e4840458c5c9f0ced492374/c.html">新华社 / 科技日报</a></p>
+          <p class="summary">7日7时37分，星河动力谷神星二号遥三在酒泉升空，将观澜试验星、云遥一号28星、中北大学一号、钧天一号06A送入约535公里太阳同步轨道。该型为三级固体加液体上面级，500公里SSO运力约1.3吨。</p>
+          <div class="stat"><div class="n serif">4</div><div class="l">星进入预定太阳同步轨道</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>商业火箭连续成功，降低中小卫星入轨门槛，补强国内商业航天运力。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">02</div>
+            <div class="kicker-wrap">
+              <div class="kicker">通信基建</div>
+              <h3 class="serif">空芯光纤千公里实时传输突破</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.chinanews.com.cn/gn/2026/11-07/10728184.shtml">央视新闻</a></p>
+          <p class="summary">央视新闻7日报道，我国完成全球首个千公里空芯光纤双向实时传输验证：1007.48公里线路上双向各64Tbps同步传输，千公里单程时延仅3.43毫秒，容量较最佳实芯光纤提升一倍。</p>
+          <div class="stat"><div class="n serif">3.43ms</div><div class="l">千公里单程传输时延</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>空芯光纤若规模替代实芯，将显著降低跨数据中心时延，直接影响大模型训练效率。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">03</div>
+            <div class="kicker-wrap">
+              <div class="kicker">能源产业</div>
+              <h3 class="serif">核能从发电走向供热供汽与核药</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://news.cctv.cn/2026/11/07/ARTI1dVJPQhth1z9gSJcZWlP261107.shtml">央视网</a></p>
+          <p class="summary">新闻联播7日报道，连云港徐圩华龙一号加高温气冷堆项目加快建设，可直供石化基地工业蒸汽；红沿河已向两万余居民供暖；秦山实现镥-177、钇-90医用同位素规模化生产。核技术应用年产值预计4000亿元。</p>
+          <div class="stat"><div class="n serif">4000亿</div><div class="l">核技术应用预计年产值</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>核能从单一发电扩展到工业脱碳与核药自主，是双碳与高端医疗的交叉突破。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">04</div>
+            <div class="kicker-wrap">
+              <div class="kicker">人工智能</div>
+              <h3 class="serif">Anthropic 打开 IPO 路演窗口</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.cnbc.com/2026/11/07/anthropic-ipo-ai-data-center-backlash.html">CNBC</a></p>
+          <p class="summary">多家媒体7日称，Anthropic计划下周启动IPO路演，争取11月16日当周登陆纳斯达克。市场曾传约1.5万亿美元估值，但美国中期选举后数据中心遭选民抵制、科技股波动，定价面临下修。</p>
+          <div class="stat"><div class="n serif">1.5T</div><div class="l">市场曾传估值（美元）</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>这或成史上最大IPO之一，将检验资本市场对前沿大模型与巨额算力开支的真实定价。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">05</div>
+            <div class="kicker-wrap">
+              <div class="kicker">半导体</div>
+              <h3 class="serif">台积电否认应英伟达要求造存储</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://www.tomshardware.com/pc-components/dram/tsmc-denies-exploring-3d-dram-at-nvidias-request-advanced-memory-tech-is-still-years-from-market-viability">Tom's Hardware</a></p>
+          <p class="summary">The Information称台积电应英伟达要求评估3D DRAM，考虑自建或收购存储厂。台积电7日回应仍定位纯逻辑代工。3D DRAM将存储单元垂直堆叠以提高密度，与HBM不同，量产仍需数年。</p>
+          <div class="stat"><div class="n serif">3D</div><div class="l">DRAM跨界传闻遭台积电否认</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>即便被否认，传闻说明AI内存短缺已催促代工厂跨界，存储正变为战略卡点。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="numbar">
+            <div class="num serif">06</div>
+            <div class="kicker-wrap">
+              <div class="kicker">机器人</div>
+              <h3 class="serif">苹果 HALO 仿真迁移成功率九成</h3>
+            </div>
+          </div>
+          <p class="source">来源 <a href="https://arxiv.org/abs/2611.06908">第一财经 / arXiv</a></p>
+          <p class="summary">苹果HALO系统周末获国内主流报道：在1000个程序生成家庭中合成训练，零样本迁移至6个未建图真实房间，360次单项任务平均成功率91%，部署于宇树G1，任务编排默认可本地调用通义千问。</p>
+          <div class="stat"><div class="n serif">91%</div><div class="l">真实房间单项任务成功率</div></div>
+          <div class="why">
+            <div class="label serif">为何重要</div>
+            <p>证明仿真数据可规模化补齐人形机器人数据缺口，也显示苹果在控制栈上的公开进展。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="closer">
+    <div class="wrap">
+      <div class="folio" style="border-color:#C41E3A;color:#F7F4EF">
+        <strong>每日时政科技简报</strong>
+        <span style="color:#B8B0A4">第 20261107 期 · 立冬 · 星期六 · 上海</span>
+      </div>
+      <h2 class="serif">收束</h2>
+      <div class="point"><div class="n serif">一</div><p>权力更迭同时铺开：二十一大代表选举启动，以色列组阁权易手。</p></div>
+      <div class="point"><div class="n serif">二</div><p>经贸摩擦未歇：美方以涉古巴为由制裁中企，商务部保留反制权利。</p></div>
+      <div class="point"><div class="n serif">三</div><p>开放与储备并进：天宫迎来外籍航天员，外储站稳、黄金二十四连增。</p></div>
+      <div class="point"><div class="n serif">四</div><p>中东风险上移：伊朗称解除导弹射程限制，霍尔木兹油轮触雷起火。</p></div>
+      <div class="point"><div class="n serif">五</div><p>算力底座在补短板：商业火箭、空芯光纤、核能综合利用同日见报。</p></div>
+      <div class="gap">
+        <strong class="serif">编后 · 缺口</strong>
+        收录口径为亚洲/上海时区2026年11月7日发生或该日首发，未混入6日晚间政策稿（何立峰与美方通话、国务院常务会议、工信部智能体终端进网通知）及8日凌晨之后稿件。第七届世界媒体峰会7日在京开幕，因版面所限写入本栏：新华社、北京市政府主办，主题为「智能变革中的媒体使命与合作行动」，112个国家和地区近500名代表与会。Anthropic IPO与台积电3D DRAM均以媒体报道为准，后者已遭台积电否认。部分国际电讯依赖英文通讯社，中文转述已交叉核验。
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
