@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 第312期 · 2026-11-08</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #FFFCF7;
+      --rule: #D6CFC4;
+      --mute: #8A847A;
+      --warm: #C9C2B6;
+      --dark-card: #242424;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, Arial, "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      font-size: 15pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3, .serif {
+      font-family: Cambria, "Palatino Linotype", "Songti SC", "STSong", "Noto Serif SC", serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-size: 13px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--crimson);
+      box-shadow: 0 1px 0 var(--ink);
+      margin-bottom: 28px;
+    }
+    .folio strong { font-family: Cambria, "STSong", serif; }
+    .folio .date { color: var(--slate); }
+    .folio .iss { color: var(--crimson); font-weight: 700; }
+
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 40px 40px;
+      margin: 0 0 40px;
+      border-radius: 2px;
+    }
+    .cover .kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #C9C2B6;
+    }
+    .cover .dot { width: 12px; height: 12px; background: var(--crimson); display: inline-block; margin-right: 10px; vertical-align: middle; }
+    .cover hr {
+      border: 0;
+      border-top: 2px solid var(--crimson);
+      border-bottom: 1px solid var(--paper);
+      margin: 16px 0 22px;
+    }
+    .cover .issue { color: var(--crimson); font-size: 18px; margin: 0 0 8px; font-family: Cambria, "STSong", serif; }
+    .cover h1 { font-size: 48pt; line-height: 1.08; margin: 0 0 16px; }
+    .cover .lead { font-size: 16pt; color: #C9C2B6; margin: 0 0 28px; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .metric { background: #242424; padding: 18px 20px; }
+    .metric b { display: block; font-size: 52px; color: var(--crimson); line-height: 1; font-family: Cambria, "STSong", serif; }
+    .metric span { display: block; font-size: 20px; margin-top: 8px; font-family: Cambria, "STSong", serif; }
+    .metric em { display: block; font-style: normal; color: #B8B0A4; font-size: 13px; margin-top: 6px; }
+
+    section { margin: 0 0 48px; }
+    .sec-kicker {
+      color: var(--crimson);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin: 0 0 6px;
+    }
+    h2 { font-size: 36pt; line-height: 1.15; margin: 0 0 14px; }
+    .sec-lead { font-size: 16pt; color: var(--slate); margin: 0 0 22px; max-width: 42em; }
+
+    .agenda {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 18px;
+    }
+    .agenda-item {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      min-height: 72px;
+    }
+    .agenda-item .n {
+      background: var(--crimson);
+      color: var(--paper);
+      font-family: Cambria, "STSong", serif;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .agenda-item .body { padding: 10px 14px; }
+    .agenda-item small { color: var(--crimson); font-size: 12px; font-weight: 700; }
+    .agenda-item p { margin: 2px 0 0; font-family: Cambria, "STSong", serif; font-size: 16pt; }
+
+    .quote {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 22px 24px;
+      margin: 0 0 22px;
+    }
+    .quote p { font-family: Cambria, "STSong", serif; font-size: 18pt; margin: 0 0 10px; line-height: 1.35; }
+    .quote cite { color: var(--warm); font-style: normal; font-size: 13px; }
+
+    .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+    article.card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 6px solid var(--crimson);
+      padding: 16px 16px 18px;
+    }
+    article.card.dark {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: #3A3A3A;
+    }
+    .kicker { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+    article h3 { font-size: 18pt; line-height: 1.25; margin: 8px 0 8px; }
+    .src { color: var(--mute); font-size: 12px; margin: 0 0 10px; }
+    .sum { font-size: 14pt; margin: 0 0 12px; }
+    .why { font-size: 13pt; color: var(--slate); margin: 0; }
+    article.dark .why { color: var(--warm); }
+    .why b { color: var(--crimson); display: block; font-size: 12px; margin-bottom: 4px; }
+
+    .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .panel { padding: 22px 22px 24px; min-height: 280px; }
+    .panel.light { background: var(--card); border: 1px solid var(--rule); border-top: 6px solid var(--crimson); }
+    .panel.dark { background: var(--ink); color: var(--paper); }
+    .giant {
+      font-family: Cambria, "STSong", serif;
+      font-size: 48pt;
+      color: var(--crimson);
+      line-height: 1;
+      margin: 6px 0 8px;
+    }
+
+    .number-stage { display: grid; grid-template-columns: 1.05fr 1.2fr; gap: 18px; }
+    .big-ink { background: var(--ink); color: var(--paper); padding: 28px 26px; }
+    .stat-list { display: grid; gap: 12px; }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      align-items: center;
+      padding: 12px 16px;
+    }
+    .stat b { font-family: Cambria, serif; font-size: 22pt; color: var(--crimson); }
+
+    .tech-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .tech-chip { background: #242424; color: var(--paper); padding: 16px 14px 18px; border-top: 4px solid var(--crimson); }
+    .tech-chip .n { font-family: Cambria, serif; font-size: 26pt; color: var(--crimson); line-height: 1; }
+    .tech-chip small { color: var(--crimson); font-size: 12px; font-weight: 700; }
+    .tech-chip p { font-family: Cambria, "STSong", serif; font-size: 14pt; margin: 8px 0 0; }
+
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 36px 32px 28px;
+    }
+    .close h2 { color: var(--paper); }
+    .q {
+      background: #242424;
+      border-left: 6px solid var(--crimson);
+      padding: 14px 16px;
+      margin: 0 0 12px;
+    }
+    .q b { color: var(--crimson); display: block; font-family: Cambria, "STSong", serif; margin-bottom: 4px; }
+    .colophon { color: var(--warm); font-size: 12px; margin-top: 18px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 18px 16px 48px; }
+      .cover h1, h2 { font-size: 32pt; }
+      .metrics, .cards, .dual, .agenda, .number-stage, .tech-row { grid-template-columns: 1fr; }
+      .cover { padding: 28px 22px; }
+    }
+    @media print {
+      body { background: white; }
+      .cover, .close, .panel.dark, article.card.dark, .big-ink, .quote, .tech-chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: var(--ink); }
+      .wrap { max-width: none; padding: 12px; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="folio">
+      <div><span class="iss">■</span> <strong>每日时政科技简报</strong></div>
+      <div class="date">第 <span class="iss">312</span> 期 · 2026.11.08 · 星期日</div>
+    </div>
+
+    <header class="cover">
+      <div class="kicker">
+        <span><span class="dot"></span>THE MORNING GAZETTE · ASIA / SHANGHAI</span>
+        <span>YESTERDAY ONLY</span>
+      </div>
+      <hr />
+      <p class="issue">第 312 期　　二〇二六年十一月八日　　星期日</p>
+      <h1>每日时政科技简报</h1>
+      <p class="lead">只收录昨日发生或昨日首发。时政六章，科技五章。拒绝转载堆叠与营销腔。</p>
+      <div class="metrics">
+        <div class="metric"><b>06</b><span>时政</span><em>选举、中东、核安全</em></div>
+        <div class="metric"><b>05</b><span>科技</span><em>算力、端侧、电网</em></div>
+        <div class="metric"><b>11</b><span>精选</span><em>交叉核验后入版</em></div>
+      </div>
+    </header>
+
+    <section>
+      <p class="sec-kicker">SECTION 01 · 时政</p>
+      <h2>选举的周日</h2>
+      <p class="sec-lead">从北京的代表名额，到耶路撒冷的组阁授权，再到比勒陀利亚的计票大厅：昨天的政治新闻，几乎都在回答同一件事——谁来执政，以及战争还能否被按住。</p>
+      <div class="quote">
+        <p>「极不可能再有必要。但三艘航母已经就位。」</p>
+        <cite>——特朗普就对伊动武接受 CNN 采访，2026年11月8日</cite>
+      </div>
+      <div class="agenda">
+        <div class="agenda-item"><div class="n">01</div><div class="body"><small>北京</small><p>中组部详解二十一大代表选举</p></div></div>
+        <div class="agenda-item"><div class="n">02</div><div class="body"><small>耶路撒冷</small><p>艾森科特获正式组阁授权</p></div></div>
+        <div class="agenda-item"><div class="n">03</div><div class="body"><small>华盛顿</small><p>特朗普称对伊大规模再打「极不可能」</p></div></div>
+        <div class="agenda-item"><div class="n">04</div><div class="body"><small>利雅得</small><p>胡塞导弹残骸击中阿美大楼</p></div></div>
+        <div class="agenda-item"><div class="n">05</div><div class="body"><small>扎波罗热</small><p>核电站第 27 次失去外部电</p></div></div>
+        <div class="agenda-item"><div class="n">06</div><div class="body"><small>南非</small><p>非国大地方选举得票跌破三成</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">时政稿件 · 01—03</p>
+      <h2>权力如何交接</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="kicker">01 · 国内政治</div>
+          <h3>中组部就二十一大代表选举答记者问</h3>
+          <p class="src">新华社 · <a href="http://politics.people.com.cn/n1/2026/1108/c1001-40829957.html">人民网转载</a></p>
+          <p class="sum">新华社北京11月8日电。二十一大将于2027年下半年召开，代表名额共2360名、由38个选举单位产生，较二十大增加60名。采取自下而上、逐级遴选，差额比例应多于15%，并严把政治关、廉洁关、作风关。</p>
+          <p class="why"><b>为何重要</b>代表产生办法框定大会人员结构，是观察2027年政治安排的起点。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">02 · 中东政治</div>
+          <h3>以色列总统正式授权艾森科特组阁</h3>
+          <p class="src"><a href="https://www.jpost.com/israel-election-2026/article-914236">耶路撒冷邮报</a> · <a href="https://www.aljazeera.com/news/2026/11/8/israels-president-tasks-eisenkot-to-form-new-coalition-government">半岛电视台</a></p>
+          <p class="sum">赫尔佐格8日在总统府授权亚沙尔党领袖、前总参谋长艾森科特组阁。他获67名当选议员推荐，内塔尼亚胡获46票。艾森科特有28天（可延长14天）筹组紧急民族政府，并称愿向利库德伸手。</p>
+          <p class="why"><b>为何重要</b>以色列政局洗牌，将重塑对伊战事、加沙人道危机与美以关系。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">03 · 外交与安全</div>
+          <h3>特朗普：谈判有进展则极不可能再对伊大打</h3>
+          <p class="src"><a href="https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html">CNBC / 路透社</a> · 新华社</p>
+          <p class="sum">特朗普8日对CNN称，只要美伊就核计划与重开霍尔木兹海峡签成「强有力协议」，美国「极不可能」恢复大规模军事行动。他同时强调中东已有三艘航母，并锁定包括38座桥梁在内的目标。</p>
+          <p class="why"><b>为何重要</b>中期选举后白宫对伊口径，左右油价、海峡航运与战争升级风险。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">双栏对照 · 中东战场与欧洲核安全</p>
+      <h2>同一天的两处险情</h2>
+      <div class="dual">
+        <div class="panel light">
+          <div class="kicker">04 · 利雅得</div>
+          <h3>沙特拦截导弹，阿美大楼遭残骸波及</h3>
+          <p class="src"><a href="https://apnews.com/article/mideast-news-november-8-2026-090d96e25872f5c63e105b9dd3e5dc60">美联社</a> · 路透社</p>
+          <p class="sum">沙特8日称防空系统在首都及其他地区拦截来袭导弹，坠落残骸导致利雅得金融区沙特阿美办公楼多楼层玻璃破碎。能源部称无人员伤亡、建筑受损有限。联军指胡塞武装发射弹道与巡航导弹，胡塞方面宣称负责。</p>
+          <p class="why"><b>为何重要</b>战火蔓延至海湾能源心脏，直接牵动全球原油供应与航运保险成本。</p>
+        </div>
+        <div class="panel dark">
+          <div class="kicker">05 · 扎波罗热</div>
+          <h3>核电站第27次失电，当日晚间恢复</h3>
+          <p class="src"><a href="https://tass.com/economy/2214471">塔斯社 / 国际原子能机构</a> · 路透社 · 新华社</p>
+          <p class="sum">欧洲最大核电站8日凌晨因仅余的「铁合金-1」线路断开，再次失去全部外部供电，改由应急柴油机维持冷却。原子能机构称这是冲突以来第27次，现场柴油约可维持两周。当晚线路修复，外部供电恢复。</p>
+          <p class="why"><b>为何重要</b>反复断电说明战场核安全仍极脆弱，冷却中断具有跨界风险。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">06 · 数字现场 · 比勒陀利亚</p>
+      <h2>非国大地方选举得票跌破三成</h2>
+      <div class="number-stage">
+        <div class="big-ink">
+          <div class="kicker">ANC 得票率</div>
+          <div class="giant">30.76%</div>
+          <p class="sum">民主化三十余年来最差地方选举成绩，较2021年的46%下滑逾15个百分点。</p>
+          <p class="src" style="color:#C9C2B6"><a href="https://www.sanews.gov.za/south-africa/iec-declares-lge-2026-free-and-fair">南非独立选举委员会</a> · 新华社 · <a href="https://www.bbc.com/news/articles/cwrkygrxp11mo">BBC</a></p>
+          <p class="why"><b>为何重要</b>传统执政党失血，将迫使更多地方联合执政，并预示2029年全国大选格局。</p>
+        </div>
+        <div class="stat-list">
+          <div class="stat"><b>24.64%</b><span>民主联盟，第二大党</span></div>
+          <div class="stat"><b>9.76%</b><span>民族之矛党，首次参加地方选举</span></div>
+          <div class="stat"><b>127</b><span>213 个市镇中的悬浮议会</span></div>
+          <div class="stat"><b>52%</b><span>投票率，高于 2021 年的 45.9%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">SECTION 02 · 科技</p>
+      <h2>电力、入口、端侧</h2>
+      <p class="sec-lead">昨天的科技新闻不再比拼参数。Anthropic 去买发电机，苹果去催智能体，进博会上的芯片摊位把推理搬到手机和本地主机。电网则提醒：时钟一齐跳动，也会变成系统风险。</p>
+      <div class="tech-row">
+        <div class="tech-chip"><div class="n">01</div><small>能源</small><p>Anthropic 锁定燃气发电</p></div>
+        <div class="tech-chip"><div class="n">02</div><small>产品</small><p>苹果欲把 Siri 做成智能体</p></div>
+        <div class="tech-chip"><div class="n">03</div><small>产业</small><p>进博会：算力向端侧下沉</p></div>
+        <div class="tech-chip"><div class="n">04</div><small>具身</small><p>启元第 10000 台下线</p></div>
+        <div class="tech-chip"><div class="n">05</div><small>科学</small><p>UPS 同步检测造成掉频</p></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">科技稿件 · 01—03</p>
+      <h2>谁控制电力与入口</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="kicker">01 · 基础设施</div>
+          <h3>Anthropic 斥 34 亿美元锁定 1.7 吉瓦发电设备</h3>
+          <p class="src">金融时报 · <a href="https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html">CNBC</a></p>
+          <p class="sum">金融时报8日报道，Anthropic于9月下旬从得州OnePWR购入约1.7吉瓦重型燃气发电机组承诺，交易额约34亿美元，为已知人工智能实验室单笔发电设备采购之最。公司未收购供应商本身，但接手其卡特彼勒订单及安装能力。</p>
+          <p class="why"><b>为何重要</b>算力扩张已从买芯片转向直接锁定电源，电力成为硬约束。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">02 · 消费入口</div>
+          <h3>苹果新任 CEO 敦促将 Siri 做成智能体</h3>
+          <p class="src">彭博社 · <a href="https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic">The Verge</a> · <a href="https://www.macrumors.com/2026/11/08/siri-ai-rumored-to-become-more-agentic/">MacRumors</a></p>
+          <p class="sum">古尔曼8日报道，新任首席执行官特纳斯近日闭门要求软件主管费德里吉加快人工智能路线图，不能只修补Siri。公司拟最早于明年让Siri更像可追踪目标、自主推进任务的智能体，以追赶Dots与Muse。</p>
+          <p class="why"><b>为何重要</b>助手正从问答转向代办，苹果若落后将动摇终端生态入口。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">03 · 芯片产业</div>
+          <h3>进博会观察：芯片巨头把算力推向端侧</h3>
+          <p class="src"><a href="https://www.yicai.com/news/103431013.html">第一财经</a></p>
+          <p class="sum">记者8日走访技术装备展区。高通全球首次实物展示3GPP定义的6G终端原型机，并与阶跃等在手机端运行300亿参数混合专家模型；AMD展出192GB统一内存本地大模型主机；三星展示存内计算与LPDDR6。</p>
+          <p class="why"><b>为何重要</b>推理正在超过训练成为支出主力，端侧与存储成为下一轮卡位。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-kicker">双栏对照 · 量产现场与系统风险</p>
+      <h2>一万台机器人，六十秒一次掉频</h2>
+      <div class="dual">
+        <div class="panel dark">
+          <div class="kicker">04 · 具身智能</div>
+          <div class="giant">10,000</div>
+          <h3>启元机器人第 10000 台个人机器人下线</h3>
+          <p class="src"><a href="https://www.21jingji.com/article/20261108/herald/cdecd4ea725f0c1048ff708bd2f475c4.html">21世纪经济报道</a> · 第一财经</p>
+          <p class="sum">11月8日，上纬新材旗下启元机器人第10000台个人机器人下线，距10月25日第5000台仅14天，日产能爬升至约240台。编号NO.10000的启元Q1当日交付。这是消费级具身智能的量产节点，而非新功能发布会。</p>
+          <p class="why"><b>为何重要</b>从样品验证跨入万台交付，检验的是供应链与品控，而不只是演示。</p>
+        </div>
+        <div class="panel light">
+          <div class="kicker">05 · 科学与基础设施</div>
+          <div class="giant">60s</div>
+          <h3>全球电网每分钟掉频，谜底是 UPS 同步读数</h3>
+          <p class="src"><a href="https://techcrunch.com/2026/11/08/coordinated-disturbances-haunt-grids-worldwide-heres-how-researchers-solved-the-mystery/">TechCrunch</a> · 于利希研究中心</p>
+          <p class="sum">德国团队8日披露：多国电网每60秒同步微降频率，源自数据中心UPS与储能电站在整分时刻一齐检测荷电状态。爱尔兰因数据中心负荷上升，该掉频2016至2021年扩大四倍。处方很简单：把检测时刻随机化。</p>
+          <p class="why"><b>为何重要</b>物联网时钟同步把微小扰动叠成系统风险；修补只需软件，但需全球协调。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="close">
+      <p class="sec-kicker">COLPHON · 收束</p>
+      <h2>昨日三问，今日仍在发酵</h2>
+      <div class="q"><b>谁来组阁</b>耶路撒冷把组阁权交给艾森科特，比勒陀利亚把地方议会交给悬浮多数。选举并未结束政治，只是把谈判桌拉开。</div>
+      <div class="q"><b>战争停不停</b>特朗普说「极不可能」，胡塞导弹仍打到阿美大楼，扎波罗热第27次靠柴油续命。口头降温与战场升温并行。</div>
+      <div class="q"><b>电从哪来</b>Anthropic 去买发电机，UPS 在整分时刻齐刷刷读电。人工智能的上限，越来越像一张电网调度单。</div>
+      <p class="colophon">编辑说明　时区为 Asia/Shanghai，窗口为 2026-11-08。时政 6 条、科技 5 条，合计 11 条。周末科技首发偏少，未将 11 月 7 日及更早稿件混入。交叉核验新华社、路透、美联社、金融时报、彭博、第一财经等。成品为单文件网页，无外链字体。</p>
+    </section>
+  </div>
+</body>
+</html>
