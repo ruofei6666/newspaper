@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第315期 · 2026-11-11</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --red: #C41E3A;
+    --slate: #4A5568;
+    --card: #FFFCF7;
+    --card-alt: #EFEAE2;
+    --dark: #141414;
+    --dark-card: #222222;
+    --serif: Cambria, "Palatino Linotype", Palatino, "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+    --sans: Calibri, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body { font-family: var(--sans); font-size: 16px; line-height: 1.55; }
+  a { color: var(--red); text-decoration: none; word-break: break-all; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 72px; }
+  .folio { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--red); font-size: 13px; color: var(--slate); }
+  .folio strong { font-family: var(--serif); color: var(--ink); font-size: 15px; }
+  .cover { background: var(--ink); color: var(--paper); padding: 48px 40px 36px; margin: 28px 0 40px; }
+  .cover .k { color: var(--red); letter-spacing: .16em; font-size: 13px; font-weight: 700; }
+  .cover h1 { font-family: var(--serif); font-size: 48px; line-height: 1.05; margin: 12px 0 18px; font-weight: 700; }
+  .cover .meta { display: flex; justify-content: space-between; align-items: flex-end; border-top: 2px solid var(--red); padding-top: 14px; }
+  .cover .issue { font-family: var(--serif); font-size: 64px; color: var(--red); line-height: 1; }
+  .cover .lede { font-family: var(--serif); font-size: 22px; line-height: 1.4; margin: 28px 0 24px; }
+  .index { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .index div { background: var(--dark-card); padding: 18px 20px; }
+  .index h2 { font-family: var(--serif); color: var(--red); font-size: 20px; margin: 0 0 10px; }
+  .index ol { margin: 0; padding-left: 0; list-style: none; }
+  .index li { font-size: 13px; color: #E8E2D8; margin: 6px 0; }
+  h2.sec { font-family: var(--serif); font-size: 64px; margin: 8px 0 6px; line-height: 1; }
+  .eyebrow { color: var(--red); font-weight: 700; letter-spacing: .12em; font-size: 13px; }
+  .rule { width: 180px; height: 2px; background: var(--red); margin: 12px 0 18px; }
+  .intro { font-family: var(--serif); font-size: 20px; line-height: 1.45; max-width: 40em; }
+  .briefs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin: 28px 0 40px; }
+  .brief { background: var(--card); padding: 18px 20px; }
+  .brief .n { font-family: var(--serif); font-size: 32px; color: var(--red); }
+  .brief h3 { font-family: var(--serif); font-size: 20px; margin: 4px 0 8px; }
+  .cards { display: grid; gap: 22px; margin: 12px 0 40px; }
+  .card { background: var(--card); padding: 18px 22px 16px 26px; position: relative; }
+  .card-rule { position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: var(--red); }
+  .card-head { display: grid; grid-template-columns: 64px 1fr; gap: 8px; align-items: start; }
+  .num { font-family: var(--serif); font-size: 32px; color: var(--red); line-height: 1; }
+  .kicker { color: var(--slate); font-size: 13px; margin: 0 0 4px; }
+  .card h3 { font-family: var(--serif); font-size: 22px; line-height: 1.25; margin: 0 0 10px; }
+  .summary { margin: 8px 0 10px; font-size: 16px; }
+  .why { color: var(--slate); font-size: 14px; }
+  .why span { color: var(--red); font-weight: 700; margin-right: 6px; }
+  .link { font-size: 12px; color: var(--slate); margin: 8px 0 0; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 12px 0 40px; }
+  .split article:nth-child(2) { background: var(--card-alt); }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 40px; }
+  .tile { background: var(--card); padding: 18px; min-height: 160px; }
+  .tile:nth-child(even) { background: var(--card-alt); }
+  .tile .n { font-family: var(--serif); font-size: 36px; color: var(--red); }
+  .tile p { font-family: var(--serif); font-size: 18px; margin: 8px 0 0; }
+  .close { background: var(--ink); color: var(--paper); padding: 36px 32px; margin-top: 24px; }
+  .close h2 { font-family: var(--serif); font-size: 40px; margin: 0 0 18px; }
+  .close-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .close-grid div { background: var(--dark-card); padding: 18px 22px; }
+  .close ol { margin: 0; padding-left: 22px; }
+  .close li { margin: 8px 0; font-size: 15px; }
+  .note { color: #C9C2B6; font-size: 13px; margin-top: 22px; line-height: 1.55; }
+  @media (max-width: 820px) {
+    .wrap { padding: 18px 16px 48px; }
+    .cover h1 { font-size: 34px; }
+    h2.sec { font-size: 48px; }
+    .index, .briefs, .split, .tiles, .close-grid, .cover .meta { grid-template-columns: 1fr; display: grid; }
+    .cover .issue { font-size: 48px; margin-top: 10px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .cover, .close { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: var(--ink); }
+    .wrap { max-width: none; padding: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 刊头</div>
+    </header>
+
+    <section class="cover">
+      <div class="k">THE MORNING EDITION · 报馆晨报</div>
+      <h1>每日时政科技简报</h1>
+      <div class="meta">
+        <div>第315期 · 二〇二六年十一月十一日 · 星期三<br>窗口 Asia/Shanghai · 只收昨日首发</div>
+        <div class="issue">315</div>
+      </div>
+      <p class="lede">谈判换来战俘名单，定价锚要换基准。<br>端侧三十亿参数，细胞图谱开始会预测。</p>
+      <div class="index">
+        <div>
+          <h2>时政 六章</h2>
+          <ol><li><b>01</b> 王毅同鲁比奥通话</li><li><b>02</b> 李强将访泰并出席东盟领导人会</li><li><b>03</b> 央行三季度货币政策报告</li><li><b>04</b> 阿布扎比会谈达成换俘</li><li><b>05</b> 科洛姆当选密西西比参议员</li><li><b>06</b> 西班牙全国总罢工</li></ol>
+        </div>
+        <div>
+          <h2>科技 四章</h2>
+          <ol><li><b>07</b> 麒麟9050端侧30B MoE</li><li><b>08</b> AlphaGenome 2 读细胞</li><li><b>09</b> Anthropic澳洲散户认购</li><li><b>10</b> Qwen4-Max 预览上线</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 时政开篇</div>
+    </header>
+    <p class="eyebrow">SECTION 01 · POLITICS</p>
+    <h2 class="sec">时政</h2>
+    <div class="rule"></div>
+    <p class="intro">昨日主线有三条：中美在峰会前通话；央行给四季度货币条件画路标；俄美乌把战俘名单写进协议，却把停火条件留在桌上。</p>
+    <div class="briefs">
+      <div class="brief"><div class="n">01</div><h3>通话</h3><p>王毅—鲁比奥，APEC 与 G20 互为东道主。</p></div>
+      <div class="brief"><div class="n">02</div><h3>定调</h3><p>央行报告：适度宽松，LPR 不再是唯一锚。</p></div>
+      <div class="brief"><div class="n">03</div><h3>谈判</h3><p>阿布扎比收官，换俘可数，停火不可数。</p></div>
+    </div>
+
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 时政稿件</div>
+    </header>
+    <h2 class="sec" style="font-size:36px">稿件卡片 · 外交、货币与停火</h2>
+    <div class="cards">
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">01</div>
+        <div>
+          <p class="kicker">外交 · 中美 · 新华社</p>
+          <h3>王毅同鲁比奥通话：积极建设性，互办 APEC 与 G20</h3>
+        </div>
+      </div>
+      <p class="summary">外交部长王毅11日同美国国务卿鲁比奥通电话，双方就中美关系及两国元首互动深入交换意见。王毅称习近平主席9月访美顺利成功，中方愿加强沟通、妥善处理分歧，相互支持办好APEC与G20，推动建设性战略稳定关系落地。</p>
+      <p class="why"><span>为何重要</span> APEC中国年临近，高层通话为领导人互动与议程协调定调。</p>
+      <p class="link"><a href="https://www.news.cn/world/20261111/f31a5d9358cb41d5831b68623b0e0b6d/c.html">https://www.news.cn/world/20261111/f31a5d9358cb41d5831b68623b0e0b6d/c.html</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">02</div>
+        <div>
+          <p class="kicker">周边 · 东盟 · 外交部</p>
+          <h3>李强将访泰国，并赴马尼拉出席中国—东盟领导人会议</h3>
+        </div>
+      </div>
+      <p class="summary">外交部发言人11日宣布：应泰国总理阿努廷邀请，李强总理13日至15日对泰国正式访问；应菲律宾总统马科斯邀请，15日至16日赴马尼拉出席第29次中国—东盟领导人会议。中方期待推动自贸区3.0版升级议定书尽快生效。</p>
+      <p class="why"><span>为何重要</span> 全面战略伙伴关系满五年，自贸升级与周边外交进入关键窗口。</p>
+      <p class="link"><a href="https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202611/t20261111_12057499.shtml">https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202611/t20261111_12057499.shtml</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">03</div>
+        <div>
+          <p class="kicker">宏观 · 央行 · 新华社 / 中国人民银行</p>
+          <h3>央行三季度报告：坚持适度宽松，贷款利率锚将多元化</h3>
+        </div>
+      </div>
+      <p class="summary">央行11日发布《2026年第三季度中国货币政策执行报告》。前三季度GDP增长4.6%，9月末社融、M2同比分别增长7.1%、7.2%。下一阶段坚持适度宽松，推动贷款利率定价从较单一参考LPR转向多元基准，并加力实施支持资本市场两项工具。</p>
+      <p class="why"><span>为何重要</span> 为四季度流动性、利率锚与资本市场工具给出官方路线图。</p>
+      <p class="link"><a href="https://www.news.cn/20261111/33b7f5c761d743518eb408fa6a58ce92/c.html">https://www.news.cn/20261111/33b7f5c761d743518eb408fa6a58ce92/c.html</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">04</div>
+        <div>
+          <p class="kicker">国际 · 俄乌 · 新华社</p>
+          <h3>阿布扎比三方会谈收官：换俘达成，停火条件仍远</h3>
+        </div>
+      </div>
+      <p class="summary">俄美乌为期两天的会谈11日在阿布扎比结束。乌方称主要成果是大规模换俘协议，俄方称双方各有逾千人列入名单；领土、安全保障与欧洲是否入席仍存重大分歧。美方库什纳称12日将赴莫斯科会见普京。</p>
+      <p class="why"><span>为何重要</span> 2月以来首次三方面对面谈判收官，人道安排先于政治解决。</p>
+      <p class="link"><a href="https://www.news.cn/20261111/58171de26b014ac5adfc2c83c8bf0702/c.html">https://www.news.cn/20261111/58171de26b014ac5adfc2c83c8bf0702/c.html</a></p>
+    </article>
+    </div>
+
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 双栏对照</div>
+    </header>
+    <h2 class="sec" style="font-size:36px">双栏对照 · 选票与街头</h2>
+    <p>同一日，密西西比用计票改写参议院版图，西班牙用停运表达住房与薪资的怒气。</p>
+    <div class="split">
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">05</div>
+        <div>
+          <p class="kicker">美国 · 中期选举 · 美联社</p>
+          <h3>密西西比翻盘：民主党人科洛姆当选联邦参议员</h3>
+        </div>
+      </div>
+      <p class="summary">美联社11日宣布，民主党人斯科特·科洛姆击败共和党现任参议员海德-史密斯，当选密西西比州联邦参议员，将成为该州重建以来首位黑人联邦参议员。计票约49.2%对48.7%，领先约4700票，海德-史密斯随后承认败选。</p>
+      <p class="why"><span>为何重要</span> 深红州易手坐实中期选举对执政共和党的反弹，巩固民主党参议院多数。</p>
+      <p class="link"><a href="https://apnews.com/article/scott-colom-mississippi-senate-midterms-56c18f292a734443992f9466c3b0f346">https://apnews.com/article/scott-colom-mississippi-senate-midterms-56c18f292a734443992f9466c3b0f346</a></p>
+    </article>
+    
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">06</div>
+        <div>
+          <p class="kicker">欧洲 · 社会 · 埃菲社</p>
+          <h3>西班牙举行十四年来首次全国总罢工，铁路航空受冲击</h3>
+        </div>
+      </div>
+      <p class="summary">西班牙两大工会CCOO与UGT发起24小时全国总罢工，抗议住房成本与通胀。Renfe取消约15.7%高铁及长途列车、10.5%市郊列车，全国约6.4%航班取消；巴塞罗那地铁与公交一度停运。工会称成功，雇主协会称多数行业运转正常。</p>
+      <p class="why"><span>为何重要</span> 大选前的社会动员，检验住房与薪资矛盾对政局的冲击。</p>
+      <p class="link"><a href="https://efe.com/english/economy/2026-11-11/spain-general-strike/">https://efe.com/english/economy/2026-11-11/spain-general-strike/</a></p>
+    </article>
+    </div>
+
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 科技开篇</div>
+    </header>
+    <p class="eyebrow">SECTION 02 · TECHNOLOGY</p>
+    <h2 class="sec">科技</h2>
+    <div class="rule"></div>
+    <p class="intro">昨日科技首发集中在三层：端侧把三十亿参数塞进手机；实验室让细胞图谱开始预测变异；资本市场给模型公司打开散户闸门。</p>
+    <div class="tiles">
+      <div class="tile"><div class="n">07</div><p>麒麟 9050 详解 30B MoE</p></div>
+      <div class="tile"><div class="n">08</div><p>AlphaGenome 2 读细胞</p></div>
+      <div class="tile"><div class="n">09</div><p>Anthropic 澳洲认购</p></div>
+      <div class="tile"><div class="n">10</div><p>Qwen4-Max 百万上下文</p></div>
+    </div>
+
+    <header class="folio">
+      <div><strong>每日时政科技简报</strong> · 晨报</div>
+      <div>第315期 / 2026.11.11 / 科技稿件</div>
+    </header>
+    <h2 class="sec" style="font-size:36px">稿件卡片 · 芯片、基因组、募资与预览</h2>
+    <div class="cards">
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">07</div>
+        <div>
+          <p class="kicker">芯片 · 端侧 · IT之家 / TechNode</p>
+          <h3>麒麟 9050：新一代达芬奇 NPU 支撑 30B MoE 入端</h3>
+        </div>
+      </div>
+      <p class="summary">华为麒麟官方11日详解9050系列新一代达芬奇NPU：性能提升140%、功耗降低66%，支持Transformer引擎与低比特量化，宣称业界首个30B MoE入端，激活约20亿参数，可离线完成屏幕朗读与眼动翻页。芯片已于10月亮相。</p>
+      <p class="why"><span>为何重要</span> 端侧大模型从演示走向可量化的存算协同，改写手机对云端推理的依赖。</p>
+      <p class="link"><a href="https://www.ithome.com/1/025/331.htm">https://www.ithome.com/1/025/331.htm</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">08</div>
+        <div>
+          <p class="kicker">科学 · 生物 · Google DeepMind / 《自然》</p>
+          <h3>DeepMind 发布 AlphaGenome 2，按细胞类型预测变异效应</h3>
+        </div>
+      </div>
+      <p class="summary">DeepMind 11日发布下一代DNA序列模型AlphaGenome 2。模型在逾1亿个单细胞图谱、68种组织上训练，可针对特定人类或小鼠细胞类型预测变异对基因表达等的影响，识别到的表达改变变异约为前代近两倍。非商业研究已通过API开放。</p>
+      <p class="why"><span>为何重要</span> 把静态细胞图谱变成预测引擎，缩短从位点到致病细胞的实验路径。</p>
+      <p class="link"><a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">09</div>
+        <div>
+          <p class="kicker">资本 · 模型公司 · CNBC / 招股书</p>
+          <h3>Anthropic 澳大利亚散户认购开闸，拟登纳斯达克</h3>
+        </div>
+      </div>
+      <p class="summary">Anthropic澳大利亚零售发行11日上午10时（澳东夏令时）开启，至17日17时截止，由CommSec等券商面向当地居民认购A类股。拟每股70–78美元、代码ANT，预计20日登陆纳斯达克。招股书10日已递交ASIC。</p>
+      <p class="why"><span>为何重要</span> 前沿模型公司公开募资进入倒计时，散户通道成为估值与监管的试金石。</p>
+      <p class="link"><a href="https://www.cnbc.com/2026/11/11/anthopic-australian-retail-ipo-offering-.html">https://www.cnbc.com/2026/11/11/anthopic-australian-retail-ipo-offering-.html</a></p>
+    </article>
+    
+
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-head">
+        <div class="num">10</div>
+        <div>
+          <p class="kicker">模型 · 国产 · 阿里云 / TechNode</p>
+          <h3>阿里上线通义 Qwen4-Max 预览，上下文一百万 Token</h3>
+        </div>
+      </div>
+      <p class="summary">阿里11日宣布新一代通义千问即将发布，旗舰预览版Qwen4-Max已上线Token Plan并接入千问App、Qoder等。模型支持文本、图像与视频输入，上下文100万Token，默认可深度思考与工具调用；预览期至11月25日，仅限套餐。</p>
+      <p class="why"><span>为何重要</span> 国产旗舰进入百万上下文多模态预览，与国际闭源阵营同期竞速。</p>
+      <p class="link"><a href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview">https://help.aliyun.com/zh/model-studio/qwen4-max-preview</a></p>
+    </article>
+    </div>
+
+    <section class="close">
+      <header class="folio" style="border-bottom-color: var(--red); color:#A0A7B0">
+        <div><strong style="color:#F7F4EF">每日时政科技简报</strong> · 晨报</div>
+        <div>第315期 / 2026.11.11 / 收束</div>
+      </header>
+      <h2>收束 · 昨日十札</h2>
+      <div class="close-grid">
+        <div><ol><li>中美外长通话，峰会季互相托底。</li><li>李强行程锁定泰国与东盟领导人会。</li><li>央行要换贷款利率锚，并加力资本市场工具。</li><li>阿布扎比只写下战俘名单，停火仍在分歧里。</li><li>密西西比把参议院又推向民主党。</li></ol></div>
+        <div><ol start="6"><li>西班牙用总罢工把住房危机抬上街头。</li><li>手机端侧开始认真跑 30B MoE。</li><li>基因组模型第一次按细胞类型读变异。</li><li>Anthropic 把散户认购开到南半球。</li><li>通义 Qwen4 以百万上下文预览抢跑。</li></ol></div>
+      </div>
+      <p class="note">编辑说明 · 日期 2026-11-11 · 时政 6 条 · 科技 4 条 · 合计 10 条。未收入：Google TPU 8tx / 8i Max、Arm Cortex-M42、Anthropic Fable 5.2、台积电资本预算等均为 11 月 10 日或更早首发。美联社选举稿正文抓取超时，结果以 AP 宣布及 ABC 交叉核验。本期无「信息不足」版面。</p>
+    </section>
+  </div>
+</body>
+</html>
