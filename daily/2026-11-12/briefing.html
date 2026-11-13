@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日时政科技简报 · 2026年11月12日</title>
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --paper: #F7F4EF;
+      --crimson: #C41E3A;
+      --slate: #4A5568;
+      --card: #EFEBE3;
+      --rule: #C9C2B6;
+      --muted: #6B6358;
+      --cream: #FBF8F3;
+      --serif: Cambria, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", STSong, "Songti SC", serif;
+      --sans: Calibri, Arial, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+    body {
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+      text-align: left;
+    }
+    a { color: var(--crimson); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .mast {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 0 10px;
+      border-bottom: 2px solid var(--ink);
+      box-shadow: 0 3px 0 0 var(--crimson);
+      margin-bottom: 28px;
+    }
+    .mast .mark {
+      width: 11px; height: 22px; background: var(--crimson); flex: 0 0 auto;
+    }
+    .mast h1 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+    .mast .folio {
+      font-size: 13px;
+      color: var(--slate);
+      white-space: nowrap;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 24px 80px; }
+    .cover {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 36px 28px 40px;
+      margin: -28px -24px 48px;
+    }
+    .cover .mast { border-bottom-color: var(--paper); }
+    .cover .mast h1 { color: var(--paper); }
+    .cover .folio { color: #B8B0A4; }
+    .eyebrow {
+      color: var(--crimson);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      margin: 8px 0 6px;
+    }
+    .cover-title {
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+    }
+    .cover-sub {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: #C9C2B6;
+      margin: 0 0 28px;
+    }
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 22px;
+    }
+    .date-block {
+      background: #242220;
+      padding: 20px 18px;
+    }
+    .date-block .wd { color: var(--crimson); font-weight: 700; font-size: 14px; }
+    .date-block .big {
+      font-family: var(--serif);
+      font-size: 72px;
+      line-height: 0.95;
+      margin: 6px 0 8px;
+    }
+    .date-block p { margin: 0; color: #C9C2B6; font-size: 14px; }
+    .leads { display: flex; flex-direction: column; gap: 10px; }
+    .lead-row {
+      background: #242220;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      align-items: center;
+      min-height: 58px;
+      padding: 8px 14px;
+    }
+    .lead-row .n {
+      font-family: var(--serif);
+      color: var(--crimson);
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .lead-row .t { font-family: var(--serif); font-size: 16px; }
+    .note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: #8A847A;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 28px;
+      margin: 8px 0 36px;
+      align-items: start;
+    }
+    .giant {
+      font-family: var(--serif);
+      font-size: 72px;
+      color: var(--crimson);
+      line-height: 0.85;
+      margin: 0;
+    }
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: 48px;
+      margin: 8px 0 12px;
+    }
+    .section-head p { color: var(--slate); margin: 0; font-size: 16px; }
+    .index {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 18px 18px 16px;
+    }
+    .index .lab { color: var(--crimson); font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+    .index ol { list-style: none; margin: 0; padding: 0; }
+    .index li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 8px;
+      padding: 8px 0;
+      font-family: var(--serif);
+      font-size: 15px;
+    }
+    .index .n { color: var(--crimson); font-weight: 700; }
+    .quote-card, .obs-card, .story, .stat-tile, .digest {
+      background: var(--card);
+      border: 1px solid var(--rule);
+    }
+    .quote-card { padding: 20px 22px; margin-bottom: 36px; }
+    .quote-card .lab, .obs-card .lab { color: var(--crimson); font-size: 12px; font-weight: 700; }
+    .quote-card blockquote {
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.45;
+      margin: 10px 0 12px;
+    }
+    .quote-card cite { color: var(--slate); font-style: normal; font-size: 14px; }
+    .story {
+      position: relative;
+      padding: 18px 20px 16px;
+      margin: 0;
+    }
+    .story .mark {
+      width: 11px; height: 14px; display: inline-block;
+      background: var(--crimson); vertical-align: -1px; margin-right: 8px;
+    }
+    .kicker {
+      color: var(--crimson);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .story h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 0 0 10px;
+    }
+    .story p { margin: 0 0 10px; font-size: 15px; }
+    .why { color: var(--slate); font-style: italic; font-size: 14px; margin: 0; }
+    .src { font-size: 12px; color: var(--muted); word-break: break-all; }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin: 18px 0 40px;
+    }
+    .dark {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: #3A332E;
+    }
+    .dark h3, .dark p { color: var(--paper); }
+    .dark .why { color: #C9C2B6; }
+    .why-box {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .why-box .lab { color: var(--crimson); font-size: 12px; font-weight: 700; }
+    .page-title {
+      font-family: var(--serif);
+      font-size: 36px;
+      margin: 0 0 16px;
+    }
+    .feature {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+    .aside {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 22px 20px;
+    }
+    .aside .num {
+      font-family: var(--serif);
+      font-size: 56px;
+      color: var(--crimson);
+      line-height: 1;
+      margin: 0;
+    }
+    .aside h4 {
+      font-family: var(--serif);
+      font-size: 20px;
+      margin: 4px 0 14px;
+    }
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 22px 0 40px;
+    }
+    .stat-tile { padding: 16px 14px; }
+    .stat-tile .n {
+      font-family: var(--serif);
+      font-size: 32px;
+      color: var(--crimson);
+      margin: 0;
+    }
+    .stat-tile .u { font-size: 14px; }
+    .stat-tile .l { color: var(--slate); font-size: 13px; }
+    .obs-card { padding: 20px 22px; }
+    .obs-card p { font-size: 16px; margin: 8px 0 0; }
+    .close {
+      background: var(--ink);
+      color: var(--paper);
+      margin: 48px -24px -80px;
+      padding: 36px 24px 56px;
+    }
+    .close .wrap { padding: 0; }
+    .close h2 {
+      font-family: var(--serif);
+      font-size: 36px;
+      margin: 0 0 18px;
+    }
+    .digest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 28px;
+      margin-bottom: 22px;
+    }
+    .digest-grid div {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 8px;
+      font-family: var(--serif);
+      font-size: 15px;
+      padding: 6px 0;
+    }
+    .digest-grid .n { color: var(--crimson); font-weight: 700; }
+    .hand {
+      background: #242220;
+      padding: 16px 18px;
+      font-size: 14px;
+    }
+    .hand .lab { color: var(--crimson); font-weight: 700; font-size: 12px; }
+    @media (max-width: 860px) {
+      .cover-grid, .section-head, .pair, .feature, .tiles, .digest-grid {
+        grid-template-columns: 1fr;
+      }
+      .cover-title { font-size: 34px; }
+      .page-title, .close h2 { font-size: 30px; }
+      .cover { margin-left: -16px; margin-right: -16px; }
+      .wrap { padding: 20px 16px 64px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .cover, .close { break-inside: avoid; }
+      .story, .pair, .feature { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+      .src { color: #444; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="cover" id="cover">
+      <div class="mast">
+        <div class="mark" aria-hidden="true"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四</div>
+      </div>
+      <div class="eyebrow">ASIA / SHANGHAI &nbsp; MORNING EDITION</div>
+      <p class="cover-title">每日时政科技简报</p>
+      <p class="cover-sub">时政与科技的晨报 · 只收昨日首发</p>
+      <div class="cover-grid">
+        <div class="date-block">
+          <div class="wd">星期四</div>
+          <div class="big">11.12</div>
+          <p>2026年11月12日</p>
+          <p style="margin-top:10px">第316期<br />时政六则 · 科技五则</p>
+        </div>
+        <div class="leads">
+          <div class="lead-row"><div class="n">01</div><div class="t">纪念孙中山先生诞辰160周年大会在京举行</div></div>
+          <div class="lead-row"><div class="n">07</div><div class="t">黄仁勋辞去英伟达总裁、首席执行官及董事职务</div></div>
+          <div class="lead-row"><div class="n">03</div><div class="t">商务部：中美“300亿对300亿”对等降税仍待落地</div></div>
+          <div class="lead-row"><div class="n">08</div><div class="t">谷歌为第八代TPU新增8i Max与8tx两款专用系统</div></div>
+        </div>
+      </div>
+      <p class="note">编辑说明：新闻均核验为 2026-11-12 当日发生或当日首发，未收入更早稿件及 11月13日凌晨之后消息。</p>
+    </section>
+
+    <section id="politics-open">
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 时政</div>
+      </div>
+      <div class="section-head">
+        <div>
+          <p class="giant">01</p>
+          <h2>时政</h2>
+          <p>昨日主轴是一场纪念大会、一场例行记者会，以及中美在经贸与政党两个层面同时展开的窗口期沟通。国内则有成品油按机制下调。</p>
+        </div>
+        <aside class="index">
+          <div class="lab">本日时政目录</div>
+          <ol>
+            <li><span class="n">01</span><span>纪念孙中山先生诞辰160周年大会在京举行</span></li>
+            <li><span class="n">02</span><span>韩国外长赵显将访华，外交部就东京审判与G7涉台声明表态</span></li>
+            <li><span class="n">03</span><span>商务部：中美“300亿对300亿”对等降税仍待落地</span></li>
+            <li><span class="n">04</span><span>2026中美政党对话在北京举行</span></li>
+            <li><span class="n">05</span><span>国内汽、柴油价格每吨分别下调645元、625元</span></li>
+            <li><span class="n">06</span><span>印尼副总统吉布兰正式递交辞呈</span></li>
+          </ol>
+        </aside>
+      </div>
+      <div class="quote-card">
+        <div class="lab">开篇引语</div>
+        <blockquote>海内外全体中华儿女要更加紧密地团结起来，继承孙中山先生的遗志，同心协力共襄中华民族伟大复兴盛举。</blockquote>
+        <cite>— 习近平 · 纪念孙中山先生诞辰160周年大会</cite>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 时政 · 01</div>
+      </div>
+      <div class="feature">
+        <article>
+          <div class="kicker">要闻 · 新华社 / 中国政府网</div>
+          <h2 class="page-title">纪念孙中山先生诞辰160周年大会在京举行</h2>
+          <p>12日上午，纪念大会在人民大会堂举行。习近平发表讲话，号召海内外中华儿女继承先生遗志，推进强国建设与民族复兴，并强调共同反对“台独”、实现祖国完全统一。李强等出席，王沪宁主持，约3000人到会。</p>
+          <p class="why">为何重要　在诞辰节点重申团结与统一，为两岸关系与民族复兴叙事定调。</p>
+          <p class="src"><a href="https://www.gov.cn/yaowen/liebiao/202611/content_7085882.htm">https://www.gov.cn/yaowen/liebiao/202611/content_7085882.htm</a></p>
+        </article>
+        <aside class="aside">
+          <p class="num">160</p>
+          <h4>周年</h4>
+          <p>1866 – 2026<br />人民大会堂<br />约 3000 人出席</p>
+          <p style="color:#C9C2B6;margin-top:16px">习近平强调学习继承发扬先生宝贵精神，把强国建设、民族复兴伟业不断推向前进。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 时政 · 02 / 06</div>
+      </div>
+      <h2 class="page-title">外交往来</h2>
+      <div class="pair">
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>02 · 外交 · 中华人民共和国外交部</div>
+          <h3>韩国外长赵显将访华，外交部就东京审判与G7涉台声明表态</h3>
+          <p>发言人毛宁宣布韩国外长赵显13日至14日访华。同日指出东京审判是战后国际秩序的组成部分，警惕日本“再军事化”；驳斥G7外长涉台声明粗暴干涉内政；并称中方就中俄美元首会晤同有关方保持沟通。</p>
+          <p class="why">为何重要　APEC前夕的一揽子外交表态，牵动中韩、中日及中美俄互动节奏。</p>
+          <p class="src"><a href="https://www.mfa.gov.cn/fyrbt_673021/202611/t20261112_12058185.shtml">原文链接</a></p>
+        </article>
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>06 · 国际 · 新华社 / 中新社</div>
+          <h3>印尼副总统吉布兰正式递交辞呈</h3>
+          <p>吉布兰·拉卡布明·拉卡12日向总统普拉博沃和人民协商会议递交辞呈。宪法规定副总统空缺后，人协须在60天内从总统提名的两名候选人中选出继任者。其参选学历资格争议近期持续发酵。</p>
+          <p class="why">为何重要　东南亚人口最多的国家出现副总统空缺，影响印尼政局与地区外交连续性。</p>
+          <p class="src"><a href="https://www.news.cn/20261112/b630e3885c8b46af93daec9d9d91ba00/c.html">原文链接</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 时政 · 03 / 04</div>
+      </div>
+      <h2 class="page-title">中美窗口</h2>
+      <div class="pair">
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>03 · 经贸 · 商务部 / 第一财经</div>
+          <h3>商务部：中美“300亿对300亿”对等降税仍待落地</h3>
+          <p>发言人何亚东12日说，中美已举行八轮经贸磋商，中方已落实前期共识。双方正就各约300亿美元进口商品的对等降税安排保持密切沟通，希望尽快落地，为农产品贸易创造条件。合作仍被定位为唯一正确道路。</p>
+          <div class="why-box">
+            <div class="lab">为何重要</div>
+            <p>深圳APEC窗口前的关键经贸信号，关系到关税安排能否从框架变成减税。</p>
+          </div>
+          <p class="src"><a href="https://www.yicai.com/news/103438231.html">原文链接</a></p>
+        </article>
+        <article class="story dark">
+          <div class="kicker"><span class="mark"></span>04 · 对话 · 新华社</div>
+          <h3>2026中美政党对话在北京举行</h3>
+          <p>中联部部长刘海星与美国前驻华大使博卡斯等出席。双方以“在变化的亚太和世界中探索新时代中美正确相处之道”为主题交流，强调相互尊重、管控分歧、夯实建设性战略稳定关系。该对话已举办15届。</p>
+          <p class="why">为何重要　元首会晤窗口期的政党与二轨沟通，为官方互动补充社会层面的缓冲。</p>
+          <p class="src"><a href="https://www.news.cn/politics/20261112/09da43af141343d6b3e61c47d8173eeb/c.html">原文链接</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 时政 · 05</div>
+      </div>
+      <div class="kicker">民生 · 新华社</div>
+      <h2 class="page-title">国内汽、柴油价格每吨分别下调645元、625元</h2>
+      <p>国家发改委宣布，自12日24时起，汽、柴油标准品每吨分别下调645元、625元，折合92号汽油、0号柴油每升约降0.51元、0.54元。加满一箱私家车约少花26元。近10个工作日国际油价均价回落是主因。</p>
+      <p class="why">为何重要　本轮为近期较大幅度下调，直接减轻居民出行与公路物流成本。</p>
+      <p class="src"><a href="https://www.news.cn/20261112/0ba66dea692d48d9a1870f7a1b07904d/c.html">https://www.news.cn/20261112/0ba66dea692d48d9a1870f7a1b07904d/c.html</a></p>
+      <div class="tiles">
+        <div class="stat-tile"><p class="n">−645</p><div class="u">元/吨</div><div class="l">汽油标准品</div></div>
+        <div class="stat-tile"><p class="n">−625</p><div class="u">元/吨</div><div class="l">柴油标准品</div></div>
+        <div class="stat-tile"><p class="n">0.51</p><div class="u">元/升</div><div class="l">92号汽油约降</div></div>
+        <div class="stat-tile"><p class="n">26</p><div class="u">元</div><div class="l">加满一箱约少花</div></div>
+      </div>
+    </section>
+
+    <section id="tech-open">
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 科技</div>
+      </div>
+      <div class="section-head">
+        <div>
+          <p class="giant">02</p>
+          <h2>科技</h2>
+          <p>昨日主线是算力权力的重组：英伟达换帅，谷歌与AMD加推专用芯片，百度把增长叙事转向推理，科学侧则交出一份脑图谱。</p>
+        </div>
+        <aside class="index">
+          <div class="lab">本日科技目录</div>
+          <ol>
+            <li><span class="n">07</span><span>黄仁勋辞去英伟达总裁、首席执行官及董事职务</span></li>
+            <li><span class="n">08</span><span>谷歌为第八代TPU新增8i Max与8tx两款专用系统</span></li>
+            <li><span class="n">09</span><span>AMD扩充Instinct MI400系列并公布推理实测</span></li>
+            <li><span class="n">10</span><span>百度世界2026：李彦宏称推理将成为AI芯片增长主引擎</span></li>
+            <li><span class="n">11</span><span>NIH首次精细绘制基底神经节细胞图谱</span></li>
+          </ol>
+        </aside>
+      </div>
+      <div class="obs-card">
+        <div class="lab">观察</div>
+        <p>训练军备仍在，但推理、智能体与机密计算正在改写芯片规格书。治理风险与产品发布叠在同一天，市场用股价投票，实验室则继续绘制更细的地图。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 科技 · 07</div>
+      </div>
+      <div class="feature">
+        <article>
+          <div class="kicker">芯片 · NVIDIA Newsroom / 路透社</div>
+          <h2 class="page-title">黄仁勋辞去英伟达总裁、首席执行官及董事职务</h2>
+          <p>董事会宣布联合创始人黄仁勋即刻辞职。CFO科莱特·克雷斯任临时CEO，哈维·琼斯出任公司首位董事会主席。美股开盘股价一度跌约13%，收跌4.3%，市值当日蒸发逾1800亿美元。公司称经营与产品路线图不受影响。</p>
+          <p class="why">为何重要　全球市值最高的AI芯片公司突然换帅，冲击算力供应链信心与出口管制博弈。</p>
+          <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition</a></p>
+        </article>
+        <aside class="aside">
+          <div class="kicker" style="color:#C41E3A">市场瞬时</div>
+          <p class="num">−13%</p>
+          <h4>开盘最大跌幅</h4>
+          <p style="font-family:var(--serif);font-size:22px;margin:0 0 8px">收跌 4.3%</p>
+          <p>当日市值蒸发逾1800亿美元。临时CEO克雷斯同时兼任CFO。</p>
+          <p style="color:#C9C2B6;margin-top:12px">11月17日仍按计划发布2027财年第三季报。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 科技 · 08 / 09</div>
+      </div>
+      <h2 class="page-title">芯片对垒</h2>
+      <div class="pair">
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>08 · 算力 · Tom's Hardware</div>
+          <h3>谷歌为第八代TPU新增8i Max与8tx两款专用系统</h3>
+          <p>8i Max将两颗8i封装一体，面向长上下文智能体，算力与HBM带宽倍增；8tx沿用8t硅片、改配第五代AMD EPYC主机，主打机密推理与小规模训练。两款均标“即将推出”，完整规格与交付日期尚未公布。</p>
+          <p class="why">为何重要　云厂商正把自研芯片从通用训练，切向智能体与机密计算等细分场景。</p>
+          <p class="src"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc">原文链接</a></p>
+        </article>
+        <article class="story dark">
+          <div class="kicker"><span class="mark"></span>09 · 芯片 · AMD Newsroom</div>
+          <h3>AMD扩充Instinct MI400系列并公布推理实测</h3>
+          <p>AMD公布科学计算卡MI430X细节，称Helios上的MI455X在DeepSeek-R1离线推理中每GPU达21333 tokens/s，较英伟达Vera Rubin公开结果高约30%。同期推出288GB版MI450X。对比为自行测试。</p>
+          <p class="why">为何重要　在英伟达换帅同日，AMD用推理基准与产品组合争夺加速器话语权。</p>
+          <p class="src"><a href="https://newsroom.amd.com/news/amd-advances-instinct-mi400-series-ai-scientific-computing/">原文链接</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 科技 · 10 / 11</div>
+      </div>
+      <h2 class="page-title">产业与科学</h2>
+      <div class="pair">
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>10 · 产业 · 新浪科技</div>
+          <h3>百度世界2026：李彦宏称推理将成为AI芯片增长主引擎</h3>
+          <p>李彦宏在开幕式上表示，算力需求已从训练为主转为训练与推理并重，智能体规模化将推高推理需求。昆仑芯称M100已上市、旗舰M300明年推出，2028年将推出全新N架构多款芯片。</p>
+          <p class="why">为何重要　国产AI全栈厂商在海外治理动荡窗口，加速自研芯片与推理基础设施布局。</p>
+          <p class="src"><a href="https://finance.sina.com.cn/tech/2026-11-12/doc-iniymwrk8610491.shtml">原文链接</a></p>
+        </article>
+        <article class="story">
+          <div class="kicker"><span class="mark"></span>11 · 科学 · 美国国立卫生研究院</div>
+          <h3>NIH首次精细绘制基底神经节细胞图谱</h3>
+          <p>BRAIN计划支持的研究以单细胞测序与三维成像，绘制将意图转化为动作的基底神经节图谱，覆盖发育过程中的数百万个细胞，并延伸至灵长类与小鼠。相关27篇论文同日发表。帕金森模型中的精准递送实验显示症状改善、副作用减轻。</p>
+          <p class="why">为何重要　为帕金森、亨廷顿与部分精神疾病提供细胞级靶点，是脑图谱工程的关键里程碑。</p>
+          <p class="src"><a href="https://www.nih.gov/news-events/news-releases/first-time-researchers-map-out-brains-behavioral-gatekeeper">原文链接</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section class="close" id="close">
+    <div class="wrap">
+      <div class="mast">
+        <div class="mark"></div>
+        <h1>每日时政科技简报</h1>
+        <div class="folio">第316期 · 2026年11月12日 · 星期四 · 收束</div>
+      </div>
+      <h2>收束 · 昨日十一则</h2>
+      <div class="digest-grid">
+        <div><span class="n">01</span><span>纪念孙中山先生诞辰160周年大会在京举行</span></div>
+        <div><span class="n">07</span><span>黄仁勋辞去英伟达总裁、首席执行官及董事职务</span></div>
+        <div><span class="n">02</span><span>韩国外长赵显将访华，外交部就东京审判与G7涉台声明表态</span></div>
+        <div><span class="n">08</span><span>谷歌为第八代TPU新增8i Max与8tx两款专用系统</span></div>
+        <div><span class="n">03</span><span>商务部：中美“300亿对300亿”对等降税仍待落地</span></div>
+        <div><span class="n">09</span><span>AMD扩充Instinct MI400系列并公布推理实测</span></div>
+        <div><span class="n">04</span><span>2026中美政党对话在北京举行</span></div>
+        <div><span class="n">10</span><span>百度世界2026：李彦宏称推理将成为AI芯片增长主引擎</span></div>
+        <div><span class="n">05</span><span>国内汽、柴油价格每吨分别下调645元、625元</span></div>
+        <div><span class="n">11</span><span>NIH首次精细绘制基底神经节细胞图谱</span></div>
+        <div><span class="n">06</span><span>印尼副总统吉布兰正式递交辞呈</span></div>
+      </div>
+      <div class="hand">
+        <div class="lab">编辑手记</div>
+        <p>本期按 Asia/Shanghai 收录 2026-11-12 当日发生或首发新闻，时政六则、科技五则。微软365全球故障发生于13日凌晨（上海时间），故未入选。AMD推理对比为其自行测试，已在稿中标明。</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
