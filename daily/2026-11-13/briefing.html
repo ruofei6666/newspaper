@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 2026-11-13</title>
+<style>
+:root {
+  --ink:#1A1A1A;
+  --paper:#F7F4EF;
+  --crimson:#C41E3A;
+  --slate:#4A5568;
+  --cream:#FFFCF7;
+  --rule:#D4CBBE;
+  --dark:#242424;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:var(--paper); color:var(--ink); font-family:Calibri,Arial,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif; font-size:16px; line-height:1.5; }
+h1,h2,h3,.serif { font-family:Cambria,"Palatino Linotype",Palatino,"Songti SC","Noto Serif CJK SC",Georgia,serif; }
+a { color:var(--crimson); text-underline-offset:3px; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 28px 64px; }
+.folio { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0 10px; border-bottom:1px solid var(--crimson); position:sticky; top:0; background:var(--paper); z-index:5; }
+.folio-left { display:flex; align-items:center; gap:10px; font-family:Cambria,Georgia,serif; font-weight:700; letter-spacing:.04em; }
+.mark { width:12px; height:12px; background:var(--crimson); display:inline-block; }
+.folio-right { color:var(--slate); font-size:13px; }
+.cover { background:var(--ink); color:var(--paper); margin:24px -28px 40px; padding:48px 48px 40px; }
+.cover .mark { width:16px; height:16px; }
+.cover-kicker { display:flex; justify-content:space-between; color:#C4B8AC; font-size:13px; letter-spacing:.12em; }
+.cover h1 { font-size:54px; line-height:1.1; margin:28px 0 12px; font-weight:700; }
+.cover .en { color:#C4B8AC; letter-spacing:.18em; font-size:14px; }
+.hair { width:120px; height:2px; background:var(--crimson); margin:22px 0; }
+.cover .date { font-size:26px; font-family:Cambria,Georgia,serif; }
+.cover .sub { color:#A8A096; margin-top:10px; }
+.tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
+.tile { background:#242424; padding:22px; border-top:3px solid var(--crimson); }
+.tile .n { font-size:40px; color:var(--crimson); font-family:Cambria,Georgia,serif; font-weight:700; }
+.tile h3 { font-size:22px; margin:6px 0; }
+.tile p { color:#B8B0A6; font-size:14px; }
+.section-head { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; margin:48px 0 28px; align-items:start; }
+.section-head h2 { font-size:54px; line-height:1; }
+.section-head .label { color:var(--crimson); font-weight:700; letter-spacing:.16em; margin:8px 0 16px; font-size:14px; }
+.lede { color:var(--slate); font-size:17px; line-height:1.65; }
+.stat { background:var(--ink); color:var(--paper); padding:28px; }
+.stat.crimson { background:var(--crimson); }
+.stat .n { font-size:48px; font-family:Cambria,Georgia,serif; color:var(--crimson); }
+.stat.crimson .n { color:var(--paper); }
+.stat h3 { font-size:22px; margin:6px 0 10px; }
+.stat p { color:#C4B8AC; font-size:15px; }
+.index { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; margin:8px 0 36px; }
+.index li { background:var(--cream); padding:14px 16px; display:grid; grid-template-columns:48px 1fr; gap:8px; align-items:center; }
+.index .num { color:var(--crimson); font-family:Cambria,Georgia,serif; font-size:22px; font-weight:700; }
+.index em { display:block; color:var(--slate); font-style:normal; font-size:12px; margin-top:4px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:18px 0 36px; }
+.card { background:var(--cream); padding:22px 22px 0; min-height:100%; display:flex; flex-direction:column; }
+.card-dark { background:var(--ink); color:var(--paper); }
+.card-rule { height:3px; background:var(--crimson); margin:-22px -22px 16px; }
+.card-meta { display:flex; gap:12px; align-items:baseline; }
+.card .num { font-family:Cambria,Georgia,serif; font-size:32px; color:var(--crimson); font-weight:700; }
+.kicker { color:var(--slate); font-size:12px; font-weight:700; letter-spacing:.04em; }
+.card-dark .kicker { color:#B8B0A6; }
+.card h3 { font-size:22px; margin:10px 0 12px; line-height:1.3; }
+.summary { color:var(--slate); font-size:15px; line-height:1.6; }
+.card-dark .summary { color:#C4B8AC; }
+.why { margin-top:auto; font-size:14px; color:var(--paper); background:var(--ink); margin-left:-22px; margin-right:-22px; padding:14px 22px 16px; }
+.card-dark .why { background:var(--crimson); color:var(--paper); }
+.why em { display:block; font-style:normal; font-size:11px; letter-spacing:.08em; margin-bottom:4px; color:#F0C4CB; }
+.src { margin-top:10px; font-size:13px; }
+.card .src { margin-bottom:12px; }
+.card-dark .src a { color:#F0C4CB; }
+.split { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:12px 0 40px; }
+.panel { padding:24px; min-height:420px; }
+.panel.light { background:var(--cream); }
+.panel.dark { background:var(--ink); color:var(--paper); }
+.panel .num { font-family:Cambria,Georgia,serif; font-size:36px; color:var(--crimson); font-weight:700; }
+.panel h3 { font-size:22px; margin:10px 0 14px; }
+.quote { margin-top:24px; background:var(--ink); color:var(--paper); padding:16px 18px; font-family:Cambria,Georgia,serif; font-style:italic; }
+.panel.dark .note { color:#F0C4CB; font-style:italic; margin-top:24px; }
+.feature { display:grid; grid-template-columns:1.6fr .8fr; gap:22px; margin:12px 0 48px; }
+.feature-main { background:var(--cream); padding:28px; }
+.feature-side { background:var(--ink); color:var(--paper); padding:28px; }
+.feature-main h3 { font-size:28px; margin:12px 0 16px; }
+.close { background:var(--ink); color:var(--paper); margin:48px -28px 0; padding:48px; }
+.close h2 { font-size:36px; }
+.close .label { color:var(--crimson); margin:8px 0 22px; }
+.close ol { columns:2; column-gap:36px; list-style:none; }
+.close li { break-inside:avoid; padding:8px 0; color:#E6E0D8; font-size:15px; }
+.gap { margin-top:28px; color:#A8A096; font-size:14px; max-width:70ch; }
+footer { color:var(--slate); font-size:13px; padding:24px 0 8px; }
+@media (max-width:860px) {
+  .cover h1, .section-head h2 { font-size:36px; }
+  .tiles, .grid, .split, .section-head, .feature, .index, .close ol { grid-template-columns:1fr; columns:1; }
+  .cover { padding:28px; margin:16px -16px 28px; }
+  .wrap { padding:0 16px 40px; }
+}
+@media print {
+  body { background:#fff; }
+  .folio { position:static; }
+  .cover, .close { break-inside:avoid; }
+  a { color:inherit; text-decoration:none; }
+  .card, .panel, .tile, .feature-main, .feature-side { break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="folio">
+    <div class="folio-left"><span class="mark"></span>每日时政科技简报</div>
+    <div class="folio-right">第317期 · 2026-11-13 · 星期五</div>
+  </header>
+
+  <section class="cover">
+    <div class="cover-kicker"><span>晨报  MORNING EDITION</span><span>第317期</span></div>
+    <h1 class="serif">每日时政科技简报</h1>
+    <p class="en">POLITICS  ·  TECHNOLOGY  ·  MORNING BRIEF</p>
+    <div class="hair"></div>
+    <p class="date serif">二〇二六年十一月十三日　　星期五</p>
+    <p class="sub">Asia/Shanghai · 只收录昨日发生或昨日首发 · 时政六章 / 科技五章</p>
+    <div class="tiles">
+      <div class="tile"><div class="n serif">06</div><h3 class="serif">时政</h3><p>治国、外交、宏观、国际安全</p></div>
+      <div class="tile"><div class="n serif">05</div><h3 class="serif">科技</h3><p>芯片、云、产业、科学</p></div>
+      <div class="tile"><div class="n serif">11</div><h3 class="serif">合计</h3><p>交叉核验后精选，拒营销稿</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2 class="serif">时政</h2>
+        <p class="label">STATECRAFT · 开篇</p>
+        <p class="lede">昨日的主线是内外并进：国企治理再部署，深圳APEC进入领导人周，总理启程曼谷；金融数据给出信用扩张的温度，欧亚战场与霍尔木兹水道则提醒外部风险并未退潮。</p>
+      </div>
+      <aside class="stat">
+        <div class="n serif">06</div>
+        <h3 class="serif">篇精选</h3>
+        <p>治国理政、多边外交、周边访问、宏观金融、国际安全、能源地缘。每条均核验为11月13日发生或当日首发。</p>
+      </aside>
+    </div>
+    <ol class="index"><li><span class="num">01</span><span>习近平对国企党建作出重要指示<em>新华社</em></span></li><li><span class="num">02</span><span>习近平将主持深圳APEC领导人会议<em>外交部</em></span></li><li><span class="num">03</span><span>李强抵达曼谷开始对泰国正式访问<em>新华社</em></span></li><li><span class="num">04</span><span>央行公布10月数据：社融少增、债券多增<em>中国人民银行</em></span></li><li><span class="num">05</span><span>泽连斯基称俄乌将进行开战以来最大换俘<em>乌克兰真理报 / BBC</em></span></li><li><span class="num">06</span><span>伊朗称霍尔木兹以东液化气船触雷爆炸<em>塔斯尼姆 / 法新社</em></span></li></ol>
+  </section>
+
+  <section>
+    <h2 class="serif" style="font-size:28px;margin-bottom:14px;">时政稿件 · 治国与多边</h2>
+    <div class="grid">
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">01</span><span class="kicker">治国理政 · 新华社</span></div>
+      <h3>习近平对国企党建作出重要指示</h3>
+      <p class="summary">11月13日，国有企业党的建设工作座谈会在京召开并传达习近平重要指示。指示要求坚持党对国企全面领导，完善中国特色现代企业制度，推动党建与生产经营深度融合，为做强做优做大国有企业和国有资本提供保障。蔡奇出席并讲话。</p>
+      <p class="src"><a href="https://www.gov.cn/yaowen/liebiao/202611/content_7085945.htm">新华社 原文</a></p>
+      <p class="why"><em>为何重要</em> 把二十届五中全会后的管党治党要求直接写入国企治理，关系到国有资本布局与公司制度边界。</p>
+    </article>
+    <article class="card card-dark">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">02</span><span class="kicker">多边外交 · 外交部</span></div>
+      <h3>习近平将主持深圳APEC领导人会议</h3>
+      <p class="summary">外交部13日宣布，亚太经合组织第三十三次领导人非正式会议将于18日至19日在深圳举行，主题为“建设亚太共同体，促进共同繁荣”。习近平将主持会议并发表讲话，出席工商领导人峰会开幕式，并同外国领导人举行双边会晤。</p>
+      <p class="src"><a href="https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/202611/t20261113_12058548.shtml">外交部 原文</a></p>
+      <p class="why"><em>为何重要</em> 中国时隔12年再任APEC东道主，深圳峰会将检验贸易、数字经济与人工智能能否写入领导人宣言。</p>
+    </article>
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">03</span><span class="kicker">周边外交 · 新华社</span></div>
+      <h3>李强抵达曼谷开始对泰国正式访问</h3>
+      <p class="summary">11月13日上午，李强应泰国总理阿努廷邀请离京，当地时间下午抵达曼谷素万纳普国际机场，阿努廷到机场迎接。李强表示，期待就深化中泰全面战略合作深入交换意见，推动中泰命运共同体建设走深走实。</p>
+      <p class="src"><a href="https://www.news.cn/20261113/cfa78662c3ff4d5cb5fbe4cfe6d68ecf/c.html">新华社 原文</a></p>
+      <p class="why"><em>为何重要</em> 此访是中国—东盟领导人会议前的关键双边安排，将为地区供应链与政治互信定调。</p>
+    </article>
+    <article class="card card-dark">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">04</span><span class="kicker">宏观经济 · 中国人民银行</span></div>
+      <h3>央行公布10月数据：社融少增、债券多增</h3>
+      <p class="summary">人民银行13日发布：10月末社融存量469.16万亿元，同比增7.2%；M2同比增7.1%。前十月社融增量28.61万亿元，同比少2.29万亿元；人民币贷款少增3.61万亿元，企业债净融资多1.27万亿元。</p>
+      <p class="src"><a href="https://jingji.cctv.cn/2026/11/13/ARTI5uzD2BrB4wXFaLmtOMEd261113.shtml">中国人民银行 原文</a></p>
+      <p class="why"><em>为何重要</em> 信贷少增、债券多增显示融资继续转向直接融资，也给四季度稳增长与防空转划出新约束。</p>
+    </article></div>
+  </section>
+
+  <section>
+    <h2 class="serif" style="font-size:28px;margin-bottom:6px;">双栏对照 · 战场与水道</h2>
+    <p style="color:var(--slate);font-size:13px;margin-bottom:12px;">同一日的外部风险</p>
+    <div class="split">
+      <article class="panel light">
+        <div class="num">05</div>
+        <p class="kicker">国际安全 · 乌克兰真理报 / BBC</p>
+        <h3 class="serif">泽连斯基称俄乌将进行开战以来最大换俘</h3>
+        <p class="summary">乌克兰总统泽连斯基在都柏林会见美国特使威特科夫、库什纳后表示，俄乌已同意进行开战以来最大规模战俘交换，具体人数未公布。他并称欧洲代表将作为谈判团队成员参加下一轮和谈。美方特使当天稍早在莫斯科会见普京。</p>
+        <p class="why"><em>为何重要</em> 换俘是阿布扎比接触后首个可核验的人道成果；欧洲入席将改变停火谈判的力量结构。</p>
+        <p class="src"><a href="https://www.pravda.com.ua/eng/news/2026/11/13/8062620/">原文链接</a></p>
+        <p class="quote">“这是真正的结果。”——泽连斯基谈换俘</p>
+      </article>
+      <article class="panel dark">
+        <div class="num">06</div>
+        <p class="kicker">能源地缘 · 塔斯尼姆 / 法新社</p>
+        <h3 class="serif">伊朗称霍尔木兹以东液化气船触雷爆炸</h3>
+        <p class="summary">伊朗革命卫队海军13日称，一艘液化气运输船无视警告，试图走霍尔木兹海峡南部“未授权航线”，触雷后剧烈爆炸。声明未公布船名与伤亡。英国海事贸易行动署与美军均未独立证实；美军近期称主航道已排雷。</p>
+        <p class="why"><em>为何重要</em> 全球最繁忙能源水道的通行权之争若再升级，将直接冲击航运保险与油价预期。</p>
+        <p class="src"><a href="https://www.malaymail.com/news/world/2026/11/13/iran-says-lng-ship-hit-mine-in-strait-of-hormuz/243126">原文链接</a></p>
+        <p class="note">独立来源尚未证实。信息缺口：船名、船籍、伤亡与雷区归属。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2 class="serif">科技</h2>
+        <p class="label">SILICON · 开篇</p>
+        <p class="lede">芯片王座易主、办公云停摆、散热资产被争抢——算力扩张的约束从模型转到电力、冷却与治理。实验室一侧，伤寒致死机制被改写；产业一侧，端侧智能体芯片试图把推理送出机房。</p>
+      </div>
+      <aside class="stat crimson">
+        <div class="n serif">05</div>
+        <h3 class="serif">篇精选</h3>
+        <p>人工智能、互联网基础设施、产业并购、生命科学、国产端侧芯片。</p>
+      </aside>
+    </div>
+    <ol class="index"><li><span class="num">07</span><span>黄仁勋辞职，英伟达进入无创始人时代<em>美联社 / 路透社</em></span></li><li><span class="num">08</span><span>微软365在逾24小时全球故障后基本恢复<em>The Verge / WIRED</em></span></li><li><span class="num">09</span><span>三星据报洽购美国数据中心冷却商Modine<em>彭博 / 路透</em></span></li><li><span class="num">10</span><span>耶鲁揭示伤寒致命肠穿孔实为血管病变<em>Yale News / Nature Microbiology</em></span></li><li><span class="num">11</span><span>龙擎空天发布端侧智能体处理器LQ7000<em>快科技</em></span></li></ol>
+  </section>
+
+  <section>
+    <h2 class="serif" style="font-size:28px;margin-bottom:14px;">科技稿件 · 算力、云、散热与实验室</h2>
+    <div class="grid">
+    <article class="card card-dark">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">07</span><span class="kicker">人工智能 · 美联社 / 路透社</span></div>
+      <h3>黄仁勋辞职，英伟达进入无创始人时代</h3>
+      <p class="summary">英伟达宣布黄仁勋辞去总裁、CEO及董事职务即刻生效，CFO科莱特·克雷斯任临时CEO，哈维·琼斯出任首位董事会主席。美东12日盘中最大跌幅约14%，收跌4.3%。中文媒体13日首发详报。董事会将内外部遴选正式继任者。</p>
+      <p class="src"><a href="https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f">美联社 / 路透社 原文</a></p>
+      <p class="why"><em>为何重要</em> 全球市值最高芯片公司突然换帅，AI资本开支、客户锁定期与供应链定价都将重新计价。</p>
+    </article>
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">08</span><span class="kicker">互联网 · The Verge / WIRED</span></div>
+      <h3>微软365在逾24小时全球故障后基本恢复</h3>
+      <p class="summary">微软13日称Outlook、Teams、Copilot等365服务已“广泛恢复”，并排除网络攻击或AI智能体原因。公司将故障归因于此前网络扩容中的问题在最近一次网络变更后暴露，邮件排队时限延长至48小时以消化积压。完整事故报告将随后公布。</p>
+      <p class="src"><a href="https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage">The Verge / WIRED 原文</a></p>
+      <p class="why"><em>为何重要</em> 全球办公云的单点故障，暴露企业通信对少数云厂商的依赖，也倒逼事后问责与冗余设计。</p>
+    </article>
+    <article class="card card-dark">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">09</span><span class="kicker">产业并购 · 彭博 / 路透</span></div>
+      <h3>三星据报洽购美国数据中心冷却商Modine</h3>
+      <p class="summary">彭博援引知情人士称，三星正洽购美国数据中心冷却商Modine，交易或数周内成型，但尚未敲定，也可能出现其他买家。Modine当时市值约56亿美元。三星今年已收购FläktGroup，并计划在韩国建冷却厂。</p>
+      <p class="src"><a href="https://www.channelnewsasia.com/business/samsung-in-talks-buy-data-center-cooling-firm-modine-bloomberg-news-reports-6547876">彭博 / 路透 原文</a></p>
+      <p class="why"><em>为何重要</em> AI数据中心瓶颈正从芯片转向电力与散热，冷却资产成为半导体巨头的新战场。</p>
+    </article>
+    <article class="card">
+      <div class="card-rule"></div>
+      <div class="card-meta"><span class="num">10</span><span class="kicker">科学突破 · Yale News / Nature Microbiology</span></div>
+      <h3>耶鲁揭示伤寒致命肠穿孔实为血管病变</h3>
+      <p class="summary">耶鲁大学Galán实验室13日报告：伤寒杆菌毒素经血液损伤小肠血管，使肠壁在细菌随后抵达时发生穿孔。该并发症是伤寒主要死因，即便使用抗生素仍可致命。研究建立了可再现人类肠穿孔的小鼠模型，为抗毒素与护血管疗法提供试验平台。</p>
+      <p class="src"><a href="https://news.yale.edu/2026/11/13/yale-scientists-identify-cause-typhoid-fevers-deadliest-complication">Yale News / Nature Microbiology 原文</a></p>
+      <p class="why"><em>为何重要</em> 把伤寒死亡从“肠道感染”改写为“血管病变”，使非抗生素干预首次具备明确靶点。</p>
+    </article></div>
+  </section>
+
+  <section>
+    <h2 class="serif" style="font-size:28px;margin-bottom:14px;">产业动态 · 端侧下沉</h2>
+    <div class="feature">
+      <article class="feature-main">
+        <div class="card-meta"><span class="num">11</span><span class="kicker">国产芯片 · 快科技</span></div>
+        <h3 class="serif">龙擎空天发布端侧智能体处理器LQ7000</h3>
+        <p class="summary">龙擎空天13日发布LQAPU白皮书并推出端侧芯片LQ7000：国产RISC-V加自研GPNPU，峰值算力20至400 TOPS，预置Qwen、DeepSeek、LLaMA。可用于家庭、政务及在轨遥感，并与国芯科技、六联智能达成合作意向。</p>
+        <p class="why"><em>为何重要</em> 端侧智能体芯片若能量产，将把大模型从云端下沉到终端与卫星，改变算力分配。</p>
+        <p class="src"><a href="https://news.mydrivers.com/1/1165/1165672.htm">快科技原文</a></p>
+      </article>
+      <aside class="feature-side">
+        <p class="kicker">编辑手记</p>
+        <h3 class="serif">核验说明</h3>
+        <p class="summary">LQ7000为公司13日首发，采购意向尚未披露金额与交付节点，故不作产能判断。</p>
+        <p class="summary" style="margin-top:14px;">谷歌TPU新品、AMD MI400扩展、DeepMind验证Signal、台积电入股模型公司等，因首发早于13日，本期不收录。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="close">
+    <h2 class="serif">收束</h2>
+    <p class="label">昨日十一条 · 时政六 · 科技五</p>
+    <ol><li>01　习近平对国企党建作出重要指示</li><li>02　习近平将主持深圳APEC领导人会议</li><li>03　李强抵达曼谷开始对泰国正式访问</li><li>04　央行公布10月数据：社融少增、债券多增</li><li>05　泽连斯基称俄乌将进行开战以来最大换俘</li><li>06　伊朗称霍尔木兹以东液化气船触雷爆炸</li><li>07　黄仁勋辞职，英伟达进入无创始人时代</li><li>08　微软365在逾24小时全球故障后基本恢复</li><li>09　三星据报洽购美国数据中心冷却商Modine</li><li>10　耶鲁揭示伤寒致命肠穿孔实为血管病变</li><li>11　龙擎空天发布端侧智能体处理器LQ7000</li></ol>
+    <div class="tiles" style="margin-top:32px;">
+      <div class="tile"><h3 class="serif">明日 · 深圳</h3><p>APEC领导人非正式会议18–19日开幕</p></div>
+      <div class="tile"><h3 class="serif">明日 · 硅谷</h3><p>英伟达17日美东公布季报，克雷斯首秀</p></div>
+      <div class="tile"><h3 class="serif">明日 · 水道</h3><p>霍尔木兹触雷尚待独立核实</p></div>
+    </div>
+    <p class="gap">信息缺口：霍尔木兹爆炸仅伊朗单方宣布；黄仁勋辞职发生在美东12日，按上海时区于13日凌晨收盘并在中文媒体首发详报。</p>
+    <p class="gap">制作说明：日期 2026-11-13（Asia/Shanghai 昨日）；时政 6 条，科技 5 条，合计 11 条。</p>
+  </section>
+
+  <footer>每日时政科技简报 · 第317期 · 单文件网页，无外部字体依赖 · 可直接打印</footer>
+</main>
+</body>
+</html>
