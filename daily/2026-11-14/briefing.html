@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第318期 · 2026-11-14</title>
+<style>
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F4EF;
+  --crimson: #C41E3A;
+  --slate: #4A5568;
+  --ivory: #FBF8F3;
+  --muted: #8A837A;
+  --card: #FFFCF7;
+  --dark: #1A1A1A;
+  --dark-card: #242424;
+  --serif: "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", "STSong", "SimSun", Cambria, Georgia, serif;
+  --sans: "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Calibri, Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+body { font-size: 16px; line-height: 1.55; }
+a { color: var(--crimson); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.folio {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem; padding: 0 0 .55rem; border-bottom: 1.5px solid var(--crimson);
+  font-size: 12px; letter-spacing: .08em; color: var(--slate); text-transform: none;
+}
+.folio b { color: var(--ink); font-weight: 600; letter-spacing: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 28px 64px; }
+.cover {
+  background: var(--dark); color: var(--paper); padding: 48px 40px 40px;
+  margin: -28px -28px 36px; border-bottom: 1px solid #2c2c2c;
+}
+.cover .folio { color: var(--muted); border-color: var(--crimson); }
+.cover .folio b { color: var(--paper); }
+.issue { color: var(--crimson); letter-spacing: .28em; font-size: 13px; margin: 22px 0 8px; }
+.cover h1 {
+  font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15;
+  margin: 0 0 16px;
+}
+.cover .dek { font-size: 16px; color: var(--paper); max-width: 36em; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.stat { background: var(--dark-card); padding: 18px 18px 16px; border-radius: 10px; }
+.stat .n { font-family: var(--serif); font-size: 36px; color: var(--crimson); line-height: 1; }
+.stat h2 { font-family: var(--serif); font-size: 18px; margin: 8px 0 6px; color: var(--paper); }
+.stat p { color: var(--muted); font-size: 14px; }
+.section-head {
+  display: grid; grid-template-columns: 1.05fr 1.4fr; gap: 28px; margin: 8px 0 28px; align-items: start;
+}
+.dark-panel {
+  background: var(--ink); color: var(--paper); padding: 28px 26px; border-radius: 12px; min-height: 280px;
+}
+.dark-panel .sec { color: var(--crimson); letter-spacing: .2em; font-size: 12px; }
+.dark-panel h2 { font-family: var(--serif); font-size: 56px; line-height: 1; margin: 8px 0 16px; }
+.quote { font-family: var(--serif); font-size: 26px; line-height: 1.35; margin-bottom: 10px; }
+.attr { color: var(--slate); font-size: 13px; margin-bottom: 18px; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tile { background: var(--ivory); padding: 16px; border-radius: 10px; border: 1px solid #E6E0D6; }
+.tile .n { font-family: var(--serif); font-size: 28px; color: var(--crimson); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 28px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.card {
+  background: var(--card); border: 1px solid #E6E0D6; border-radius: 12px;
+  padding: 20px 20px 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.card-top { display: flex; align-items: baseline; gap: 12px; }
+.no { font-family: var(--serif); color: var(--crimson); font-size: 22px; font-weight: 700; }
+.kicker { color: var(--slate); font-size: 12px; letter-spacing: .06em; }
+.card h3 { font-family: var(--serif); font-size: 22px; line-height: 1.3; }
+.sum { font-size: 15px; color: var(--ink); }
+.why { font-size: 14px; color: var(--slate); }
+.why em, .whybox em { font-style: normal; color: var(--crimson); margin-right: 6px; font-weight: 600; }
+.src { font-size: 12px; color: var(--muted); margin-top: auto; }
+.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 8px 0 36px; }
+.dual .card.dark { background: var(--ink); color: var(--paper); border-color: transparent; }
+.dual .card.dark .sum { color: var(--paper); }
+.dual .card.dark .why { color: var(--muted); }
+.glyph { font-family: var(--serif); font-size: 32px; color: var(--crimson); }
+.tech-open { display: grid; grid-template-columns: 1.4fr .9fr; gap: 18px; margin-bottom: 28px; }
+.redbox { background: var(--crimson); color: var(--paper); padding: 26px; border-radius: 12px; }
+.redbox h3 { font-family: var(--serif); font-size: 22px; margin: 8px 0 12px; }
+.numstack { display: flex; flex-direction: column; gap: 12px; }
+.numstack .tile .n { font-size: 26px; }
+h2.page { font-family: var(--serif); font-size: 36px; margin: 8px 0 16px; }
+.whybox { background: var(--ivory); border: 1px solid #E6E0D6; border-radius: 8px; padding: 10px 12px; font-size: 14px; color: var(--slate); }
+.sub { color: var(--slate); font-size: 14px; margin: -8px 0 16px; }
+.close {
+  background: var(--dark); color: var(--paper); margin: 36px -28px -64px; padding: 40px 40px 56px;
+}
+.close h2 { font-family: var(--serif); font-size: 32px; margin: 12px 0 20px; }
+.close .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.close li { list-style: none; padding: 6px 0; font-size: 15px; border-bottom: 1px solid #2c2c2c; }
+.close li b { color: var(--crimson); font-family: var(--serif); margin-right: 8px; }
+.note {
+  background: var(--dark-card); border-radius: 12px; padding: 18px 20px; margin-top: 24px; color: var(--paper); font-size: 14px;
+}
+.note strong { color: var(--crimson); display: block; margin-bottom: 6px; }
+.foot { color: var(--muted); font-size: 12px; margin-top: 18px; }
+@media (max-width: 860px) {
+  .cover h1 { font-size: 36px; }
+  .stats, .grid2, .grid3, .dual, .section-head, .tech-open, .close .cols, .tiles { grid-template-columns: 1fr; }
+  .dark-panel h2 { font-size: 44px; }
+  .cover, .close, .wrap { padding-left: 18px; padding-right: 18px; }
+  .cover, .close { margin-left: -18px; margin-right: -18px; }
+}
+@media print {
+  body { background: white; }
+  .cover, .close { margin: 0 0 18px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card, .dark-panel, .redbox, .tile { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="cover">
+    <div class="folio"><span>每日报馆  ·  THE MORNING DISPATCH  ·  时政科技</span><b>ASIA / SHANGHAI  ·  SATURDAY</b></div>
+    <p class="issue">第  三  一  八  期</p>
+    <h1>每日时政科技简报</h1>
+    <p class="dek">二零二六年十一月十四日  ·  星期六<br>只收上海日历日发生或该日首发的稿件。时政六条，科技五条，合计十一条。</p>
+    <div class="stats">
+      <div class="stat"><div class="n">06</div><h2>时政</h2><p>医保、APEC、和谈、空管、自贸</p></div>
+      <div class="stat"><div class="n">05</div><h2>科技</h2><p>电动飞机、星舰、助手、科研智能体</p></div>
+      <div class="stat"><div class="n">11</div><h2>合计</h2><p>精选稿件，交叉核验，拒绝转载充数</p></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="folio"><span>每日报馆  ·  THE MORNING DISPATCH</span><b>第318期  ·  2026年11月14日 星期六</b></div>
+    <div class="section-head">
+      <div class="dark-panel">
+        <p class="sec">SECTION  01</p>
+        <h2>时政</h2>
+        <p>周六不是空窗。医保目录落地、APEC工商界开场、和谈与空管同时震动公共生活。</p>
+        <p style="margin-top:18px;color:var(--crimson);font-size:13px;">今日主线</p>
+        <p>一、药价与可及性<br>二、亚太秩序预热<br>三、停飞与开市对照</p>
+      </div>
+      <div>
+        <p class="quote">“脱钩断链、小院高墙，无法解决一国的经济发展困境。”</p>
+        <p class="attr">—— 何立峰，APEC工商咨询理事会开幕式，深圳</p>
+        <div class="tiles">
+          <div class="tile"><div class="n">51</div><p>一类新药入目录</p></div>
+          <div class="tile"><div class="n">11.19</div><p>深圳三边会晤</p></div>
+          <div class="tile"><div class="n">4.5h</div><p>全美停飞时长</p></div>
+        </div>
+      </div>
+    </div>
+    <h2 class="page">时政稿件</h2>
+    <p class="sub">国内药政与东道主开场，国际和谈与大国日程。</p>
+    <div class="grid2">
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">01</span>
+        <span class="kicker">民生 · 医保</span>
+      </div>
+      <h3>51个一类新药进入新版医保目录</h3>
+      <p class="sum">国家医保局、人社部14日在苏州发布2026年版国家医保药品目录，新增107种药品，其中一类创新药51个，创历次调整新高；同步更新商保创新药目录，新增含全球首个实体瘤CAR-T等12种。目录药品达3331个，2027年1月1日起执行。</p>
+      <p class="whybox"><em>为何重要</em> 创新药进医保直接决定明年临床可及性与患者负担，也是中国药政与产业激励的年度风向标。</p>
+      <p class="src">新华社 / 国家医保局
+         · <a href="https://www.news.cn/20261114/c30f9b253c4f457692d14990d8efd333/c.html">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">02</span>
+        <span class="kicker">外交 · APEC</span>
+      </div>
+      <h3>何立峰：脱钩断链解不了一国困境</h3>
+      <p class="sum">国务院副总理何立峰14日在深圳出席APEC工商咨询理事会第四次会议开幕式。他表示即将举行的领导人非正式会议将为亚太合作定向，并强调脱钩断链、小院高墙无法解决一国发展困境，唯有互联互通才能实现区域繁荣。</p>
+      <p class="whybox"><em>为何重要</em> APEC深圳周进入工商预热，东道主对开放与反脱钩的表态，将框定18–19日领导人会的基调。</p>
+      <p class="src">新华社
+         · <a href="https://www.news.cn/20261114/2fd06d5c76774c1caee7ccdedf12bd8a/c.html">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">03</span>
+        <span class="kicker">国际 · 俄乌</span>
+      </div>
+      <h3>美方试探以顿巴斯换北约资格</h3>
+      <p class="sum">乌克兰总统泽连斯基办公室14日公布其谈话：美方谈判代表首次提出“若乌加入北约，是否撤出顿巴斯”。泽连斯基重申不割让领土，但称若获得明确安全保证、军队不受限及重建资金，可将综合方案付诸公投。美方称多种设想仍在讨论。</p>
+      <p class="whybox"><em>为何重要</em> 和谈核心从停火条件转向领土与北约挂钩，欧洲安全架构可能被重新定价。</p>
+      <p class="src">BBC / 美联社
+         · <a href="https://www.bbc.com/news/articles/cwvg2l312ylqo">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">04</span>
+        <span class="kicker">国际 · 大国</span>
+      </div>
+      <h3>克宫确认特习普深圳三边会晤</h3>
+      <p class="sum">克里姆林宫发言人佩斯科夫14日对塔斯社证实，普京、习近平与特朗普将于19日在深圳APEC间隙举行三边会晤。白宫此前称特朗普拟谈削减核武器与伊朗，预料不会在三边场合讨论乌克兰，也不期待当场达成协议。</p>
+      <p class="whybox"><em>为何重要</em> 三大核国家元首同场，是冷战后少见的秩序对话，也把深圳APEC推到全球聚光灯下。</p>
+      <p class="src">阿纳多卢通讯社 / CNA
+         · <a href="https://www.aa.com.tr/en/eurasia/kremlin-says-putin-xi-trump-to-hold-trilateral-meeting-in-shenzhen-on-nov-19/4125290">原文</a>
+      </p>
+    </article>
+    </div>
+    <h2 class="page">双栏对照  ·  阻断与连通</h2>
+    <div class="dual">
+      
+    <article class="card dark">
+      <div class="card-top">
+        <span class="no">05</span>
+        <span class="kicker">公共事务 · 航空</span>
+      </div>
+      <div class="glyph">停</div><h3>铜缆换光纤拖垮全美空管</h3>
+      <p class="sum">美东13日下午（上海14日凌晨）FAA因通信与雷达异常发布全国停飞令，持续约四小时半，为“9·11”以来最长。交通部长达菲14日称铜缆换光纤时路由器向航管网发起连接洪泛。局长预计当日再取消四至五千架次，15日晚恢复。官方排除网络攻击。</p>
+      <p class="whybox"><em>为何重要</em> 一次例行升级即可瘫痪全美航空，暴露空管电信系统老化，基础设施治理成为公共安全议题。</p>
+      <p class="src">美国交通部 / NBC / 新华社
+         · <a href="https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace">原文</a>
+      </p>
+    </article>
+    
+      
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">06</span>
+        <span class="kicker">经贸 · 印太</span>
+      </div>
+      <div class="glyph">通</div><h3>加拿大同日敲定东盟与菲律宾自贸</h3>
+      <p class="sum">总理卡尼14日在马尼拉宣布，加拿大已实质完成与东盟的自贸协定谈判，并与菲律宾结束双边自贸谈判，目标2027年签署。渥太华预计东盟协定可为加国GDP增加近20亿加元、支撑约1.4万个就业；对菲出口有望在2035年前增至三倍。</p>
+      <p class="whybox"><em>为何重要</em> 北美经济体加快把贸易重心转向东南亚，是对单一市场依赖的对冲，也改写印太经贸拼图。</p>
+      <p class="src">加拿大总理府
+         · <a href="https://www.pm.gc.ca/en/news/news-releases/2026/11/14/canada-concludes-negotiations-two-new-free-trade-agreements">原文</a>
+      </p>
+    </article>
+    
+    </div>
+  </section>
+
+  <section>
+    <div class="folio"><span>每日报馆  ·  THE MORNING DISPATCH</span><b>第318期  ·  科技</b></div>
+    <div class="tech-open">
+      <div>
+        <p style="color:var(--crimson);letter-spacing:.2em;font-size:12px;">SECTION  02</p>
+        <h2 class="page" style="font-size:56px;margin:6px 0 12px;">科技</h2>
+        <p class="sub">周末首发本就偏少。本期只收上海14日窗口内可核验的突破：载人电动飞行、星舰入轨，以及助手开始触达真实金融与科研流程。</p>
+        <div class="redbox">
+          <p style="font-size:12px;letter-spacing:.12em;">试飞现场</p>
+          <h3>CE-25A空中飞行16分38秒、60.4公里。从无人验证到两人一工程师同乘，电动商用航空跨过载人门槛。</h3>
+          <p>山东滨州  ·  中国商飞</p>
+        </div>
+      </div>
+      <div class="numstack">
+        <div class="tile"><div class="n">16′38″</div><p>CE-25A空中飞行</p></div>
+        <div class="tile"><div class="n">26</div><p>星链V3当次部署</p></div>
+        <div class="tile"><div class="n">158.63</div><p>颠覆性技术指数</p></div>
+      </div>
+    </div>
+    <h2 class="page">科技稿件  ·  航空与航天</h2>
+    <div class="grid2">
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">07</span>
+        <span class="kicker">航空 · 电动飞行</span>
+      </div>
+      <h3>十吨级电动飞机完成载人首飞</h3>
+      <p class="sum">中国商飞研制的10吨级电动商用飞机CE-25A，14日在山东滨州完成首次有人驾驶智能飞行，搭载两名飞行员和一名试飞工程师，空中飞行16分38秒、航程60.4公里。该机可载19人、航程400公里，民航局已受理型号合格证申请。</p>
+      <p class="whybox"><em>为何重要</em> 电动支线航空从无人验证跨入载人试飞，是低碳航空适航竞赛的关键一步。</p>
+      <p class="src">新华社 / 中国民航网
+         · <a href="https://www.news.cn/politics/20261114/cb8c94c4e6cc4a809ec8d81b7167b36b/c.html">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">08</span>
+        <span class="kicker">航天 · 复用</span>
+      </div>
+      <h3>星舰十五次试飞：入轨，助推器失回收</h3>
+      <p class="sum">SpaceX“星舰”第15次试飞于13日22:47 UTC（上海14日6:47）从得州升空，飞船入轨并部署26颗星链V3；助推器因燃料告警改在墨西哥湾溅落爆炸。截至上海14日24时飞船仍在轨，塔架捕获窗口已落入15日凌晨，本期不报结果。</p>
+      <p class="whybox"><em>为何重要</em> 二次入轨与批量星链部署验证了运载平台能力，但助推器回收失败显示完全复用仍未闭合。</p>
+      <p class="src">Spaceflight Now / 新华社
+         · <a href="https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/">原文</a>
+      </p>
+    </article>
+    </div>
+    <h2 class="page">科技稿件  ·  智能体、金融与产业化</h2>
+    <div class="grid3">
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">09</span>
+        <span class="kicker">人工智能 · 金融</span>
+      </div>
+      <h3>Gemini只读接入钱包与银行流水</h3>
+      <p class="sum">谷歌宣布美国Gemini用户可将Google钱包设为连接应用，并经Plaid可选绑定银行卡与信贷账户，用于支出复盘、订阅审计和预算建议。Gemini仅只读、不能转账或投资，用户可随时关闭。功能在网页与移动端同步铺开。</p>
+      <p class="whybox"><em>为何重要</em> 主流助手开始触达真实金融数据，代理式商业的下一道门槛是隐私、授权与误导风险。</p>
+      <p class="src">Google 官方博客
+         · <a href="https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">10</span>
+        <span class="kicker">人工智能 · 科研</span>
+      </div>
+      <h3>谷歌外放科研多智能体工作流</h3>
+      <p class="sum">谷歌研究部门宣布，外部科研与开发者可在Antigravity中使用Gemini 4驱动的/teamwork与/boost多智能体工作流，并开放一万名学者半年最高用量申请。系统把任务拆给专职智能体并行探索，再用形式化验证或测试做独立核验。</p>
+      <p class="whybox"><em>为何重要</em> 前沿实验室把内部多智能体科研流程外放，科研组织方式可能从单模型对话转向智能体团队。</p>
+      <p class="src">Google Research
+         · <a href="https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/">原文</a>
+      </p>
+    </article>
+    
+
+    <article class="card light">
+      <div class="card-top">
+        <span class="no">11</span>
+        <span class="kicker">产业 · 指数</span>
+      </div>
+      <h3>颠覆性技术产业化六年增逾五成</h3>
+      <p class="sum">科技部相关司局指导、科技日报与中国工程科技创新战略研究院编制的《颠覆性技术产业化指数报告（2026）》14日在天津发布。2020–2025年指数由100升至158.63，覆盖高温超导、可控核聚变、氢能、具身智能等十个领域。</p>
+      <p class="whybox"><em>为何重要</em> 把“卡脖子”叙事量化为产业化进度，为资本与地方产业政策提供可对照的晴雨表。</p>
+      <p class="src">新华社 / 科技日报
+         · <a href="http://www.news.cn/tech/20261114/e0ca7f8c7291458db8c69536c8bcfef5/c.html">原文</a>
+      </p>
+    </article>
+    </div>
+  </section>
+
+  <footer class="close">
+    <div class="folio" style="border-color:var(--crimson);"><span>每日报馆  ·  THE MORNING DISPATCH</span><b>第318期  ·  收束</b></div>
+    <h2>收束  ·  十一稿一览</h2>
+    <div class="cols">
+      <ul><li><b>01</b> 51个一类新药进入新版医保目录</li><li><b>02</b> 何立峰：脱钩断链解不了一国困境</li><li><b>03</b> 美方试探以顿巴斯换北约资格</li><li><b>04</b> 克宫确认特习普深圳三边会晤</li><li><b>05</b> 铜缆换光纤拖垮全美空管</li><li><b>06</b> 加拿大同日敲定东盟与菲律宾自贸</li></ul>
+      <ul><li><b>07</b> 十吨级电动飞机完成载人首飞</li><li><b>08</b> 星舰十五次试飞：入轨，助推器失回收</li><li><b>09</b> Gemini只读接入钱包与银行流水</li><li><b>10</b> 谷歌外放科研多智能体工作流</li><li><b>11</b> 颠覆性技术产业化六年增逾五成</li></ul>
+    </div>
+    <div class="note">
+      <strong>编辑手记  ·  缺口与边界</strong>
+      土卡共同防务协定、中美政党对话、新型储能实施方案、ChatGPT Wallet、llama.cpp 1.0 等首发落在13日，未收入。星舰塔架捕获发生于上海15日05:20，按截稿纪律不报结果。周末科技首发偏少，不以前一日稿件充数。
+    </div>
+    <p class="foot">明日续刊  ·  关注APEC深圳周与空管复飞  ·  时政6条 / 科技5条 / 合计11条</p>
+  </footer>
+</main>
+</body>
+</html>
