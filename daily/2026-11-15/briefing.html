@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第319期 · 2026年11月15日</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --crimson: #C41E3A;
+    --slate: #4A5568;
+    --cream: #EFE8DC;
+    --card: #FFFCF7;
+    --rule: #C9C2B6;
+    --muted: #B8B0A4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body {
+    font-family: Calibri, "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .mast, .serif, .num {
+    font-family: Cambria, "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  a { color: var(--crimson); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 64px; }
+  .folio {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 16px; padding-bottom: 10px; border-bottom: 1.5px solid var(--ink);
+    position: relative; font-size: 13px; font-weight: 700;
+    font-family: Cambria, "Noto Serif CJK SC", serif;
+  }
+  .folio::after {
+    content: ""; position: absolute; left: 0; bottom: -1.5px;
+    width: 44px; height: 4px; background: var(--crimson);
+  }
+  .folio .pg { color: var(--slate); font-family: Calibri, Arial, sans-serif; font-weight: 500; }
+  .cover {
+    background: var(--ink); color: var(--paper); margin: 28px -32px 40px;
+    padding: 40px 48px 36px; position: relative;
+  }
+  .kicker { color: var(--crimson); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .cover h1 { font-size: 48px; line-height: 1.15; margin: 10px 0 18px; }
+  .cover .meta { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    padding-top: 14px; border-top: 1px solid #3A3A3A; font-size: 18px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; }
+  .panel { background: #242424; padding: 18px 20px 20px; }
+  .panel h3 { font-size: 26px; margin: 8px 0 10px; color: var(--paper); }
+  .panel p { color: #D8D2C8; font-size: 15px; }
+  .cover-foot { margin-top: 18px; color: var(--muted); font-size: 13px; }
+  section { margin: 36px 0; }
+  .section-head { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 16px; }
+  .giant { font-size: 64px; line-height: 0.9; color: var(--crimson); }
+        .section-head h2 { font-size: 36px; line-height: 1.2; margin-top: 18px; }
+  .lead { color: var(--slate); font-size: 16px; margin: 8px 0 22px; max-width: 46em; }
+  .index { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .index article {
+    background: var(--card); border: 0.9px solid var(--rule); padding: 14px 16px 16px;
+    display: grid; grid-template-columns: 52px 1fr; gap: 10px; align-items: start;
+  }
+  .index .n { font-size: 28px; color: var(--crimson); line-height: 1; }
+  .tag { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card {
+    background: var(--card); border: 0.9px solid var(--rule);
+    padding: 18px 20px 16px; position: relative; min-height: 320px;
+    display: flex; flex-direction: column;
+  }
+  .card::before { content: none; }
+  .card h3 { font-size: 20px; line-height: 1.3; margin: 6px 0 8px; }
+  .src { color: var(--slate); font-size: 13px; margin-bottom: 10px; }
+  .sum { font-size: 15px; margin-bottom: 14px; flex: 1; }
+  .why { background: var(--cream); padding: 10px 12px; font-size: 14px; }
+  .why strong { color: var(--crimson); display: block; font-size: 11px; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { background: var(--card); border: 0.9px solid var(--rule); padding: 0 0 16px; }
+  .col .bar { display: none; }
+  .col .inner { padding: 16px 20px 0; }
+  .col h3 { font-size: 22px; margin: 8px 0 10px; }
+  .quote { background: var(--cream); margin: 16px 20px 0; padding: 12px 14px; font-size: 14px; }
+  .quote em { font-family: Cambria, "Noto Serif CJK SC", serif; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+  .stat { background: var(--ink); color: var(--paper); padding: 16px 12px 14px; text-align: center; }
+  .stat .n { font-size: 30px; display: block; margin-bottom: 6px; }
+  .stat span { color: #D8D2C8; font-size: 13px; display: block; }
+  .feature { background: var(--card); border: 0.9px solid var(--rule); padding: 18px 22px 16px; }
+  .close {
+    background: var(--ink); color: var(--paper); margin: 40px -32px 0;
+    padding: 36px 48px 48px;
+  }
+  .close h2 { font-size: 32px; margin: 8px 0 12px; }
+  .close .lead { color: #D8D2C8; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 22px; }
+  .metric { background: #242424; padding: 14px 16px 16px; }
+  .metric .n { font-size: 32px; color: var(--crimson); display: block; }
+  .metric strong { display: block; margin: 6px 0 6px; }
+  .metric p { color: #D8D2C8; font-size: 14px; }
+  .note { border-top: 1px solid #3A3A3A; padding-top: 14px; color: #D8D2C8; font-size: 14px; }
+  .links { font-size: 13px; color: var(--slate); margin-top: 8px; }
+  @media (max-width: 820px) {
+    .wrap { padding: 18px 16px 40px; }
+    .cover, .close { margin-left: -16px; margin-right: -16px; padding: 28px 20px; }
+    .cover h1 { font-size: 34px; }
+    .grid2, .cards, .index, .dual, .stats, .metrics { grid-template-columns: 1fr; }
+    .section-head { flex-direction: column; gap: 4px; }
+    .giant { font-size: 48px; }
+  }
+  @media print {
+    body { background: white; }
+    .cover, .close { margin: 0 0 18px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    .card, .col, .index article { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="folio">
+    <div>每日时政科技简报  ·  第319期  ·  2026年11月15日</div>
+    <div class="pg">报馆晨报</div>
+  </header>
+
+  <div class="cover">
+    <div class="kicker">The Daily Ledger · 报馆晨报</div>
+    <h1>每日时政科技简报</h1>
+    <div class="meta serif">
+      <span>第319期　2026年11月15日 星期日</span>
+      <span style="color:#B8B0A4;font-family:Calibri,Arial,sans-serif;font-size:14px;">截稿窗口 Asia/Shanghai 昨日日历日</span>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <div class="kicker">时政 Politics</div>
+        <h3>亚太议程与两条海峡</h3>
+        <p>地方党委工作条例公布；李强抵马尼拉出席中国—东盟峰会；东盟延长缅甸领导人禁令并开出按进展恢复路径；APEC工商峰会将发《深圳倡议》。霍尔木兹触雷与曼德海峡撤防同日发生。</p>
+      </div>
+      <div class="panel">
+        <div class="kicker">科技 Technology</div>
+        <h3>轨道回收与芯片权力</h3>
+        <p>星舰首次被发射塔捕获。美航管故障锁定阿肯色路由器。贝森特要求英伟达外聘首席执行官。苹果智能眼镜路线图首度细化。中国空间站第四次辐射生物样品回舱。</p>
+      </div>
+    </div>
+    <p class="cover-foot">精选 11 条　·　时政 6　·　科技 5　·　只收录该日发生或该日首发</p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <div class="giant serif">01</div>
+      <div>
+        <div class="kicker">Section · 时政开篇</div>
+        <h2>地方纪律、东盟议程、海湾咽喉</h2>
+      </div>
+    </div>
+    <p class="lead">周日并非空窗。北京公布修订后的地方党委工作条例；马尼拉进入东盟峰会首日；深圳为APEC工商峰会亮出成果文件。海湾两侧，霍尔木兹与曼德海峡同时告急。</p>
+    <div class="index">
+      <article><div class="n serif">01</div><div><div class="tag">党内法规</div><h3>修订地方党委工作条例，禁形象工程</h3></div></article>
+      <article><div class="n serif">02</div><div><div class="tag">中国外交</div><h3>李强抵马尼拉，南海行为准则仍未谈成</h3></div></article>
+      <article><div class="n serif">03</div><div><div class="tag">地区秩序</div><h3>东盟延长缅甸领导人禁令，开出按进展恢复</h3></div></article>
+      <article><div class="n serif">04</div><div><div class="tag">亚太议程</div><h3>APEC工商峰会将发首份深圳倡议</h3></div></article>
+      <article><div class="n serif">05</div><div><div class="tag">红海航运</div><h3>也门政府军撤离曼德海峡附近，胡塞逼近亚丁</h3></div></article>
+      <article><div class="n serif">06</div><div><div class="tag">海湾安全</div><h3>霍尔木兹油轮触雷，伊朗再袭巴林雷达</h3></div></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">时政稿件 · 01–02</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">党内法规与马尼拉议程</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">01</div>
+        <div class="tag">北京 · 党建与治理</div>
+        <h3>中共中央公布修订后的地方党委工作条例</h3>
+        <p class="src">新华社 · 2026-11-15 16:56 · <a href="https://www.xinhuanet.com/20261115/95bce2b65d61415ebf798aa6103a28a5/c.html">原文</a></p>
+        <p class="sum">新华社15日受权发布修订后的《中国共产党地方委员会工作条例》。条例11月7日发布、即日起施行，禁止搞形象工程和政绩工程、违规新增隐性债务、新官不理旧账；常委会重大决策失误实行终身责任追究。</p>
+        <div class="why"><strong>为何重要</strong>把地方决策纪律写入党内法规，直接约束“十五五”开局年的政绩观与债务风险。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">02</div>
+        <div class="tag">马尼拉 · 中国—东盟</div>
+        <h3>李强抵马尼拉出席中国—东盟峰会，南海准则未谈成</h3>
+        <p class="src">新华社 / 路透社 · 2026-11-15 · <a href="https://english.www.gov.cn/news/202611/15/content_WS6af9b350c6d00ca5f9a0e48e.html">原文</a></p>
+        <p class="sum">李强15日晚抵马尼拉，将出席第29次中国—东盟领导人会议。同日菲律宾外长拉扎罗称，东盟与中国就《南海行为准则》约八成内容已有初步共识，但包括是否具法律约束力等关键问题仍无最终结论。</p>
+        <div class="why"><strong>为何重要</strong>APEC前夕的马尼拉日程，同时暴露南海规则谈判仍卡在约束力这一缺口。</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">时政稿件 · 03–04</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">地区秩序与工商建言</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">03</div>
+        <div class="tag">东盟峰会 · 缅甸</div>
+        <h3>东盟延长缅甸领导人与会禁令，并开出按进展恢复路径</h3>
+        <p class="src">美联社 / 东盟秘书处 · 2026-11-15 · <a href="https://apnews.com/article/myanmar-violence-asean-philippines-660b4a8df06082f79b673912b2f3e655">原文</a></p>
+        <p class="sum">东盟领导人15日在马尼拉审议“五点共识”后决定，继续禁止缅甸领导人及外长出席峰会和外长会，直至落实取得有意义进展。文件同时写明，若持续取得具体进展，可考虑逐步恢复完整政治代表权。</p>
+        <div class="why"><strong>为何重要</strong>禁令未松，但首次把按进展逐步恢复写进领导人决定。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">04</div>
+        <div class="tag">深圳 · APEC工商</div>
+        <h3>APEC工商峰会将发创办30年来首份《深圳倡议》</h3>
+        <p class="src">新华社 · 2026-11-15 · <a href="https://www.news.cn/20261115/7257454def0d417db9db457ea3448377/c.html">原文</a></p>
+        <p class="sum">中国贸促会15日在深圳通报，工商领导人峰会将于17日至18日在前海举行，习近平将出席开幕式并发表主旨演讲。逾2000位政商领袖与会，将发布创办30年来首次以倡议形式呈现的成果文件。</p>
+        <div class="why"><strong>为何重要</strong>工商界共识将直接向领导人非正式会议建言，是本周APEC的政策接口。</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">双栏对照 · 05–06 · 两条海峡</div>
+    <h2 style="font-size:26px;margin:6px 0 16px;">同一日，全球航运的两个咽喉同时告急</h2>
+    <div class="dual">
+      <div class="col">
+        <div class="bar red"></div>
+        <div class="inner">
+          <div class="tag">霍尔木兹海峡 · 波斯湾出口</div>
+          <h3>两艘油轮触雷起火，伊朗再袭巴林雷达</h3>
+          <p class="src">阿纳多卢通讯社 / 路透社 / BBC · 15日 · <a href="https://www.aa.com.tr/en/middle-east/iran-says-2-oil-tankers-hit-mines-near-strait-of-hormuz-1-sinks/4125887">原文</a></p>
+          <p class="sum">伊朗革命卫队称两艘关闭识别系统的油轮在霍尔木兹南部触雷起火，其中一艘超级油轮据称载逾200万桶原油后沉没，路透社未能独立核实。同日清晨，革命卫队称以六架无人机打击巴林里法美军防空雷达；巴林军方称来袭在抵达目标前被拦截，海湾合作委员会谴责此举公然挑战地区和平努力。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">引语</strong><em>“霍尔木兹已经关闭。美国的任何侵略，都将遭到更严厉、更有力的回应。”——伊朗革命卫队声明</em></div>
+      </div>
+      <div class="col">
+        <div class="bar ink"></div>
+        <div class="inner">
+          <div class="tag">曼德海峡 · 红海入口</div>
+          <h3>政府军撤离海峡附近，胡塞武装逼近亚丁</h3>
+          <p class="src">路透社 / 半岛电视台 / 法新社 · 15日 · <a href="https://www.aljazeera.com/news/2026/11/15/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden">原文</a></p>
+          <p class="sum">也门南方武装部队15日宣布从杜巴卜机场及曼德海峡附近撤防，转守临时首都亚丁。政府消息称胡塞武装已推进至距亚丁约60至70公里处，红海咽喉实际控制权进一步向胡塞倾斜。路透社指出，这使伊朗对齐的武装同时对霍尔木兹与曼德形成压力。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">为何对照</strong>两条航道分别卡住海湾原油与亚欧集装箱。同日告急，意味着绕航、保费与化肥粮价会一起被重新定价。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div class="giant serif">02</div>
+      <div>
+        <div class="kicker">Section · 科技开篇</div>
+        <h2>回收、空管、芯片与下一代硬件</h2>
+      </div>
+    </div>
+    <p class="lead">周日科技首发偏少，但不缺硬新闻：轨道级飞船首次被塔架捕获；美空管给出路由器级故障画像；华盛顿直接点名英伟达继任人选；苹果把智能眼镜押在Siri上。</p>
+    <div class="index">
+      <article><div class="n serif">01</div><div><div class="tag">航天</div><h3>星舰首次被发射塔机械臂捕获</h3></div></article>
+      <article><div class="n serif">02</div><div><div class="tag">基础设施</div><h3>美航管故障锁定阿肯色路由器</h3></div></article>
+      <article><div class="n serif">03</div><div><div class="tag">芯片政治</div><h3>贝森特要求英伟达从外部选帅</h3></div></article>
+      <article><div class="n serif">04</div><div><div class="tag">消费电子</div><h3>苹果智能眼镜瞄准二〇二七年</h3></div></article>
+      <article><div class="n serif">05</div><div><div class="tag">空间科学</div><h3>空间站第四次辐射生物样品回舱</h3></div></article>
+      <article><div class="n serif" style="font-size:22px;padding-top:6px;">—</div><div><div class="tag">周末缺口</div><h3>大模型产品发布多属更早首发</h3></div></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">科技稿件 · 01 · 航天</div>
+    <h2 style="font-size:36px;margin:6px 0 14px;">星舰首次被发射塔机械臂捕获</h2>
+    <div class="stats">
+      <div class="stat"><span class="n serif">05:20</span><span>上海时间捕获时刻<br>对应 21:20 UTC 14日</span></div>
+      <div class="stat"><span class="n serif">22.5h</span><span>从得州升空到塔架回收</span></div>
+      <div class="stat"><span class="n serif">26</span><span>部署星链 V3 卫星</span></div>
+      <div class="stat"><span class="n serif">1st</span><span>轨道上面级首次塔架捕获</span></div>
+    </div>
+    <div class="feature">
+      <p class="src">SpaceX / Space.com / CNBC · 捕获发生于上海时间15日清晨，按截稿规则收入本期 · <a href="https://www.spacex.com/launches/starship-flight-15/">原文</a></p>
+      <p class="sum">第15次试飞的飞船级于上海时间15日5时20分返回得州星舰基地，被发射塔“机械臂”首次捕获。任务历时约22.5小时，部署26颗星链V3卫星。助推器此前因燃料与制导限制改在墨西哥湾溅落并解体。SpaceX称这是轨道级上面级首次被发射塔接住。</p>
+      <div class="why"><strong>为何重要</strong>可复用重型运载的关键不在升空，而在上面级能否完整回家。塔架捕获把着陆场从海面收回到发射工位，缩短周转并降低单次入轨成本。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">科技稿件 · 02–03</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">空管遗留网与芯片权力</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">02</div>
+        <div class="tag">华盛顿 · 航空基础设施</div>
+        <h3>美航管故障锁定阿肯色路由器，全美同类设备关闭广播</h3>
+        <p class="src">美国联邦航空局 / ABC · 2026-11-15 · <a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers">原文</a></p>
+        <p class="sum">运输部长杜菲15日称，引发周五全美停飞的路由器已送往L3Harris佛罗里达实验室，联邦调查局协助调查。该设备在阿肯色州将铜缆改光纤时向全网广播数据，约69台同类路由器广播功能已被关闭；周日仍有约1600架次航班取消。</p>
+        <div class="why"><strong>为何重要</strong>一次配置或硬件故障即可瘫痪国家级空管，暴露遗留通信网的系统性脆弱。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">03</div>
+        <div class="tag">华盛顿 · 芯片与出口管制</div>
+        <h3>贝森特要英伟达外聘首席执行官，十日交代对华合规</h3>
+        <p class="src">彭博社 / 路透社 / CNBC · 2026-11-15 · <a href="https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html">原文</a></p>
+        <p class="sum">美国财政部长贝森特15日在福克斯新闻称，黄仁勋去职后英伟达需要“剧烈重组”，董事会应在公司外部寻找新首席执行官，并在十日内由董事会及外部律师回答出口管制合规问题。他质疑公司是否曾以“看似违规”的对华销售抬升营收。</p>
+        <div class="why"><strong>为何重要</strong>财长公开干预全球市值最高芯片公司的人事与合规，将改写AI算力的地缘定价。</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">科技稿件 · 04–05</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">下一代硬件与舱外生命实验</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">04</div>
+        <div class="tag">库比蒂诺 · 产品路线</div>
+        <h3>苹果智能眼镜瞄准2027年发布，靠Siri接管应用</h3>
+        <p class="src">彭博社 Power On / MacRumors · 2026-11-15 · <a href="https://www.macrumors.com/2026/11/15/apple-smart-glasses-hinge-on-siri/">原文</a></p>
+        <p class="sum">马克·古尔曼15日报道，苹果计划于2027年WWDC发布首款智能眼镜并争取年内出货。原型内部代号N50，无AR显示，靠配对iPhone与Siri调用第三方应用；硬件大体定型，软件与人工智能进度滞后，两项目标仍不确定。</p>
+        <div class="why"><strong>为何重要</strong>苹果把下一代硬件押在Siri应用生态而非独立AR显示，将重塑智能眼镜竞争逻辑。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">05</div>
+        <div class="tag">中国空间站 · 生命科学</div>
+        <h3>中国空间站第四次辐射生物暴露实验样品回舱</h3>
+        <p class="src">央视新闻 / 科技日报 · 2026-11-15 · <a href="https://news.bjd.com.cn/2026/11/15/12031246.shtml">原文</a></p>
+        <p class="sum">神舟二十三号乘组15日通报，梦天实验舱空间辐射生物学装置第四次暴露实验完成。纳米酶、放线菌和植物种子在舱外暴露五个月后已回舱拆取存储，将随飞船返回地面，用于研究太空辐射对生物的深层影响。</p>
+        <div class="why"><strong>为何重要</strong>真实舱外辐射无法被地面实验室完整模拟，是长期驻留与载人深空的防护基础。</div>
+      </article>
+    </div>
+  </section>
+
+  <div class="close">
+    <div class="kicker">Colophon · 收束</div>
+    <h2>十一记，一张当日版图</h2>
+    <p class="lead">时政把议程从党内法规拉到两条海峡；科技把回收、空管、芯片人事与舱外实验放在同一版。周末产品发布偏少，宁缺毋滥。</p>
+    <div class="metrics">
+      <div class="metric"><span class="n serif">6</span><strong>时政</strong><p>条例、东盟、缅甸、APEC、曼德、霍尔木兹</p></div>
+      <div class="metric"><span class="n serif">5</span><strong>科技</strong><p>星舰捕获、空管路由器、英伟达、苹果眼镜、空间站</p></div>
+      <div class="metric"><span class="n serif">0</span><strong>未混入</strong><p>黄仁勋去职、DeepSeek API、Gemini Hydrogen 均属更早首发</p></div>
+      <div class="metric"><span class="n serif">319</span><strong>期号</strong><p>公历年积日 · 2026-11-15</p></div>
+    </div>
+    <div class="note">
+      <p style="color:var(--crimson);font-weight:700;margin-bottom:6px;">信息说明</p>
+      <p>霍尔木兹沉船细节目前仅来自伊朗方面，路透社未能独立核实，版面已标明。苹果智能眼镜为彭博社爆料，并非公司官方发布。星舰捕获时刻为 21:20 UTC 11月14日，折合上海时间15日5:20，按本期窗口收录。克里姆林宫宣布中美俄三方会晤、李强会见泰国国王、意大利对Meta罚款，均属14日首发，不收入本期。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
