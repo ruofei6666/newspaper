@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第320期 · 2026年11月16日</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --crimson: #C41E3A;
+    --slate: #4A5568;
+    --cream: #EFE8DC;
+    --card: #FFFCF7;
+    --rule: #C9C2B6;
+    --muted: #B8B0A4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body {
+    font-family: Calibri, "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .mast, .serif, .num {
+    font-family: Cambria, "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  a { color: var(--crimson); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 32px 64px; }
+  .folio {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 16px; padding-bottom: 10px; border-bottom: 1.5px solid var(--ink);
+    position: relative; font-size: 13px; font-weight: 700;
+    font-family: Cambria, "Noto Serif CJK SC", serif;
+  }
+  .folio::after {
+    content: ""; position: absolute; left: 0; bottom: -1.5px;
+    width: 44px; height: 4px; background: var(--crimson);
+  }
+  .folio .pg { color: var(--slate); font-family: Calibri, Arial, sans-serif; font-weight: 500; }
+  .cover {
+    background: var(--ink); color: var(--paper); margin: 28px -32px 40px;
+    padding: 40px 48px 36px; position: relative;
+  }
+  .kicker { color: var(--crimson); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .cover h1 { font-size: 48px; line-height: 1.15; margin: 10px 0 18px; }
+  .cover .meta { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    padding-top: 14px; border-top: 1px solid #3A3A3A; font-size: 18px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; }
+  .panel { background: #242424; padding: 18px 20px 20px; }
+  .panel h3 { font-size: 26px; margin: 8px 0 10px; color: var(--paper); }
+  .panel p { color: #D8D2C8; font-size: 15px; }
+  .cover-foot { margin-top: 18px; color: var(--muted); font-size: 13px; }
+  section { margin: 36px 0; }
+  .section-head { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 16px; }
+  .giant { font-size: 64px; line-height: 0.9; color: var(--crimson); }
+  .section-head h2 { font-size: 36px; line-height: 1.2; margin-top: 18px; }
+  .lead { color: var(--slate); font-size: 16px; margin: 8px 0 22px; max-width: 46em; }
+  .index { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .index article {
+    background: var(--card); border: 0.9px solid var(--rule); padding: 14px 16px 16px;
+    display: grid; grid-template-columns: 52px 1fr; gap: 10px; align-items: start;
+  }
+  .index .n { font-size: 28px; color: var(--crimson); line-height: 1; }
+  .tag { color: var(--crimson); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card {
+    background: var(--card); border: 0.9px solid var(--rule);
+    padding: 18px 20px 16px; position: relative; min-height: 300px;
+    display: flex; flex-direction: column;
+  }
+  .card h3 { font-size: 20px; line-height: 1.3; margin: 6px 0 8px; }
+  .src { color: var(--slate); font-size: 13px; margin-bottom: 10px; }
+  .sum { font-size: 15px; margin-bottom: 14px; flex: 1; }
+  .why { background: var(--cream); padding: 10px 12px; font-size: 14px; }
+  .why strong { color: var(--crimson); display: block; font-size: 11px; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .dual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { background: var(--card); border: 0.9px solid var(--rule); padding: 0 0 16px; }
+  .col .inner { padding: 16px 20px 0; }
+  .col h3 { font-size: 22px; margin: 8px 0 10px; }
+  .quote { background: var(--cream); margin: 16px 20px 0; padding: 12px 14px; font-size: 14px; }
+  .quote em { font-family: Cambria, "Noto Serif CJK SC", serif; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+  .stat { background: var(--ink); color: var(--paper); padding: 16px 12px 14px; text-align: center; }
+  .stat .n { font-size: 30px; display: block; margin-bottom: 6px; }
+  .stat span { color: #D8D2C8; font-size: 13px; display: block; }
+  .feature { background: var(--card); border: 0.9px solid var(--rule); padding: 18px 22px 16px; }
+  .close {
+    background: var(--ink); color: var(--paper); margin: 40px -32px 0;
+    padding: 36px 48px 48px;
+  }
+  .close h2 { font-size: 32px; margin: 8px 0 12px; }
+  .close .lead { color: #D8D2C8; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 22px; }
+  .metric { background: #242424; padding: 14px 16px 16px; }
+  .metric .n { font-size: 32px; color: var(--crimson); display: block; }
+  .metric strong { display: block; margin: 6px 0 6px; }
+  .metric p { color: #D8D2C8; font-size: 14px; }
+  .note { border-top: 1px solid #3A3A3A; padding-top: 14px; color: #D8D2C8; font-size: 14px; }
+  @media (max-width: 820px) {
+    .wrap { padding: 18px 16px 40px; }
+    .cover, .close { margin-left: -16px; margin-right: -16px; padding: 28px 20px; }
+    .cover h1 { font-size: 34px; }
+    .grid2, .cards, .index, .dual, .stats, .metrics { grid-template-columns: 1fr; }
+    .section-head { flex-direction: column; gap: 4px; }
+    .giant { font-size: 48px; }
+  }
+  @media print {
+    body { background: white; }
+    .cover, .close { margin: 0 0 18px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    .card, .col, .index article { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="folio">
+    <div>每日时政科技简报  ·  第320期  ·  2026年11月16日</div>
+    <div class="pg">报馆晨报</div>
+  </header>
+
+  <div class="cover">
+    <div class="kicker">The Daily Ledger · 报馆晨报</div>
+    <h1>每日时政科技简报</h1>
+    <div class="meta serif">
+      <span>第320期　2026年11月16日 星期一</span>
+      <span style="color:#B8B0A4;font-family:Calibri,Arial,sans-serif;font-size:14px;">截稿窗口 Asia/Shanghai 昨日日历日</span>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <div class="kicker">时政 Politics</div>
+        <h3>三方会晤写入官方日程</h3>
+        <p>外交部正式宣布中俄美元首将于19日在深圳会晤。李强在马尼拉宣布自贸区3.0于12月1日生效。上海、沈阳二手房价同比止跌。霍尔木兹再报第四艘油轮触雷。</p>
+      </div>
+      <div class="panel">
+        <div class="kicker">科技 Technology</div>
+        <h3>模型降价，超算对垒</h3>
+        <p>阿里Qwen4-Max与腾讯Hy4 flash同日发布，把竞争打到任务账单。英伟达在SC26亮出Rubin HPC与Vera CPU；AMD的Lux在橡树岭向科研用户开放。DeepSeek对免费端收紧额度。</p>
+      </div>
+    </div>
+    <p class="cover-foot">精选 10 条　·　时政 5　·　科技 5　·　只收录该日发生或该日首发</p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <div class="giant serif">01</div>
+      <div>
+        <div class="kicker">Section · 时政开篇</div>
+        <h2>深圳会晤、马尼拉议程、海湾续报</h2>
+      </div>
+    </div>
+    <p class="lead">周一把上周的传闻写成官方日程：北京确认三方会晤；中国—东盟自贸区升级有了生效日。国内房价给出分化中的止跌信号。海湾航运风险则在16日继续加码。</p>
+    <div class="index">
+      <article><div class="n serif">01</div><div><div class="tag">大国外交</div><h3>外交部宣布中俄美元首深圳会晤</h3></div></article>
+      <article><div class="n serif">02</div><div><div class="tag">中国—东盟</div><h3>自贸区3.0将于12月1日生效</h3></div></article>
+      <article><div class="n serif">03</div><div><div class="tag">宏观经济</div><h3>上海沈阳二手房价同比率先止跌</h3></div></article>
+      <article><div class="n serif">04</div><div><div class="tag">海湾航运</div><h3>伊朗称第四艘油轮在霍尔木兹以东触雷</h3></div></article>
+      <article><div class="n serif">05</div><div><div class="tag">劝和促谈</div><h3>中方特使访问中东海湾与非洲之角</h3></div></article>
+      <article><div class="n serif" style="font-size:22px;padding-top:6px;">—</div><div><div class="tag">未混入</div><h3>周日抵菲、APEC预告、烟霾致歉均属15日</h3></div></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">时政稿件 · 01–02</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">官方日程：深圳与马尼拉</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">01</div>
+        <div class="tag">北京 · 大国外交</div>
+        <h3>外交部宣布：习近平将同普京、特朗普在深圳会晤</h3>
+        <p class="src">外交部 · 2026-11-16 09:00 · <a href="https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/202611/t20261116_12059654.shtml">原文</a></p>
+        <p class="sum">外交部16日宣布，11月19日习近平将同普京、特朗普在深圳举行中俄美元首会晤。毛宁称这是三国元首历史上首次面对面会晤，将围绕维护世界和平、促进大国关系战略稳定深入交换意见。</p>
+        <div class="why"><strong>为何重要</strong>北京正式确认后，三方会晤从传闻变成APEC期间的最高外交议程。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">02</div>
+        <div class="tag">马尼拉 · 中国—东盟</div>
+        <h3>李强出席领导人会议，自贸区3.0将于12月1日生效</h3>
+        <p class="src">新华社 · 2026-11-16 12:51 · <a href="https://www.news.cn/politics/leaders/20261116/19b535ee785b441bb983db2249181e49/c.html">原文</a></p>
+        <p class="sum">李强16日在马尼拉出席第29次中国—东盟领导人会议。会议宣布自贸区3.0版升级议定书将于12月1日生效，2027年定为人工智能合作年。李强称去年双边贸易已破1万亿美元，期待早日达成南海行为准则。</p>
+        <div class="why"><strong>为何重要</strong>把超大区域市场的制度升级和人工智能合作年，写进了领导人会议成果。</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">时政稿件 · 03 · 宏观数据</div>
+    <h2 style="font-size:36px;margin:6px 0 14px;">房价止跌，仍只发生在少数城市</h2>
+    <div class="stats">
+      <div class="stat"><span class="n serif">+2.2%</span><span>上海二手房同比<br>一线唯一转正</span></div>
+      <div class="stat"><span class="n serif">8月</span><span>一线二手房<br>环比连续上涨</span></div>
+      <div class="stat"><span class="n serif">沈阳</span><span>二线首个<br>二手房同比止跌</span></div>
+      <div class="stat"><span class="n serif">~70%</span><span>从业者预期未来半年<br>新房稳定或上涨</span></div>
+    </div>
+    <div class="feature">
+      <p class="src">国家统计局 / 澎湃新闻 · 2026-11-16 · <a href="https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965838.html">原文</a></p>
+      <p class="sum">统计局16日公布10月70城房价。一线城市二手房环比连涨8个月，上海同比上涨2.2%；沈阳同比持平，成为二线首个止跌城市。二三线仍在磨底，环比上涨城市减至7个。国新办称近七成从业者预期未来半年新房价格稳定或上涨。</p>
+      <div class="why"><strong>为何重要</strong>止跌信号从上海扩散到二线，但全国修复仍高度分化，不能读成全面回暖。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">双栏对照 · 04–05 · 海湾与劝和</div>
+    <h2 style="font-size:26px;margin:6px 0 16px;">海峡再报触雷，北京公开劝和路线</h2>
+    <div class="dual">
+      <div class="col">
+        <div class="inner">
+          <div class="tag">霍尔木兹海峡 · 16日续报</div>
+          <h3>伊朗海军称第四艘油轮触雷起火</h3>
+          <p class="src">路透社 / 伊朗国家电视台 · 16日 · <a href="https://www.arabnews.com/middle-east/irans-army-navy-says-fourth-tanker-hit-by-mine-east-of-hormuz-3012325">原文</a></p>
+          <p class="sum">伊朗海军16日称，过去24小时内第四艘油轮在霍尔木兹海峡以东“禁航区”触雷起火。声明未公布船名、船旗、载货及船员状况。周日两艘油轮触雷及巴林无人机袭击已见报，独立核实仍不足。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">引语</strong><em>声明未指认油轮身份。路透社援引伊朗国家电视台报道，目前无法独立核实损失与船员情况。</em></div>
+      </div>
+      <div class="col">
+        <div class="inner">
+          <div class="tag">外交部记者会 · 劝和促谈</div>
+          <h3>中方特使访问中东海湾与非洲之角七国</h3>
+          <p class="src">外交部 · 2026-11-16 17:15 · <a href="https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202611/t20261116_12060248.shtml">原文</a></p>
+          <p class="sum">毛宁16日介绍，中东问题特使翟隽、非洲事务特别代表刘显法、非洲之角事务特使胡长春近日访问中东海湾和非洲之角七国。翟隽已访伊朗、阿曼、沙特，就伊朗、也门等问题劝和促谈。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">为何对照</strong>同一天，霍尔木兹续报触雷，北京把劝和止战写成安理会常任理事国的公开外交动作。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div class="giant serif">02</div>
+      <div>
+        <div class="kicker">Section · 科技开篇</div>
+        <h2>模型打起价格战，超算台上对垒</h2>
+      </div>
+    </div>
+    <p class="lead">周一不是产品空窗。阿里与腾讯同日交出新模型，把评测从榜单拉到任务账单。超级计算大会上，英伟达加码科学计算，AMD把Lux交给能源部实验室。DeepSeek则在调用量居首后收紧免费端。</p>
+    <div class="index">
+      <article><div class="n serif">01</div><div><div class="tag">大模型</div><h3>阿里发布Qwen4-Max</h3></div></article>
+      <article><div class="n serif">02</div><div><div class="tag">大模型</div><h3>腾讯发布Hy4 flash</h3></div></article>
+      <article><div class="n serif">03</div><div><div class="tag">超算</div><h3>英伟达SC26发布Rubin HPC与Vera</h3></div></article>
+      <article><div class="n serif">04</div><div><div class="tag">超算</div><h3>AMD Lux向橡树岭科研用户开放</h3></div></article>
+      <article><div class="n serif">05</div><div><div class="tag">算力瓶颈</div><h3>DeepSeek对免费用户限额</h3></div></article>
+      <article><div class="n serif" style="font-size:22px;padding-top:6px;">—</div><div><div class="tag">未混入</div><h3>红外芯片《自然》论文属10月28日首发</h3></div></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">双栏对照 · 科技 01–02 · 同日降价</div>
+    <h2 style="font-size:26px;margin:6px 0 16px;">阿里、腾讯把竞争打到任务账单</h2>
+    <div class="dual">
+      <div class="col">
+        <div class="inner">
+          <div class="tag">杭州 · Qwen4-Max</div>
+          <h3>2.4万亿参数，单任务费用约降六成</h3>
+          <p class="src">阿里云 · 2026-11-16 · <a href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max">原文</a></p>
+          <p class="sum">阿里16日发布旗舰模型Qwen4-Max，总参数2.4T、每token激活71B，原生视觉并支持百万上下文。官方称在Work360上较上代整体更强，高推理模式下token消耗少35%，单任务费用约降60%。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">为何重要</strong>国产旗舰把卖点从参数规模转到真实任务成本，并预告开源更小尺寸权重。</div>
+      </div>
+      <div class="col">
+        <div class="inner">
+          <div class="tag">深圳 · Hy4 flash</div>
+          <h3>激活12B，单任务成本约为Hy4的1/20</h3>
+          <p class="src">腾讯 · 2026-11-16 · <a href="https://www.tencent.com/zh-cn/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/">原文</a></p>
+          <p class="sum">腾讯16日发布Hy4 flash，总参数224B、激活仅12B，支持多模态与1M上下文。API每百万token输入0.5元、输出2元。官方称日常办公单任务成本约为Hy4的1/20，解码超150tps，并计划开源。</p>
+        </div>
+        <div class="quote"><strong style="color:var(--crimson);font-size:11px;display:block;margin-bottom:4px;">为何对照</strong>两家同日把价格锚在办公场景：一个砍旗舰账单，一个用小激活抢高频任务。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">科技稿件 · 03 · 超级计算大会</div>
+    <h2 style="font-size:36px;margin:6px 0 14px;">英伟达把科学计算重新写进产品线</h2>
+    <div class="stats">
+      <div class="stat"><span class="n serif">50,000+</span><span>Rubin HPC<br>单卡CUDA核心</span></div>
+      <div class="stat"><span class="n serif">2028</span><span>Rubin HPC<br>预计上市年份</span></div>
+      <div class="stat"><span class="n serif">192</span><span>Vera机架<br>CPU数量</span></div>
+      <div class="stat"><span class="n serif">2027</span><span>Vera机架<br>厂商供货窗口</span></div>
+    </div>
+    <div class="feature">
+      <p class="src">NVIDIA · 2026-11-16 · <a href="https://blogs.nvidia.com/blog/rubin-hpc/">Rubin HPC</a>　·　<a href="https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery">Vera CPU</a></p>
+      <p class="sum">超级计算大会上，英伟达发布面向科学仿真的Rubin HPC GPU，宣称单卡超5万CUDA核心，并加强稀疏数据加速与第七代NVLink，预计2028年上市。同日推出Vera CPU机架平台，192颗处理器、约300TB内存；德国气候计算中心已选型，整机预计2027年初供货。</p>
+      <div class="why"><strong>为何重要</strong>在生成式AI之外，英伟达重新加码双精度科学计算，把气候与分子模拟写成下一代超算订单。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">科技稿件 · 04–05</div>
+    <h2 style="font-size:36px;margin:6px 0 16px;">实验室超算与免费额度的上限</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">04</div>
+        <div class="tag">橡树岭 · AMD Lux</div>
+        <h3>Lux向科研用户开放，成Genesis任务首座AI工厂</h3>
+        <p class="src">AMD / 橡树岭国家实验室 · 2026-11-16 · <a href="https://newsroom.amd.com/news/amd-powered-lux-supercomputer-opens-scientific-users/">原文</a></p>
+        <p class="sum">AMD宣布橡树岭国家实验室Lux超级计算机向科研用户开放，采用EPYC处理器与Instinct MI355X GPU，位列当日TOP500第14名，并成为美国能源部Genesis任务的首座专用“AI工厂”，承接聚变、材料与地球系统预测。</p>
+        <div class="why"><strong>为何重要</strong>美国把AI超算从排行榜搬进国家实验室的日常科研队列。</div>
+      </article>
+      <article class="card">
+        <div class="num" style="color:var(--crimson);font-size:22px;">05</div>
+        <div class="tag">杭州 · DeepSeek</div>
+        <h3>调用量居全球首位后，免费端开始限额</h3>
+        <p class="src">第一财经 · 2026-11-16 15:19 · <a href="https://www.yicai.com/news/103441951.html">原文</a></p>
+        <p class="sum">多名用户16日反馈，DeepSeek对App和网页版收紧额度：不活跃长对话受限、单次输入约4万字、连续使用或很快触顶。OpenRouter显示其上一代Flash一周调用居全球首位。官方尚未公布规则。</p>
+        <div class="why"><strong>为何重要</strong>免费流量已经碰到真实算力墙，模型公司必须在训练、API和C端之间做取舍。</div>
+      </article>
+    </div>
+  </section>
+
+  <div class="close">
+    <div class="kicker">Colophon · 收束</div>
+    <h2>十记，一张星期一版图</h2>
+    <p class="lead">时政把三方会晤写成官方日程，把自贸区升级钉上生效日；科技把模型价格和超算订单放在同一版。周日续报只取16日新进展，宁缺毋滥。</p>
+    <div class="metrics">
+      <div class="metric"><span class="n serif">5</span><strong>时政</strong><p>会晤、东盟、房价、霍尔木兹、特使</p></div>
+      <div class="metric"><span class="n serif">5</span><strong>科技</strong><p>千问、混元、英伟达、Lux、DeepSeek</p></div>
+      <div class="metric"><span class="n serif">0</span><strong>未混入</strong><p>黄仁勋去职、硅和平签字、红外《自然》论文</p></div>
+      <div class="metric"><span class="n serif">320</span><strong>期号</strong><p>公历年积日 · 2026-11-16</p></div>
+    </div>
+    <div class="note">
+      <p style="color:var(--crimson);font-weight:700;margin-bottom:6px;">信息说明</p>
+      <p>克里姆林宫与白宫此前已放风三方会晤，15日期未收；16日外交部正式宣布，按中方首发收入本期。李强15日晚抵马尼拉、APEC工商峰会新闻发布、印尼烟霾致歉、旧金山硅和平宣言签字，均属15日事件，不收入。霍尔木兹第四艘油轮仅来自伊朗军方，独立来源尚未确认船名与船员。华中科大红外成像芯片《自然》论文于10月28日发表，新华社16日通稿不视为首发。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
