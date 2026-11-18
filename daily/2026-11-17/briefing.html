@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日时政科技简报 · 第321期 · 2026-11-17</title>
+<style>
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F7F4EF;
+    --crimson: #C41E3A;
+    --slate: #4A5568;
+    --card: #FFFCF7;
+    --warm: #E8E2D6;
+    --muted: #9A9286;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ink);
+    color: var(--ink);
+    font-family: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC",
+      "Microsoft YaHei", Calibri, Arial, sans-serif;
+    font-size: 15pt;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--paper);
+  }
+  .folio {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 1.6rem 0.45rem;
+    border-bottom: 1.5px solid var(--crimson);
+    font-size: 0.85rem;
+  }
+  .folio strong {
+    font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC",
+      Cambria, "Songti SC", Georgia, serif;
+    font-size: 0.95rem;
+  }
+  .folio span { color: var(--slate); }
+  .kicker {
+    color: var(--crimson);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.35rem;
+  }
+  .kicker::before {
+    content: "";
+    display: inline-block;
+    width: 0.55rem;
+    height: 0.55rem;
+    background: var(--crimson);
+    margin-right: 0.45rem;
+    vertical-align: middle;
+  }
+  h1, h2, h3 {
+    font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC",
+      Cambria, "Songti SC", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: left;
+  }
+  h1 { font-size: 48pt; }
+  h2 { font-size: 36pt; }
+  h3 { font-size: 28pt; }
+  a { color: var(--crimson); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .why {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0.7rem;
+    margin-top: 0.9rem;
+  }
+  .why i { background: var(--crimson); display: block; }
+  .why p { font-size: 0.92rem; }
+  .why b { color: var(--crimson); display: block; font-size: 0.75rem; margin-bottom: 0.15rem; }
+
+  /* cover */
+  .cover {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.2rem 1.8rem 2.4rem;
+  }
+  .cover .lat {
+    color: #C8C0B4;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .cover .lat::before {
+    content: "";
+    width: 0.18rem;
+    height: 1.1rem;
+    background: var(--crimson);
+    display: inline-block;
+  }
+  .cover h1 {
+    color: var(--paper);
+    font-size: 48pt;
+    margin: 1.1rem 0 0.6rem;
+  }
+  .cover .rule { width: 4.2rem; height: 2px; background: var(--crimson); margin: 0.4rem 0 0.9rem; }
+  .cover .meta { font-size: 1.2rem; font-family: inherit; }
+  .issue {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .issue-num { text-align: right; }
+  .issue-num .n {
+    font-family: "Noto Serif CJK SC", Cambria, serif;
+    font-size: 5.4rem;
+    line-height: 0.9;
+    color: var(--crimson);
+    font-weight: 700;
+  }
+  .issue-num small { color: #C8C0B4; font-size: 0.8rem; }
+  .leads {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+  .lead-card {
+    background: #242424;
+    padding: 1.15rem 1.2rem 1.15rem 1.35rem;
+    border-left: 4px solid var(--crimson);
+  }
+  .lead-card .tag { color: var(--crimson); font-size: 0.78rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .lead-card h2 { color: var(--paper); font-size: 18pt; margin-bottom: 0.45rem; }
+  .lead-card p { color: #C8C0B4; font-size: 0.95rem; }
+  .cover-foot { color: #9A9286; font-size: 0.82rem; margin-top: 1.5rem; }
+
+  .section { padding: 1.4rem 1.6rem 2rem; }
+  .section h2 { font-size: 36pt; margin: 0.3rem 0 1rem; }
+  .index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+  .index-col {
+    background: var(--card);
+    padding: 1.1rem 1.2rem 0.4rem;
+    border-top: 4px solid var(--crimson);
+  }
+  .index-col h3 { font-size: 1.2rem; margin-bottom: 0.7rem; }
+  .index-col ol { list-style: none; }
+  .index-col li {
+    display: grid;
+    grid-template-columns: 2.2rem 1fr;
+    gap: 0.4rem;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--warm);
+    font-size: 1rem;
+  }
+  .index-col li em {
+    font-style: normal;
+    font-family: "Noto Serif CJK SC", Cambria, serif;
+    color: var(--crimson);
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .story {
+    background: var(--card);
+    padding: 1.25rem 1.3rem 1.35rem;
+    margin: 0 1.6rem 1rem;
+  }
+  .story h3 { font-size: 28pt; margin: 0.2rem 0 0.45rem; }
+  .src { color: var(--slate); font-size: 0.82rem; margin-bottom: 0.7rem; }
+  .story p { font-size: 15pt; }
+
+  .lead-story {
+    display: grid;
+    grid-template-columns: 1.7fr 0.8fr;
+    gap: 0.9rem;
+    margin: 0 1.6rem 1.2rem;
+  }
+  .quote {
+    background: var(--card);
+    padding: 0.9rem 1.05rem;
+    margin: 0.8rem 0;
+    font-family: "Noto Serif CJK SC", Cambria, serif;
+    font-size: 1.05rem;
+  }
+  .quote .lbl { color: var(--crimson); font-family: inherit; font-size: 0.75rem; font-weight: 700; display: block; margin-bottom: 0.3rem; }
+  .aside {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.2rem 1.15rem;
+  }
+  .aside .lbl { color: var(--crimson); font-size: 0.75rem; font-weight: 700; }
+  .aside h3 { color: var(--paper); font-size: 1.7rem; margin: 0.4rem 0 0.8rem; }
+  .aside dt { color: var(--crimson); font-size: 0.75rem; font-weight: 700; margin-top: 0.7rem; }
+  .aside dd { color: var(--paper); font-size: 0.95rem; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin: 0 1.6rem 1.2rem;
+  }
+  .dual-dark {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.2rem 1.2rem 1.3rem;
+  }
+  .dual-dark h3 { color: var(--paper); font-size: 28pt; }
+  .dual-dark .src { color: #C8C0B4; }
+  .dual-dark p { color: var(--paper); }
+  .dual-light {
+    background: var(--card);
+    border-top: 4px solid var(--crimson);
+    padding: 1.2rem 1.2rem 1.3rem;
+  }
+  .dual-light h3 { font-size: 28pt; }
+  .metric {
+    font-family: "Noto Serif CJK SC", Cambria, serif;
+    color: var(--crimson);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.35rem 0 0.5rem;
+  }
+  .banner {
+    background: var(--crimson);
+    color: var(--paper);
+    padding: 1rem 1.15rem;
+    margin: 0 1.6rem 0.9rem;
+  }
+  .banner .lbl { font-size: 0.75rem; font-weight: 700; }
+  .banner h3 { color: var(--paper); font-size: 36pt; margin-top: 0.2rem; }
+
+  .close {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.6rem 1.6rem 2.2rem;
+  }
+  .close h2 { color: var(--paper); font-size: 36pt; margin-bottom: 1rem; }
+  .close .item {
+    background: #242424;
+    border-left: 4px solid var(--crimson);
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .close .item .lbl { color: var(--crimson); font-size: 0.75rem; font-weight: 700; }
+  .close .item p { margin-top: 0.25rem; }
+  .colophon { color: #9A9286; font-size: 0.85rem; margin-top: 1.2rem; }
+
+  @media (max-width: 820px) {
+    .leads, .index, .lead-story, .grid-2 { grid-template-columns: 1fr; }
+    .cover h1 { font-size: 36pt; }
+    .issue-num { text-align: left; }
+    .story, .lead-story, .grid-2, .banner { margin-left: 1rem; margin-right: 1rem; }
+    .section { padding-left: 1rem; padding-right: 1rem; }
+  }
+  @media print {
+    html, body { background: var(--paper); }
+    .page { max-width: none; }
+    .cover, .close, .aside, .dual-dark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    .story, .lead-story, .grid-2 { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+
+<header class="cover">
+  <div class="issue">
+    <div>
+      <p class="lat">THE MORNING GAZETTE · ASIA / SHANGHAI</p>
+      <h1>每日时政科技简报</h1>
+      <div class="rule"></div>
+      <p class="meta">2026年11月17日 · 星期二 · 第321期</p>
+    </div>
+    <div class="issue-num">
+      <div class="n">321</div>
+      <small>公历年积日</small>
+    </div>
+  </div>
+  <div class="leads">
+    <div class="lead-card">
+      <div class="tag">时政 · 六条</div>
+      <h2>深圳会晤苏林，中加延长豁免；蒙古总统请辞，华盛顿收紧远程算力。</h2>
+      <p>欧委会上调增长预期，霍尔木兹再起烟火。</p>
+    </div>
+    <div class="lead-card">
+      <div class="tag">科技 · 五条</div>
+      <h2>神舟二十四号转运发射区，「梦想」号刷新深海钻探水深。</h2>
+      <p>AMD收官Taalas，高通开放推理评估，商汤开源Loop-9B。</p>
+    </div>
+  </div>
+  <p class="cover-foot">只收上海日历日 11 月 17 日发生或首发稿件 · 时政六条、科技五条，合计十一条 · 交叉核验官方与通讯社</p>
+</header>
+
+<section class="section">
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>第321期 · 2026年11月17日 星期二 · 上海截稿</span>
+  </div>
+  <p class="kicker">今日目录 · INDEX</p>
+  <h2>十一条，一张晨报。</h2>
+  <div class="index">
+    <div class="index-col">
+      <h3>时政 POLITICS</h3>
+      <ol>
+        <li><em>01</em>习近平在深圳会见越共总书记苏林</li>
+        <li><em>02</em>中加延长经贸豁免两年</li>
+        <li><em>03</em>蒙古总统呼日勒苏赫宣布辞职</li>
+        <li><em>04</em>中方反对美远程半导体新规</li>
+        <li><em>05</em>欧委会上调今年增长至1.4%</li>
+        <li><em>06</em>美军打击格什姆岛导弹阵地</li>
+      </ol>
+    </div>
+    <div class="index-col">
+      <h3>科技 TECHNOLOGY</h3>
+      <ol>
+        <li><em>07</em>神舟二十四号转运至发射区</li>
+        <li><em>08</em>「梦想」号刷新深海钻探水深</li>
+        <li><em>09</em>AMD完成收购Taalas</li>
+        <li><em>10</em>高通Dragonfly AI200开放评估</li>
+        <li><em>11</em>商汤开源SenseNova Loop-9B</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>时政开篇 · LEAD · 第321期</span>
+  </div>
+  <div class="lead-story">
+    <div>
+      <p class="kicker">时政 / 01</p>
+      <h2>习近平在深圳会见越共总书记、国家主席苏林</h2>
+      <div class="quote">
+        <span class="lbl">引语</span>
+        「越是风高浪急，越要同舟共济。」双方同意深化多维联通，探索人工智能应用合作，并妥善管控海上分歧。
+      </div>
+      <p>11月17日上午，习近平在深圳会见来华出席APEC领导人非正式会议的苏林。双方同意推动智慧口岸与跨境经济合作区落地，接续今明两年亚太经合组织东道主角色。苏林表示，越方视中国为最重要战略依托。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>APEC领导人会前的最高层级双边接触，为中越关系与亚太接续合作定调。</p></div></div>
+    </div>
+    <aside class="aside">
+      <div class="lbl">现场</div>
+      <h3>深圳<br>上午</h3>
+      <dl>
+        <dt>来源</dt><dd>中华人民共和国外交部</dd>
+        <dt>时间</dt><dd>2026-11-17 14:40 发布</dd>
+        <dt>原文</dt><dd><a href="https://www.mfa.gov.cn/web/zyxw/202611/t20261117_12060890.shtml">mfa.gov.cn 重要新闻</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>时政 · 稿件卡片 · 第321期</span>
+  </div>
+  <div class="grid-2">
+    <article class="dual-light">
+      <p class="kicker">时政 / 02</p>
+      <h3>中加经贸豁免延长两年</h3>
+      <p class="src">商务部 · 加拿大总理府 · 深圳</p>
+      <p>双方在初步联合安排上形成补充安排，同意将相关豁免延长两年。加方扩大对华钢铝豁免，中方相应调整对加部分农水产品反歧视措施；卡尼宣布2027年对华经贸团与电子商务年。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>中加经贸从关税对峙转入可预期豁免框架，直接影响农产品与钢铝贸易。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c0c35d2c7d444dda90e295bf20894c19.html">商务部原文</a> · <a href="https://www.pm.gc.ca/en/news/news-releases/2026/11/17/prime-minister-carney-advances-canadas-strategic-partnership-china">加拿大总理府</a></p>
+    </article>
+    <article class="dual-light">
+      <p class="kicker">时政 / 03</p>
+      <h3>蒙古总统宣布辞职</h3>
+      <p class="src">新华社 · 美联社 · 乌兰巴托</p>
+      <p>呼日勒苏赫17日宣布将辞去总统职务，称愿配合调查以澄清名誉。反对党指其与塔本陶勒盖—嘎顺苏海图铁路项目相关受贿约2500万美元。辞职须经国家大呼拉尔批准。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>现任元首主动请辞在该国史无前例，或牵动对华煤炭通道与北邻政局。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://english.news.cn/20261117/d152c5d4e03344f680907709ebe19bfb/c.html">新华社原文</a></p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>时政 · 双栏对照 · 第321期</span>
+  </div>
+  <div class="section" style="padding-bottom:0.4rem">
+    <h2>管制与增长，同一日的两条官方定盘。</h2>
+  </div>
+  <div class="grid-2">
+    <article class="dual-dark">
+      <p class="kicker">04 · 华盛顿—北京</p>
+      <h3>中方反对远程芯片新规</h3>
+      <p class="src">商务部 · 外交部 · 11月17日</p>
+      <p>美国商务部发布临时最终规则，限制向中国等企业提供超过1200万TPP的海外数据中心算力，并向新加坡、泰国、马来西亚、印尼、巴西出口先进芯片设许可。中方17日表示强烈不满，警告将反制。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>出口管制从「芯片卖到哪里」延伸到「算力租给谁」。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="http://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c9c0beb01b8640d3ba9160b73d315716.html">商务部答问</a></p>
+    </article>
+    <article class="dual-light">
+      <p class="kicker">05 · 布鲁塞尔</p>
+      <h3>欧盟增长上调至1.4%</h3>
+      <p class="src">欧盟委员会秋季经济预测 · 11月17日</p>
+      <p>秋季预测将2026年欧盟GDP增速由春季1.1%上调至1.4%，欧元区1.2%；通胀预计3.3%。出口回升支撑增长，投资偏弱，能源冲击使物价高位更久，失业率仍近6%。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>能源冲击后欧盟官方对增长与物价的最新定盘，影响利率与财政路径。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://commission.europa.eu/news-and-media/news/autumn-2026-economic-forecast-continued-growth-amid-higher-inflation-2026-11-17_en">欧委会原文</a></p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>时政 · 现场 · 第321期</span>
+  </div>
+  <div class="banner">
+    <div class="lbl">海峡 · 06</div>
+    <h3>霍尔木兹</h3>
+  </div>
+  <article class="story">
+    <p class="kicker">时政 / 06</p>
+    <h3>美军打击伊朗格什姆岛导弹阵地</h3>
+    <p class="src">Arab News · Euronews · 德黑兰 / 华盛顿</p>
+    <p>美国官员称战机以精确弹药打击格什姆岛一处革命卫队导弹发射场，称为自卫。伊方称未伤及民居与基础设施。当日霍尔木兹水道再有油轮据报触雷起火。阿拉伯新闻社首发约16:31（利雅得），仍落在上海17日夜。</p>
+    <div class="why"><i></i><div><b>为何重要</b><p>霍尔木兹是全球石油咽喉，军事与航运风险同步上升，直接牵动能源价格。</p></div></div>
+    <p class="src" style="margin-top:0.8rem"><a href="https://www.arabnews.com/middle-east/us-warplanes-struck-iran-missile-site-on-qeshm-island-us-official-3012499">Arab News 原文</a></p>
+  </article>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>科技开篇 · SCIENCE LEAD · 第321期</span>
+  </div>
+  <div class="lead-story">
+    <div>
+      <p class="kicker">科技 / 07</p>
+      <h2>神舟二十四号转运至发射区</h2>
+      <p class="src">中国载人航天工程网 · 酒泉卫星发射中心 · 北京时间11月17日</p>
+      <p>神舟二十四号载人飞船与长征二号F遥二十四运载火箭组合体已转运至发射区。发射场设施设备状态良好，后续将开展发射前功能检查与联合测试，计划近日择机实施发射。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>载人飞船进入发射前最后阶段，关系中国空间站乘组轮换节奏。</p></div></div>
+    </div>
+    <aside class="aside">
+      <div class="lbl">发射序列</div>
+      <h3>SZ-24</h3>
+      <dl>
+        <dt>火箭</dt><dd>长征二号F遥二十四</dd>
+        <dt>地点</dt><dd>酒泉卫星发射中心</dd>
+        <dt>下一步</dt><dd>功能检查、联合测试，近日择机</dd>
+        <dt>原文</dt><dd><a href="https://www.cmse.gov.cn/xwzx/202611/t20261117_57861.html">cmse.gov.cn</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>科技 · 双栏对照 · 第321期</span>
+  </div>
+  <div class="grid-2">
+    <article class="dual-light">
+      <p class="kicker">科技 / 08</p>
+      <h3>梦想号刷新水深纪录</h3>
+      <p class="src">中国地质调查局 · 南海北部</p>
+      <div class="metric">2004.8 m</div>
+      <p>历时33天，在142.7米与2004.8米水深完成无隔水管泥浆回收循环钻井系统海试，打破同类系统1419米纪录。四种钻探模式均已验证。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>超深水绿色钻探能力，关系大洋科学钻探与深海资源勘查成本。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://www.cgs.gov.cn/ywdt/ddyw/202611/t20261117_872697.html">中国地质调查局原文</a></p>
+    </article>
+    <article class="dual-light">
+      <p class="kicker">科技 / 09</p>
+      <h3>AMD完成收购Taalas</h3>
+      <p class="src">AMD Newsroom · 11月17日</p>
+      <div class="metric">推理硅片</div>
+      <p>AMD宣布完成对多伦多推理芯片公司Taalas的收购，计划纳入加速器路线图，与Instinct、EPYC与Helios协同。Taalas以模型固化硅片降低内存瓶颈著称。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>推理市场从通用GPU走向专用硅片，AMD押注差异化能效。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://newsroom.amd.com/news/amd-completes-acquisition-taalas-advance-ai-inference-innovation/">AMD 原文</a></p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="folio">
+    <strong>每日时政科技简报</strong>
+    <span>科技 · 稿件卡片 · 第321期</span>
+  </div>
+  <div class="grid-2">
+    <article class="dual-light">
+      <p class="kicker">科技 / 10</p>
+      <h3>高通开放AI200评估</h3>
+      <p class="src">Qualcomm / BusinessWire · 芝加哥 SC26</p>
+      <p>高通与Cirrascale宣布，机架级推理平台Dragonfly AI200已向选定客户开放评估。单卡768GB LPDDR内存，面向万亿参数模型，采用液冷、PCIe扩展与机密计算。Newsquawk时间戳14:22 UTC，仍属上海17日。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>推理成本与功耗成为部署瓶颈，高通以高内存低功耗路线挑战GPU格局。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://www.businesswire.com/news/home/20261117104055/en/Qualcomm-and-Cirrascale-Collaborate-to-Advance-Next-Generation-Energy-Efficient-AI-Inference">BusinessWire 原文</a></p>
+    </article>
+    <article class="dual-light">
+      <p class="kicker">科技 / 11</p>
+      <h3>商汤开源Loop-9B</h3>
+      <p class="src">第一财经 · IT之家 · 11月17日晚</p>
+      <p>约90亿参数的Loop-9B以循环复用中间层将32层扩展为56次计算，支持512K上下文与图文输入。官方4bit量化权重约4.9GB，宣称低显存下接近27B级表现，并同步开放权重。</p>
+      <div class="why"><i></i><div><b>为何重要</b><p>以计算深度换参数规模，为低显存本地部署提供一条可验证的开源路径。</p></div></div>
+      <p class="src" style="margin-top:0.8rem"><a href="https://www.yicai.com/news/103444236.html">第一财经</a> · <a href="https://www.ithome.com/1/028/534.htm">IT之家</a></p>
+    </article>
+  </div>
+</section>
+
+<footer class="close">
+  <div class="folio" style="border-bottom-color:#C41E3A; padding-left:0; padding-right:0;">
+    <strong style="color:#F7F4EF">每日时政科技简报</strong>
+    <span>收束 · COLPHON · 第321期</span>
+  </div>
+  <h2>今日要义</h2>
+  <div class="item">
+    <div class="lbl">时政</div>
+    <p>深圳进入APEC领导人会前窗口：中越定调、中加延长豁免；蒙古元首请辞，华盛顿把芯片管制延伸到远程算力，霍尔木兹再响。</p>
+  </div>
+  <div class="item">
+    <div class="lbl">科技</div>
+    <p>神舟二十四号进入发射区，「梦想」号把深海钻探推到两千米；推理侧则是专用硅片、高内存机架与小参数开源三条并行线。</p>
+  </div>
+  <div class="item">
+    <div class="lbl">缺口</div>
+    <p>SC26芝加哥傍晚场次部分稿件已落入18日上海凌晨，未收入本期；三星定制HBM4E报道最早见于13日付费稿，亦不收。</p>
+  </div>
+  <p class="colophon">第321期 · 2026-11-17 · 时政6 / 科技5 · 次日续看神舟择机发射与APEC领导人会</p>
+</footer>
+
+</article>
+</body>
+</html>
